@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Google OAuth credentials
+credentials.json
+token.json
+
+# Temporary files
+.tmp/
+__pycache__/
+*.pyc
+
+# OS specific
+.DS_Store
+Thumbs.db
