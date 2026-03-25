@@ -1,6 +1,18 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
+// Prevent brutalist bracket labels [ ] from breaking lines
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.mono, .text-fg').forEach(el => {
+        const text = el.textContent.trim();
+        // Applies to texts fully wrapped in brackets or starting with [01]/[02]
+        if ((text.startsWith('[') && text.endsWith(']')) || 
+            text.startsWith('[01]') || text.startsWith('[02]')) {
+            el.style.whiteSpace = 'nowrap';
+        }
+    });
+});
+
 // Smart Auto-Hiding Navbar
 const navbar = document.getElementById('navbar');
 let lastScrollY = window.scrollY;

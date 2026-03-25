@@ -953,7 +953,16 @@ footer {
         margin: 1.5rem 0 2rem;
     }
 
+
+
     /* Typography overrides */
+    .title-lg {
+        font-size: clamp(2.3rem, 11vw, 3.5rem);
+        line-height: 1;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
     .title-md {
         font-size: clamp(1.6rem, 6vw, 2.5rem);
         margin-bottom: 2rem;
