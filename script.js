@@ -1,20 +1,47 @@
 // Initialize Lucide Icons
 lucide.createIcons();
 
-// Sticky Navbar Effect
+// Smart Auto-Hiding Navbar
 const navbar = document.getElementById('navbar');
+let lastScrollY = window.scrollY;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'var(--bg)';
-        navbar.style.padding = '1rem 0';
-        navbar.style.boxShadow = 'none';
-        navbar.style.borderBottom = '1px solid var(--gray-mid)';
+    if (!navbar) return;
+    const currentScrollY = window.scrollY;
+    
+    // Determine if navbar is over a light background section
+    // Any section without .dark-theme is a light section (Quem Somos até o final)
+    const lightSections = document.querySelectorAll('section:not(.dark-theme)');
+    let overLight = false;
+    const navHeight = 80;
+    
+    lightSections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        // If the top of the section is above the bottom of the navbar, and the bottom of the section is below the top of the viewport
+        if (rect.top <= navHeight && rect.bottom > 0) {
+            overLight = true;
+        }
+    });
+
+    if (overLight) {
+        navbar.classList.add('navbar-scrolled');
     } else {
-        navbar.style.background = 'transparent';
-        navbar.style.padding = '1.5rem 0';
-        navbar.style.borderBottom = '1px solid transparent';
+        navbar.classList.remove('navbar-scrolled');
     }
-});
+
+    // Auto-hide logic
+    if (currentScrollY > 80) {
+        if (currentScrollY > lastScrollY) {
+            navbar.classList.add('navbar-hidden');
+        } else {
+            navbar.classList.remove('navbar-hidden');
+        }
+    } else {
+        navbar.classList.remove('navbar-hidden');
+    }
+    
+    lastScrollY = currentScrollY;
+}, { passive: true });
 
 // Hamburger Menu Toggle
 const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -133,24 +160,13 @@ function toggleFaq(btn) {
     document.querySelectorAll('.faq-item').forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('active')) {
             otherItem.classList.remove('active');
-            const otherIcon = otherItem.querySelector('.faq-icon');
-            if (otherIcon) otherIcon.setAttribute('data-lucide', 'plus');
         }
     });
 
     // Toggle current item
     item.classList.toggle('active');
-    const icon = btn.querySelector('.faq-icon');
-    if (icon) {
-        icon.setAttribute('data-lucide', item.classList.contains('active') ? 'minus' : 'plus');
-        lucide.createIcons();
-    }
 }
 
-// Also support delegated .faq-question clicks (backwards compat)
-document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => toggleFaq(q));
-});
 
 // Lead Modal Logic
 function openLeadModal() {
@@ -193,7 +209,7 @@ document.getElementById('leadModal')?.addEventListener('click', (e) => {
 });
 
 function clearFieldErrors() {
-    const fields = ['empresa', 'whatsapp', 'email', 'faturamento', 'gargalo', 'consent'];
+    const fields = ['nome', 'empresa', 'whatsapp', 'email', 'faturamento', 'gargalo', 'consent'];
     fields.forEach((fieldId) => {
         const field = document.getElementById(fieldId);
         const errorEl = document.getElementById(`${fieldId}Error`);
@@ -212,6 +228,10 @@ function setFieldError(fieldId, message) {
 function validateLeadFields(payload) {
     clearFieldErrors();
     const errors = [];
+
+    if (!payload.nome || payload.nome.length < 2) {
+        errors.push({ field: 'nome', msg: 'Informe seu nome.' });
+    }
 
     if (!payload.empresa || payload.empresa.length < 2) {
         errors.push({ field: 'empresa', msg: 'Informe o nome da empresa.' });
@@ -263,7 +283,7 @@ if (whatsappInput) {
     });
 }
 
-['empresa', 'whatsapp', 'email', 'faturamento', 'gargalo', 'consent'].forEach((fieldId) => {
+['nome', 'empresa', 'whatsapp', 'email', 'faturamento', 'gargalo', 'consent'].forEach((fieldId) => {
     const field = document.getElementById(fieldId);
     const errorEl = document.getElementById(`${fieldId}Error`);
     if (!field) return;
@@ -301,6 +321,7 @@ async function submitLeadForm(e) {
     }
 
     const payload = {
+        nome: document.getElementById('nome').value.trim(),
         empresa: document.getElementById('empresa').value.trim(),
         whatsapp: document.getElementById('whatsapp').value.trim(),
         email: document.getElementById('email').value.trim(),
@@ -396,6 +417,10 @@ function formatCurrency(value) {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(value);
 }
 
+function formatCurrencyWithZeros(value) {
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
+}
+
 function formatNumber(value) {
     return new Intl.NumberFormat('pt-BR').format(value);
 }
@@ -416,9 +441,9 @@ function calculateROI() {
     const realMonthlyCost    = monthlySalary * cltMultiplier;
     const realHourlyRate     = realMonthlyCost / hoursPerMonth;
     const hoursWastedPerYear = hoursPerDay * workDaysPerMonth * monthsPerYear;
-    const moneyWastedPerYear = realHourlyRate * hoursWastedPerYear;
+    const moneyWastedPerYear = Math.round(realHourlyRate * hoursWastedPerYear);
 
-    costResult.textContent = formatCurrency(moneyWastedPerYear);
+    costResult.textContent = formatCurrencyWithZeros(moneyWastedPerYear);
     timeResult.textContent = formatNumber(hoursWastedPerYear) + 'h';
 
     if (liveCostResult) {
@@ -426,7 +451,7 @@ function calculateROI() {
 
         const costPerSecond = moneyWastedPerYear / (365 * 24 * 60 * 60);
         let currentWasted = 0;
-        liveCostResult.textContent = formatCurrency(currentWasted);
+        liveCostResult.textContent = formatCurrencyWithZeros(currentWasted);
 
         liveTickerInterval = setInterval(() => {
             currentWasted += costPerSecond;
@@ -563,3 +588,5 @@ if (hoursSlider) {
         });
     });
 })();
+
+
