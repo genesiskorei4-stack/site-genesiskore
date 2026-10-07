@@ -21,7 +21,8 @@ const fundoEscuro = (el) => !!el && el.matches('.escuro, .rodape');
 /*
  * De onde o lead veio. O link da bio do Instagram é `genesiskore.com/?origem=instagram`, e a
  * etiqueta segue no formulário até o CRM. Sem etiqueta, o navegador interno do Instagram
- * costuma deixar `instagram.com` como página anterior. Guardada na sessão porque a pessoa
+ * costuma deixar `instagram.com` como página anterior, e o LinkedIn deixa `linkedin.com` ou
+ * `lnkd.in`, que é como o post da empresa leva ao site sem `?origem` no texto. Guardada na sessão porque a pessoa
  * pode navegar pela página antes de preencher, e o endereço perde o `?` quando ela clica num
  * link de seção.
  */
@@ -30,6 +31,7 @@ const origemDoLead = (() => {
     const params = new URLSearchParams(location.search);
     let origem = limpar(params.get('origem') || params.get('utm_source'));
     if (!origem && /instagram\./i.test(document.referrer)) origem = 'instagram';
+    if (!origem && /(linkedin\.|lnkd\.in)/i.test(document.referrer)) origem = 'linkedin';
     try {
         if (origem) sessionStorage.setItem('origem', origem);
         else origem = sessionStorage.getItem('origem') || '';
