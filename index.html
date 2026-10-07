@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>GenesisKore | Automação e sistemas sob medida</title>
     <meta name="description"
         content="A GenesisKore tira o trabalho repetitivo da mão da sua equipe: atendimento, documentos, cobrança e números do negócio rodando sozinhos, do jeito da sua empresa.">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#000000">
     <!-- Prévia de link (WhatsApp, Instagram, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://genesiskore.com/">
@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;500;700&family=Playfair+Display:ital@1&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Sem JavaScript, nada fica escondido esperando animação. -->
@@ -43,13 +43,13 @@
     <header class="topo" id="topo">
         <div class="container topo-linha">
             <a href="#inicio" class="marca" aria-label="GenesisKore, voltar ao início">
-                <img src="logo.png" alt="" width="40" height="40">
+                <img src="logo.png" alt="" width="36" height="40">
                 <span>GENESISKORE</span>
             </a>
             <nav class="menu-largo" aria-label="Seções">
-                <a href="#resultados">Resultados</a>
+                <a href="#cases">Resultados</a>
+                <a href="#calculadora">Calculadora</a>
                 <a href="#como-funciona">Como funciona</a>
-                <a href="#cases">Cases</a>
                 <a href="#perguntas">Perguntas</a>
             </nav>
             <button type="button" class="botao botao-cheio botao-pequeno topo-cta" data-abrir-diagnostico>
@@ -60,62 +60,147 @@
                 <span></span><span></span>
             </button>
         </div>
-        <nav class="menu-celular" id="menuCelular" aria-label="Seções" hidden>
-            <a href="#resultados">Resultados</a>
-            <a href="#onde-trava">Onde o tempo vai embora</a>
-            <a href="#calculadora">Calculadora</a>
-            <a href="#como-funciona">Como funciona</a>
-            <a href="#cases">Cases</a>
-            <a href="#perguntas">Perguntas</a>
-            <button type="button" class="botao botao-cheio" data-abrir-diagnostico>Quero meu diagnóstico</button>
-        </nav>
+        <span class="topo-progresso" aria-hidden="true"></span>
     </header>
+
+    <nav class="menu-celular" id="menuCelular" aria-label="Seções">
+        <a href="#cases">Resultados</a>
+        <a href="#onde-trava">Onde o tempo vai embora</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#compromissos">Compromissos</a>
+        <a href="#perguntas">Perguntas</a>
+        <button type="button" class="botao botao-cheio botao-largo" data-abrir-diagnostico>Quero meu diagnóstico</button>
+        <p class="menu-rodape">genesiskore.i4@gmail.com</p>
+    </nav>
 
     <main id="conteudo">
 
-        <!-- 1. A promessa, em uma tela de celular -->
-        <section class="secao escuro abertura" id="inicio">
-            <div class="container">
-                <p class="etiqueta revelar">Automatizando sua rota para o sucesso</p>
-                <h1 class="revelar">O trabalho repetitivo da sua empresa, rodando sozinho.</h1>
-                <p class="lead suave revelar">A gente constrói, do jeito da sua empresa, o sistema que responde cliente,
-                    emite documento, cobra e organiza os números. Sua equipe fica com o que precisa de gente.</p>
-                <div class="acoes revelar">
-                    <button type="button" class="botao botao-cheio" data-abrir-diagnostico>
-                        Quero meu diagnóstico
-                        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                    </button>
-                    <a href="#cases" class="botao botao-vazio">Ver o que já fizemos</a>
-                </div>
-                <ul class="selos revelar" aria-label="Como a gente trabalha">
-                    <li>Feito sob medida</li>
-                    <li>Preço fechado antes de começar</li>
-                    <li>Sem trocar as ferramentas que você usa</li>
-                    <li>Entrega por partes</li>
-                </ul>
+        <!-- 1. A promessa. O resultado primeiro, e a prova de que roda sozinho ao lado. -->
+        <section class="abertura escuro" id="inicio" data-anima>
+            <div class="abertura-fundo" aria-hidden="true">
+                <span class="abertura-luz"></span>
+                <svg class="nucleo" viewBox="0 0 400 400" focusable="false">
+                    <g class="nucleo-eixos">
+                        <line x1="0" y1="200" x2="400" y2="200" />
+                        <line x1="200" y1="0" x2="200" y2="400" />
+                    </g>
+                    <circle class="nucleo-regua" cx="200" cy="200" r="188" />
+                    <line class="nucleo-fluxo" x1="200" y1="0" x2="200" y2="200" />
+                    <line class="nucleo-fluxo" x1="0" y1="200" x2="200" y2="200" />
+                    <line class="nucleo-fluxo" x1="400" y1="200" x2="200" y2="200" />
+                    <line class="nucleo-fluxo" x1="200" y1="400" x2="200" y2="200" />
+                    <rect class="nucleo-orbita-lenta" x="100" y="100" width="200" height="200" />
+                    <circle class="nucleo-orbita-rapida" cx="200" cy="200" r="140" />
+                    <rect class="nucleo-losango" x="141" y="141" width="118" height="118" />
+                    <g class="nucleo-marcas">
+                        <path d="M92 100h16M100 92v16" />
+                        <path d="M292 100h16M300 92v16" />
+                        <path d="M92 300h16M100 292v16" />
+                        <path d="M292 300h16M300 292v16" />
+                    </g>
+                    <rect class="nucleo-centro" x="175" y="175" width="50" height="50" />
+                    <circle class="nucleo-olho" cx="200" cy="200" r="10" />
+                </svg>
+                <span class="abertura-grao"></span>
             </div>
+
+            <div class="container abertura-grade">
+                <div class="avisos-vivos vidro" aria-hidden="true">
+                    <p class="avisos-rotulo"><span class="ponto-vivo"></span>Enquanto sua equipe cuida de outra coisa</p>
+                    <div class="avisos-janela">
+                        <ul class="avisos-lista" id="avisosLista">
+                            <li class="aviso"><span class="aviso-ponto"></span><span class="aviso-texto">Recibo enviado ao cliente</span><span class="aviso-hora">agora</span></li>
+                            <li class="aviso"><span class="aviso-ponto"></span><span class="aviso-texto">Pedido lançado na planilha</span><span class="aviso-hora">há 1 min</span></li>
+                            <li class="aviso"><span class="aviso-ponto"></span><span class="aviso-texto">Certificado emitido com QR code</span><span class="aviso-hora">há 4 min</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="abertura-texto">
+                    <p class="etiqueta entrada">Automatizando sua rota para o sucesso</p>
+                    <h1 class="abertura-titulo">
+                        <span class="palavra"><span>O</span></span>
+                        <span class="palavra"><span>trabalho</span></span>
+                        <span class="palavra"><span>repetitivo</span></span>
+                        <span class="palavra"><span>da</span></span>
+                        <span class="palavra"><span>sua</span></span>
+                        <span class="palavra"><span>empresa,</span></span>
+                        <span class="palavra"><span>rodando</span></span>
+                        <span class="palavra"><span><em class="enfase">sozinho</em>.</span></span>
+                    </h1>
+                    <p class="lead suave entrada">Atendimento, documentos, cobrança e os números do negócio funcionando
+                        sem ninguém fazer à mão. Do jeito da sua empresa, com preço fechado antes de começar.</p>
+                    <div class="acoes entrada">
+                        <button type="button" class="botao botao-cheio botao-brilho" data-abrir-diagnostico>
+                            Quero meu diagnóstico
+                            <svg class="seta" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                        </button>
+                        <a href="#cases" class="link-seta">Ver resultados de clientes</a>
+                    </div>
+                    <p class="garantia-curta entrada">A conversa de diagnóstico não custa nada. Você sai dela sabendo o que
+                        vale automatizar, mesmo que não feche com a gente.</p>
+                </div>
+            </div>
+
+            <a href="#prova" class="rolar" aria-label="Descer para a próxima seção"><span></span></a>
         </section>
 
-        <!-- 2. Números da casa -->
-        <section class="secao numeros" id="resultados" aria-labelledby="titulo-resultados">
+        <!-- 2. Prova logo de cara: quem já trabalha com a gente, e os números da casa -->
+        <section class="prova escuro" id="prova" aria-labelledby="titulo-prova" data-anima>
             <div class="container">
-                <h2 id="titulo-resultados" class="visualmente-oculto">Resultados</h2>
+                <h2 id="titulo-prova" class="etiqueta revelar">Quem já trabalha com a gente</h2>
+            </div>
+            <div class="marquise revelar" aria-label="Empresas atendidas">
+                <div class="marquise-trilho">
+                    <ul class="marquise-grupo">
+                        <li><img src="logo-auth.png" alt="AUTH" class="logo-auth" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.png" alt="Fazenda CCA" class="logo-cca" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.png" alt="Rastro" class="logo-rastro" height="80" loading="lazy"></li>
+                        <li><img src="logo-medicina.png" alt="Clínica médica" class="logo-medicina" height="52" loading="lazy"></li>
+                        <li><img src="logo-gmf.png" alt="GMF Gráfica" class="logo-gmf" height="90" loading="lazy"></li>
+                    </ul>
+                    <!-- As cópias só existem para a faixa girar sem emenda -->
+                    <ul class="marquise-grupo" aria-hidden="true">
+                        <li><img src="logo-auth.png" alt="" class="logo-auth" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.png" alt="" class="logo-cca" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.png" alt="" class="logo-rastro" height="80" loading="lazy"></li>
+                        <li><img src="logo-medicina.png" alt="" class="logo-medicina" height="52" loading="lazy"></li>
+                        <li><img src="logo-gmf.png" alt="" class="logo-gmf" height="90" loading="lazy"></li>
+                    </ul>
+                    <ul class="marquise-grupo" aria-hidden="true">
+                        <li><img src="logo-auth.png" alt="" class="logo-auth" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.png" alt="" class="logo-cca" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.png" alt="" class="logo-rastro" height="80" loading="lazy"></li>
+                        <li><img src="logo-medicina.png" alt="" class="logo-medicina" height="52" loading="lazy"></li>
+                        <li><img src="logo-gmf.png" alt="" class="logo-gmf" height="90" loading="lazy"></li>
+                    </ul>
+                    <ul class="marquise-grupo" aria-hidden="true">
+                        <li><img src="logo-auth.png" alt="" class="logo-auth" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.png" alt="" class="logo-cca" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.png" alt="" class="logo-rastro" height="80" loading="lazy"></li>
+                        <li><img src="logo-medicina.png" alt="" class="logo-medicina" height="52" loading="lazy"></li>
+                        <li><img src="logo-gmf.png" alt="" class="logo-gmf" height="90" loading="lazy"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
                 <dl class="grade-numeros">
                     <div class="revelar">
                         <dt>Horas poupadas</dt>
-                        <dd>+47 mil</dd>
+                        <dd>+<span data-contar="47">47</span> mil</dd>
                     </div>
                     <div class="revelar">
                         <dt>Projetos entregues</dt>
-                        <dd>+8</dd>
+                        <dd>+<span data-contar="8">8</span></dd>
                     </div>
                     <div class="revelar">
                         <dt>Setores atendidos</dt>
-                        <dd>+4</dd>
+                        <dd>+<span data-contar="4">4</span></dd>
                     </div>
                     <div class="revelar">
                         <dt>Do diagnóstico ao ar</dt>
-                        <dd>2 a 6 <small>semanas</small></dd>
+                        <dd><span data-contar="2">2</span> a <span data-contar="6">6</span> <small>semanas</small></dd>
                     </div>
                 </dl>
             </div>
@@ -125,58 +210,69 @@
         <section class="secao" id="onde-trava" aria-labelledby="titulo-onde-trava">
             <div class="container">
                 <p class="etiqueta revelar">O que muda no seu dia</p>
-                <h2 id="titulo-onde-trava" class="revelar">Onde o tempo da sua empresa vai embora</h2>
+                <h2 id="titulo-onde-trava" class="titulo-secao revelar">Onde o tempo da sua empresa vai embora</h2>
                 <p class="lead revelar">Se alguma destas cenas é do seu dia a dia, tem hora de trabalho sendo paga
                     para fazer o que um sistema faz sozinho.</p>
 
                 <ul class="grade-dores">
                     <li class="cartao revelar">
-                        <p class="antes">Responder a mesma pergunta no WhatsApp o dia inteiro</p>
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9h8M8 12h5" /></svg>
+                        <p class="mini">Hoje</p>
+                        <p><span class="antes">Responder a mesma pergunta no WhatsApp o dia inteiro</span></p>
+                        <p class="mini mini-depois">Com a GenesisKore</p>
                         <p class="depois">O cliente recebe a resposta, o andamento do pedido e o documento na hora,
                             sem ninguém parar o que está fazendo.</p>
                     </li>
                     <li class="cartao revelar">
-                        <p class="antes">Copiar dado de uma planilha para outra</p>
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" /><path d="M4 10h16M4 15h16M10 4v16" /></svg>
+                        <p class="mini">Hoje</p>
+                        <p><span class="antes">Copiar dado de uma planilha para outra</span></p>
+                        <p class="mini mini-depois">Com a GenesisKore</p>
                         <p class="depois">A informação entra uma vez e aparece em todo lugar que precisa.</p>
                     </li>
                     <li class="cartao revelar">
-                        <p class="antes">Montar nota, recibo, certificado ou relatório à mão</p>
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z" /><path d="M14 3v5h5M9 13h6M9 17h4" /></svg>
+                        <p class="mini">Hoje</p>
+                        <p><span class="antes">Montar nota, recibo, certificado ou relatório à mão</span></p>
+                        <p class="mini mini-depois">Com a GenesisKore</p>
                         <p class="depois">O documento sai pronto, com a sua marca, no momento certo.</p>
                     </li>
                     <li class="cartao revelar">
-                        <p class="antes">Descobrir só no fim do mês como o caixa ficou</p>
-                        <p class="depois">Os números do negócio numa tela só, atualizados enquanto a empresa trabalha.
-                        </p>
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20h16M7 16v-4M12 16V8M17 16V5" /></svg>
+                        <p class="mini">Hoje</p>
+                        <p><span class="antes">Descobrir só no fim do mês como o caixa ficou</span></p>
+                        <p class="mini mini-depois">Com a GenesisKore</p>
+                        <p class="depois">Os números do negócio numa tela só, atualizados enquanto a empresa trabalha.</p>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- 4. Quanto isso custa hoje -->
+        <!-- 4. Quanto custa ficar como está -->
         <section class="secao escuro" id="calculadora" aria-labelledby="titulo-calculadora">
             <div class="container grade-calculadora">
-                <div class="revelar">
-                    <p class="etiqueta">Faça a conta</p>
-                    <h2 id="titulo-calculadora">Quanto o trabalho repetitivo custa hoje</h2>
-                    <p class="suave">Arraste e veja uma estimativa do que a sua empresa paga por ano para gente fazer
-                        tarefa que poderia rodar sozinha.</p>
+                <div>
+                    <p class="etiqueta revelar">Faça a conta</p>
+                    <h2 id="titulo-calculadora" class="titulo-secao revelar">Quanto custa deixar como está</h2>
+                    <p class="suave revelar">Arraste e veja quanto a sua empresa paga por ano para gente fazer tarefa que
+                        poderia rodar sozinha.</p>
 
-                    <div class="controle">
-                        <label for="hoursSlider">Horas por dia em tarefa repetitiva <span class="dica">(somando a
-                                equipe)</span></label>
+                    <div class="controle revelar">
+                        <label for="hoursSlider">Horas por dia em tarefa repetitiva <span class="dica">somando a
+                                equipe</span></label>
                         <output id="hoursVal" for="hoursSlider">10h</output>
                         <input type="range" id="hoursSlider" min="1" max="80" value="10">
                     </div>
-                    <div class="controle">
+                    <div class="controle revelar">
                         <label for="salarySlider">Salário médio da equipe</label>
                         <output id="salaryVal" for="salarySlider">R$ 2.500</output>
                         <input type="range" id="salarySlider" min="1500" max="15000" step="100" value="2500">
                     </div>
                 </div>
 
-                <div class="painel-resultado revelar" aria-live="polite">
+                <div class="painel-resultado brilho revelar" aria-live="polite">
                     <p class="etiqueta">Estimativa por ano</p>
-                    <p class="resultado-titulo">Custo do trabalho repetitivo</p>
+                    <p class="resultado-titulo">Dinheiro indo para tarefa repetitiva</p>
                     <p class="resultado-valor" id="costResult">R$ 76.313</p>
                     <p class="resultado-titulo">Horas que podiam ir para vender e atender</p>
                     <p class="resultado-horas" id="timeResult">2.640h</p>
@@ -189,57 +285,300 @@
             </div>
         </section>
 
-        <!-- 5. Rapidez: como funciona, do primeiro papo ao sistema no ar -->
-        <section class="secao" id="como-funciona" aria-labelledby="titulo-como-funciona">
+        <!-- 5. Resultados. Decisões do Gustavo em 07/10/2026: AUTH em destaque, CCA e Rastro
+             com os aplicativos de gestão, a Clínica como estava e a nossa própria plataforma
+             como case. Nenhum número do negócio da AUTH (volume, faturamento) entra aqui. -->
+        <section class="secao" id="cases" aria-labelledby="titulo-cases">
             <div class="container">
-                <p class="etiqueta revelar">Rápido e sem complicação</p>
-                <h2 id="titulo-como-funciona" class="revelar">Do primeiro papo ao sistema funcionando</h2>
+                <p class="etiqueta revelar">Resultados</p>
+                <h2 id="titulo-cases" class="titulo-secao revelar">O que nossos clientes <em class="enfase">ganharam</em></h2>
+                <p class="lead revelar">Alguns exemplos, escolhidos entre os projetos que a gente já entregou, em
+                    setores bem diferentes. Cada um feito do zero para o jeito daquela empresa.</p>
 
-                <ol class="passos">
-                    <li class="revelar">
-                        <span class="passo-numero">01</span>
-                        <div>
-                            <h3>Conversa de diagnóstico</h3>
-                            <p>Você conta como o trabalho acontece hoje. A gente mostra onde está o desperdício e diz o
-                                que vale automatizar. E o que não vale.</p>
+                <div class="case-abas revelar" role="tablist" aria-label="Escolha um case" id="caseAbas">
+                    <button type="button" role="tab" class="case-aba" id="aba-auth" aria-controls="case-auth" aria-selected="true"><span>01</span>AUTH</button>
+                    <button type="button" role="tab" class="case-aba" id="aba-cca" aria-controls="case-cca" aria-selected="false" tabindex="-1"><span>02</span>Fazenda CCA</button>
+                    <button type="button" role="tab" class="case-aba" id="aba-rastro" aria-controls="case-rastro" aria-selected="false" tabindex="-1"><span>03</span>Rastro</button>
+                    <button type="button" role="tab" class="case-aba" id="aba-medicina" aria-controls="case-medicina" aria-selected="false" tabindex="-1"><span>04</span>Clínica</button>
+                    <button type="button" role="tab" class="case-aba" id="aba-genesiskore" aria-controls="case-genesiskore" aria-selected="false" tabindex="-1"><span>05</span>GenesisKore</button>
+                    <span class="case-indicador" aria-hidden="true"></span>
+                </div>
+
+                <div class="case-paineis revelar" id="casePaineis">
+                    <article class="case" id="case-auth" role="tabpanel" aria-labelledby="aba-auth" tabindex="0">
+                        <header class="case-topo">
+                            <div>
+                                <p class="etiqueta">Autenticação de peças de luxo</p>
+                                <h3>AUTH: a operação inteira num sistema só</h3>
+                            </div>
+                            <img src="logo-auth.png" alt="" class="case-logo logo-auth" height="28" loading="lazy">
+                        </header>
+                        <div class="case-resultado">
+                            <p class="resultado-numero"><span data-contar="500">500</span>%</p>
+                            <p>mais capacidade de avaliação, sem contratar mais gente.</p>
                         </div>
-                    </li>
-                    <li class="revelar">
-                        <span class="passo-numero">02</span>
-                        <div>
-                            <h3>Proposta com preço fechado</h3>
-                            <p>O que vai ser feito, em quanto tempo e por quanto, em três opções. Você escolhe sem ter
-                                pago nada antes.</p>
+                        <div class="case-historia">
+                            <div>
+                                <p class="mini">Antes</p>
+                                <p>Cada certificado de autenticidade era montado à mão, peça por peça. Com mais pedidos
+                                    chegando, a conta não fechava.</p>
+                            </div>
+                            <div>
+                                <p class="mini">O que fizemos</p>
+                                <p>Primeiro, o certificado passou a sair sozinho: o avaliador preenche os dados e o cliente
+                                    recebe o documento pronto. Depois veio a plataforma completa, com duas portas: uma para
+                                    a equipe trabalhar, outra para a loja e o cliente acompanharem.</p>
+                            </div>
                         </div>
-                    </li>
-                    <li class="revelar">
-                        <span class="passo-numero">03</span>
-                        <div>
-                            <h3>A primeira parte já em uso</h3>
-                            <p>Não precisa esperar tudo ficar pronto. A entrega vem por partes, e sua equipe sente a
-                                diferença desde a primeira.</p>
+                        <ul class="case-lista">
+                            <li><strong>Para a equipe</strong> Fila organizada pelo prazo de cada peça, fotos e checklist
+                                da análise, certificado com QR code, e clientes, financeiro e metas na mesma tela. Cada
+                                pessoa vê só o que a função dela pede.</li>
+                            <li><strong>Para a loja e o cliente</strong> Mandam a peça, acompanham cada etapa com prazo e
+                                baixam o certificado sem precisar perguntar a ninguém.</li>
+                            <li><strong>Para quem compra a peça</strong> O QR do certificado abre o documento daquela
+                                peça, para conferir se é a mesma.</li>
+                            <li><strong>Sempre de olho</strong> A cada 5 minutos o sistema testa se a equipe consegue
+                                trabalhar, e se conserta sozinho nas falhas que a gente já conhece.</li>
+                        </ul>
+                        <footer class="case-rodape">
+                            <a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer"
+                                class="link-seta">Ver a AUTH no Instagram</a>
+                            <button type="button" class="case-proximo" data-proximo>Próximo: Fazenda CCA</button>
+                        </footer>
+                    </article>
+
+                    <article class="case" id="case-cca" role="tabpanel" aria-labelledby="aba-cca" tabindex="0">
+                        <header class="case-topo">
+                            <div>
+                                <p class="etiqueta">Agro e pecuária</p>
+                                <h3>Fazenda CCA: a fazenda inteira num aplicativo só</h3>
+                            </div>
+                            <img src="logo-cca.png" alt="" class="case-logo logo-cca" height="64" loading="lazy">
+                        </header>
+                        <div class="case-resultado">
+                            <p class="resultado-numero">Zero</p>
+                            <p>dificuldade para a equipe: tudo pelo celular, direto do pasto.</p>
                         </div>
-                    </li>
-                    <li class="revelar">
-                        <span class="passo-numero">04</span>
-                        <div>
-                            <h3>A gente continua junto</h3>
-                            <p>Depois que o sistema entra no ar, a gente acompanha, ajusta e corrige. Se algo falhar, o
-                                próprio sistema avisa a nossa equipe.</p>
+                        <div class="case-historia">
+                            <div>
+                                <p class="mini">Antes</p>
+                                <p>As vendas de gado eram anotadas em bloquinho, que se perdia na caminhonete. O dono não
+                                    enxergava o caixa.</p>
+                            </div>
+                            <div>
+                                <p class="mini">O que fizemos</p>
+                                <p>Um sistema de gestão completo, feito para quem está no campo. Num aplicativo só,
+                                    simples o bastante para o peão usar e preencher, a fazenda cuida de tudo o que antes
+                                    ficava espalhado.</p>
+                            </div>
                         </div>
-                    </li>
-                </ol>
-                <p class="nota-prazo revelar">Na maioria dos projetos, são <strong>2 a 6 semanas</strong> entre a primeira
-                    conversa e o sistema funcionando.</p>
+                        <ul class="case-lista">
+                            <li><strong>Pastos e lotes</strong> O manejo de cada pasto e de cada lote registrado na hora,
+                                por quem está lá.</li>
+                            <li><strong>Entrada e saída</strong> Tudo o que entra e sai da fazenda, registrado com data e
+                                histórico.</li>
+                            <li><strong>Insumos, veículos e maquinário</strong> O que tem, o que foi usado e cada máquina,
+                                no mesmo lugar.</li>
+                            <li><strong>Por áudio, foto ou texto</strong> Quem prefere não abrir o aplicativo manda pelo
+                                celular. O sistema entende, organiza e gera o recibo em PDF na hora.</li>
+                            <li><strong>Relatório pronto</strong> Todo mês, semestre e ano sai o relatório completo do
+                                caixa.</li>
+                        </ul>
+                        <footer class="case-rodape">
+                            <button type="button" class="case-proximo" data-proximo>Próximo: Rastro</button>
+                        </footer>
+                    </article>
+
+                    <article class="case" id="case-rastro" role="tabpanel" aria-labelledby="aba-rastro" tabindex="0">
+                        <header class="case-topo">
+                            <div>
+                                <p class="etiqueta">Logística e frotas</p>
+                                <h3>Rastro: frota e pneus sob controle</h3>
+                            </div>
+                            <img src="logo-rastro.png" alt="" class="case-logo logo-rastro" height="80" loading="lazy">
+                        </header>
+                        <div class="case-resultado">
+                            <p class="resultado-numero">Zero</p>
+                            <p>trabalho manual entre a medição e a decisão de cada pneu.</p>
+                        </div>
+                        <div class="case-historia">
+                            <div>
+                                <p class="mini">Antes</p>
+                                <p>Centenas de pneus controlados no olho, sem histórico. Resultado: troca antes da hora e
+                                    pneu falhando na estrada.</p>
+                            </div>
+                            <div>
+                                <p class="mini">O que fizemos</p>
+                                <p>Um aplicativo para a Rastro cuidar da frota de caminhões e do estoque de pneus dos
+                                    clientes dela, que são transportadoras. Um controle muito mais fino, e rastreável do
+                                    começo ao fim.</p>
+                            </div>
+                        </div>
+                        <ul class="case-lista">
+                            <li><strong>Cada pneu com história</strong> Do estoque ao caminhão: em qual veículo está,
+                                quanto rodou e como está o desgaste.</li>
+                            <li><strong>Medição pelo celular</strong> O técnico mede, e o sistema calcula o desgaste e
+                                guarda tudo numa ficha em PDF.</li>
+                            <li><strong>Decisão pronta</strong> Todo mês chega o relatório dizendo o que trocar e o que
+                                rodiziar.</li>
+                        </ul>
+                        <footer class="case-rodape">
+                            <button type="button" class="case-proximo" data-proximo>Próximo: Clínica</button>
+                        </footer>
+                    </article>
+
+                    <article class="case" id="case-medicina" role="tabpanel" aria-labelledby="aba-medicina" tabindex="0">
+                        <header class="case-topo">
+                            <div>
+                                <p class="etiqueta">Saúde</p>
+                                <h3>Clínica médica: uma secretária que não para</h3>
+                            </div>
+                            <img src="logo-medicina.png" alt="" class="case-logo logo-medicina" height="52" loading="lazy">
+                        </header>
+                        <div class="case-resultado">
+                            <p class="resultado-numero">-<span data-contar="40">40</span>%</p>
+                            <p>de faltas nas consultas, com lembretes automáticos escritos com jeito de gente.</p>
+                        </div>
+                        <div class="case-historia">
+                            <div>
+                                <p class="mini">Antes</p>
+                                <p>O paciente esperava até 4 horas para conseguir marcar consulta ou pedir orçamento.</p>
+                            </div>
+                            <div>
+                                <p class="mini">O que fizemos</p>
+                                <p>Uma secretária virtual que atende a qualquer hora, inclusive de madrugada e no fim de
+                                    semana.</p>
+                            </div>
+                        </div>
+                        <ul class="case-lista">
+                            <li><strong>Primeiro atendimento</strong> Faz as primeiras perguntas sobre os sintomas antes de
+                                o paciente chegar.</li>
+                            <li><strong>Agenda do médico</strong> Marca, remarca e lembra o paciente da consulta.</li>
+                            <li><strong>Prontuário em dia</strong> O resumo de cada atendimento fica guardado no lugar
+                                certo.</li>
+                        </ul>
+                        <footer class="case-rodape">
+                            <button type="button" class="case-proximo" data-proximo>Próximo: GenesisKore</button>
+                        </footer>
+                    </article>
+
+                    <article class="case" id="case-genesiskore" role="tabpanel" aria-labelledby="aba-genesiskore" tabindex="0">
+                        <header class="case-topo">
+                            <div>
+                                <p class="etiqueta">Nossa própria operação</p>
+                                <h3>GenesisKore: a gente usa o que vende</h3>
+                            </div>
+                            <img src="logo.png" alt="" class="case-logo logo-casa" height="40" loading="lazy">
+                        </header>
+                        <div class="case-resultado">
+                            <p class="resultado-numero"><span data-contar="1">1</span> tela</p>
+                            <p>para projetos, clientes, caixa e marketing da empresa inteira.</p>
+                        </div>
+                        <div class="case-historia">
+                            <div>
+                                <p class="mini">Antes</p>
+                                <p>Cronograma de projeto em arquivo solto, lead numa planilha, contrato anotado em texto e o
+                                    caixa só no extrato do banco. Para saber como a empresa estava, alguém tinha de juntar
+                                    tudo à mão.</p>
+                            </div>
+                            <div>
+                                <p class="mini">O que fizemos</p>
+                                <p>Construímos para nós o mesmo tipo de sistema que entregamos para os clientes. É nele
+                                    que testamos primeiro muita coisa que depois vai para quem contrata a gente.</p>
+                            </div>
+                        </div>
+                        <ul class="case-lista">
+                            <li><strong>Cliente acompanha sozinho</strong> Cada projeto tem um link próprio. O cliente
+                                abre e vê o que já foi entregue e o que vem em seguida, sem pedir atualização.</li>
+                            <li><strong>Lead atendido na hora</strong> Quem preenche o formulário do site cai direto na
+                                plataforma, com um resumo do pedido e a primeira mensagem de WhatsApp pronta para mandar.</li>
+                            <li><strong>Caixa sem surpresa</strong> Contratos, cobranças e extrato do banco num lugar só,
+                                com a previsão do caixa dos próximos três meses.</li>
+                            <li><strong>Cada um vê o que precisa</strong> Sócio vê tudo. Quem trabalha num projeto vê só
+                                aquele projeto, sem nenhum valor em dinheiro.</li>
+                            <li><strong>Marketing que se adianta</strong> Todo dia chega um post e os stories do
+                                Instagram no padrão da marca, prontos para revisar e publicar.</li>
+                            <li><strong>Aviso quando algo para</strong> Cada automação bate ponto. Se uma parar, a tela
+                                inicial mostra qual foi.</li>
+                        </ul>
+                        <footer class="case-rodape">
+                            <button type="button" class="case-proximo" data-proximo>Voltar para a AUTH</button>
+                        </footer>
+                    </article>
+                </div>
+                <p class="dica-deslizar" aria-hidden="true">Deslize para o lado para ver o próximo case</p>
             </div>
         </section>
 
-        <!-- 6. Personalização -->
-        <section class="secao escuro" id="sob-medida" aria-labelledby="titulo-sob-medida">
+        <!-- 6. Depoimentos. Só aparece com fala de cliente de verdade, com autorização dele.
+             Para publicar: tirar o atributo hidden e preencher um <figure> por depoimento, no modelo:
+             <figure class="depoimento revelar">
+                 <blockquote><p>Texto que o cliente mandou, sem editar o sentido.</p></blockquote>
+                 <figcaption><strong>Nome</strong><span>Cargo, Empresa</span></figcaption>
+             </figure> -->
+        <section class="secao escuro" id="depoimentos" aria-labelledby="titulo-depoimentos" hidden>
+            <div class="container">
+                <p class="etiqueta revelar">Quem usa conta</p>
+                <h2 id="titulo-depoimentos" class="titulo-secao revelar">O que os clientes dizem</h2>
+                <div class="grade-depoimentos">
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Rapidez, e quanto trabalho ele NÃO vai ter -->
+        <section class="secao escuro" id="como-funciona" aria-labelledby="titulo-como-funciona">
+            <div class="container grade-processo">
+                <div class="processo-cabeca">
+                    <p class="etiqueta revelar">Rápido e sem complicação</p>
+                    <h2 id="titulo-como-funciona" class="titulo-secao revelar">Do primeiro papo ao sistema funcionando</h2>
+                    <p class="suave revelar">Na maioria dos projetos, são <strong>2 a 6 semanas</strong>. E a parte que
+                        fica com você é pequena.</p>
+                </div>
+
+                <ol class="passos" id="passos">
+                    <li class="passo revelar">
+                        <span class="passo-no" aria-hidden="true"></span>
+                        <p class="passo-numero">01</p>
+                        <h3>Conversa de diagnóstico</h3>
+                        <p>Você conta como o trabalho acontece hoje. A gente mostra onde está o desperdício e diz o que
+                            vale automatizar. E o que não vale.</p>
+                        <p class="sua-parte"><span>Sua parte</span>Contar como é hoje. A conversa não custa nada.</p>
+                    </li>
+                    <li class="passo revelar">
+                        <span class="passo-no" aria-hidden="true"></span>
+                        <p class="passo-numero">02</p>
+                        <h3>Proposta com preço fechado</h3>
+                        <p>O que vai ser feito, em quanto tempo e por quanto, em três opções. Você escolhe sem ter pago
+                            nada antes.</p>
+                        <p class="sua-parte"><span>Sua parte</span>Escolher uma das opções.</p>
+                    </li>
+                    <li class="passo revelar">
+                        <span class="passo-no" aria-hidden="true"></span>
+                        <p class="passo-numero">03</p>
+                        <h3>A primeira parte já em uso</h3>
+                        <p>Não precisa esperar tudo ficar pronto. A entrega vem por partes, e sua equipe sente a diferença
+                            desde a primeira.</p>
+                        <p class="sua-parte"><span>Sua parte</span>Usar e dizer o que ajustar.</p>
+                    </li>
+                    <li class="passo revelar">
+                        <span class="passo-no" aria-hidden="true"></span>
+                        <p class="passo-numero">04</p>
+                        <h3>A gente continua junto</h3>
+                        <p>Depois que o sistema entra no ar, a gente acompanha, ajusta e corrige. Se algo falhar, o
+                            próprio sistema avisa a nossa equipe.</p>
+                        <p class="sua-parte"><span>Sua parte</span>Nenhuma. Quem fica de olho é a gente.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 8. Personalização, e a admissão: dizer o que ele não precisa comprar -->
+        <section class="secao" id="sob-medida" aria-labelledby="titulo-sob-medida">
             <div class="container">
                 <p class="etiqueta revelar">Feito para a sua empresa</p>
-                <h2 id="titulo-sob-medida" class="revelar">Sistema de prateleira faz você mudar. O nosso muda para você.
-                </h2>
+                <h2 id="titulo-sob-medida" class="titulo-secao revelar">Sistema de prateleira faz você mudar. O nosso muda
+                    para você.</h2>
 
                 <div class="comparacao revelar" role="table" aria-label="Sistema de prateleira comparado com a GenesisKore">
                     <div class="comparacao-linha comparacao-cabecalho" role="row">
@@ -265,265 +604,142 @@
                     </div>
                 </div>
 
-                <p class="honestidade revelar">E se o Bling, o Omie ou a ferramenta que você já paga resolver o seu
-                    problema, a gente fala. Você sai da conversa sabendo disso, sem proposta nenhuma na mão.</p>
+                <blockquote class="honestidade revelar">
+                    <p>E se o Bling, o Omie ou a ferramenta que você já paga resolver o seu problema, a gente fala.</p>
+                    <footer>Você sai da conversa sabendo disso, sem proposta nenhuma na mão.</footer>
+                </blockquote>
             </div>
         </section>
 
-        <!-- 7. Cases (decisões do Gustavo em 07/10/2026): a AUTH em destaque, a nossa própria
-             plataforma como case, CCA e Rastro com os aplicativos de gestão, a Clínica como estava.
-             Nenhum número do negócio da AUTH (volume, faturamento) entra aqui: é confidencial. -->
-        <section class="secao" id="cases" aria-labelledby="titulo-cases">
+        <!-- 9. Reversão de risco -->
+        <section class="secao escuro" id="compromissos" aria-labelledby="titulo-compromissos">
             <div class="container">
-                <p class="etiqueta revelar">Quem já trabalha com a gente</p>
-                <h2 id="titulo-cases" class="revelar">Cases</h2>
-                <p class="lead revelar">Alguns exemplos, escolhidos entre os projetos que a gente já entregou, em
-                    setores bem diferentes. Cada um feito do zero para o jeito daquela empresa.</p>
+                <p class="etiqueta revelar">Sem surpresa</p>
+                <h2 id="titulo-compromissos" class="titulo-secao revelar">Nossos compromissos com você</h2>
 
-                <ul class="logos revelar" aria-label="Empresas atendidas">
-                    <li><a href="#case-auth"><img src="logo-auth.png" alt="AUTH" class="logo-auth" height="28" loading="lazy"></a></li>
-                    <li><a href="#case-cca"><img src="logo-cca.png" alt="Fazenda CCA" class="logo-cca" height="64" loading="lazy"></a></li>
-                    <li><a href="#case-rastro"><img src="logo-rastro.png" alt="Rastro" class="logo-rastro" height="80" loading="lazy"></a></li>
-                    <li><a href="#case-medicina"><img src="logo-medicina.png" alt="Clínica médica" class="logo-medicina" height="52" loading="lazy"></a></li>
-                    <li><img src="logo-gmf.png" alt="GMF Gráfica" class="logo-gmf" height="90" loading="lazy"></li>
+                <ul class="grade-compromissos">
+                    <li class="compromisso brilho revelar">
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12l9-9h8v8l-9 9z" /><circle cx="16" cy="8" r="1.5" /></svg>
+                        <h3>Preço fechado antes de começar</h3>
+                        <p>Valor e prazo vêm escritos na proposta. Você só decide depois de ver os dois.</p>
+                    </li>
+                    <li class="compromisso brilho revelar">
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" /><rect x="13" y="3" width="8" height="8" /><rect x="3" y="13" width="8" height="8" /><path d="M13 17h8M17 13v8" /></svg>
+                        <h3>Paga conforme recebe</h3>
+                        <p>A construção é paga uma vez, e dá para dividir pelas partes entregues.</p>
+                    </li>
+                    <li class="compromisso brilho revelar">
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19L19 5" /><circle cx="7" cy="7" r="2" /><circle cx="17" cy="17" r="2" /></svg>
+                        <h3>Nada sobre o seu faturamento</h3>
+                        <p>Sem porcentagem e sem taxa escondida. A mensalidade cobre a hospedagem, a inteligência
+                            artificial e o nosso acompanhamento.</p>
+                    </li>
+                    <li class="compromisso brilho revelar">
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /><path d="M9 12l2 2 4-4" /></svg>
+                        <h3>Seus dados, só seus</h3>
+                        <p>Cada cliente tem o próprio banco de dados, separado dos outros. Cada pessoa da sua equipe vê só
+                            o que a função dela pede. Tudo dentro da LGPD.</p>
+                    </li>
+                    <li class="compromisso brilho revelar">
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z" /><path d="M10 20a2 2 0 0 0 4 0" /></svg>
+                        <h3>Aviso antes de virar problema</h3>
+                        <p>Quando algo falha, o sistema registra e avisa a nossa equipe na hora.</p>
+                    </li>
                 </ul>
-
-                <article class="case case-destaque revelar" id="case-auth">
-                    <header class="case-topo">
-                        <p class="etiqueta">Autenticação de peças de luxo</p>
-                        <img src="logo-auth.png" alt="" height="28" loading="lazy">
-                    </header>
-                    <h3>AUTH: a operação inteira num sistema só</h3>
-                    <div class="case-colunas">
-                        <div>
-                            <p><strong>Antes.</strong> Cada certificado de autenticidade era montado à mão, peça por
-                                peça. Com mais pedidos chegando, a conta não fechava.</p>
-                            <p><strong>O que fizemos.</strong> Primeiro, o certificado passou a sair sozinho: o avaliador
-                                preenche os dados e o cliente recebe o documento pronto. Depois veio a plataforma
-                                completa, com duas portas: uma para a equipe trabalhar, outra para a loja e o cliente
-                                acompanharem.</p>
-                        </div>
-                        <ul class="case-lista">
-                            <li><strong>Para a equipe</strong> Fila organizada pelo prazo de cada peça, fotos e checklist
-                                da análise, certificado com QR code, e clientes, financeiro e metas na mesma tela. Cada
-                                pessoa vê só o que a função dela pede.</li>
-                            <li><strong>Para a loja e o cliente</strong> Mandam a peça, acompanham cada etapa com prazo e
-                                baixam o certificado sem precisar perguntar a ninguém.</li>
-                            <li><strong>Para quem compra a peça</strong> O QR do certificado abre o documento daquela
-                                peça, para conferir se é a mesma.</li>
-                            <li><strong>Sempre de olho</strong> A cada 5 minutos o sistema testa se a equipe consegue
-                                trabalhar, e se conserta sozinho nas falhas que a gente já conhece.</li>
-                        </ul>
-                    </div>
-                    <footer class="case-resultado">
-                        <p class="resultado-numero">500%</p>
-                        <p>mais capacidade de avaliação, sem contratar mais gente.</p>
-                        <a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer"
-                            class="link-seta">Ver a AUTH no Instagram</a>
-                    </footer>
-                </article>
-
-                <article class="case case-destaque revelar" id="case-genesiskore">
-                    <header class="case-topo">
-                        <p class="etiqueta">Nossa própria operação</p>
-                        <img src="logo.png" alt="" height="28" loading="lazy" class="logo-casa">
-                    </header>
-                    <h3>GenesisKore: a gente usa o que vende</h3>
-                    <div class="case-colunas">
-                        <div>
-                            <p><strong>Antes.</strong> Cronograma de projeto em arquivo solto, lead numa planilha,
-                                contrato anotado em texto e o caixa só no extrato do banco. Para saber como a empresa
-                                estava, alguém tinha de juntar tudo à mão.</p>
-                            <p><strong>O que fizemos.</strong> Construímos para nós o mesmo tipo de sistema que
-                                entregamos para os clientes. Hoje a empresa inteira roda numa plataforma só, e é nela
-                                que testamos primeiro muita coisa que depois vai para quem contrata a gente.</p>
-                        </div>
-                        <ul class="case-lista">
-                            <li><strong>Cliente acompanha sozinho</strong> Cada projeto tem um link próprio. O cliente
-                                abre e vê o que já foi entregue e o que vem em seguida, sem pedir atualização.</li>
-                            <li><strong>Lead atendido na hora</strong> Quem preenche o formulário do site cai direto na
-                                plataforma, com um resumo do pedido e a primeira mensagem de WhatsApp pronta para mandar.
-                            </li>
-                            <li><strong>Caixa sem surpresa</strong> Contratos, cobranças e extrato do banco num lugar
-                                só, com a previsão do caixa dos próximos três meses.</li>
-                            <li><strong>Cada um vê o que precisa</strong> Sócio vê tudo. Quem trabalha num projeto vê só
-                                aquele projeto, sem nenhum valor em dinheiro.</li>
-                            <li><strong>Marketing que se adianta</strong> Todo dia chega um post e os stories do
-                                Instagram no padrão da marca, prontos para revisar e publicar.</li>
-                            <li><strong>Aviso quando algo para</strong> Cada automação bate ponto. Se uma parar, a tela
-                                inicial mostra qual foi.</li>
-                        </ul>
-                    </div>
-                    <footer class="case-resultado">
-                        <p class="resultado-numero">1 tela</p>
-                        <p>para projetos, clientes, caixa e marketing da empresa inteira.</p>
-                    </footer>
-                </article>
-
-                <div class="grade-cases">
-                    <article class="case revelar" id="case-cca">
-                        <p class="etiqueta">Agro e pecuária</p>
-                        <h3>Fazenda CCA: a fazenda inteira num aplicativo só</h3>
-                        <p><strong>Antes.</strong> As vendas de gado eram anotadas em bloquinho, que se perdia na
-                            caminhonete. O dono não enxergava o caixa.</p>
-                        <p><strong>O que fizemos.</strong> Um sistema de gestão completo, feito para quem está no campo.
-                            Num aplicativo só, simples o bastante para o peão usar e preencher, a fazenda cuida dos
-                            pastos e dos lotes, do que entra e do que sai, dos insumos, dos veículos e do maquinário.</p>
-                        <p>Quem prefere não abrir o aplicativo manda áudio, foto da anotação ou texto pelo celular: o
-                            sistema entende, organiza tudo e gera o recibo em PDF na hora. Todo mês, semestre e ano sai o
-                            relatório completo do caixa.</p>
-                        <footer class="case-resultado">
-                            <p class="resultado-numero">Zero</p>
-                            <p>dificuldade para a equipe: tudo pelo celular, direto do pasto.</p>
-                        </footer>
-                    </article>
-
-                    <article class="case revelar" id="case-rastro">
-                        <p class="etiqueta">Logística e frotas</p>
-                        <h3>Rastro: frota e pneus sob controle</h3>
-                        <p><strong>Antes.</strong> Centenas de pneus controlados no olho, sem histórico. Resultado:
-                            troca antes da hora e pneu falhando na estrada.</p>
-                        <p><strong>O que fizemos.</strong> Um aplicativo para a Rastro cuidar da frota de caminhões e
-                            do estoque de pneus dos clientes dela, que são transportadoras. Cada pneu tem o próprio
-                            histórico, do estoque ao caminhão: em qual veículo está, quanto rodou e como está o
-                            desgaste.</p>
-                        <p>O técnico mede pelo celular. O sistema calcula o desgaste, guarda tudo numa ficha em PDF e
-                            manda todo mês o relatório dizendo o que trocar e o que rodiziar.</p>
-                        <footer class="case-resultado">
-                            <p class="resultado-numero">Zero</p>
-                            <p>trabalho manual entre a medição e a decisão de cada pneu.</p>
-                        </footer>
-                    </article>
-
-                    <article class="case revelar" id="case-medicina">
-                        <p class="etiqueta">Saúde</p>
-                        <h3>Clínica médica: uma secretária que não para</h3>
-                        <p><strong>Antes.</strong> O paciente esperava até 4 horas para conseguir marcar consulta ou
-                            pedir orçamento.</p>
-                        <p><strong>O que fizemos.</strong> Uma secretária virtual atende a qualquer hora: faz as
-                            primeiras perguntas sobre os sintomas, cuida da agenda do médico e guarda o resumo do
-                            atendimento no prontuário.</p>
-                        <footer class="case-resultado">
-                            <p class="resultado-numero">-40%</p>
-                            <p>de faltas nas consultas, com lembretes automáticos escritos com jeito de gente.</p>
-                        </footer>
-                    </article>
-                </div>
             </div>
         </section>
 
-        <!-- 8. Depoimentos. Só aparece com fala de cliente de verdade, com autorização dele.
-             Para publicar: tirar o atributo hidden e preencher um <figure> por depoimento, no modelo:
-             <figure class="depoimento revelar">
-                 <blockquote><p>Texto que o cliente mandou, sem editar o sentido.</p></blockquote>
-                 <figcaption><strong>Nome</strong><span>Cargo, Empresa</span></figcaption>
-             </figure> -->
-        <section class="secao escuro" id="depoimentos" aria-labelledby="titulo-depoimentos" hidden>
-            <div class="container">
-                <p class="etiqueta revelar">Quem usa conta</p>
-                <h2 id="titulo-depoimentos" class="revelar">O que os clientes dizem</h2>
-                <div class="grade-depoimentos">
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. Preço e segurança -->
-        <section class="secao" id="investimento" aria-labelledby="titulo-investimento">
-            <div class="container grade-duas">
-                <div class="revelar">
-                    <p class="etiqueta">Sem surpresa</p>
-                    <h2 id="titulo-investimento">Como funciona o pagamento</h2>
-                    <dl class="lista-termos">
-                        <div>
-                            <dt>Construção</dt>
-                            <dd>Paga uma vez, e dá para dividir por parte entregue.</dd>
-                        </div>
-                        <div>
-                            <dt>Mensalidade</dt>
-                            <dd>Cobre servidor, custo de IA e o nosso acompanhamento depois que o sistema entra no ar.
-                            </dd>
-                        </div>
-                        <div>
-                            <dt>O que não tem</dt>
-                            <dd>Taxa escondida e porcentagem sobre o seu faturamento.</dd>
-                        </div>
-                    </dl>
-                </div>
-                <div class="revelar">
-                    <p class="etiqueta">Seus dados</p>
-                    <h2>Protegidos e só seus</h2>
-                    <ul class="lista-check">
-                        <li>Cada cliente tem o próprio banco de dados, separado dos outros.</li>
-                        <li>Cada pessoa da sua equipe vê só o que a função dela pede.</li>
-                        <li>Tudo segue a LGPD: dado coletado com autorização e usado só para o que foi combinado.</li>
-                        <li>Quando algo falha, o sistema registra e avisa a nossa equipe.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. Perguntas -->
+        <!-- 10. Objeções, respondidas antes de ele perguntar -->
         <section class="secao" id="perguntas" aria-labelledby="titulo-perguntas">
             <div class="container estreito">
                 <p class="etiqueta revelar">Antes de falar com a gente</p>
-                <h2 id="titulo-perguntas" class="revelar">Perguntas frequentes</h2>
+                <h2 id="titulo-perguntas" class="titulo-secao revelar">Perguntas frequentes</h2>
 
                 <div class="perguntas revelar">
                     <details>
+                        <summary>Quanto custa?</summary>
+                        <div class="resposta">
+                            <p>Depende do tamanho do trabalho, e por isso não existe pacote pronto. O preço vem fechado,
+                                em três opções, depois do diagnóstico. A conversa de diagnóstico não custa nada.</p>
+                        </div>
+                    </details>
+                    <details>
                         <summary>Quanto tempo leva?</summary>
-                        <p>Na maioria dos projetos, de 2 a 6 semanas depois da proposta aprovada. Quando é uma
-                            plataforma inteira, leva mais, e entra por partes: cada uma já em uso antes da próxima. O
-                            prazo fechado vem junto com o preço.</p>
+                        <div class="resposta">
+                            <p>Na maioria dos projetos, de 2 a 6 semanas depois da proposta aprovada. Quando é uma
+                                plataforma inteira, leva mais, e entra por partes: cada uma já em uso antes da próxima. O
+                                prazo fechado vem junto com o preço.</p>
+                        </div>
                     </details>
                     <details>
                         <summary>Minha empresa é pequena demais?</summary>
-                        <p>Depende da tarefa, não do tamanho. Se alguma tarefa repetitiva come horas da sua equipe toda
-                            semana, vale conversar. Se não come, a gente fala isso no diagnóstico.</p>
+                        <div class="resposta">
+                            <p>Depende da tarefa, não do tamanho. Se alguma tarefa repetitiva come horas da sua equipe
+                                toda semana, vale conversar. Se não come, a gente fala isso no diagnóstico.</p>
+                        </div>
                     </details>
                     <details>
                         <summary>E se o sistema que eu já uso resolve?</summary>
-                        <p>Aí a gente diz. Se o Bling, o Omie ou a ferramenta que você já paga dá conta, você sai do
-                            diagnóstico sabendo disso, sem proposta nenhuma.</p>
+                        <div class="resposta">
+                            <p>Aí a gente diz. Se o Bling, o Omie ou a ferramenta que você já paga dá conta, você sai do
+                                diagnóstico sabendo disso, sem proposta nenhuma.</p>
+                        </div>
                     </details>
                     <details>
                         <summary>Minha equipe vai ter de aprender um sistema novo?</summary>
-                        <p>Só se valer a pena. Muitas vezes a automação trabalha por trás do que vocês já usam, como
-                            WhatsApp, e-mail e planilha. Quando tem tela nova, ela é feita para o trabalho daquela
-                            pessoa e abre no celular.</p>
+                        <div class="resposta">
+                            <p>Só se valer a pena. Muitas vezes a automação trabalha por trás do que vocês já usam, como
+                                WhatsApp, e-mail e planilha. Quando tem tela nova, ela é feita para o trabalho daquela
+                                pessoa e abre no celular.</p>
+                        </div>
                     </details>
                     <details>
                         <summary>E se der problema depois?</summary>
-                        <p>O sistema registra o erro e avisa a nossa equipe na hora. Na AUTH, ele se testa a cada 5
-                            minutos e se recupera sozinho das falhas conhecidas. O acompanhamento depois do ar faz parte
-                            da mensalidade.</p>
+                        <div class="resposta">
+                            <p>O sistema registra o erro e avisa a nossa equipe na hora. Na AUTH, ele se testa a cada 5
+                                minutos e se recupera sozinho das falhas conhecidas. O acompanhamento depois do ar faz
+                                parte da mensalidade.</p>
+                        </div>
                     </details>
                     <details>
                         <summary>Preciso entender de tecnologia?</summary>
-                        <p>Não. Você explica como o seu negócio funciona, do seu jeito. A parte técnica é com a gente.
-                        </p>
+                        <div class="resposta">
+                            <p>Não. Você explica como o seu negócio funciona, do seu jeito. A parte técnica é com a gente.</p>
+                        </div>
                     </details>
                 </div>
             </div>
         </section>
 
-        <!-- 11. Fechamento -->
-        <section class="secao escuro fechamento" id="contato" aria-labelledby="titulo-contato">
+        <!-- 11. Fechamento, com um único próximo passo -->
+        <section class="secao escuro fechamento" id="contato" aria-labelledby="titulo-contato" data-anima>
+            <div class="fechamento-fundo" aria-hidden="true">
+                <svg class="nucleo nucleo-pequeno" viewBox="0 0 400 400" focusable="false">
+                    <circle class="nucleo-regua" cx="200" cy="200" r="188" />
+                    <rect class="nucleo-orbita-lenta" x="100" y="100" width="200" height="200" />
+                    <circle class="nucleo-orbita-rapida" cx="200" cy="200" r="140" />
+                </svg>
+            </div>
             <div class="container estreito">
-                <h2 id="titulo-contato" class="revelar">Conte onde a sua operação trava.</h2>
+                <p class="etiqueta revelar">Próximo passo</p>
+                <h2 id="titulo-contato" class="revelar">Conte onde a sua operação <em class="enfase">trava</em>.</h2>
                 <p class="lead suave revelar">Leva dois minutos. Uma pessoa da nossa equipe lê e chama você no WhatsApp
-                    para a conversa de diagnóstico.</p>
+                    para a conversa de diagnóstico, que não custa nada.</p>
                 <div class="acoes revelar">
-                    <button type="button" class="botao botao-cheio" data-abrir-diagnostico>Quero meu diagnóstico</button>
+                    <button type="button" class="botao botao-cheio botao-brilho" data-abrir-diagnostico>
+                        Quero meu diagnóstico
+                        <svg class="seta" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    </button>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="rodape">
+    <footer class="rodape" id="rodape">
         <div class="container rodape-grade">
             <div>
                 <a href="#inicio" class="marca">
-                    <img src="logo.png" alt="" width="36" height="36" loading="lazy">
+                    <img src="logo.png" alt="" width="32" height="36" loading="lazy">
                     <span>GENESISKORE</span>
                 </a>
                 <p class="suave">Automatizando sua rota para o sucesso.</p>
@@ -539,20 +755,22 @@
         <p class="container rodape-fim">© 2026 GenesisKore. Automação e sistemas sob medida.</p>
     </footer>
 
-    <!-- Botão fixo no celular, aparece depois da primeira tela -->
-    <button type="button" class="cta-fixo botao botao-cheio" id="ctaFixo" data-abrir-diagnostico>Quero meu
-        diagnóstico</button>
+    <!-- Botão fixo de vidro no celular, aparece depois da primeira tela -->
+    <button type="button" class="cta-fixo" id="ctaFixo" data-abrir-diagnostico>
+        Quero meu diagnóstico
+        <svg class="seta" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+    </button>
 
     <!-- Formulário de diagnóstico -->
     <dialog id="leadModal" class="janela" aria-labelledby="leadModalTitle" aria-describedby="leadModalDescription">
         <div class="janela-topo">
             <h2 id="leadModalTitle">Seu diagnóstico</h2>
             <button type="button" class="janela-fechar" id="fecharDiagnostico" aria-label="Fechar">
-                <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" /></svg>
             </button>
         </div>
         <p class="suave" id="leadModalDescription">Conte onde a operação trava. Uma pessoa da nossa equipe lê e chama
-            você no WhatsApp.</p>
+            você no WhatsApp. A conversa não custa nada.</p>
 
         <form id="leadForm" novalidate>
             <!-- Campo escondido: gente não vê, robô preenche. Preenchido, o envio não sai. -->
@@ -608,10 +826,10 @@
             </div>
 
             <button type="submit" class="botao botao-cheio botao-largo" id="submitBtn">Enviar</button>
-            <p id="formErrorMessage" class="aviso aviso-erro" role="alert" hidden>Não deu para enviar agora. Tente de
+            <p id="formErrorMessage" class="aviso-form aviso-erro" role="alert" hidden>Não deu para enviar agora. Tente de
                 novo em instantes.</p>
         </form>
-        <div id="formSuccessMessage" class="aviso aviso-ok" role="status" hidden>
+        <div id="formSuccessMessage" class="aviso-form aviso-ok" role="status" hidden>
             <p><strong>Recebido.</strong></p>
             <p>Você vai receber um e-mail de confirmação, e a gente chama você no WhatsApp para marcar a conversa de
                 diagnóstico.</p>
