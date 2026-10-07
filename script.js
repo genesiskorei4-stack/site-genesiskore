@@ -351,6 +351,15 @@ async function submitLeadForm(e) {
         return;
     }
 
+    // Campo escondido preenchido é robô: finge que enviou e não dispara o workflow, que
+    // chamaria a IA e mandaria e-mail para um endereço inventado.
+    if (payload.website) {
+        leadForm.style.display = 'none';
+        if (successMessage) successMessage.style.display = 'block';
+        btn.disabled = false;
+        return;
+    }
+
     try {
         const res = await fetch('https://n8n.srv1249694.hstgr.cloud/webhook/401bcc95-ad5d-4576-89f9-1ecb550fa667', {
             method: 'POST',
