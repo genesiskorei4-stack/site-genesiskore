@@ -18,6 +18,25 @@ const reais = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currenc
 const numero = (v) => new Intl.NumberFormat('pt-BR').format(v);
 const fundoEscuro = (el) => !!el && el.matches('.escuro, .rodape');
 
+/*
+ * De onde o lead veio. O link da bio do Instagram é `genesiskore.com/?origem=instagram`, e a
+ * etiqueta segue no formulário até o CRM. Sem etiqueta, o navegador interno do Instagram
+ * costuma deixar `instagram.com` como página anterior. Guardada na sessão porque a pessoa
+ * pode navegar pela página antes de preencher, e o endereço perde o `?` quando ela clica num
+ * link de seção.
+ */
+const origemDoLead = (() => {
+    const limpar = (v) => String(v || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40);
+    const params = new URLSearchParams(location.search);
+    let origem = limpar(params.get('origem') || params.get('utm_source'));
+    if (!origem && /instagram\./i.test(document.referrer)) origem = 'instagram';
+    try {
+        if (origem) sessionStorage.setItem('origem', origem);
+        else origem = sessionStorage.getItem('origem') || '';
+    } catch { /* navegação privada sem armazenamento: vale só o que veio no endereço */ }
+    return origem || 'direto';
+})();
+
 /* ------------------------------------------------------------ elementos */
 
 const topo = document.getElementById('topo');
@@ -639,6 +658,7 @@ form?.addEventListener('submit', async (e) => {
         gargalo: document.getElementById('gargalo').value.trim(),
         consent: document.getElementById('consent').checked,
         website: document.getElementById('website')?.value || '',
+        origem: origemDoLead,
     };
 
     if (!validar(dados)) return;
