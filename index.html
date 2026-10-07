@@ -6,901 +6,619 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenesisKore | Automação e sistemas sob medida</title>
     <meta name="description"
-        content="A GenesisKore desenha e constrói a automação e os sistemas que rodam a operação de pequenas e médias empresas. Diagnóstico da operação, orçamento fixo e entrega por fases.">
-    <!-- Open Graph / Social Preview -->
+        content="A GenesisKore tira o trabalho repetitivo da mão da sua equipe: atendimento, documentos, cobrança e números do negócio rodando sozinhos, do jeito da sua empresa.">
+    <meta name="theme-color" content="#0a0a0a">
+    <!-- Prévia de link (WhatsApp, Instagram, LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://genesiskore.com/">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="GenesisKore | Automação e sistemas sob medida">
-    <meta property="og:description" content="Tiramos o trabalho repetitivo da mão da sua equipe. Diagnóstico da operação, orçamento fixo e entrega por fases.">
+    <meta property="og:description" content="Tiramos o trabalho repetitivo da mão da sua equipe. Do jeito da sua empresa, com preço fechado antes de começar.">
     <meta property="og:image" content="https://genesiskore.com/previa-link.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GenesisKore | Automação e sistemas sob medida">
-    <meta name="twitter:description" content="Tiramos o trabalho repetitivo da mão da sua equipe. Diagnóstico da operação, orçamento fixo e entrega por fases.">
+    <meta name="twitter:description" content="Tiramos o trabalho repetitivo da mão da sua equipe. Do jeito da sua empresa, com preço fechado antes de começar.">
     <meta name="twitter:image" content="https://genesiskore.com/previa-link.png">
-    <!-- Icone da aba sem fundo. Sao dois porque um so some: a marca preta nao aparece em
-         aba de tema escuro, e a branca nao aparece em aba clara. O navegador escolhe. -->
+    <!-- Ícone da aba sem fundo. São dois porque um só some: a marca preta não aparece em
+         aba de tema escuro, e a branca não aparece em aba clara. O navegador escolhe. -->
     <link rel="icon" type="image/png" href="icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
-    <!-- Este continua com fundo branco de proposito: o iOS compoe icone transparente sobre
+    <!-- Este continua com fundo branco de propósito: o iOS compõe ícone transparente sobre
          preto, e a marca preta sumiria. -->
     <link rel="apple-touch-icon" href="favicon.png">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,ital@1&display=swap" rel="stylesheet">
-    <!-- Versão fixa: a "latest" tirou os ícones de marca e o Instagram do menu sumiu sem aviso. -->
-    <script src="https://unpkg.com/lucide@1.52.0/dist/umd/lucide.min.js"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Sem JavaScript, nada fica escondido esperando animação. -->
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body>
-    <div class="architectural-grid"><span></span></div>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-    <!-- Navigation -->
-    <nav class="navbar dark-theme" id="navbar">
-        <div class="container">
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="GenesisKore Logo" style="height: 60px; width: auto;">
-                GENESISKORE
+    <header class="topo" id="topo">
+        <div class="container topo-linha">
+            <a href="#inicio" class="marca" aria-label="GenesisKore, voltar ao início">
+                <img src="logo.png" alt="" width="40" height="40">
+                <span>GENESISKORE</span>
             </a>
-            <div class="nav-links">
-                <a href="#roi-calculator">Calculadora</a>
-                <a href="#sobre">Quem Somos</a>
-                <a href="#solucoes">Como trabalhamos</a>
+            <nav class="menu-largo" aria-label="Seções">
+                <a href="#resultados">Resultados</a>
+                <a href="#como-funciona">Como funciona</a>
                 <a href="#cases">Cases</a>
-                <a href="#processo">Processo</a>
-                <a href="#ecossistema">Stack</a>
-                <a href="#comercial">Modelo</a>
-            </div>
-            <div style="display: flex; gap: 1rem; align-items: center;">
-                <a href="https://www.instagram.com/genesiskore.ai/" target="_blank" rel="noopener noreferrer"
-                    class="text-muted d-none-mobile"
-                    style="transition: var(--transition);" onmouseover="this.style.color='var(--fg)'"
-                    onmouseout="this.style.color='var(--gray-light)'">
-                    <i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/genesiskore" target="_blank" rel="noopener noreferrer"
-                    class="text-muted d-none-mobile"
-                    style="transition: var(--transition);" onmouseover="this.style.color='var(--fg)'"
-                    onmouseout="this.style.color='var(--gray-light)'">
-                    <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i>
-                </a>
-                <a href="#contato" class="btn btn-ghost d-none-mobile" style="padding: 0.5rem 1rem;">
-                    Contato
-                </a>
-                <!-- Hamburger Button -->
-                <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+                <a href="#perguntas">Perguntas</a>
+            </nav>
+            <button type="button" class="botao botao-cheio botao-pequeno topo-cta" data-abrir-diagnostico>
+                Diagnóstico
+            </button>
+            <button type="button" class="botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menuCelular">
+                <span></span><span></span>
+            </button>
         </div>
-    </nav>
+        <nav class="menu-celular" id="menuCelular" aria-label="Seções" hidden>
+            <a href="#resultados">Resultados</a>
+            <a href="#onde-trava">Onde o tempo vai embora</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#cases">Cases</a>
+            <a href="#perguntas">Perguntas</a>
+            <button type="button" class="botao botao-cheio" data-abrir-diagnostico>Quero meu diagnóstico</button>
+        </nav>
+    </header>
 
-    <!-- Mobile Nav Drawer -->
-    <nav class="mobile-nav dark-theme" id="mobileNav" aria-hidden="true">
-        <button class="mobile-nav-close" id="closeMobileNav" aria-label="Fechar menu">
-            <i data-lucide="x" size="32"></i>
-        </button>
-        <button class="btn btn-primary mobile-nav-cta" id="mobileNavLeadBtn" type="button">
-            FAZER DIAGNÓSTICO
-        </button>
-        <a href="#roi-calculator" class="mobile-nav-link">Calculadora</a>
-        <a href="#solucoes" class="mobile-nav-link">Como trabalhamos</a>
-        <a href="#cases" class="mobile-nav-link">Cases</a>
-        <a href="#sobre" class="mobile-nav-link">Quem Somos</a>
-        <a href="#ecossistema" class="mobile-nav-link">Stack</a>
-        <a href="#processo" class="mobile-nav-link">Processo</a>
-        <a href="#comercial" class="mobile-nav-link">Modelo</a>
-        <a href="#contato" class="mobile-nav-link">Contato</a>
-    </nav>
+    <main id="conteudo">
 
-    <!-- Hero Section -->
-    <section class="hero dark-theme" id="home">
-        <div class="container">
-            <div class="fade-in-up">
-                <span class="mono text-muted" style="display: block; margin-bottom: 2rem;">[ AUTOMAÇÃO E SISTEMAS SOB MEDIDA ]</span>
-                <h1 class="title-lg">AUTOMATIZANDO SUA
-                    ROTA <br>PARA O <span class="luxury-emphasis">SUCESSO</span>.</h1>
-                <p class="subtitle">Tiramos o trabalho repetitivo da mão da sua equipe e colocamos num sistema que roda sozinho.</p>
-                <div class="hero-cta">
-                    <button class="btn btn-primary" onclick="openLeadModal()">
-                        FAZER DIAGNÓSTICO
+        <!-- 1. A promessa, em uma tela de celular -->
+        <section class="secao escuro abertura" id="inicio">
+            <div class="container">
+                <p class="etiqueta revelar">Automatizando sua rota para o sucesso</p>
+                <h1 class="revelar">O trabalho repetitivo da sua empresa, rodando sozinho.</h1>
+                <p class="lead suave revelar">A gente constrói, do jeito da sua empresa, o sistema que responde cliente,
+                    emite documento, cobra e organiza os números. Sua equipe fica com o que precisa de gente.</p>
+                <div class="acoes revelar">
+                    <button type="button" class="botao botao-cheio" data-abrir-diagnostico>
+                        Quero meu diagnóstico
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                     </button>
-                    <a href="#cases" class="btn btn-ghost">
-                        VER OS CASES
-                    </a>
+                    <a href="#cases" class="botao botao-vazio">Ver o que já fizemos</a>
                 </div>
+                <ul class="selos revelar" aria-label="Como a gente trabalha">
+                    <li>Feito sob medida</li>
+                    <li>Preço fechado antes de começar</li>
+                    <li>Sem trocar as ferramentas que você usa</li>
+                    <li>Entrega por partes</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ROI Calculator -->
-    <section class="section dark-theme" id="roi-calculator">
-        <div class="container grid-2" style="align-items: center;">
-            <div class="fade-in-up">
-                <h2 class="title-md" style="margin-bottom: 0.5rem;">
-                    <span class="roi-title-desktop">CALCULE SEU<br>DESPERDÍCIO OPERACIONAL</span>
-                    <span class="roi-title-mobile">CALCULE SEU<br>DESPERDÍCIO</span>
-                </h2>
-                <p class="text-muted" style="margin-bottom: 3rem; max-width: 480px; font-size: 1.1rem;">
-                    Uma estimativa de quanto a sua empresa paga por ano para gente fazer
-                    <strong>tarefa repetitiva</strong>. Arraste e veja.
-                </p>
-
-                <div style="margin-bottom: 2.5rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
-                        <label for="hoursSlider" class="mono text-fg"
-                            style="font-size: 0.85rem; letter-spacing: 0.05em;">HORAS MANUAIS POR DIA (EQUIPE)</label>
-                        <span id="hoursVal" class="mono text-muted">10h</span>
+        <!-- 2. Números da casa -->
+        <section class="secao numeros" id="resultados" aria-labelledby="titulo-resultados">
+            <div class="container">
+                <h2 id="titulo-resultados" class="visualmente-oculto">Resultados</h2>
+                <dl class="grade-numeros">
+                    <div class="revelar">
+                        <dt>Horas poupadas</dt>
+                        <dd>+47 mil</dd>
                     </div>
-                    <div class="slider-wrapper">
-                        <input type="range" id="hoursSlider" min="1" max="80" value="10" class="roi-slider">
-                        <div class="slider-hint-arrow" aria-hidden="true">
-                            <span class="arrow-line"></span>
-                            <span>arraste</span>
-                            <span class="arrow-line" style="animation-direction: reverse;"></span>
-                        </div>
+                    <div class="revelar">
+                        <dt>Projetos entregues</dt>
+                        <dd>+8</dd>
                     </div>
-                </div>
-
-                <div style="margin-bottom: 1rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
-                        <label for="salarySlider" class="mono text-fg"
-                            style="font-size: 0.85rem; letter-spacing: 0.05em;">SALÁRIO MÉDIO DA EQUIPE (R$)</label>
-                        <span id="salaryVal" class="mono text-muted">R$ 2.500</span>
+                    <div class="revelar">
+                        <dt>Setores atendidos</dt>
+                        <dd>+4</dd>
                     </div>
-                    <div class="slider-wrapper">
-                        <input type="range" id="salarySlider" min="1500" max="15000" step="100" value="2500"
-                            class="roi-slider">
-                        <div class="slider-hint-arrow" aria-hidden="true">
-                            <span class="arrow-line"></span>
-                            <span>arraste</span>
-                            <span class="arrow-line" style="animation-direction: reverse;"></span>
-                        </div>
+                    <div class="revelar">
+                        <dt>Do diagnóstico ao ar</dt>
+                        <dd>2 a 6 <small>semanas</small></dd>
                     </div>
-                </div>
+                </dl>
             </div>
+        </section>
 
-            <div class="brutal-card fade-in-up delay-1 dark-theme"
-                style="background: var(--bg); border-color: var(--gray-mid);">
-                <span class="mono text-muted"
-                    style="display: block; margin-bottom: 2rem; font-size: 0.8rem; letter-spacing: 0.1em;">[ ESTIMATIVA POR ANO ]</span>
+        <!-- 3. A dor do cliente antes da empresa -->
+        <section class="secao" id="onde-trava" aria-labelledby="titulo-onde-trava">
+            <div class="container">
+                <p class="etiqueta revelar">O que muda no seu dia</p>
+                <h2 id="titulo-onde-trava" class="revelar">Onde o tempo da sua empresa vai embora</h2>
+                <p class="lead revelar">Se alguma destas cenas é do seu dia a dia, tem hora de trabalho sendo paga
+                    para fazer o que um sistema faz sozinho.</p>
 
-                <div style="margin-bottom: 3rem;">
-                    <h4
-                        style="font-size: 0.9rem; color: var(--gray-light); font-weight: 400; margin-bottom: 0.5rem; text-transform: uppercase;">
-                        Custo por ano</h4>
-                    <div id="costResult"
-                        style="font-family: var(--font-heading); font-size: 3.5rem; font-weight: 700; color: #ef4444; line-height: 1; letter-spacing: -0.02em;">
-                        R$ 76.313,00
-                    </div>
-                    <p class="text-muted" style="font-size: 0.85rem; margin-top: 0.75rem;">Horas por dia, 22 dias por mês,
-                        12 meses. <strong style="color: var(--fg); font-weight: 500;">O custo CLT entra como 1,85 vez o
-                            salário (INSS, FGTS, 13º e férias).</strong> O número da sua empresa sai na Reunião 01.</p>
-                </div>
-
-
-
-                <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <h4
-                        style="font-size: 0.9rem; color: var(--gray-light); font-weight: 400; margin-bottom: 0.5rem; text-transform: uppercase;">
-                        Horas por ano</h4>
-                    <div id="timeResult"
-                        style="font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--fg); line-height: 1;">
-                        2.640h
-                    </div>
-                    <p class="text-muted" style="font-size: 0.85rem; margin-top: 0.75rem;">Tempo que podia ir para
-                        vender, atender e cuidar de cliente.</p>
-                </div>
-
-                <button onclick="openLeadModal()" class="btn btn-primary" style="width: 100%; margin-top: 3rem;">
-                    QUERO O NÚMERO DA MINHA EMPRESA <i data-lucide="arrow-right" size="16"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quem Somos -->
-    <section class="section" id="sobre">
-        <div class="container grid-2">
-            <div class="fade-in-up">
-                <h2 class="title-md">QUEM SOMOS</h2>
-                <p
-                    style="font-size: 1.25rem; font-weight: 300; margin-bottom: 2rem; max-width: 500px; color: var(--fg);">
-                    Uma software house de operações. A gente desenha e constrói o que roda o dia a dia da sua
-                    empresa: a automação que tira a tarefa repetitiva da equipe e, quando faz sentido, a plataforma
-                    inteira em volta dela.
-                </p>
-                <p class="text-muted" style="max-width: 500px; margin-bottom: 3rem;">
-                    Missão: eliminar a ineficiência humana em tarefas repetitivas. O que precisa de gente continua
-                    com a sua equipe.
-                </p>
-
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; border: 1px solid var(--gray-mid); padding: 2rem;">
-                    <div style="text-align: center; border-right: 1px solid var(--gray-mid);">
-                        <p style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; line-height: 1; color: var(--fg);">0%</p>
-                        <span class="mono text-muted" style="font-size: 0.72rem; letter-spacing: 0.08em; display: block; margin-top: 0.5rem;">SOBRE O SEU FATURAMENTO</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <p style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; line-height: 1; color: var(--fg);">Fixo</p>
-                        <span class="mono text-muted" style="font-size: 0.72rem; letter-spacing: 0.08em; display: block; margin-top: 0.5rem;">O ORÇAMENTO, FECHADO NA REUNIÃO 02</span>
-                    </div>
-                </div>
-
-                <div class="sobre-stats" style="display: flex; gap: 4rem; flex-wrap: wrap; margin-top: 2rem;">
-                    <div style="margin-bottom: 2rem; border-left: 2px solid var(--fg); padding-left: 1.5rem;">
-                        <strong class="mono text-fg" style="font-size: 1.1rem; letter-spacing: 0.05em;">COMO
-                            TRABALHAMOS</strong>
-                        <p class="text-muted" style="font-size: 0.95rem; margin-top: 0.75rem; max-width: 300px;">
-                            Mapeamos os processos manuais da sua operação e entregamos automação sob medida. Ela roda o
-                            dia inteiro e avisa a gente quando algo sai do esperado.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="fade-in-up delay-1 d-none-mobile"
-                style="display: flex; align-items: center; justify-content: center; border: 1px solid var(--gray-mid); min-height: 400px; background: var(--gray-dark); position: relative; overflow: hidden;">
-                <!-- Animated Central Brain Core -->
-                <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    class="brain-svg">
-                    <!-- Static Grid Lines -->
-                    <line x1="0" y1="200" x2="400" y2="200" stroke="var(--gray-mid)" stroke-width="1" />
-                    <line x1="200" y1="0" x2="200" y2="400" stroke="var(--gray-mid)" stroke-width="1" />
-
-                    <!-- Pulsing Data Streams -->
-                    <line x1="200" y1="0" x2="200" y2="200" class="data-stream" />
-                    <line x1="0" y1="200" x2="200" y2="200" class="data-stream delay-1" />
-                    <line x1="400" y1="200" x2="200" y2="200" class="data-stream delay-2" />
-                    <line x1="200" y1="400" x2="200" y2="200" class="data-stream delay-3" />
-
-                    <!-- Outer Rotating Orbit -->
-                    <rect x="100" y="100" width="200" height="200" fill="none" stroke="var(--gray-light)"
-                        stroke-width="1" stroke-dasharray="4 8" class="orbit-slow" />
-                    <circle cx="200" cy="200" r="140" fill="none" stroke="var(--gray-mid)" stroke-width="1"
-                        stroke-dasharray="1 12" class="orbit-fast" />
-
-                    <!-- Inner Core Engine -->
-                    <rect x="175" y="175" width="50" height="50" fill="var(--fg)" class="core-pulse" />
-                    <circle cx="200" cy="200" r="10" fill="var(--bg)" />
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <!-- Soluções -->
-    <section class="section" id="solucoes">
-        <div class="container">
-            <h2 class="title-md fade-in-up">SOLUÇÕES</h2>
-
-            <div class="brutal-card fade-in-up" style="width: 100%;">
-                <div class="card-icon">
-                    <i data-lucide="settings-2" size="48" style="stroke-width: 1.5;"></i>
-                </div>
-                <h3 class="title-sm" style="margin-bottom: 1.5rem;"><span style="color: #4ade80;">100%</span> SOB MEDIDA. DO PROBLEMA À SOLUÇÃO.</h3>
-                <p class="text-muted" style="margin-bottom: 2.5rem; max-width: 680px;">
-                    Sem pacote pronto. Cada projeto começa pelo gargalo real da sua empresa, medido com você.
-                </p>
-
-                <div class="solucoes-steps"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
-                    <div style="border-left: 2px solid var(--fg); padding-left: 1.5rem;">
-                        <strong class="mono"
-                            style="font-size: 0.85rem; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">[
-                            REUNIÃO 01 · DIAGNÓSTICO ]</strong>
-                        <p class="text-muted" style="font-size: 0.9rem;">Você conta onde a operação trava. A gente
-                            mede quanto isso custa e diz o que vale automatizar. E o que não vale.</p>
-                    </div>
-                    <div style="border-left: 2px solid var(--fg); padding-left: 1.5rem;">
-                        <strong class="mono"
-                            style="font-size: 0.85rem; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">[
-                            REUNIÃO 02 · PROPOSTA ]</strong>
-                        <p class="text-muted" style="font-size: 0.9rem;">Escopo, prazo e orçamento fixo, em três
-                            opções. Você decide sem ter pago nada antes.</p>
-                    </div>
-                    <div style="border-left: 2px solid var(--fg); padding-left: 1.5rem;">
-                        <strong class="mono"
-                            style="font-size: 0.85rem; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">[
-                            ENTREGA EM FASES ]</strong>
-                        <p class="text-muted" style="font-size: 0.9rem;">A primeira fase já entra em uso, sem esperar o
-                            projeto inteiro. Sua operação não para durante a troca.</p>
-                    </div>
-                    <div style="border-left: 2px solid var(--fg); padding-left: 1.5rem;">
-                        <strong class="mono"
-                            style="font-size: 0.85rem; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">[
-                            DEPOIS DO AR ]</strong>
-                        <p class="text-muted" style="font-size: 0.9rem;">A gente acompanha, corrige e ajusta. É o que a
-                            mensalidade cobre.</p>
-                    </div>
-                </div>
-
-                <div class="solucoes-stats"
-                    style="border-top: 1px solid var(--gray-mid); padding-top: 2rem; display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;">
-                    <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
-                        <div>
-                            <span class="mono text-muted" style="font-size: 0.8rem;">ATÉ O ORÇAMENTO</span>
-                            <p style="font-size: 1.5rem; font-weight: 700; margin-top: 0.25rem;">2 reuniões</p>
-                        </div>
-                        <div>
-                            <span class="mono text-muted" style="font-size: 0.8rem;">PACOTE PRONTO</span>
-                            <p style="font-size: 1.5rem; font-weight: 700; margin-top: 0.25rem;">Nenhum</p>
-                        </div>
-                    </div>
-                    <button onclick="openLeadModal()" class="btn btn-primary"
-                        style="white-space: nowrap; flex-shrink: 0;">
-                        FAZER DIAGNÓSTICO <i data-lucide="arrow-right" size="16"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cases de Sucesso. A AUTH vem primeiro e mais detalhada, com a plataforma inteira; os outros
-         continuam como estavam (decisão do Gustavo em 07/10/2026). Nenhum número do negócio da
-         AUTH (volume, faturamento) entra aqui: é confidencial. -->
-    <section class="section" id="cases">
-        <div class="container">
-            <h2 class="title-md fade-in-up" style="margin-bottom: 2rem; text-align: center;">CASES</h2>
-            <div class="fade-in-up cases-logos"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; align-items: center; justify-items: center; margin-bottom: 4rem;">
-                <a href="#case-auth"><img src="logo-auth.png" alt="Logo AUTH" class="header-logo"
-                        style="height: 48px; width: auto;" loading="lazy" decoding="async"></a>
-                <a href="#case-cca"><img src="logo-cca.png" alt="Logo Fazenda CCA" class="header-logo"
-                        style="height: 112px; width: auto;" loading="lazy" decoding="async"></a>
-                <a href="#case-rastro"><img src="logo-rastro.png" alt="Logo Rastro" class="header-logo"
-                        style="height: 138px; width: auto;" loading="lazy" decoding="async"></a>
-                <a href="#case-medicina"><img src="logo-medicina.png" alt="Símbolo Medicina" class="header-logo"
-                        style="height: 90px; width: auto;" loading="lazy" decoding="async"></a>
-                <img src="logo-gmf.png" alt="Logo GMF Gráfica" class="header-logo" style="height: 158px; width: auto;"
-                    loading="lazy" decoding="async">
-            </div>
-
-            <div class="brutal-card case-unico fade-in-up" id="case-auth">
-                <div class="case-unico-topo">
-                    <span class="mono text-muted">[ MERCADO DE LUXO SECOND-HAND ]</span>
-                    <img src="logo-auth.png" alt="AUTH" class="header-logo" style="height: 40px; width: auto;"
-                        loading="lazy" decoding="async">
-                </div>
-                <h3 class="title-sm">AUTH: A OPERAÇÃO INTEIRA NUM SISTEMA SÓ</h3>
-
-                <div class="case-unico-grade">
-                    <div>
-                        <p class="text-muted" style="margin-bottom: 1.5rem;"><strong>Antes:</strong> a AUTH autentica
-                            peças de luxo e streetwear. O certificado de autenticidade era montado à mão, peça por peça,
-                            e com o volume crescendo essa conta não fechava.</p>
-                        <p class="text-muted"><strong>O que construímos:</strong> começou pela emissão automática. O
-                            avaliador insere os dados, e o sistema monta o laudo e entrega o certificado ao cliente
-                            final. Depois virou uma plataforma com duas portas para o mesmo banco de dados: a equipe
-                            trabalha por uma, a loja parceira e o cliente final acompanham pela outra.</p>
-                    </div>
-                    <ul class="case-lista">
-                        <li><strong>Portal do Autenticador</strong> A fila se ordena pelo prazo de cada peça. A análise
-                            tem fotos e checklist, o certificado com QR code sai do próprio sistema, e o CRM, o
-                            financeiro e as metas do negócio ficam na mesma tela. Cada cargo vê só o que pode.</li>
-                        <li><strong>Portal do Cliente</strong> A loja e o cliente final mandam a peça, acompanham cada
-                            etapa com prazo, conversam sobre ela e baixam o certificado sem pedir para ninguém.</li>
-                        <li><strong>Conferência pública</strong> O QR de cada certificado abre o documento daquela
-                            peça, guardado pela AUTH. Quem compra confere se é o mesmo item.</li>
-                        <li><strong>Vigia da plataforma</strong> De 5 em 5 minutos o sistema entra com um usuário de
-                            teste, confere se a equipe consegue trabalhar e se recupera sozinho das falhas que a gente
-                            já conhece.</li>
-                    </ul>
-                </div>
-
-                <div class="case-metric">
-                    <a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-ghost"
-                        style="padding: 0.5rem 1rem; margin-bottom: 1.5rem; font-size: 0.75rem;"><i
-                            class="fa-brands fa-instagram" style="font-size: 16px;"></i> VER CASE @AUTH.BR</a>
-                    <h4>500%</h4>
-                    <p class="text-muted">Aumento bruto em performance avaliativa sem incremento de FTE.</p>
-                </div>
-            </div>
-
-            <div class="mobile-swipe-hint mono">
-                <i data-lucide="arrow-right" size="16"></i> DESLIZE PARA VER MAIS
-            </div>
-
-            <div class="stacked-cases cases-tres">
-                <div class="brutal-card case-card fade-in-up delay-1" id="case-cca">
-                    <div>
-                        <span class="mono text-muted" style="display: block; margin-bottom: 1.5rem;">[ AGROTECH &
-                            PECUÁRIA ]</span>
-                        <h3 class="title-sm">FAZENDA CCA: ERP RURAL VIA WHATSAPP</h3>
-                        <p class="text-muted" style="margin-bottom: 2rem;"><strong>Cenário Prévio:</strong> Fechamento
-                            financeiro disperso ("Papelada na Caminhonete"). Gerentes anotando vendas de gado em blocos
-                            físicos que se perdiam, resultando em donos de fazendas com visões cegas do caixa.<br><br>
-                            <strong>A Engenharia:</strong> O peão envia a entrada de dados como preferir: <strong>áudio,
-                                foto das anotações ou texto digitado</strong>. A IA interpreta tudo e adiciona a
-                            informação organizada direto na planilha da fazenda, gerando recibos em PDF na hora.
-                            Periodicamente (mensal, semestral e anual), o sistema engatilha a geração e o envio de
-                            relatórios completos sobre toda a atividade financeira da fazenda.
-                        </p>
-                    </div>
-                    <div class="case-metric">
-                        <h4>Zero</h4>
-                        <p class="text-muted">Barreira tecnológica. Operação completa e segura na palma da mão, direto
-                            do pasto.</p>
-                    </div>
-                </div>
-
-                <div class="brutal-card case-card fade-in-up delay-2" id="case-rastro">
-                    <div>
-                        <span class="mono text-muted" style="display: block; margin-bottom: 1.5rem;">[ LOGÍSTICA &
-                            FROTAS ]</span>
-                        <h3 class="title-sm">RASTRO: GESTÃO INTELIGENTE DE PNEUS</h3>
-                        <p class="text-muted" style="margin-bottom: 2rem;"><strong>Cenário Prévio:</strong> Centenas de
-                            pneus rolando com controle de desgaste, quilometragem e sulcos baseados apenas em "feeling"
-                            manual, levando a descartes precoces e falhas na estrada.<br><br>
-                            <strong>A Engenharia:</strong> O técnico preenche um formulário pelo celular. Uma pipeline
-                            de Inteligência Artificial calcula o índice de desgaste, grava em um Banco de Dados na Nuvem
-                            (em tempo real), cria um
-                            <strong>RG digital (PDF)</strong> com histórico de injeção e emite relatórios avançados
-                            automáticos mensais (via E-mail) recomendando rodízios e recapes.
-                        </p>
-                    </div>
-                    <div class="case-metric">
-                        <h4>Zero</h4>
-                        <p class="text-muted">Trabalho manual entre a coleta de dados e a auditoria de decisão de cada
-                            pneu da frota.</p>
-                    </div>
-                </div>
-
-                <div class="brutal-card case-card fade-in-up delay-3" id="case-medicina">
-                    <div>
-                        <span class="mono text-muted" style="display: block; margin-bottom: 1.5rem;">[ SETOR DE SAÚDE
-                            ]</span>
-                        <h3 class="title-sm">CLÍNICA MÉDICA (ALTO SIGILO)</h3>
-                        <p class="text-muted" style="margin-bottom: 2rem;"><strong>Cenário Prévio:</strong> Gargalo no
-                            call-center com 4 horas de delay médio para pacientes conseguirem agendamentos ou
-                            orçamentos.<br><br>
-                            <strong>Engenharia Aplicada:</strong> IA atua como Secretária Virtual Inteligente realizando
-                            triagem total em canal
-                            ativo 24/7. Aplica anamnese inicial de sintomas, gerencia a <strong>agenda do
-                                médico</strong> e consolida o sumário do atendimento diretamente no banco de dados e
-                            prontuário eletrônico.
-                        </p>
-                    </div>
-                    <div class="case-metric">
-                        <h4>-40%</h4>
-                        <p class="text-muted">Abaixo no No-Show (faltas) através do funil de lembretes humanizados
-                            automáticos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Processo de construção -->
-    <section class="section" id="processo" style="background-color: var(--gray-dark);">
-        <div class="container">
-            <div class="fade-in-up" style="text-align: center; margin-bottom: 4rem;">
-                <span class="mono text-muted" style="display: block; margin-bottom: 1rem;">[ PROCESSO ]</span>
-                <h2 class="title-md">COMO A GENTE<br>CONSTRÓI</h2>
-                <p class="text-muted" style="max-width: 600px; margin: 1.5rem auto 0; font-size: 1.1rem;">
-                    Sua operação continua rodando enquanto o sistema novo é construído.
-                </p>
-            </div>
-
-            <div class="timeline fade-in-up delay-1" style="max-width: 800px; margin: 0 auto;">
-
-                <div class="timeline-item">
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-number">[01]</span>
-                        <h3 class="timeline-title">Mapa da operação</h3>
-                        <p class="timeline-text">Antes de qualquer código, a gente desenha o caminho de cada tarefa:
-                            quem faz, quantas vezes por semana e onde trava.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-number">[02]</span>
-                        <h3 class="timeline-title">Construção à parte</h3>
-                        <p class="timeline-text">O sistema novo nasce num ambiente separado. Nada do que a sua equipe
-                            usa hoje muda até a hora de trocar.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-number">[03]</span>
-                        <h3 class="timeline-title">Teste com caso real</h3>
-                        <p class="timeline-text">Cada parte é testada com situações da sua empresa, inclusive as que dão
-                            errado, antes de alguém depender dela.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-number">[04]</span>
-                        <h3 class="timeline-title">Entrada por fases</h3>
-                        <p class="timeline-text">Uma parte de cada vez, com a anterior já em uso. Depois do ar, o sistema
-                            avisa a gente quando algo sai do esperado.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Stack: só o que a casa usa de verdade em projeto -->
-    <section class="section" id="ecossistema">
-        <div class="container">
-            <h2 class="title-md fade-in-up">STACK</h2>
-            <div class="grid-2">
-                <div class="fade-in-up">
-                    <p
-                        style="font-size: 1.25rem; font-weight: 300; margin-bottom: 2rem; color: var(--fg); max-width: 500px;">
-                        A gente constrói com ferramentas que já rodam em produção e conecta o que a sua empresa já usa.
-                    </p>
-                    <ul class="feature-list" style="border: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">
-                            <div>
-                                <strong class="text-fg">Automação</strong><br>
-                                <span class="text-muted">Fluxos no <strong style="color: var(--fg)">n8n</strong>, em
-                                    servidor próprio. O que hoje depende de alguém lembrar passa a acontecer sozinho, com
-                                    aviso quando falha.</span>
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 1rem;">
-                            <div>
-                                <strong class="text-fg">Banco e acesso</strong><br>
-                                <span class="text-muted"><strong style="color: var(--fg)">PostgreSQL no
-                                        Supabase</strong>, um banco por cliente. A regra de quem vê o quê fica no
-                                    próprio banco.</span>
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 1rem;">
-                            <div>
-                                <strong class="text-fg">Telas</strong><br>
-                                <span class="text-muted">Aplicativos web em <strong style="color: var(--fg)">React e
-                                        Next.js</strong>, que abrem no computador e no celular.</span>
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 1rem;">
-                            <div>
-                                <strong class="text-fg">Integrações</strong><br>
-                                <span class="text-muted">E-mail, WhatsApp, planilhas e Drive do Google, armazenamento de
-                                    arquivos e PDF gerado pelo sistema.</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="brutal-card fade-in-up delay-1 stack-grid d-none-mobile"
-                    style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; place-items: center; align-content: center; border: 1px solid var(--gray-mid); background: var(--gray-dark);">
-                    <img src="https://cdn.simpleicons.org/n8n/555555" alt="n8n" width="40" height="40"
-                        class="stack-logo" title="n8n" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/supabase/555555" alt="Supabase" width="40" height="40"
-                        class="stack-logo" title="Supabase" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/postgresql/555555" alt="PostgreSQL" width="40" height="40"
-                        class="stack-logo" title="PostgreSQL" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/react/555555" alt="React" width="40" height="40"
-                        class="stack-logo" title="React" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/nextdotjs/555555" alt="Next.js" width="40" height="40"
-                        class="stack-logo" title="Next.js" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/vercel/555555" alt="Vercel" width="40" height="40"
-                        class="stack-logo" title="Vercel" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/whatsapp/555555" alt="WhatsApp" width="40" height="40"
-                        class="stack-logo" title="WhatsApp" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/gmail/555555" alt="Gmail" width="40" height="40"
-                        class="stack-logo" title="Gmail" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/googlesheets/555555" alt="Google Sheets" width="40" height="40"
-                        class="stack-logo" title="Google Sheets" loading="lazy" decoding="async">
-                    <img src="https://cdn.simpleicons.org/googledrive/555555" alt="Google Drive" width="40" height="40"
-                        class="stack-logo" title="Google Drive" loading="lazy" decoding="async">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modelo Comercial & Segurança -->
-    <section class="section" id="comercial">
-        <div class="container grid-2">
-
-            <div class="brutal-card fade-in-up">
-                <h3 class="title-sm">MODELO COMERCIAL</h3>
-                <p class="text-muted" style="margin-bottom: 3rem;">Sem caixa-preta. Você sabe o que paga e por quê.</p>
-
-                <div style="margin-bottom: 2.5rem; border-left: 2px solid var(--fg); padding-left: 1.5rem;">
-                    <strong class="text-fg"
-                        style="display: block; margin-bottom: 0.5rem; letter-spacing: 0.1em; font-size: 0.85rem;">[01]
-                        CONSTRUÇÃO</strong>
-                    <p class="text-muted" style="font-size: 0.95rem;">Pagamento único pelo sistema e pela entrada no
-                        ar. Dá para dividir por fase entregue.</p>
-                </div>
-
-                <div style="border-left: 2px solid var(--gray-mid); padding-left: 1.5rem;">
-                    <strong class="text-fg"
-                        style="display: block; margin-bottom: 0.5rem; letter-spacing: 0.1em; font-size: 0.85rem;">[02]
-                        MENSALIDADE (SUSTENTAÇÃO)</strong>
-                    <p class="text-muted" style="font-size: 0.95rem;">Servidor, custo de IA e o acompanhamento do
-                        sistema depois que ele entra no ar. Nada de percentual sobre o seu faturamento.</p>
-                </div>
-            </div>
-
-            <div class="brutal-card fade-in-up delay-1" id="seguranca">
-                <h3 class="title-sm">SEGURANÇA E LGPD</h3>
-                <p class="text-muted" style="margin-bottom: 2rem;">O que a gente faz em todo projeto.</p>
-
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
-                    <span style="display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--fg); padding: 0.5rem 1rem; font-family: monospace; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--fg); background: rgba(255,255,255,0.05);">
-                        <i data-lucide="shield-check" size="14"></i> LGPD
-                    </span>
-                    <span style="display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--fg); padding: 0.5rem 1rem; font-family: monospace; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--fg); background: rgba(255,255,255,0.05);">
-                        <i data-lucide="lock" size="14"></i> ACESSO POR CARGO
-                    </span>
-                </div>
-
-                <ul class="feature-list" style="border: none; padding: 0; margin-top: 0;">
-                    <li><strong class="text-fg" style="min-width: 140px; font-size: 0.85rem;">DADOS</strong>
-                        <span class="text-muted">Coletados com consentimento e usados só para o que você contratou. Cada
-                            cliente tem o próprio banco.</span>
+                <ul class="grade-dores">
+                    <li class="cartao revelar">
+                        <p class="antes">Responder a mesma pergunta no WhatsApp o dia inteiro</p>
+                        <p class="depois">O cliente recebe a resposta, o andamento do pedido e o documento na hora,
+                            sem ninguém parar o que está fazendo.</p>
                     </li>
-                    <li><strong class="text-fg" style="min-width: 140px; font-size: 0.85rem;">ACESSO</strong>
-                        <span class="text-muted">Cada pessoa vê só o que o cargo dela permite. A regra mora no banco,
-                            não só na tela.</span>
+                    <li class="cartao revelar">
+                        <p class="antes">Copiar dado de uma planilha para outra</p>
+                        <p class="depois">A informação entra uma vez e aparece em todo lugar que precisa.</p>
                     </li>
-                    <li><strong class="text-fg" style="min-width: 140px; font-size: 0.85rem;">FALHAS</strong>
-                        <span class="text-muted">Toda automação registra o erro e avisa a equipe. A gente fica sabendo
-                            antes de você precisar ligar.</span>
+                    <li class="cartao revelar">
+                        <p class="antes">Montar nota, recibo, certificado ou relatório à mão</p>
+                        <p class="depois">O documento sai pronto, com a sua marca, no momento certo.</p>
+                    </li>
+                    <li class="cartao revelar">
+                        <p class="antes">Descobrir só no fim do mês como o caixa ficou</p>
+                        <p class="depois">Os números do negócio numa tela só, atualizados enquanto a empresa trabalha.
+                        </p>
                     </li>
                 </ul>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- 4. Quanto isso custa hoje -->
+        <section class="secao escuro" id="calculadora" aria-labelledby="titulo-calculadora">
+            <div class="container grade-calculadora">
+                <div class="revelar">
+                    <p class="etiqueta">Faça a conta</p>
+                    <h2 id="titulo-calculadora">Quanto o trabalho repetitivo custa hoje</h2>
+                    <p class="suave">Arraste e veja uma estimativa do que a sua empresa paga por ano para gente fazer
+                        tarefa que poderia rodar sozinha.</p>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-        <div class="container">
-            <div class="fade-in-up" style="text-align: center; margin-bottom: 4rem;">
-                <span class="mono text-muted" style="display: block; margin-bottom: 1rem;">[ DÚVIDAS FREQUENTES ]</span>
-                <h2 class="title-md">ANTES DE<br>FALAR COM A GENTE</h2>
+                    <div class="controle">
+                        <label for="hoursSlider">Horas por dia em tarefa repetitiva <span class="dica">(somando a
+                                equipe)</span></label>
+                        <output id="hoursVal" for="hoursSlider">10h</output>
+                        <input type="range" id="hoursSlider" min="1" max="80" value="10">
+                    </div>
+                    <div class="controle">
+                        <label for="salarySlider">Salário médio da equipe</label>
+                        <output id="salaryVal" for="salarySlider">R$ 2.500</output>
+                        <input type="range" id="salarySlider" min="1500" max="15000" step="100" value="2500">
+                    </div>
+                </div>
+
+                <div class="painel-resultado revelar" aria-live="polite">
+                    <p class="etiqueta">Estimativa por ano</p>
+                    <p class="resultado-titulo">Custo do trabalho repetitivo</p>
+                    <p class="resultado-valor" id="costResult">R$ 76.313</p>
+                    <p class="resultado-titulo">Horas que podiam ir para vender e atender</p>
+                    <p class="resultado-horas" id="timeResult">2.640h</p>
+                    <p class="conta">Horas por dia × 22 dias × 12 meses. O custo de um funcionário CLT entra como 1,85
+                        vez o salário (INSS, FGTS, 13º e férias). O número exato da sua empresa sai na conversa de
+                        diagnóstico.</p>
+                    <button type="button" class="botao botao-cheio botao-largo" data-abrir-diagnostico>Quero o número da
+                        minha empresa</button>
+                </div>
             </div>
-            <div style="max-width: 800px; margin: 0 auto;">
+        </section>
 
-                <div class="faq-item fade-in-up">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Quanto tempo leva?</span>
-                        <i data-lucide="plus" size="20" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Uma automação costuma ficar pronta entre <strong>2 e 6 semanas</strong> depois da Reunião 02. Plataforma inteira leva mais e entra por fases, cada uma já em uso. O prazo fechado vem junto com o orçamento.</p>
-                    </div>
-                </div>
+        <!-- 5. Rapidez: como funciona, do primeiro papo ao sistema no ar -->
+        <section class="secao" id="como-funciona" aria-labelledby="titulo-como-funciona">
+            <div class="container">
+                <p class="etiqueta revelar">Rápido e sem complicação</p>
+                <h2 id="titulo-como-funciona" class="revelar">Do primeiro papo ao sistema funcionando</h2>
 
-                <div class="faq-item fade-in-up delay-1">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Minha empresa é pequena demais?</span>
-                        <i data-lucide="plus" size="20" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Depende do gargalo, não do tamanho. Se uma tarefa repetitiva come horas da equipe toda semana, vale conversar. Se não come, a gente fala isso na Reunião 01.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in-up delay-2">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>E se o sistema que eu já uso resolve?</span>
-                        <i data-lucide="plus" size="20" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Aí a gente diz. Se o Bling, o Omie ou a ferramenta que você já paga dá conta, você sai da Reunião 01 sabendo disso, sem proposta nenhuma na mão.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in-up delay-3">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>E se a automação falhar?</span>
-                        <i data-lucide="plus" size="20" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Toda automação nossa registra o erro e avisa a equipe na hora. Na plataforma da AUTH, um vigia testa o login de 5 em 5 minutos e reinicia sozinho o que já sabe consertar. O acompanhamento depois do ar está dentro da mensalidade.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in-up">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Como é o pagamento?</span>
-                        <i data-lucide="plus" size="20" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Duas partes: a construção, paga uma vez e que pode ser dividida por fase, e a <strong>mensalidade de sustentação</strong>. Sem taxa escondida e sem percentual sobre o seu faturamento.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in-up delay-1">
-                    <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Minha equipe vai ter de aprender um sistema novo?</span>
-                        <i data-lucide="plus" size="20" class="faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Só se ele valer a pena. Muitas vezes a automação trabalha por trás do que a equipe já usa, como WhatsApp, e-mail e planilha. Quando tem tela nova, ela é feita para o trabalho daquela pessoa e abre no celular.</p>
-                    </div>
-                </div>
-
+                <ol class="passos">
+                    <li class="revelar">
+                        <span class="passo-numero">01</span>
+                        <div>
+                            <h3>Conversa de diagnóstico</h3>
+                            <p>Você conta como o trabalho acontece hoje. A gente mostra onde está o desperdício e diz o
+                                que vale automatizar. E o que não vale.</p>
+                        </div>
+                    </li>
+                    <li class="revelar">
+                        <span class="passo-numero">02</span>
+                        <div>
+                            <h3>Proposta com preço fechado</h3>
+                            <p>O que vai ser feito, em quanto tempo e por quanto, em três opções. Você escolhe sem ter
+                                pago nada antes.</p>
+                        </div>
+                    </li>
+                    <li class="revelar">
+                        <span class="passo-numero">03</span>
+                        <div>
+                            <h3>A primeira parte já em uso</h3>
+                            <p>Não precisa esperar tudo ficar pronto. A entrega vem por partes, e sua equipe sente a
+                                diferença desde a primeira.</p>
+                        </div>
+                    </li>
+                    <li class="revelar">
+                        <span class="passo-numero">04</span>
+                        <div>
+                            <h3>A gente continua junto</h3>
+                            <p>Depois que o sistema entra no ar, a gente acompanha, ajusta e corrige. Se algo falhar, o
+                                próprio sistema avisa a nossa equipe.</p>
+                        </div>
+                    </li>
+                </ol>
+                <p class="nota-prazo revelar">Na maioria dos projetos, são <strong>2 a 6 semanas</strong> entre a primeira
+                    conversa e o sistema funcionando.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="dark-theme">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#home" class="logo"
-                        style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.75rem;">
-                        <img src="logo.png" alt="GenesisKore Logo" style="height: 60px; width: auto;" loading="lazy"> GENESISKORE
-                    </a>
-                    <p class="text-muted" style="max-width: 250px; font-size: 0.95rem;">AUTOMATIZANDO SUA ROTA PARA O
-                        SUCESSO.</p>
+        <!-- 6. Personalização -->
+        <section class="secao escuro" id="sob-medida" aria-labelledby="titulo-sob-medida">
+            <div class="container">
+                <p class="etiqueta revelar">Feito para a sua empresa</p>
+                <h2 id="titulo-sob-medida" class="revelar">Sistema de prateleira faz você mudar. O nosso muda para você.
+                </h2>
+
+                <div class="comparacao revelar" role="table" aria-label="Sistema de prateleira comparado com a GenesisKore">
+                    <div class="comparacao-linha comparacao-cabecalho" role="row">
+                        <span role="columnheader">Sistema de prateleira</span>
+                        <span role="columnheader">GenesisKore</span>
+                    </div>
+                    <div class="comparacao-linha" role="row">
+                        <span role="cell">Sua equipe aprende a trabalhar do jeito do sistema</span>
+                        <span role="cell">O sistema aprende o jeito da sua equipe</span>
+                    </div>
+                    <div class="comparacao-linha" role="row">
+                        <span role="cell">Você paga por recurso que nunca vai usar</span>
+                        <span role="cell">Só o que resolve o seu problema</span>
+                    </div>
+                    <div class="comparacao-linha" role="row">
+                        <span role="cell">Tela nova para todo mundo aprender</span>
+                        <span role="cell">Funciona no WhatsApp, no e-mail e na planilha que vocês já usam, ou numa tela
+                            simples feita para cada função</span>
+                    </div>
+                    <div class="comparacao-linha" role="row">
+                        <span role="cell">Suporte com fila e protocolo</span>
+                        <span role="cell">Você fala direto com quem construiu</span>
+                    </div>
                 </div>
 
-                <div class="footer-col">
-                    <h4>NAVEGAÇÃO</h4>
-                    <ul class="footer-links">
-                        <li><a href="#sobre">Quem Somos</a></li>
-                        <li><a href="#solucoes">Como trabalhamos</a></li>
-                        <li><a href="#cases">Cases</a></li>
+                <p class="honestidade revelar">E se o Bling, o Omie ou a ferramenta que você já paga resolver o seu
+                    problema, a gente fala. Você sai da conversa sabendo disso, sem proposta nenhuma na mão.</p>
+            </div>
+        </section>
+
+        <!-- 7. Cases (decisões do Gustavo em 07/10/2026): a AUTH em destaque, a nossa própria
+             plataforma como case, CCA e Rastro com os aplicativos de gestão, a Clínica como estava.
+             Nenhum número do negócio da AUTH (volume, faturamento) entra aqui: é confidencial. -->
+        <section class="secao" id="cases" aria-labelledby="titulo-cases">
+            <div class="container">
+                <p class="etiqueta revelar">Quem já trabalha com a gente</p>
+                <h2 id="titulo-cases" class="revelar">Cases</h2>
+                <p class="lead revelar">Alguns exemplos, escolhidos entre os projetos que a gente já entregou, em
+                    setores bem diferentes. Cada um feito do zero para o jeito daquela empresa.</p>
+
+                <ul class="logos revelar" aria-label="Empresas atendidas">
+                    <li><a href="#case-auth"><img src="logo-auth.png" alt="AUTH" class="logo-auth" height="28" loading="lazy"></a></li>
+                    <li><a href="#case-cca"><img src="logo-cca.png" alt="Fazenda CCA" class="logo-cca" height="64" loading="lazy"></a></li>
+                    <li><a href="#case-rastro"><img src="logo-rastro.png" alt="Rastro" class="logo-rastro" height="80" loading="lazy"></a></li>
+                    <li><a href="#case-medicina"><img src="logo-medicina.png" alt="Clínica médica" class="logo-medicina" height="52" loading="lazy"></a></li>
+                    <li><img src="logo-gmf.png" alt="GMF Gráfica" class="logo-gmf" height="90" loading="lazy"></li>
+                </ul>
+
+                <article class="case case-destaque revelar" id="case-auth">
+                    <header class="case-topo">
+                        <p class="etiqueta">Autenticação de peças de luxo</p>
+                        <img src="logo-auth.png" alt="" height="28" loading="lazy">
+                    </header>
+                    <h3>AUTH: a operação inteira num sistema só</h3>
+                    <div class="case-colunas">
+                        <div>
+                            <p><strong>Antes.</strong> Cada certificado de autenticidade era montado à mão, peça por
+                                peça. Com mais pedidos chegando, a conta não fechava.</p>
+                            <p><strong>O que fizemos.</strong> Primeiro, o certificado passou a sair sozinho: o avaliador
+                                preenche os dados e o cliente recebe o documento pronto. Depois veio a plataforma
+                                completa, com duas portas: uma para a equipe trabalhar, outra para a loja e o cliente
+                                acompanharem.</p>
+                        </div>
+                        <ul class="case-lista">
+                            <li><strong>Para a equipe</strong> Fila organizada pelo prazo de cada peça, fotos e checklist
+                                da análise, certificado com QR code, e clientes, financeiro e metas na mesma tela. Cada
+                                pessoa vê só o que a função dela pede.</li>
+                            <li><strong>Para a loja e o cliente</strong> Mandam a peça, acompanham cada etapa com prazo e
+                                baixam o certificado sem precisar perguntar a ninguém.</li>
+                            <li><strong>Para quem compra a peça</strong> O QR do certificado abre o documento daquela
+                                peça, para conferir se é a mesma.</li>
+                            <li><strong>Sempre de olho</strong> A cada 5 minutos o sistema testa se a equipe consegue
+                                trabalhar, e se conserta sozinho nas falhas que a gente já conhece.</li>
+                        </ul>
+                    </div>
+                    <footer class="case-resultado">
+                        <p class="resultado-numero">500%</p>
+                        <p>mais capacidade de avaliação, sem contratar mais gente.</p>
+                        <a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer"
+                            class="link-seta">Ver a AUTH no Instagram</a>
+                    </footer>
+                </article>
+
+                <article class="case case-destaque revelar" id="case-genesiskore">
+                    <header class="case-topo">
+                        <p class="etiqueta">Nossa própria operação</p>
+                        <img src="logo.png" alt="" height="28" loading="lazy" class="logo-casa">
+                    </header>
+                    <h3>GenesisKore: a gente usa o que vende</h3>
+                    <div class="case-colunas">
+                        <div>
+                            <p><strong>Antes.</strong> Cronograma de projeto em arquivo solto, lead numa planilha,
+                                contrato anotado em texto e o caixa só no extrato do banco. Para saber como a empresa
+                                estava, alguém tinha de juntar tudo à mão.</p>
+                            <p><strong>O que fizemos.</strong> Construímos para nós o mesmo tipo de sistema que
+                                entregamos para os clientes. Hoje a empresa inteira roda numa plataforma só, e é nela
+                                que testamos primeiro muita coisa que depois vai para quem contrata a gente.</p>
+                        </div>
+                        <ul class="case-lista">
+                            <li><strong>Cliente acompanha sozinho</strong> Cada projeto tem um link próprio. O cliente
+                                abre e vê o que já foi entregue e o que vem em seguida, sem pedir atualização.</li>
+                            <li><strong>Lead atendido na hora</strong> Quem preenche o formulário do site cai direto na
+                                plataforma, com um resumo do pedido e a primeira mensagem de WhatsApp pronta para mandar.
+                            </li>
+                            <li><strong>Caixa sem surpresa</strong> Contratos, cobranças e extrato do banco num lugar
+                                só, com a previsão do caixa dos próximos três meses.</li>
+                            <li><strong>Cada um vê o que precisa</strong> Sócio vê tudo. Quem trabalha num projeto vê só
+                                aquele projeto, sem nenhum valor em dinheiro.</li>
+                            <li><strong>Marketing que se adianta</strong> Todo dia chega um post e os stories do
+                                Instagram no padrão da marca, prontos para revisar e publicar.</li>
+                            <li><strong>Aviso quando algo para</strong> Cada automação bate ponto. Se uma parar, a tela
+                                inicial mostra qual foi.</li>
+                        </ul>
+                    </div>
+                    <footer class="case-resultado">
+                        <p class="resultado-numero">1 tela</p>
+                        <p>para projetos, clientes, caixa e marketing da empresa inteira.</p>
+                    </footer>
+                </article>
+
+                <div class="grade-cases">
+                    <article class="case revelar" id="case-cca">
+                        <p class="etiqueta">Agro e pecuária</p>
+                        <h3>Fazenda CCA: a fazenda inteira num aplicativo só</h3>
+                        <p><strong>Antes.</strong> As vendas de gado eram anotadas em bloquinho, que se perdia na
+                            caminhonete. O dono não enxergava o caixa.</p>
+                        <p><strong>O que fizemos.</strong> Um sistema de gestão completo, feito para quem está no campo.
+                            Num aplicativo só, simples o bastante para o peão usar e preencher, a fazenda cuida dos
+                            pastos e dos lotes, do que entra e do que sai, dos insumos, dos veículos e do maquinário.</p>
+                        <p>Quem prefere não abrir o aplicativo manda áudio, foto da anotação ou texto pelo celular: o
+                            sistema entende, organiza tudo e gera o recibo em PDF na hora. Todo mês, semestre e ano sai o
+                            relatório completo do caixa.</p>
+                        <footer class="case-resultado">
+                            <p class="resultado-numero">Zero</p>
+                            <p>dificuldade para a equipe: tudo pelo celular, direto do pasto.</p>
+                        </footer>
+                    </article>
+
+                    <article class="case revelar" id="case-rastro">
+                        <p class="etiqueta">Logística e frotas</p>
+                        <h3>Rastro: frota e pneus sob controle</h3>
+                        <p><strong>Antes.</strong> Centenas de pneus controlados no olho, sem histórico. Resultado:
+                            troca antes da hora e pneu falhando na estrada.</p>
+                        <p><strong>O que fizemos.</strong> Um aplicativo para a Rastro cuidar da frota de caminhões e
+                            do estoque de pneus dos clientes dela, que são transportadoras. Cada pneu tem o próprio
+                            histórico, do estoque ao caminhão: em qual veículo está, quanto rodou e como está o
+                            desgaste.</p>
+                        <p>O técnico mede pelo celular. O sistema calcula o desgaste, guarda tudo numa ficha em PDF e
+                            manda todo mês o relatório dizendo o que trocar e o que rodiziar.</p>
+                        <footer class="case-resultado">
+                            <p class="resultado-numero">Zero</p>
+                            <p>trabalho manual entre a medição e a decisão de cada pneu.</p>
+                        </footer>
+                    </article>
+
+                    <article class="case revelar" id="case-medicina">
+                        <p class="etiqueta">Saúde</p>
+                        <h3>Clínica médica: uma secretária que não para</h3>
+                        <p><strong>Antes.</strong> O paciente esperava até 4 horas para conseguir marcar consulta ou
+                            pedir orçamento.</p>
+                        <p><strong>O que fizemos.</strong> Uma secretária virtual atende a qualquer hora: faz as
+                            primeiras perguntas sobre os sintomas, cuida da agenda do médico e guarda o resumo do
+                            atendimento no prontuário.</p>
+                        <footer class="case-resultado">
+                            <p class="resultado-numero">-40%</p>
+                            <p>de faltas nas consultas, com lembretes automáticos escritos com jeito de gente.</p>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Depoimentos. Só aparece com fala de cliente de verdade, com autorização dele.
+             Para publicar: tirar o atributo hidden e preencher um <figure> por depoimento, no modelo:
+             <figure class="depoimento revelar">
+                 <blockquote><p>Texto que o cliente mandou, sem editar o sentido.</p></blockquote>
+                 <figcaption><strong>Nome</strong><span>Cargo, Empresa</span></figcaption>
+             </figure> -->
+        <section class="secao escuro" id="depoimentos" aria-labelledby="titulo-depoimentos" hidden>
+            <div class="container">
+                <p class="etiqueta revelar">Quem usa conta</p>
+                <h2 id="titulo-depoimentos" class="revelar">O que os clientes dizem</h2>
+                <div class="grade-depoimentos">
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Preço e segurança -->
+        <section class="secao" id="investimento" aria-labelledby="titulo-investimento">
+            <div class="container grade-duas">
+                <div class="revelar">
+                    <p class="etiqueta">Sem surpresa</p>
+                    <h2 id="titulo-investimento">Como funciona o pagamento</h2>
+                    <dl class="lista-termos">
+                        <div>
+                            <dt>Construção</dt>
+                            <dd>Paga uma vez, e dá para dividir por parte entregue.</dd>
+                        </div>
+                        <div>
+                            <dt>Mensalidade</dt>
+                            <dd>Cobre servidor, custo de IA e o nosso acompanhamento depois que o sistema entra no ar.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>O que não tem</dt>
+                            <dd>Taxa escondida e porcentagem sobre o seu faturamento.</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="revelar">
+                    <p class="etiqueta">Seus dados</p>
+                    <h2>Protegidos e só seus</h2>
+                    <ul class="lista-check">
+                        <li>Cada cliente tem o próprio banco de dados, separado dos outros.</li>
+                        <li>Cada pessoa da sua equipe vê só o que a função dela pede.</li>
+                        <li>Tudo segue a LGPD: dado coletado com autorização e usado só para o que foi combinado.</li>
+                        <li>Quando algo falha, o sistema registra e avisa a nossa equipe.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <div class="footer-col">
-                    <h4>DIRETRIZES</h4>
-                    <ul class="footer-links">
-                        <li><a href="#comercial">Modelo comercial</a></li>
-                        <li><a href="#seguranca">Segurança e LGPD</a></li>
-                    </ul>
-                </div>
+        <!-- 10. Perguntas -->
+        <section class="secao" id="perguntas" aria-labelledby="titulo-perguntas">
+            <div class="container estreito">
+                <p class="etiqueta revelar">Antes de falar com a gente</p>
+                <h2 id="titulo-perguntas" class="revelar">Perguntas frequentes</h2>
 
-                <div class="footer-col" id="contato">
-                    <h4>CONTATO</h4>
-                    <ul class="footer-links" style="margin-bottom: 1rem;">
-                        <li><a href="mailto:genesiskore.i4@gmail.com"
-                                style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-envelope" style="font-size: 16px; width: 16px; text-align: center;"></i> genesiskore.i4@gmail.com</a></li>
-                        <li><a href="https://www.instagram.com/genesiskore.ai/" target="_blank" rel="noopener noreferrer"
-                                style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fa-brands fa-instagram" style="font-size: 16px; width: 16px; text-align: center;"></i> @genesiskore.ai</a></li>
-                        <li><a href="https://www.linkedin.com/company/genesiskore" target="_blank" rel="noopener noreferrer"
-                                style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="fa-brands fa-linkedin-in" style="font-size: 16px; width: 16px; text-align: center;"></i> GenesisKore</a></li>
-                    </ul>
-                    <button onclick="openLeadModal()" class="btn btn-ghost"
-                        style="padding: 0.75rem 1.5rem; width: 100%; border-color: var(--gray-mid);">
-                        <i data-lucide="square-terminal" size="18"></i> FAZER DIAGNÓSTICO
-                    </button>
+                <div class="perguntas revelar">
+                    <details>
+                        <summary>Quanto tempo leva?</summary>
+                        <p>Na maioria dos projetos, de 2 a 6 semanas depois da proposta aprovada. Quando é uma
+                            plataforma inteira, leva mais, e entra por partes: cada uma já em uso antes da próxima. O
+                            prazo fechado vem junto com o preço.</p>
+                    </details>
+                    <details>
+                        <summary>Minha empresa é pequena demais?</summary>
+                        <p>Depende da tarefa, não do tamanho. Se alguma tarefa repetitiva come horas da sua equipe toda
+                            semana, vale conversar. Se não come, a gente fala isso no diagnóstico.</p>
+                    </details>
+                    <details>
+                        <summary>E se o sistema que eu já uso resolve?</summary>
+                        <p>Aí a gente diz. Se o Bling, o Omie ou a ferramenta que você já paga dá conta, você sai do
+                            diagnóstico sabendo disso, sem proposta nenhuma.</p>
+                    </details>
+                    <details>
+                        <summary>Minha equipe vai ter de aprender um sistema novo?</summary>
+                        <p>Só se valer a pena. Muitas vezes a automação trabalha por trás do que vocês já usam, como
+                            WhatsApp, e-mail e planilha. Quando tem tela nova, ela é feita para o trabalho daquela
+                            pessoa e abre no celular.</p>
+                    </details>
+                    <details>
+                        <summary>E se der problema depois?</summary>
+                        <p>O sistema registra o erro e avisa a nossa equipe na hora. Na AUTH, ele se testa a cada 5
+                            minutos e se recupera sozinho das falhas conhecidas. O acompanhamento depois do ar faz parte
+                            da mensalidade.</p>
+                    </details>
+                    <details>
+                        <summary>Preciso entender de tecnologia?</summary>
+                        <p>Não. Você explica como o seu negócio funciona, do seu jeito. A parte técnica é com a gente.
+                        </p>
+                    </details>
                 </div>
             </div>
+        </section>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 GENESISKORE. AUTOMAÇÃO E SISTEMAS SOB MEDIDA.</p>
+        <!-- 11. Fechamento -->
+        <section class="secao escuro fechamento" id="contato" aria-labelledby="titulo-contato">
+            <div class="container estreito">
+                <h2 id="titulo-contato" class="revelar">Conte onde a sua operação trava.</h2>
+                <p class="lead suave revelar">Leva dois minutos. Uma pessoa da nossa equipe lê e chama você no WhatsApp
+                    para a conversa de diagnóstico.</p>
+                <div class="acoes revelar">
+                    <button type="button" class="botao botao-cheio" data-abrir-diagnostico>Quero meu diagnóstico</button>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <a href="#inicio" class="marca">
+                    <img src="logo.png" alt="" width="36" height="36" loading="lazy">
+                    <span>GENESISKORE</span>
+                </a>
+                <p class="suave">Automatizando sua rota para o sucesso.</p>
+            </div>
+            <ul class="rodape-links" aria-label="Contato">
+                <li><a href="mailto:genesiskore.i4@gmail.com">genesiskore.i4@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/genesiskore.ai/" target="_blank" rel="noopener noreferrer">Instagram
+                        @genesiskore.ai</a></li>
+                <li><a href="https://www.linkedin.com/company/genesiskore" target="_blank" rel="noopener noreferrer">LinkedIn
+                        GenesisKore</a></li>
+            </ul>
         </div>
+        <p class="container rodape-fim">© 2026 GenesisKore. Automação e sistemas sob medida.</p>
     </footer>
 
-    <!-- Lead Capture Modal -->
-    <div id="leadModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle"
-        aria-describedby="leadModalDescription">
-        <div class="brutal-card modal-content" tabindex="-1">
-            <button class="modal-close" onclick="closeLeadModal()">
-                <i data-lucide="x" size="24"></i>
+    <!-- Botão fixo no celular, aparece depois da primeira tela -->
+    <button type="button" class="cta-fixo botao botao-cheio" id="ctaFixo" data-abrir-diagnostico>Quero meu
+        diagnóstico</button>
+
+    <!-- Formulário de diagnóstico -->
+    <dialog id="leadModal" class="janela" aria-labelledby="leadModalTitle" aria-describedby="leadModalDescription">
+        <div class="janela-topo">
+            <h2 id="leadModalTitle">Seu diagnóstico</h2>
+            <button type="button" class="janela-fechar" id="fecharDiagnostico" aria-label="Fechar">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
             </button>
-            <h3 class="title-sm" id="leadModalTitle" style="margin-bottom: 0.5rem;">DIAGNÓSTICO DA OPERAÇÃO</h3>
-            <p class="text-muted" id="leadModalDescription" style="margin-bottom: 2rem; font-size: 0.9rem;">Conte onde a
-                sua operação trava. A gente lê pessoalmente e chama você para a Reunião 01.
-            </p>
-
-            <form id="leadForm" onsubmit="submitLeadForm(event)">
-                <!-- Honeypot anti-bot: bots costumam preencher inputs ocultos -->
-                <div style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
-                    <label for="website" style="display:none;">Website</label>
-                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
-                </div>
-
-                <div class="form-group">
-                    <label for="nome" class="mono text-muted text-sm">NOME COMPLETO <span
-                            style="color: #ef4444;">*</span></label>
-                    <input type="text" id="nome" required placeholder="Ex: João da Silva" class="form-control"
-                        maxlength="80" autocomplete="name">
-                    <p id="nomeError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="empresa" class="mono text-muted text-sm">NOME DA EMPRESA <span
-                            style="color: #ef4444;">*</span></label>
-                    <input type="text" id="empresa" required placeholder="Ex: Clínica Alpha" class="form-control"
-                        maxlength="80" autocomplete="organization">
-                    <p id="empresaError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="whatsapp" class="mono text-muted text-sm">WHATSAPP / CELULAR <span
-                            style="color: #ef4444;">*</span></label>
-                    <input type="tel" id="whatsapp" required placeholder="(11) 99999-9999" class="form-control"
-                        maxlength="15" autocomplete="tel" inputmode="tel">
-                    <p id="whatsappError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="mono text-muted text-sm">E-MAIL <span
-                            style="color: #ef4444;">*</span></label>
-                    <input type="email" id="email" required placeholder="contato@empresa.com.br" class="form-control"
-                        maxlength="120" autocomplete="email">
-                    <p id="emailError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="faturamento" class="mono text-muted text-sm">FATURAMENTO MENSAL <span
-                            style="color: #ef4444;">*</span></label>
-                    <div class="select-wrapper">
-                        <select id="faturamento" required class="form-control">
-                            <option value="" disabled selected>Selecione uma faixa...</option>
-                            <option value="ate-50k">Até R$ 50.000</option>
-                            <option value="50k-150k">R$ 50k a R$ 150.000</option>
-                            <option value="150k-500k">R$ 150k a R$ 500.000</option>
-                            <option value="mais-500k">Acima de R$ 500.000</option>
-                        </select>
-                        <i data-lucide="chevron-down" class="select-icon" size="16"></i>
-                    </div>
-                    <p id="faturamentoError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <div class="form-group">
-                    <label for="gargalo" class="mono text-muted text-sm">QUAL É O SEU MAIOR GARGALO MANUAL HOJE? <span
-                            style="color: #ef4444;">*</span></label>
-                    <textarea id="gargalo" required rows="3"
-                        placeholder="Ex: Minha secretária perde muito tempo agendando consultas e emitindo recibos..."
-                        class="form-control" maxlength="2000"></textarea>
-                    <p id="gargaloError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <div class="form-group" style="margin-top: 1.25rem;">
-                    <label class="mono text-muted text-sm" style="display: flex; gap: 0.6rem; align-items: flex-start;">
-                        <input type="checkbox" id="consent" required style="margin-top: 3px;">
-                        <span>
-                            Autorizo o tratamento dos meus dados para fins de contato e análise do diagnóstico (LGPD).
-                        </span>
-                    </label>
-                    <p id="consentError" class="field-error" aria-live="polite"></p>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" id="submitBtn">
-                    ENVIAR PARA ANÁLISE <i data-lucide="arrow-right" size="16"></i>
-                </button>
-
-                <div id="formErrorMessage"
-                    style="display: none; text-align: center; margin-top: 1.25rem; color: #ef4444;">
-                    <i data-lucide="alert-triangle" size="22" style="margin-bottom: 0.35rem;"></i>
-                    <p>Não foi possível enviar seus dados agora. Tente novamente em instantes.</p>
-                </div>
-
-                <div id="formSuccessMessage"
-                    style="display: none; text-align: center; margin-top: 1.5rem; color: #4ade80;">
-                    <i data-lucide="check-circle" size="24" style="margin-bottom: 0.5rem;"></i>
-                    <p>Recebido. Você vai receber um e-mail de confirmação, e a gente chama você no WhatsApp para marcar a Reunião 01.</p>
-                </div>
-            </form>
         </div>
-    </div>
+        <p class="suave" id="leadModalDescription">Conte onde a operação trava. Uma pessoa da nossa equipe lê e chama
+            você no WhatsApp.</p>
 
-    <!-- Mobile Sticky CTA -->
-    <button class="mobile-sticky-cta btn btn-primary" id="mobileStickyLeadBtn" type="button">
-        FAZER DIAGNÓSTICO
-    </button>
+        <form id="leadForm" novalidate>
+            <!-- Campo escondido: gente não vê, robô preenche. Preenchido, o envio não sai. -->
+            <div class="campo-robo" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
 
-    <!-- Scripts -->
+            <div class="campo">
+                <label for="nome">Seu nome</label>
+                <input type="text" id="nome" required maxlength="80" autocomplete="name" placeholder="João da Silva">
+                <p id="nomeError" class="campo-erro" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+                <label for="empresa">Nome da empresa</label>
+                <input type="text" id="empresa" required maxlength="80" autocomplete="organization"
+                    placeholder="Padaria do João">
+                <p id="empresaError" class="campo-erro" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" required maxlength="15" autocomplete="tel" inputmode="tel"
+                    placeholder="(11) 99999-9999">
+                <p id="whatsappError" class="campo-erro" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required maxlength="120" autocomplete="email" inputmode="email"
+                    placeholder="voce@empresa.com.br">
+                <p id="emailError" class="campo-erro" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+                <label for="faturamento">Faturamento por mês</label>
+                <select id="faturamento" required>
+                    <option value="" disabled selected>Escolha uma faixa</option>
+                    <option value="ate-50k">Até R$ 50 mil</option>
+                    <option value="50k-150k">De R$ 50 mil a R$ 150 mil</option>
+                    <option value="150k-500k">De R$ 150 mil a R$ 500 mil</option>
+                    <option value="mais-500k">Acima de R$ 500 mil</option>
+                </select>
+                <p id="faturamentoError" class="campo-erro" aria-live="polite"></p>
+            </div>
+            <div class="campo">
+                <label for="gargalo">Qual tarefa mais toma o tempo da sua equipe hoje?</label>
+                <textarea id="gargalo" required rows="3" maxlength="2000"
+                    placeholder="Ex.: minha secretária passa a manhã agendando consulta e emitindo recibo"></textarea>
+                <p id="gargaloError" class="campo-erro" aria-live="polite"></p>
+            </div>
+            <div class="campo campo-aceite">
+                <input type="checkbox" id="consent" required>
+                <label for="consent">Autorizo o uso dos meus dados para este contato e para o diagnóstico (LGPD).</label>
+                <p id="consentError" class="campo-erro" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="botao botao-cheio botao-largo" id="submitBtn">Enviar</button>
+            <p id="formErrorMessage" class="aviso aviso-erro" role="alert" hidden>Não deu para enviar agora. Tente de
+                novo em instantes.</p>
+        </form>
+        <div id="formSuccessMessage" class="aviso aviso-ok" role="status" hidden>
+            <p><strong>Recebido.</strong></p>
+            <p>Você vai receber um e-mail de confirmação, e a gente chama você no WhatsApp para marcar a conversa de
+                diagnóstico.</p>
+            <button type="button" class="botao botao-vazio botao-largo" data-fechar-diagnostico>Fechar</button>
+        </div>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 
