@@ -56,7 +56,7 @@
                 <a href="#roi-calculator">Calculadora</a>
                 <a href="#sobre">Quem Somos</a>
                 <a href="#solucoes">Como trabalhamos</a>
-                <a href="#cases">Case</a>
+                <a href="#cases">Cases</a>
                 <a href="#processo">Processo</a>
                 <a href="#ecossistema">Stack</a>
                 <a href="#comercial">Modelo</a>
@@ -97,7 +97,7 @@
         </button>
         <a href="#roi-calculator" class="mobile-nav-link">Calculadora</a>
         <a href="#solucoes" class="mobile-nav-link">Como trabalhamos</a>
-        <a href="#cases" class="mobile-nav-link">Case</a>
+        <a href="#cases" class="mobile-nav-link">Cases</a>
         <a href="#sobre" class="mobile-nav-link">Quem Somos</a>
         <a href="#ecossistema" class="mobile-nav-link">Stack</a>
         <a href="#processo" class="mobile-nav-link">Processo</a>
@@ -118,7 +118,7 @@
                         FAZER DIAGNÓSTICO
                     </button>
                     <a href="#cases" class="btn btn-ghost">
-                        VER O CASE DA AUTH
+                        VER OS CASES
                     </a>
                 </div>
             </div>
@@ -344,11 +344,25 @@
         </div>
     </section>
 
-    <!-- Case. Só a AUTH, por decisão do Gustavo em 07/10/2026: é o único sistema da casa em
-         produção. Número do negócio dela (volume, faturamento, prazo) é confidencial e não entra. -->
+    <!-- Cases de Sucesso. A AUTH vem primeiro e mais detalhada, com a plataforma inteira; os outros
+         continuam como estavam (decisão do Gustavo em 07/10/2026). Nenhum número do negócio da
+         AUTH (volume, faturamento) entra aqui: é confidencial. -->
     <section class="section" id="cases">
         <div class="container">
-            <h2 class="title-md fade-in-up" style="margin-bottom: 2rem; text-align: center;">CASE</h2>
+            <h2 class="title-md fade-in-up" style="margin-bottom: 2rem; text-align: center;">CASES</h2>
+            <div class="fade-in-up cases-logos"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; align-items: center; justify-items: center; margin-bottom: 4rem;">
+                <a href="#case-auth"><img src="logo-auth.png" alt="Logo AUTH" class="header-logo"
+                        style="height: 48px; width: auto;" loading="lazy" decoding="async"></a>
+                <a href="#case-cca"><img src="logo-cca.png" alt="Logo Fazenda CCA" class="header-logo"
+                        style="height: 112px; width: auto;" loading="lazy" decoding="async"></a>
+                <a href="#case-rastro"><img src="logo-rastro.png" alt="Logo Rastro" class="header-logo"
+                        style="height: 138px; width: auto;" loading="lazy" decoding="async"></a>
+                <a href="#case-medicina"><img src="logo-medicina.png" alt="Símbolo Medicina" class="header-logo"
+                        style="height: 90px; width: auto;" loading="lazy" decoding="async"></a>
+                <img src="logo-gmf.png" alt="Logo GMF Gráfica" class="header-logo" style="height: 158px; width: auto;"
+                    loading="lazy" decoding="async">
+            </div>
 
             <div class="brutal-card case-unico fade-in-up" id="case-auth">
                 <div class="case-unico-topo">
@@ -363,9 +377,10 @@
                         <p class="text-muted" style="margin-bottom: 1.5rem;"><strong>Antes:</strong> a AUTH autentica
                             peças de luxo e streetwear. O certificado de autenticidade era montado à mão, peça por peça,
                             e com o volume crescendo essa conta não fechava.</p>
-                        <p class="text-muted"><strong>O que construímos:</strong> uma plataforma com duas portas para o
-                            mesmo banco de dados. A equipe trabalha por uma. A loja parceira e o cliente final
-                            acompanham pela outra.</p>
+                        <p class="text-muted"><strong>O que construímos:</strong> começou pela emissão automática. O
+                            avaliador insere os dados, e o sistema monta o laudo e entrega o certificado ao cliente
+                            final. Depois virou uma plataforma com duas portas para o mesmo banco de dados: a equipe
+                            trabalha por uma, a loja parceira e o cliente final acompanham pela outra.</p>
                     </div>
                     <ul class="case-lista">
                         <li><strong>Portal do Autenticador</strong> A fila se ordena pelo prazo de cada peça. A análise
@@ -375,16 +390,91 @@
                             etapa com prazo, conversam sobre ela e baixam o certificado sem pedir para ninguém.</li>
                         <li><strong>Conferência pública</strong> O QR de cada certificado abre o documento daquela
                             peça, guardado pela AUTH. Quem compra confere se é o mesmo item.</li>
+                        <li><strong>Vigia da plataforma</strong> De 5 em 5 minutos o sistema entra com um usuário de
+                            teste, confere se a equipe consegue trabalhar e se recupera sozinho das falhas que a gente
+                            já conhece.</li>
                     </ul>
                 </div>
 
                 <div class="case-metric">
-                    <h4>5 min</h4>
-                    <p class="text-muted">De 5 em 5 minutos a plataforma entra com um usuário de teste, confere se a
-                        equipe consegue trabalhar e se recupera sozinha das falhas que a gente já conhece.</p>
                     <a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-ghost" style="padding: 0.5rem 1rem; margin-top: 1.5rem; font-size: 0.75rem;"><i
-                            class="fa-brands fa-instagram" style="font-size: 16px;"></i> VER A AUTH NO INSTAGRAM</a>
+                        class="btn btn-ghost"
+                        style="padding: 0.5rem 1rem; margin-bottom: 1.5rem; font-size: 0.75rem;"><i
+                            class="fa-brands fa-instagram" style="font-size: 16px;"></i> VER CASE @AUTH.BR</a>
+                    <h4>500%</h4>
+                    <p class="text-muted">Aumento bruto em performance avaliativa sem incremento de FTE.</p>
+                </div>
+            </div>
+
+            <div class="mobile-swipe-hint mono">
+                <i data-lucide="arrow-right" size="16"></i> DESLIZE PARA VER MAIS
+            </div>
+
+            <div class="stacked-cases cases-tres">
+                <div class="brutal-card case-card fade-in-up delay-1" id="case-cca">
+                    <div>
+                        <span class="mono text-muted" style="display: block; margin-bottom: 1.5rem;">[ AGROTECH &
+                            PECUÁRIA ]</span>
+                        <h3 class="title-sm">FAZENDA CCA: ERP RURAL VIA WHATSAPP</h3>
+                        <p class="text-muted" style="margin-bottom: 2rem;"><strong>Cenário Prévio:</strong> Fechamento
+                            financeiro disperso ("Papelada na Caminhonete"). Gerentes anotando vendas de gado em blocos
+                            físicos que se perdiam, resultando em donos de fazendas com visões cegas do caixa.<br><br>
+                            <strong>A Engenharia:</strong> O peão envia a entrada de dados como preferir: <strong>áudio,
+                                foto das anotações ou texto digitado</strong>. A IA interpreta tudo e adiciona a
+                            informação organizada direto na planilha da fazenda, gerando recibos em PDF na hora.
+                            Periodicamente (mensal, semestral e anual), o sistema engatilha a geração e o envio de
+                            relatórios completos sobre toda a atividade financeira da fazenda.
+                        </p>
+                    </div>
+                    <div class="case-metric">
+                        <h4>Zero</h4>
+                        <p class="text-muted">Barreira tecnológica. Operação completa e segura na palma da mão, direto
+                            do pasto.</p>
+                    </div>
+                </div>
+
+                <div class="brutal-card case-card fade-in-up delay-2" id="case-rastro">
+                    <div>
+                        <span class="mono text-muted" style="display: block; margin-bottom: 1.5rem;">[ LOGÍSTICA &
+                            FROTAS ]</span>
+                        <h3 class="title-sm">RASTRO: GESTÃO INTELIGENTE DE PNEUS</h3>
+                        <p class="text-muted" style="margin-bottom: 2rem;"><strong>Cenário Prévio:</strong> Centenas de
+                            pneus rolando com controle de desgaste, quilometragem e sulcos baseados apenas em "feeling"
+                            manual, levando a descartes precoces e falhas na estrada.<br><br>
+                            <strong>A Engenharia:</strong> O técnico preenche um formulário pelo celular. Uma pipeline
+                            de Inteligência Artificial calcula o índice de desgaste, grava em um Banco de Dados na Nuvem
+                            (em tempo real), cria um
+                            <strong>RG digital (PDF)</strong> com histórico de injeção e emite relatórios avançados
+                            automáticos mensais (via E-mail) recomendando rodízios e recapes.
+                        </p>
+                    </div>
+                    <div class="case-metric">
+                        <h4>Zero</h4>
+                        <p class="text-muted">Trabalho manual entre a coleta de dados e a auditoria de decisão de cada
+                            pneu da frota.</p>
+                    </div>
+                </div>
+
+                <div class="brutal-card case-card fade-in-up delay-3" id="case-medicina">
+                    <div>
+                        <span class="mono text-muted" style="display: block; margin-bottom: 1.5rem;">[ SETOR DE SAÚDE
+                            ]</span>
+                        <h3 class="title-sm">CLÍNICA MÉDICA (ALTO SIGILO)</h3>
+                        <p class="text-muted" style="margin-bottom: 2rem;"><strong>Cenário Prévio:</strong> Gargalo no
+                            call-center com 4 horas de delay médio para pacientes conseguirem agendamentos ou
+                            orçamentos.<br><br>
+                            <strong>Engenharia Aplicada:</strong> IA atua como Secretária Virtual Inteligente realizando
+                            triagem total em canal
+                            ativo 24/7. Aplica anamnese inicial de sintomas, gerencia a <strong>agenda do
+                                médico</strong> e consolida o sumário do atendimento diretamente no banco de dados e
+                            prontuário eletrônico.
+                        </p>
+                    </div>
+                    <div class="case-metric">
+                        <h4>-40%</h4>
+                        <p class="text-muted">Abaixo no No-Show (faltas) através do funil de lembretes humanizados
+                            automáticos.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -665,7 +755,7 @@
                     <ul class="footer-links">
                         <li><a href="#sobre">Quem Somos</a></li>
                         <li><a href="#solucoes">Como trabalhamos</a></li>
-                        <li><a href="#cases">Case AUTH</a></li>
+                        <li><a href="#cases">Cases</a></li>
                     </ul>
                 </div>
 

@@ -1534,10 +1534,19 @@ textarea.form-control {
     }
 }
 
-/* Case único: só a AUTH desde 07/10/2026. Um cartão largo no lugar da grade de quatro. */
+/* Case da AUTH em destaque, num cartão largo acima dos outros três (07/10/2026). */
 .case-unico {
-    max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 0 2rem;
+}
+
+.stacked-cases.cases-tres {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+    .stacked-cases.cases-tres {
+        grid-template-columns: 1fr;
+    }
 }
 
 .case-unico-topo {
