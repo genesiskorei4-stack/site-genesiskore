@@ -237,8 +237,8 @@ if ('IntersectionObserver' in window) {
 
 const listaAvisos = document.getElementById('avisosLista');
 const MENSAGENS = [
-    'Cliente respondido no WhatsApp',
-    'Lembrete de consulta confirmado',
+    'Cliente avisado da entrega',
+    'Pedido conferido com o estoque',
     'Relatório do mês no seu e-mail',
     'Orçamento enviado em PDF',
     'Pagamento conferido no extrato',
