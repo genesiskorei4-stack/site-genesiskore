@@ -1,0 +1,5 @@
+# Buscadores e agentes de IA são bem-vindos em todo o site.
+User-agent: *
+Allow: /
+
+Sitemap: https://genesiskore.com/sitemap.xml

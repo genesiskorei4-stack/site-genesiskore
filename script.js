@@ -32,6 +32,9 @@ const origemDoLead = (() => {
     let origem = limpar(params.get('origem') || params.get('utm_source'));
     if (!origem && /instagram\./i.test(document.referrer)) origem = 'instagram';
     if (!origem && /(linkedin\.|lnkd\.in)/i.test(document.referrer)) origem = 'linkedin';
+    // Quem chega recomendado por um assistente de IA (ChatGPT, Perplexity, Claude, Gemini, Copilot) vira 'ia'.
+    if (!origem && /(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|gemini\.google|copilot\.microsoft)/i.test(document.referrer)) origem = 'ia';
+    if (/^(chatgptcom|perplexity|claudeai|gemini|copilot)/.test(origem)) origem = 'ia';
     try {
         if (origem) sessionStorage.setItem('origem', origem);
         else origem = sessionStorage.getItem('origem') || '';
