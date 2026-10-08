@@ -1155,6 +1155,12 @@ body.travado {
     max-width: 46ch;
 }
 
+.garantia-final {
+    margin: 22px auto 0;
+    padding: 0;
+    border-left: 0;
+}
+
 .rolar {
     display: none;
 }
