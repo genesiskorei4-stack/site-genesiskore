@@ -1362,6 +1362,191 @@ body.travado {
     }
 }
 
+/* ------------------------------------------------------------ 3b. diagnóstico rápido (21/10/2026) */
+
+.diagnostico {
+    border-top: 1px solid var(--linha);
+}
+
+.quiz {
+    margin-top: 36px;
+    background: var(--branco);
+    border: 1px solid var(--tinta);
+    padding: 22px 18px 26px;
+}
+
+.quiz-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 44px;
+}
+
+.quiz-passo {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--suave);
+}
+
+/* Botão de texto: Voltar, Refazer e "Não mandar estas respostas" */
+.quiz-voltar {
+    min-height: 44px;
+    padding: 0 4px;
+    background: none;
+    border: 0;
+    font-family: var(--titulo);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tinta);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+.quiz-voltar[hidden] {
+    display: none;
+}
+
+.quiz-barra {
+    height: 2px;
+    margin: 6px 0 24px;
+    background: var(--linha);
+    overflow: hidden;
+}
+
+.quiz-barra span {
+    display: block;
+    height: 100%;
+    background: var(--tinta);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease);
+}
+
+.quiz-pergunta h3,
+.quiz-resultado h3 {
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.quiz-pergunta h3:focus,
+.quiz-resultado h3:focus {
+    outline: none;
+}
+
+.quiz-pergunta[hidden],
+.quiz-resultado[hidden] {
+    display: none;
+}
+
+.quiz-opcoes {
+    display: grid;
+    gap: 10px;
+}
+
+.quiz-opcao {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 56px;
+    padding: 14px 16px;
+    background: var(--branco);
+    border: 1px solid #c9c9c9;
+    color: var(--tinta);
+    font-family: var(--texto);
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+/* O quadradinho que marca a escolha, no lugar da bolinha de rádio */
+.quiz-opcao::before {
+    content: '';
+    flex: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid currentColor;
+}
+
+.quiz-opcao[aria-pressed='true'] {
+    background: var(--tinta);
+    border-color: var(--tinta);
+    color: var(--branco);
+}
+
+.quiz-opcao[aria-pressed='true']::before {
+    background: var(--verde);
+    border-color: var(--verde);
+}
+
+@media (hover: hover) {
+    .quiz-opcao:hover {
+        border-color: var(--tinta);
+    }
+}
+
+.quiz-pontos {
+    list-style: none;
+    counter-reset: ponto;
+    display: grid;
+    gap: 16px;
+}
+
+.quiz-pontos li {
+    counter-increment: ponto;
+    position: relative;
+    padding: 0 0 16px 40px;
+    border-bottom: 1px solid var(--linha);
+}
+
+.quiz-pontos li::before {
+    content: counter(ponto, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--suave);
+}
+
+.quiz-franco {
+    margin-top: 22px;
+    padding-left: 16px;
+    border-left: 2px solid var(--tinta);
+}
+
+.quiz-franco[hidden] {
+    display: none;
+}
+
+.quiz-nota {
+    margin-top: 18px;
+    font-size: 0.86rem;
+    color: var(--suave);
+}
+
+.quiz-acoes {
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    margin-top: 22px;
+}
+
+@media (min-width: 720px) {
+    .quiz {
+        padding: 34px 40px 38px;
+    }
+}
+
 /* ------------------------------------------------------------ 4. calculadora */
 
 .grade-calculadora {
@@ -2430,7 +2615,10 @@ body.travado {
     box-shadow: inset 0 0 0 1px var(--tinta);
 }
 
-.campo .field-invalid {
+/* Com input/select/textarea no seletor para vencer a borda cinza e o foco, que têm o mesmo peso. */
+.campo input.field-invalid,
+.campo select.field-invalid,
+.campo textarea.field-invalid {
     border-color: var(--vermelho);
     box-shadow: inset 0 0 0 1px var(--vermelho);
 }
@@ -2474,6 +2662,65 @@ body.travado {
 
 .campo-aceite .campo-erro {
     grid-column: 2;
+}
+
+.campo-grupo {
+    border: 0;
+    margin: 4px 0 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.campo-grupo legend {
+    padding: 0;
+    font-family: var(--titulo);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.campo-dica {
+    margin: 2px 0 10px;
+    font-size: 0.82rem;
+    color: var(--suave);
+}
+
+.opcional {
+    font-weight: 400;
+    color: var(--suave);
+}
+
+.form-diagnostico {
+    margin-bottom: 18px;
+    padding: 14px 16px 6px;
+    background: var(--branco);
+    border: 1px solid var(--linha);
+}
+
+.form-diagnostico[hidden] {
+    display: none;
+}
+
+.form-diagnostico-texto {
+    white-space: pre-line;
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+.aviso-erro {
+    display: grid;
+    gap: 10px;
+}
+
+.aviso-erro .botao {
+    color: var(--tinta);
+}
+
+.aviso-erro .suave a {
+    color: inherit;
+}
+
+.aviso-ok:focus {
+    outline: none;
 }
 
 .campo-robo {
