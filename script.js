@@ -871,7 +871,7 @@ function montarEmailReserva(d) {
         d.gargalo && `\n${d.gargalo}`,
     ].filter(Boolean);
     const assunto = `Conversa de diagnóstico: ${d.empresa}`;
-    document.getElementById('formErroEmail').href = `mailto:genesiskore.i4@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(linhas.join('\n'))}`;
+    document.getElementById('formErroEmail').href = `mailto:contato@genesiskore.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(linhas.join('\n'))}`;
 }
 
 function mostrarSucesso(d) {

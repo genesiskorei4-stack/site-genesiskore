@@ -67,6 +67,6 @@ Não. Você explica como o seu negócio funciona, do seu jeito. A parte técnica
 ## Contato
 
 - Formulário de diagnóstico: https://genesiskore.com/#contato (uma pessoa da equipe lê e chama você no WhatsApp)
-- E-mail: genesiskore.i4@gmail.com
+- E-mail: contato@genesiskore.com
 - Instagram: https://www.instagram.com/genesiskore.ai/
 - LinkedIn: https://www.linkedin.com/company/genesiskore
