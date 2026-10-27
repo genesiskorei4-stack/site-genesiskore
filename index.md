@@ -81,8 +81,7 @@ Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema res
 
 ## Contato
 
-- Formulário de diagnóstico: https://genesiskore.com/#conversar (uma pessoa da equipe lê e chama você no WhatsApp)
-- Diagnóstico rápido com Raio X em PDF na hora: https://genesiskore.com/#diagnostico
+- Formulário de diagnóstico: https://genesiskore.com/conversar/ (uma pessoa da equipe lê e chama você no WhatsApp)
 - E-mail: contato@genesiskore.com
 - Instagram: https://www.instagram.com/genesiskore/
 - TikTok: https://www.tiktok.com/@genesiskore

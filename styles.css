@@ -1362,243 +1362,6 @@ body.travado {
     }
 }
 
-/* ------------------------------------------------------------ 3b. diagnóstico rápido (21/10/2026) */
-
-.diagnostico {
-    border-top: 1px solid var(--linha);
-}
-
-.quiz {
-    margin-top: 36px;
-    background: var(--branco);
-    border: 1px solid var(--tinta);
-    padding: 22px 18px 26px;
-}
-
-.quiz-topo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 44px;
-}
-
-.quiz-passo {
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--suave);
-}
-
-/* Botão de texto: Voltar, Refazer e "Não mandar estas respostas" */
-.quiz-voltar {
-    min-height: 44px;
-    padding: 0 4px;
-    background: none;
-    border: 0;
-    font-family: var(--titulo);
-    font-size: 0.74rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--tinta);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    cursor: pointer;
-}
-
-.quiz-voltar[hidden] {
-    display: none;
-}
-
-.quiz-barra {
-    height: 2px;
-    margin: 6px 0 24px;
-    background: var(--linha);
-    overflow: hidden;
-}
-
-.quiz-barra span {
-    display: block;
-    height: 100%;
-    background: var(--tinta);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s var(--ease);
-}
-
-.quiz-pergunta h3,
-.quiz-resultado h3 {
-    font-size: clamp(1.25rem, 5vw, 1.6rem);
-    line-height: 1.25;
-    margin-bottom: 20px;
-}
-
-.quiz-pergunta h3:focus,
-.quiz-resultado h3:focus {
-    outline: none;
-}
-
-.quiz-pergunta[hidden],
-.quiz-resultado[hidden] {
-    display: none;
-}
-
-.quiz-opcoes {
-    display: grid;
-    gap: 10px;
-}
-
-.quiz-opcao {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    min-height: 56px;
-    padding: 14px 16px;
-    background: var(--branco);
-    border: 1px solid #c9c9c9;
-    color: var(--tinta);
-    font-family: var(--texto);
-    font-size: 1rem;
-    line-height: 1.35;
-    text-align: left;
-    cursor: pointer;
-    transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease), color 0.3s var(--ease);
-}
-
-/* O quadradinho que marca a escolha, no lugar da bolinha de rádio */
-.quiz-opcao::before {
-    content: '';
-    flex: none;
-    width: 14px;
-    height: 14px;
-    border: 1px solid currentColor;
-}
-
-.quiz-opcao[aria-pressed='true'] {
-    background: var(--tinta);
-    border-color: var(--tinta);
-    color: var(--branco);
-}
-
-.quiz-opcao[aria-pressed='true']::before {
-    background: var(--verde);
-    border-color: var(--verde);
-}
-
-@media (hover: hover) {
-    .quiz-opcao:hover {
-        border-color: var(--tinta);
-    }
-}
-
-.quiz-pontos {
-    list-style: none;
-    counter-reset: ponto;
-    display: grid;
-    gap: 16px;
-}
-
-.quiz-pontos li {
-    counter-increment: ponto;
-    position: relative;
-    padding: 0 0 16px 40px;
-    border-bottom: 1px solid var(--linha);
-}
-
-.quiz-pontos li::before {
-    content: counter(ponto, decimal-leading-zero);
-    position: absolute;
-    left: 0;
-    top: 2px;
-    font-family: var(--mono);
-    font-size: 0.74rem;
-    color: var(--suave);
-}
-
-.quiz-franco {
-    margin-top: 22px;
-    padding-left: 16px;
-    border-left: 2px solid var(--tinta);
-}
-
-.quiz-franco[hidden] {
-    display: none;
-}
-
-.quiz-nota {
-    margin-top: 18px;
-    font-size: 0.86rem;
-    color: var(--suave);
-}
-
-.quiz-acoes {
-    display: grid;
-    justify-items: center;
-    gap: 6px;
-    margin-top: 22px;
-}
-
-/* O pedido do Raio X em PDF, dentro do resultado (27/10/2026) */
-.quiz-raio {
-    margin-top: 28px;
-    padding: 20px 16px 8px;
-    border: 1px solid var(--tinta);
-}
-
-.quiz-raio h4 {
-    font-family: var(--titulo);
-    font-size: 1.15rem;
-    line-height: 1.3;
-    margin-bottom: 8px;
-}
-
-.quiz-raio-texto {
-    font-size: 0.92rem;
-    color: var(--suave);
-    margin-bottom: 18px;
-}
-
-.quiz-raio-erro {
-    margin: 10px 0 12px;
-}
-
-.quiz-raio-pronto {
-    display: grid;
-    gap: 14px;
-    padding-bottom: 12px;
-}
-
-.quiz-raio-pronto:focus {
-    outline: none;
-}
-
-.quiz-raio-pronto[hidden],
-.quiz-raio form[hidden] {
-    display: none;
-}
-
-.quiz-raio-links {
-    display: grid;
-    gap: 10px;
-}
-
-@media (min-width: 720px) {
-    .quiz {
-        padding: 34px 40px 38px;
-    }
-
-    .quiz-raio {
-        padding: 26px 28px 12px;
-    }
-
-    .quiz-raio-links {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 /* ------------------------------------------------------------ 4. calculadora */
 
 .grade-calculadora {
@@ -2515,109 +2278,7 @@ body.travado {
     color: var(--branco);
 }
 
-/* ------------------------------------------------------------ janela do diagnóstico */
-
-.janela {
-    width: 100%;
-    max-width: 100%;
-    max-height: calc(100vh - 24px);
-    max-height: calc(100dvh - 24px);
-    margin: auto 0 0;
-    padding: 22px var(--margem) calc(28px + env(safe-area-inset-bottom));
-    border: 0;
-    border-top: 1px solid var(--tinta);
-    background: var(--papel);
-    color: var(--tinta);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-}
-
-.janela[open] {
-    animation: janelaSobe 0.55s var(--ease);
-}
-
-.janela::backdrop {
-    background: rgba(0, 0, 0, 0.62);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    animation: fundoAparece 0.45s ease;
-}
-
-.janela.fechando {
-    animation: janelaDesce 0.35s var(--ease) forwards;
-}
-
-.janela.fechando::backdrop {
-    animation: fundoSome 0.35s ease forwards;
-}
-
-@keyframes janelaSobe {
-    from {
-        transform: translateY(60px);
-        opacity: 0;
-    }
-}
-
-@keyframes janelaDesce {
-    to {
-        transform: translateY(60px);
-        opacity: 0;
-    }
-}
-
-@keyframes fundoAparece {
-    from {
-        opacity: 0;
-    }
-}
-
-@keyframes fundoSome {
-    to {
-        opacity: 0;
-    }
-}
-
-.janela-topo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 8px;
-}
-
-.janela-topo h2 {
-    font-size: 1.7rem;
-}
-
-.janela-fechar {
-    flex: none;
-    width: 44px;
-    height: 44px;
-    display: grid;
-    place-content: center;
-    background: none;
-    border: 1px solid var(--linha);
-    cursor: pointer;
-    transition: transform 0.45s var(--ease), border-color 0.3s;
-}
-
-.janela-fechar svg {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.6;
-}
-
-@media (hover: hover) {
-    .janela-fechar:hover {
-        transform: rotate(90deg);
-        border-color: var(--tinta);
-    }
-}
-
-.janela > .suave {
-    font-size: 0.95rem;
-    margin-bottom: 22px;
-}
+/* ------------------------------------------------------------ campos do formulário (conversar/) */
 
 .campo {
     margin-bottom: 14px;
@@ -2739,23 +2400,6 @@ body.travado {
 .opcional {
     font-weight: 400;
     color: var(--suave);
-}
-
-.form-diagnostico {
-    margin-bottom: 18px;
-    padding: 14px 16px 6px;
-    background: var(--branco);
-    border: 1px solid var(--linha);
-}
-
-.form-diagnostico[hidden] {
-    display: none;
-}
-
-.form-diagnostico-texto {
-    white-space: pre-line;
-    font-size: 0.86rem;
-    line-height: 1.55;
 }
 
 .aviso-erro {
@@ -2969,29 +2613,6 @@ body.travado {
     .rodape-grade {
         grid-template-columns: 1fr auto;
         align-items: start;
-    }
-
-    /* No tablet e no computador, a janela vira caixa no meio da tela */
-    .janela {
-        width: min(580px, calc(100% - 48px));
-        max-height: 90vh;
-        margin: auto;
-        padding: 32px 36px;
-        border: 1px solid var(--tinta);
-    }
-
-    @keyframes janelaSobe {
-        from {
-            transform: translateY(24px) scale(0.97);
-            opacity: 0;
-        }
-    }
-
-    @keyframes janelaDesce {
-        to {
-            transform: translateY(16px) scale(0.98);
-            opacity: 0;
-        }
     }
 }
 
@@ -3345,5 +2966,286 @@ body.travado {
 @media (min-width: 1024px) {
     .grade-produtos {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ------------------------------------------------------------ página do formulário (27/10/2026)
+   O formulário saiu da janela e virou página própria, em cinco etapas, com a linha de progresso
+   no alto e o faturamento por último. A lógica mora em conversar/conversar.js. */
+
+.conversa {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.conversa-topo {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(245, 245, 245, 0.92);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--linha);
+}
+
+.conversa-topo-linha {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: var(--topo);
+}
+
+.conversa-topo .marca img {
+    filter: invert(1);
+}
+
+.conversa-sair {
+    font-family: var(--titulo);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tinta);
+    text-underline-offset: 4px;
+}
+
+/* A linha de progresso: um traço por etapa, preto quando respondida */
+.progresso {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    height: 3px;
+}
+
+.progresso span {
+    position: relative;
+    overflow: hidden;
+    background: var(--linha);
+}
+
+.progresso span::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--tinta);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s var(--ease);
+}
+
+.progresso span.feita::after {
+    transform: scaleX(1);
+}
+
+.progresso-texto {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0 12px;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--suave);
+}
+
+.conversa-corpo {
+    flex: 1;
+    width: 100%;
+    max-width: calc(640px + 2 * var(--margem));
+    margin: 0 auto;
+    padding: 40px var(--margem) calc(56px + env(safe-area-inset-bottom));
+}
+
+.etapa[hidden],
+.conversa-fim[hidden] {
+    display: none;
+}
+
+.etapa,
+.conversa-fim {
+    animation: etapaEntra 0.6s var(--ease);
+}
+
+@keyframes etapaEntra {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+}
+
+.etapa h1,
+.conversa-fim h1 {
+    font-size: clamp(1.9rem, 7.5vw, 2.8rem);
+    line-height: 1.04;
+    margin-bottom: 16px;
+}
+
+.etapa h1:focus,
+.conversa-fim h1:focus {
+    outline: none;
+}
+
+.etapa > .lead {
+    margin-bottom: 28px;
+}
+
+.opcoes {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 58px;
+    padding: 14px 16px;
+    background: var(--branco);
+    border: 1px solid #c9c9c9;
+    color: var(--tinta);
+    font-family: var(--texto);
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+/* O quadradinho que marca a escolha, no lugar da bolinha de rádio */
+.opcao::before {
+    content: '';
+    flex: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid currentColor;
+}
+
+.opcao[aria-pressed='true'] {
+    background: var(--tinta);
+    border-color: var(--tinta);
+    color: var(--branco);
+}
+
+.opcao[aria-pressed='true']::before {
+    background: var(--verde);
+    border-color: var(--verde);
+}
+
+@media (hover: hover) {
+    .opcao:hover {
+        border-color: var(--tinta);
+    }
+}
+
+.opcoes-erro {
+    min-height: 1.2em;
+}
+
+/* A conta da etapa 3: o número sai das respostas, e a conta fica escrita embaixo */
+.conta-do-ano {
+    margin-bottom: 28px;
+    padding: 20px 18px;
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.conta-do-ano[hidden] {
+    display: none;
+}
+
+.conta-do-ano strong {
+    display: block;
+    font-family: var(--titulo);
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1;
+    margin: 6px 0 10px;
+}
+
+.conta-do-ano p {
+    color: var(--suave-escuro);
+    font-size: 0.92rem;
+}
+
+.conta-do-ano .mini {
+    color: var(--suave-escuro);
+}
+
+.etapa-acoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.etapa-acoes .botao {
+    flex: 1;
+    max-width: 320px;
+    margin-left: auto;
+}
+
+.voltar {
+    min-height: 44px;
+    padding: 0 4px;
+    background: none;
+    border: 0;
+    font-family: var(--titulo);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tinta);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+}
+
+.a-seguir {
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid var(--linha);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--suave);
+}
+
+.franqueza {
+    padding: 16px;
+    background: var(--branco);
+    border: 1px solid var(--linha);
+    font-size: 0.95rem;
+}
+
+.franqueza[hidden] {
+    display: none;
+}
+
+.conversa-fim {
+    display: grid;
+    gap: 16px;
+}
+
+@media (min-width: 720px) {
+    .conversa-corpo {
+        padding-top: 64px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .etapa,
+    .conversa-fim {
+        animation: none;
+    }
+
+    .progresso span::after {
+        transition: none;
     }
 }

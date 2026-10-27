@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Conversa de diagnóstico | GenesisKore</title>
+    <meta name="description"
+        content="Cinco perguntas rápidas sobre a sua operação. Uma pessoa da GenesisKore lê e chama você para a conversa de diagnóstico, que não custa nada.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://genesiskore.com/conversar/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://genesiskore.com/conversar/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Conversa de diagnóstico | GenesisKore">
+    <meta property="og:description" content="Cinco perguntas rápidas sobre a sua operação. A conversa de diagnóstico não custa nada.">
+    <meta property="og:image" content="https://genesiskore.com/previa-link.png">
+    <link rel="icon" type="image/png" href="../icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="../icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
+    <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;500;700&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>document.documentElement.classList.add('js')</script>
+</head>
+
+<body>
+    <div class="conversa">
+        <header class="conversa-topo">
+            <div class="container">
+                <div class="conversa-topo-linha">
+                    <a href="../" class="marca" aria-label="GenesisKore, voltar ao site">
+                        <img src="../logo.png" alt="" width="36" height="40">
+                        <span>GENESISKORE</span>
+                    </a>
+                    <a href="../" class="conversa-sair">Voltar ao site</a>
+                </div>
+                <div class="progresso" id="progresso" role="progressbar" aria-label="Quanto do formulário você já respondeu"
+                    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="progresso-texto" aria-hidden="true">
+                    <span id="progressoEtapa">Etapa 1 de 5</span>
+                    <span id="progressoFeito">0% respondido</span>
+                </p>
+            </div>
+        </header>
+
+        <main class="conversa-corpo">
+            <!-- Os ids e o que vai no envio são os mesmos da janela que existia antes de 27/10/2026: o
+                 workflow do n8n lê nome, empresa, whatsapp, email, faturamento, gargalo, consent, website e
+                 origem. As respostas das etapas 1 a 3 seguem juntas no texto do gargalo. -->
+            <form id="leadForm" novalidate>
+                <!-- Campo escondido: gente não vê, robô preenche. Preenchido, o envio não sai. -->
+                <div class="campo-robo" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <!-- 1 -->
+                <section class="etapa" data-etapa="1" aria-labelledby="t1">
+                    <p class="etiqueta">Conversa de diagnóstico</p>
+                    <h1 id="t1" tabindex="-1">Onde a sua empresa mais perde tempo hoje?</h1>
+                    <p class="lead">Escolha o que mais pesa. Daqui a pouco dá para contar com as suas palavras.</p>
+                    <div class="opcoes" data-pergunta="onde">
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="pedido">Pedido, estoque e entrega</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="financeiro">Conferência, cobrança e boleto</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="documentos">Documento e relatório montados à mão</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="dono">Tudo passa por mim antes de sair</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="lucro">Não sei quanto sobra de cada venda</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="outro">Outra coisa</button>
+                    </div>
+                    <p class="campo-erro opcoes-erro" id="ondeError" aria-live="polite"></p>
+                    <p class="a-seguir">A seguir: quanto isso custa em horas</p>
+                </section>
+
+                <!-- 2 -->
+                <section class="etapa" data-etapa="2" aria-labelledby="t2" hidden>
+                    <p class="etiqueta">Pergunta 2</p>
+                    <h1 id="t2" tabindex="-1">Quanto tempo isso toma da equipe por semana?</h1>
+                    <p class="lead">Somando todo mundo que mexe nisso. Um palpite serve.</p>
+                    <div class="opcoes" data-pergunta="tempo">
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="ate-5">Menos de 5 horas</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="5-15">De 5 a 15 horas</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="15-40">De 15 a 40 horas</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="mais-40">Mais de 40 horas</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="nao-sei">Nunca medi</button>
+                    </div>
+                    <p class="campo-erro opcoes-erro" id="tempoError" aria-live="polite"></p>
+                    <div class="etapa-acoes">
+                        <button type="button" class="voltar" data-voltar>Voltar</button>
+                    </div>
+                    <p class="a-seguir">A seguir: a conta do ano</p>
+                </section>
+
+                <!-- 3 -->
+                <section class="etapa" data-etapa="3" aria-labelledby="t3" hidden>
+                    <div class="conta-do-ano" id="contaDoAno" hidden>
+                        <p class="mini">A conta do ano</p>
+                        <strong id="contaHoras"></strong>
+                        <p id="contaTexto"></p>
+                    </div>
+                    <h1 id="t3" tabindex="-1">Como isso acontece hoje?</h1>
+                    <p class="lead">Conte do seu jeito, como contaria para alguém de fora. Quanto mais concreto, melhor a gente
+                        chega na conversa.</p>
+                    <div class="campo">
+                        <label for="gargalo">O que acontece, passo a passo <span class="opcional">(opcional)</span></label>
+                        <textarea id="gargalo" name="gargalo" rows="5" maxlength="2000"
+                            placeholder="Ex.: o pedido chega no WhatsApp, alguém digita tudo de novo no sistema e o financeiro confere à mão antes de emitir o boleto"></textarea>
+                    </div>
+                    <div class="etapa-acoes">
+                        <button type="button" class="voltar" data-voltar>Voltar</button>
+                        <button type="submit" class="botao botao-cheio">Continuar</button>
+                    </div>
+                    <p class="a-seguir">A seguir: com quem a gente fala</p>
+                </section>
+
+                <!-- 4 -->
+                <section class="etapa" data-etapa="4" aria-labelledby="t4" hidden>
+                    <p class="etiqueta">Quase lá</p>
+                    <h1 id="t4" tabindex="-1">Com quem a gente fala?</h1>
+                    <p class="lead">Uma pessoa da nossa equipe lê o que você mandou e chama você para marcar a conversa.</p>
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome" required aria-required="true" maxlength="80" autocomplete="name"
+                            placeholder="João da Silva" aria-describedby="nomeError">
+                        <p id="nomeError" class="campo-erro" aria-live="polite"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="empresa">Nome da empresa</label>
+                        <input type="text" id="empresa" name="empresa" required aria-required="true" maxlength="80"
+                            autocomplete="organization" placeholder="Distribuidora Silva" aria-describedby="empresaError">
+                        <p id="empresaError" class="campo-erro" aria-live="polite"></p>
+                    </div>
+                    <fieldset class="campo-grupo">
+                        <legend>Como a gente fala com você</legend>
+                        <p class="campo-dica" id="contatoDica">Preencha pelo menos um dos dois.</p>
+                        <div class="campo">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" maxlength="20" autocomplete="tel" inputmode="tel"
+                                placeholder="(11) 98765-4321" aria-describedby="contatoDica whatsappError">
+                            <p id="whatsappError" class="campo-erro" aria-live="polite"></p>
+                        </div>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" maxlength="120" autocomplete="email" inputmode="email"
+                                placeholder="voce@empresa.com.br" aria-describedby="contatoDica emailError">
+                            <p id="emailError" class="campo-erro" aria-live="polite"></p>
+                        </div>
+                    </fieldset>
+                    <div class="etapa-acoes">
+                        <button type="button" class="voltar" data-voltar>Voltar</button>
+                        <button type="submit" class="botao botao-cheio">Continuar</button>
+                    </div>
+                    <p class="a-seguir">Falta só uma, e é a última</p>
+                </section>
+
+                <!-- 5: o mais reservado fica por último -->
+                <section class="etapa" data-etapa="5" aria-labelledby="t5" hidden>
+                    <p class="etiqueta">Última pergunta</p>
+                    <h1 id="t5" tabindex="-1">Quanto a empresa fatura por mês, em média?</h1>
+                    <p class="lead">Fica entre nós. Serve para a gente chegar na conversa sabendo se faz sentido, e dizer logo
+                        se não fizer.</p>
+                    <div class="opcoes" data-pergunta="faturamento">
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="ate-50k">Até R$ 50 mil</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="50k-150k">De R$ 50 mil a R$ 150 mil</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="150k-500k">De R$ 150 mil a R$ 500 mil</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="mais-500k">Acima de R$ 500 mil</button>
+                        <button type="button" class="opcao" aria-pressed="false" data-valor="">Prefiro dizer na conversa</button>
+                    </div>
+                    <div class="campo campo-aceite">
+                        <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="consentError">
+                        <label for="consent">Autorizo o uso dos meus dados para este contato e para o diagnóstico (LGPD). <a href="../privacidade/" target="_blank" rel="noopener">Como usamos os dados</a></label>
+                        <p id="consentError" class="campo-erro" aria-live="polite"></p>
+                    </div>
+                    <div class="etapa-acoes">
+                        <button type="button" class="voltar" data-voltar>Voltar</button>
+                        <button type="submit" class="botao botao-cheio" id="submitBtn">Enviar</button>
+                    </div>
+                    <div id="formErrorMessage" class="aviso-form aviso-erro" role="alert" hidden>
+                        <p>Não deu para enviar agora. O que você escreveu continua aqui: tente de novo em instantes.</p>
+                        <p>Se preferir, mande por e-mail. O botão abaixo já monta a mensagem com os seus dados.</p>
+                        <a class="botao botao-vazio botao-largo" id="formErroEmail" href="mailto:contato@genesiskore.com">Mandar por e-mail</a>
+                        <p class="suave">Ou chame no Instagram <a href="https://www.instagram.com/genesiskore/" target="_blank" rel="noopener noreferrer">@genesiskore</a>.</p>
+                    </div>
+                </section>
+            </form>
+
+            <section class="conversa-fim" id="formSuccessMessage" aria-labelledby="formSucessoTitulo" hidden>
+                <p class="etiqueta">Pedido recebido</p>
+                <h1 id="formSucessoTitulo" tabindex="-1">Recebido.</h1>
+                <p class="lead" id="formSucessoTexto">Uma pessoa da nossa equipe lê o que você mandou e chama você no WhatsApp
+                    para marcar a conversa de diagnóstico.</p>
+                <p class="franqueza" id="formFranqueza" hidden></p>
+                <a href="../" class="botao botao-vazio botao-largo">Voltar ao site</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../contagem.js"></script>
+    <script src="conversar.js"></script>
+</body>
+
+</html>
