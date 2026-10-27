@@ -473,12 +473,12 @@
             <div class="container estreito">
                 <p class="etiqueta revelar">Diagnóstico rápido</p>
                 <h2 id="titulo-diagnostico" class="titulo-secao revelar">Onde a sua operação perde tempo e dinheiro</h2>
-                <p class="lead revelar">Cinco perguntas sobre o dia a dia da empresa, com um toque cada. O resultado
-                    aparece aqui mesmo, sem pedir e-mail nem telefone.</p>
+                <p class="lead revelar">Seis perguntas sobre o dia a dia da empresa, com um toque cada. O resultado
+                    aparece aqui mesmo, sem pedir e-mail nem telefone. Se quiser, no fim ele vira um Raio X em PDF.</p>
 
                 <div class="quiz revelar" id="quiz">
                     <div class="quiz-topo">
-                        <p class="quiz-passo" id="quizPasso" aria-live="polite">Pergunta 1 de 5</p>
+                        <p class="quiz-passo" id="quizPasso" aria-live="polite">Pergunta 1 de 6</p>
                         <button type="button" class="quiz-voltar" id="quizVoltar" hidden>Voltar</button>
                     </div>
                     <div class="quiz-barra" aria-hidden="true"><span id="quizBarra"></span></div>
@@ -522,6 +522,17 @@
                         </div>
                     </div>
 
+                    <div class="quiz-pergunta" data-chave="setor" data-rotulo="Setor" role="group" aria-labelledby="q-setor" hidden>
+                        <h3 id="q-setor" tabindex="-1">Em que ramo a empresa trabalha?</h3>
+                        <div class="quiz-opcoes">
+                            <button type="button" class="quiz-opcao" aria-pressed="false" data-valor="distribuicao" data-resumo="distribuição e atacado">Distribuição e atacado</button>
+                            <button type="button" class="quiz-opcao" aria-pressed="false" data-valor="varejo" data-resumo="varejo">Varejo, loja física ou online</button>
+                            <button type="button" class="quiz-opcao" aria-pressed="false" data-valor="industria" data-resumo="indústria">Indústria ou produção própria</button>
+                            <button type="button" class="quiz-opcao" aria-pressed="false" data-valor="servicos" data-resumo="escritório de serviço">Escritório de serviço, como advocacia, contabilidade ou engenharia</button>
+                            <button type="button" class="quiz-opcao" aria-pressed="false" data-valor="outro" data-resumo="outro ramo">Outro ramo</button>
+                        </div>
+                    </div>
+
                     <div class="quiz-pergunta" data-chave="faturamento" data-rotulo="Faturamento por mês" role="group" aria-labelledby="q-faturamento" hidden>
                         <h3 id="q-faturamento" tabindex="-1">Quanto a empresa fatura por mês, mais ou menos?</h3>
                         <div class="quiz-opcoes">
@@ -537,10 +548,66 @@
                         <h3 id="quizResultadoTitulo" tabindex="-1">Onde provavelmente você perde</h3>
                         <ol class="quiz-pontos" id="quizPontos"></ol>
                         <p class="quiz-franco" id="quizFranco" hidden></p>
-                        <p class="quiz-nota">Montado só com as suas cinco respostas. O número da sua empresa sai na
+                        <p class="quiz-nota">Montado só com as suas seis respostas. O número da sua empresa sai na
                             conversa de diagnóstico, que não custa nada.</p>
+
+                        <!-- O Raio X em PDF (27/10/2026): a plataforma monta pelas mesmas regras e devolve o link. -->
+                        <div class="quiz-raio" id="quizRaio">
+                            <p class="mini">Raio X da empresa</p>
+                            <h4>Quer isso numa página só, em PDF?</h4>
+                            <p class="quiz-raio-texto">O que você respondeu, onde a empresa perde, a conta das horas, o que muda com a
+                                reforma tributária em 2027 e por onde a gente começaria. Sai na hora, e uma pessoa da equipe
+                                lê e responde.</p>
+                            <form id="raioForm" novalidate>
+                                <div class="campo-robo" aria-hidden="true">
+                                    <label for="raioSite">Site</label>
+                                    <input type="text" id="raioSite" name="site" tabindex="-1" autocomplete="off">
+                                </div>
+                                <div class="campo">
+                                    <label for="raioNome">Seu nome</label>
+                                    <input type="text" id="raioNome" name="nome" required aria-required="true" maxlength="80" autocomplete="name"
+                                        placeholder="João da Silva" aria-describedby="raioNomeErro">
+                                    <p id="raioNomeErro" class="campo-erro" aria-live="polite"></p>
+                                </div>
+                                <div class="campo">
+                                    <label for="raioEmpresa">Nome da empresa</label>
+                                    <input type="text" id="raioEmpresa" name="empresa" required aria-required="true" maxlength="80"
+                                        autocomplete="organization" placeholder="Distribuidora Silva" aria-describedby="raioEmpresaErro">
+                                    <p id="raioEmpresaErro" class="campo-erro" aria-live="polite"></p>
+                                </div>
+                                <div class="campo">
+                                    <label for="raioEmail">E-mail</label>
+                                    <input type="email" id="raioEmail" name="email" required aria-required="true" maxlength="120" autocomplete="email"
+                                        inputmode="email" placeholder="voce@empresa.com.br" aria-describedby="raioEmailErro">
+                                    <p id="raioEmailErro" class="campo-erro" aria-live="polite"></p>
+                                </div>
+                                <div class="campo">
+                                    <label for="raioWhatsapp">WhatsApp <span class="opcional">(opcional)</span></label>
+                                    <input type="tel" id="raioWhatsapp" name="whatsapp" maxlength="20" autocomplete="tel" inputmode="tel"
+                                        placeholder="(11) 98765-4321" aria-describedby="raioWhatsappErro">
+                                    <p id="raioWhatsappErro" class="campo-erro" aria-live="polite"></p>
+                                </div>
+                                <div class="campo campo-aceite">
+                                    <input type="checkbox" id="raioConsent" name="consent" required aria-required="true" aria-describedby="raioConsentErro">
+                                    <label for="raioConsent">Autorizo o uso dos meus dados para montar o Raio X e para este contato (LGPD). <a href="privacidade/" target="_blank" rel="noopener">Como usamos os dados</a></label>
+                                    <p id="raioConsentErro" class="campo-erro" aria-live="polite"></p>
+                                </div>
+                                <button type="submit" class="botao botao-cheio botao-largo" id="raioEnviar">Gerar meu Raio X</button>
+                                <p class="campo-erro quiz-raio-erro" id="raioErro" role="alert"></p>
+                            </form>
+                            <div class="quiz-raio-pronto" id="raioPronto" tabindex="-1" hidden>
+                                <p><strong>Pronto.</strong> O Raio X da <span id="raioProntoEmpresa"></span> está no link abaixo, que vale por 90 dias.</p>
+                                <div class="quiz-raio-links">
+                                    <a class="botao botao-cheio botao-largo" id="raioAbrir" href="#" target="_blank" rel="noopener">Abrir o Raio X</a>
+                                    <a class="botao botao-vazio botao-largo" id="raioPdf" href="#">Baixar o PDF</a>
+                                </div>
+                                <p class="quiz-nota">Uma pessoa da equipe vai ler e responder por e-mail ou WhatsApp. Se preferir, chame no
+                                    Instagram <a href="https://www.instagram.com/genesiskore/" target="_blank" rel="noopener noreferrer">@genesiskore</a>.</p>
+                            </div>
+                        </div>
+
                         <div class="quiz-acoes">
-                            <button type="button" class="botao botao-cheio botao-largo" id="quizConversar">Levar isso para a conversa</button>
+                            <button type="button" class="botao botao-vazio botao-largo" id="quizConversar">Prefiro só conversar</button>
                             <button type="button" class="quiz-voltar" id="quizRefazer">Refazer o diagnóstico</button>
                         </div>
                     </div>

@@ -1541,9 +1541,61 @@ body.travado {
     margin-top: 22px;
 }
 
+/* O pedido do Raio X em PDF, dentro do resultado (27/10/2026) */
+.quiz-raio {
+    margin-top: 28px;
+    padding: 20px 16px 8px;
+    border: 1px solid var(--tinta);
+}
+
+.quiz-raio h4 {
+    font-family: var(--titulo);
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.quiz-raio-texto {
+    font-size: 0.92rem;
+    color: var(--suave);
+    margin-bottom: 18px;
+}
+
+.quiz-raio-erro {
+    margin: 10px 0 12px;
+}
+
+.quiz-raio-pronto {
+    display: grid;
+    gap: 14px;
+    padding-bottom: 12px;
+}
+
+.quiz-raio-pronto:focus {
+    outline: none;
+}
+
+.quiz-raio-pronto[hidden],
+.quiz-raio form[hidden] {
+    display: none;
+}
+
+.quiz-raio-links {
+    display: grid;
+    gap: 10px;
+}
+
 @media (min-width: 720px) {
     .quiz {
         padding: 34px 40px 38px;
+    }
+
+    .quiz-raio {
+        padding: 26px 28px 12px;
+    }
+
+    .quiz-raio-links {
+        grid-template-columns: 1fr 1fr;
     }
 }
 

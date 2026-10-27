@@ -503,10 +503,12 @@ remedir();
 /* ------------------------------------------------------------ diagnóstico rápido */
 
 /*
- * Cinco perguntas, uma por vez, e um resultado montado por regra simples, sem IA. As perguntas
+ * Seis perguntas, uma por vez, e um resultado montado por regra simples, sem IA. As perguntas
  * e as opções estão no HTML (seção #diagnostico); aqui ficam só as regras do resultado.
- * Nada é enviado ao terminar: as respostas só saem do navegador se a pessoa mandar o
- * formulário, e aí vão como texto no campo `gargalo`, que o n8n já lê.
+ * Nada é enviado ao terminar. As respostas só saem do navegador por um destes dois caminhos:
+ * o formulário da conversa (vão como texto no campo `gargalo`, que o n8n já lê) ou o pedido do
+ * Raio X em PDF (27/10/2026), que manda as respostas e o contato para a plataforma, e ela monta
+ * o Raio X pelas mesmas regras (lib/diagnostico/raio-x-do-site.ts) e devolve o link.
  */
 
 const quiz = document.getElementById('quiz');
@@ -521,6 +523,8 @@ const quizConversar = document.getElementById('quizConversar');
 let respostas = {};
 let perguntaAtual = 0;
 let quizComecou = false;
+// Quando a primeira resposta foi dada. Vai junto no pedido do Raio X, que recusa resposta rápida demais.
+let quizInicio = 0;
 // O bloco de texto que vai junto no formulário. Vazio quando não há diagnóstico (ou a pessoa tirou).
 let diagnosticoTexto = '';
 let faturamentoDoQuiz = '';
@@ -618,7 +622,8 @@ function mostrarResultadoQuiz() {
     const franco = document.getElementById('quizFranco');
     franco.textContent = franqueza;
     franco.hidden = !franqueza;
-    quizConversar.textContent = franqueza ? 'Quero conversar assim mesmo' : 'Levar isso para a conversa';
+    quizConversar.textContent = franqueza ? 'Quero conversar assim mesmo' : 'Prefiro só conversar';
+    prepararRaio();
 
     diagnosticoTexto = textoDoDiagnostico(respostas);
     faturamentoDoQuiz = FAIXA_NO_FORMULARIO[respostas.faturamento?.valor] || '';
@@ -634,6 +639,7 @@ function responder(botao) {
     respostas[pergunta.dataset.chave] = { valor: botao.dataset.valor, resumo: botao.dataset.resumo };
     if (!quizComecou) {
         quizComecou = true;
+        quizInicio = Date.now();
         registrarEvento('diagnostico_iniciado');
     }
     // Um respiro curto para a escolha aparecer marcada antes de trocar de pergunta.
@@ -645,10 +651,115 @@ function responder(botao) {
 
 function refazerQuiz() {
     respostas = {};
+    quizComecou = false;
+    quizInicio = 0;
     diagnosticoTexto = '';
     faturamentoDoQuiz = '';
     quiz.querySelectorAll('.quiz-opcao').forEach((b) => b.setAttribute('aria-pressed', 'false'));
     mostrarPergunta(0);
+}
+
+/* ------------------------------------------------------------ Raio X em PDF */
+
+const RAIO_ENDERECO = 'https://app.genesiskore.com/api/diagnostico';
+const raioForm = document.getElementById('raioForm');
+const raioPronto = document.getElementById('raioPronto');
+const raioErro = document.getElementById('raioErro');
+const raioEnviar = document.getElementById('raioEnviar');
+const RAIO_FALHOU = 'Não deu para montar o Raio X agora. Tente de novo em instantes, ou escreva para contato@genesiskore.com.';
+const EMAIL_DO_RAIO = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+// Cada campo e a regra dele. Devolve a mensagem de erro, ou vazio quando está certo.
+const RAIO_CAMPOS = {
+    raioNome: (v) => (v.trim().length >= 2 ? '' : 'Escreva seu nome. Pode ser só o primeiro.'),
+    raioEmpresa: (v) => (v.trim().length >= 2 ? '' : 'Escreva o nome da empresa.'),
+    raioEmail: (v) => (EMAIL_DO_RAIO.test(v.trim()) ? '' : 'O Raio X vai para um e-mail. Confira o @ e o final, como voce@empresa.com.br.'),
+    raioWhatsapp: (v) => {
+        const n = v.replace(/\D/g, '');
+        return !n || (n.length >= 10 && n.length <= 11) ? '' : 'Coloque o DDD e o número, como (11) 98765-4321.';
+    },
+};
+
+function conferirCampoDoRaio(id) {
+    const campo = document.getElementById(id);
+    const erro = id === 'raioConsent' ? (campo.checked ? '' : 'Marque a caixa para autorizar. Sem ela a gente não pode montar o Raio X.') : RAIO_CAMPOS[id](campo.value);
+    document.getElementById(`${id}Erro`).textContent = erro;
+    campo.classList.toggle('field-invalid', Boolean(erro));
+    campo.setAttribute('aria-invalid', String(Boolean(erro)));
+    return !erro;
+}
+
+// Cada resultado novo começa com o pedido limpo, mas sem apagar o que a pessoa já digitou.
+function prepararRaio() {
+    if (!raioForm) return;
+    raioForm.hidden = false;
+    raioPronto.hidden = true;
+    raioErro.textContent = '';
+}
+
+function respostasDoQuiz() {
+    const saida = {};
+    for (const [chave, r] of Object.entries(respostas)) saida[chave] = r.valor;
+    return saida;
+}
+
+async function pedirRaio(e) {
+    e.preventDefault();
+    const ids = [...Object.keys(RAIO_CAMPOS), 'raioConsent'];
+    const certos = ids.map(conferirCampoDoRaio);
+    if (certos.includes(false)) {
+        document.getElementById(ids[certos.indexOf(false)]).focus();
+        return;
+    }
+    raioErro.textContent = '';
+    raioEnviar.disabled = true;
+    raioEnviar.textContent = 'Montando o Raio X…';
+    const pedido = {
+        nome: document.getElementById('raioNome').value.trim(),
+        empresa: document.getElementById('raioEmpresa').value.trim(),
+        email: document.getElementById('raioEmail').value.trim(),
+        whatsapp: document.getElementById('raioWhatsapp').value.trim(),
+        consentimento: true,
+        respostas: respostasDoQuiz(),
+        origem: origemDoLead,
+        site: document.getElementById('raioSite').value,
+        ms: quizInicio ? Date.now() - quizInicio : undefined,
+    };
+    try {
+        // text/plain, como a contagem: sem preflight de CORS. A plataforma lê o JSON do corpo.
+        const resposta = await fetch(RAIO_ENDERECO, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify(pedido) });
+        const corpo = await resposta.json().catch(() => ({}));
+        if (!resposta.ok || !corpo.ok || !corpo.url) {
+            // A frase da plataforma é escrita para quem lê (limite, campo errado). Sem ela, a frase padrão.
+            raioErro.textContent = corpo.erro || RAIO_FALHOU;
+            return;
+        }
+        document.getElementById('raioProntoEmpresa').textContent = pedido.empresa;
+        document.getElementById('raioAbrir').href = corpo.url;
+        document.getElementById('raioPdf').href = corpo.pdf;
+        raioForm.hidden = true;
+        raioPronto.hidden = false;
+        raioPronto.focus({ preventScroll: true });
+        raioPronto.scrollIntoView({ behavior: rolagem, block: 'center' });
+        // Quem pede o Raio X deixou o contato: no funil conta como formulário enviado.
+        registrarEvento('formulario_enviado');
+    } catch {
+        // Sem rede, ou a plataforma fora do ar. A mensagem do navegador ("Failed to fetch") não serve a ninguém.
+        raioErro.textContent = RAIO_FALHOU;
+    } finally {
+        raioEnviar.disabled = false;
+        raioEnviar.textContent = 'Gerar meu Raio X';
+    }
+}
+
+if (raioForm) {
+    raioForm.addEventListener('submit', pedirRaio);
+    for (const id of [...Object.keys(RAIO_CAMPOS), 'raioConsent']) {
+        const campo = document.getElementById(id);
+        // Confere ao sair do campo, e de novo a cada mudança enquanto ele estiver marcado com erro.
+        campo.addEventListener('blur', () => { if (campo.value || id === 'raioConsent') conferirCampoDoRaio(id); });
+        campo.addEventListener(id === 'raioConsent' ? 'change' : 'input', () => { if (campo.classList.contains('field-invalid')) conferirCampoDoRaio(id); });
+    }
 }
 
 if (quiz && perguntasQuiz.length && quizResultado) {
