@@ -751,6 +751,8 @@ if (janela) {
 }
 
 document.querySelectorAll('[data-abrir-diagnostico]').forEach((b) => b.addEventListener('click', () => abrirDiagnostico()));
+// Link de outra página que já abre o formulário (../#conversar), desde 27/10/2026. Antes caía em #contato e faltava um clique.
+if (location.hash === '#conversar') abrirDiagnostico();
 document.querySelectorAll('[data-fechar-diagnostico]').forEach((b) => b.addEventListener('click', fecharDiagnostico));
 document.getElementById('fecharDiagnostico')?.addEventListener('click', fecharDiagnostico);
 

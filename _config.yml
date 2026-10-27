@@ -1,0 +1,6 @@
+# GitHub Pages: os arquivos de instrução e os scripts do repositório não vão para genesiskore.com.
+exclude:
+  - CLAUDE.md
+  - AGENTS.md
+  - GEMINI.md
+  - execution

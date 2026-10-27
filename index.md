@@ -24,7 +24,10 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 3. **A primeira parte já em uso em até 2 semanas.** O resto vem por partes.
 4. **A gente continua junto.** Depois do ar, acompanha, ajusta e corrige. Se algo falhar, o próprio sistema avisa a equipe.
 
-**Garantia:** se em 30 dias do sistema no ar ele não fizer o que está escrito na proposta, você recebe de volta 100% do que pagou pela implementação.
+
+## Consultoria de gestão
+
+Quando o problema é não saber se a empresa está ganhando dinheiro, quem entra é a Consultoria de gestão, o segundo produto da GenesisKore. O que você decide no feeling passa a ter número: Contabilidade gerencial (o resultado do mês por linha de negócio, junto com o contador, nunca no lugar dele), análise financeira (margem por produto, cliente e canal, e o caixa dos próximos meses), análise de processos (a empresa que não anda sem o dono), pesquisa e mapeamento de mercado, análise macroeconômica (juros, câmbio, inflação e crédito traduzidos em venda, custo e caixa) e experiência do cliente (o cliente que compra uma vez e some). Quem faz o diagnóstico senta à mesa com quem constrói o sistema. Mais em https://genesiskore.com/consultoria/
 
 ## O que a GenesisKore não faz
 
@@ -42,7 +45,7 @@ A primeira parte fica pronta em até 2 semanas. O projeto inteiro leva, na maior
 
 ### E se não funcionar do jeito combinado?
 
-A proposta diz por escrito o que o sistema vai fazer. Se, em 30 dias do sistema no ar, ele não fizer o que está escrito ali, a gente devolve 100% do valor da implementação. A mensalidade dos meses usados não volta.
+A proposta diz por escrito o que o sistema vai fazer. Cada parte entra em uso pela sua equipe antes da próxima, e o que não fizer o que está escrito ali a gente corrige. Depois do ar, o acompanhamento e as correções estão na mensalidade.
 
 ### Minha empresa é pequena demais?
 
@@ -64,9 +67,22 @@ O sistema registra o erro e avisa a nossa equipe na hora. Na AUTH, ele se testa 
 
 Não. Você explica como o seu negócio funciona, do seu jeito. A parte técnica é com a gente.
 
+### Qual a diferença entre a Consultoria e os Sistemas?
+
+Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.
+
+### A Consultoria substitui o meu contador?
+
+Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consultoria transforma esses números em decisão e trabalha junto com ele.
+
+### Preciso contratar os dois?
+
+Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua.
+
 ## Contato
 
-- Formulário de diagnóstico: https://genesiskore.com/#contato (uma pessoa da equipe lê e chama você no WhatsApp)
+- Formulário de diagnóstico: https://genesiskore.com/#conversar (uma pessoa da equipe lê e chama você no WhatsApp)
 - E-mail: contato@genesiskore.com
-- Instagram: https://www.instagram.com/genesiskore.ai/
+- Instagram: https://www.instagram.com/genesiskore/
+- TikTok: https://www.tiktok.com/@genesiskore
 - LinkedIn: https://www.linkedin.com/company/genesiskore

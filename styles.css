@@ -3173,3 +3173,125 @@ body.travado {
         animation: none;
     }
 }
+
+/* ------------------------------------------------------------ consultoria de gestão (27/10/2026)
+   O segundo produto. Mesmo papel claro, mesmo cartão e filete das seções da Automação. */
+
+.abertura-consultoria {
+    margin-top: 12px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 46ch;
+}
+
+.abertura-consultoria a {
+    color: var(--branco);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* O cartão ponte ocupa a linha inteira: a dor que não é tarefa repetida, e sim falta de número. */
+.cartao-ponte {
+    grid-column: 1 / -1;
+    background: var(--preto-1);
+    border-color: var(--preto-1);
+    color: var(--branco);
+}
+
+.cartao-ponte .antes {
+    color: var(--suave-escuro);
+}
+
+.cartao-ponte .mini {
+    color: var(--suave-escuro);
+}
+
+.cartao-ponte .depois {
+    color: var(--branco);
+}
+
+.cartao-ponte .link-seta {
+    margin-top: 8px;
+    color: var(--branco);
+}
+
+.consultoria {
+    border-top: 1px solid var(--linha);
+}
+
+.grade-produtos {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    margin-top: 36px;
+}
+
+.produto h3 {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.produto-fala {
+    font-family: var(--serifa);
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.produto p:last-child {
+    color: var(--suave);
+    font-size: 0.95rem;
+}
+
+.passos-consultoria {
+    list-style: none;
+    counter-reset: passo;
+    display: grid;
+    gap: 14px;
+    margin-top: 40px;
+    max-width: 62ch;
+}
+
+.passos-consultoria li {
+    counter-increment: passo;
+    position: relative;
+    padding-left: 44px;
+    color: var(--suave);
+}
+
+.passos-consultoria li::before {
+    content: counter(passo, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--tinta);
+}
+
+.passos-consultoria strong {
+    color: var(--tinta);
+}
+
+@media (min-width: 720px) {
+    .grade-produtos {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .consultoria .acoes {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grade-produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
