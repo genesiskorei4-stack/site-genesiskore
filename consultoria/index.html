@@ -3,19 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoria de gestão | GenesisKore</title>
+    <title>Consultoria de gestão para pequenas e médias empresas | GenesisKore</title>
     <meta name="description" content="Consultoria de gestão da GenesisKore: contabilidade gerencial, análise financeira, processos, mercado, cenário econômico e experiência do cliente, para o dono decidir com número.">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/consultoria/">
+    <link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/">
+    <link rel="alternate" hreflang="en" href="https://genesiskore.com/management-consulting/">
+    <link rel="alternate" hreflang="x-default" href="https://genesiskore.com/consultoria/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://genesiskore.com/consultoria/">
     <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="Consultoria de gestão | GenesisKore">
     <meta property="og:description" content="O que você decide no feeling passa a ter número.">
     <meta property="og:image" content="https://genesiskore.com/previa-link.png">
     <link rel="icon" type="image/png" href="../icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="../icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
     <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
+    <!-- Dados estruturados. A FAQ repete as perguntas visíveis no fim da página. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://genesiskore.com/#organizacao",
+      "name": "GenesisKore",
+      "url": "https://genesiskore.com/",
+      "logo": "https://genesiskore.com/logo.png",
+      "email": "contato@genesiskore.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://genesiskore.com/consultoria/#servico",
+      "name": "Consultoria de gestão GenesisKore",
+      "alternateName": "GenesisKore Management Consulting",
+      "serviceType": "Consultoria de gestão",
+      "url": "https://genesiskore.com/consultoria/",
+      "inLanguage": "pt-BR",
+      "provider": { "@id": "https://genesiskore.com/#organizacao" },
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Donos de pequenas e médias empresas que faturam a partir de uns R$ 150 mil por mês"
+      },
+      "description": "Consultoria de gestão para o dono que já vende bem e não sabe quanto sobra. Olha os números, os processos e o mercado da empresa e entrega o que fazer, em ordem de impacto. Trabalha junto com o contador, nunca no lugar dele.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Produtos da Consultoria de gestão",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contabilidade Gerencial", "description": "Os últimos 12 meses refeitos num resultado gerencial, um plano de contas para decidir e uma rotina de fechamento que a equipe roda sozinha. Junto com o contador, nunca no lugar dele." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise Financeira", "description": "Os pontos onde a margem vaza, em reais, por produto, cliente e canal, o caixa projetado dos próximos meses e um plano de ação em ordem de impacto." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise de Processos", "description": "Os processos críticos redesenhados e escritos, quem decide o quê, indicadores e uma rotina que anda sem o dono." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pesquisa e Mapeamento de Mercado", "description": "O tamanho do mercado com a conta aberta, o mapa dos clientes possíveis, o perfil do cliente ideal e uma recomendação." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise Macroeconômica: o que pode afetar seu negócio", "description": "Cenários para os próximos 12 meses em reais, o teste do caixa no cenário ruim e um plano de reação para cada cenário." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Experiência do Cliente", "description": "A jornada do cliente mapeada, os pontos de atrito em ordem de impacto, um padrão de atendimento e indicadores para acompanhar." } }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://genesiskore.com/consultoria/#perguntas",
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        { "@type": "Question", "name": "Qual a diferença entre a Consultoria e os Sistemas?", "acceptedAnswer": { "@type": "Answer", "text": "Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum." } },
+        { "@type": "Question", "name": "A Consultoria substitui o meu contador?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consultoria transforma esses números em decisão e trabalha junto com ele." } },
+        { "@type": "Question", "name": "Preciso contratar os dois?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua." } },
+        { "@type": "Question", "name": "Quanto custa?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe tabela. O valor vem na proposta, junto com o escopo e o prazo por escrito, depois da primeira conversa, que não custa nada." } }
+      ]
+    }
+  ]
+}
+    </script>
     <style>
         :root { --fundo: #fff; --texto: #000; --suave: #555; --linha: #d4d4d4; }
         @media (prefers-color-scheme: dark) { :root { --fundo: #000; --texto: #fff; --suave: #a3a3a3; --linha: #333; } }
@@ -58,7 +123,7 @@
         <p>Para o dono que já vende bem e não sabe quanto sobra. A Consultoria de gestão da GenesisKore olha os números, os processos e o mercado da sua empresa e entrega o que fazer, em ordem de impacto. É o segundo produto da casa, ao lado dos <a href="../">Sistemas sob medida</a>.</p>
         <p class="suave">Para empresas a partir de uns R$ 150 mil de faturamento por mês, em distribuição e atacado, varejo de alto valor e escritórios de serviço.</p>
 
-        <h2>Os produtos</h2>
+        <h2>Os seis produtos da Consultoria</h2>
         <section class="produto">
             <h3>Contabilidade Gerencial</h3>
             <p class="fala">&ldquo;O contador manda o balanço e o dono não consegue decidir nada com ele. O mês fecha pelo extrato do banco.&rdquo;</p>
@@ -102,6 +167,9 @@
         <h2>O que fica de fora</h2>
         <p>Contabilidade fiscal e imposto continuam com o seu contador, e a Consultoria trabalha junto com ele. Também ficam de fora jurídico e trabalhista, marketing e redes sociais.</p>
 
+        <h2>Para quem não é</h2>
+        <p>Empresa que fatura bem abaixo de R$ 150 mil por mês, MEI e negócio de uma pessoa só. Clínicas, consultórios e empresas de saúde.</p>
+
         <blockquote>Quem faz o diagnóstico senta à mesa com quem constrói o sistema.</blockquote>
         <p class="suave">Quando a análise mostra que um sistema resolve parte do problema, os Sistemas sob medida entram. Quando não resolve, a gente fala.</p>
 
@@ -129,13 +197,23 @@
             </li>
         </ul>
 
+        <h2>Perguntas</h2>
+        <h3>Qual a diferença entre a Consultoria e os Sistemas?</h3>
+        <p>Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.</p>
+        <h3>A Consultoria substitui o meu contador?</h3>
+        <p>Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consultoria transforma esses números em decisão e trabalha junto com ele.</p>
+        <h3>Preciso contratar os dois?</h3>
+        <p>Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua.</p>
+        <h3>Quanto custa?</h3>
+        <p>Não existe tabela. O valor vem na proposta, junto com o escopo e o prazo por escrito, depois da primeira conversa, que não custa nada.</p>
+
         <h2>Quer conversar?</h2>
         <p>A primeira conversa não custa nada. Conte onde a empresa trava e uma pessoa da nossa equipe chama você.</p>
         <a class="botao" href="../conversar/">Quero conversar</a>
         <p class="suave">Ou escreva para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>.</p>
     </main>
     <footer>
-        <a href="../">Início</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a><a href="../privacidade/">Privacidade</a>
+        <a href="../">Início</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a><a href="../privacidade/">Privacidade</a><a href="../management-consulting/" hreflang="en" lang="en">English</a>
         <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. Caminho absoluto porque a 404 responde em qualquer endereço. -->

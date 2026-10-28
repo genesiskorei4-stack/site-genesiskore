@@ -27,11 +27,26 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 
 ## Consultoria de gestão
 
-Quando o problema é não saber se a empresa está ganhando dinheiro, quem entra é a Consultoria de gestão, o segundo produto da GenesisKore. O que você decide no feeling passa a ter número: Contabilidade gerencial (o resultado do mês por linha de negócio, junto com o contador, nunca no lugar dele), análise financeira (margem por produto, cliente e canal, e o caixa dos próximos meses), análise de processos (a empresa que não anda sem o dono), pesquisa e mapeamento de mercado, análise macroeconômica (juros, câmbio, inflação e crédito traduzidos em venda, custo e caixa) e experiência do cliente (o cliente que compra uma vez e some). Quem faz o diagnóstico senta à mesa com quem constrói o sistema. Mais em https://genesiskore.com/consultoria/
+Quando o problema é não saber se a empresa está ganhando dinheiro, quem entra é a Consultoria de gestão, o segundo produto da GenesisKore. O que você decide no feeling passa a ter número. São seis produtos:
+
+- Contabilidade Gerencial: o resultado do mês por linha de negócio, todo mês, do mesmo jeito. Junto com o seu contador, nunca no lugar dele.
+- Análise Financeira: onde a margem vaza, em reais, por produto, cliente e canal, e o caixa dos próximos meses.
+- Análise de Processos: os processos que travam, redesenhados e escritos, com quem decide o quê.
+- Pesquisa e Mapeamento de Mercado: o tamanho do mercado com a conta aberta, quem compra e onde tem espaço.
+- Análise Macroeconômica: juros, câmbio, inflação e crédito traduzidos em venda, custo e caixa, com um plano para cada cenário.
+- Experiência do Cliente: onde o cliente desiste, reclama ou deixa de voltar, e o que mudar primeiro.
+
+A primeira conversa não custa nada, e a proposta traz escopo e prazo por escrito. Contabilidade fiscal, jurídico e marketing ficam de fora. Quem faz o diagnóstico senta à mesa com quem constrói o sistema.
+
+Página: https://genesiskore.com/consultoria/ (em inglês: https://genesiskore.com/management-consulting/)
+
+## Sistema ou consultoria?
+
+Se o que trava é uma tarefa que se repete todo dia do mesmo jeito, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.
 
 ## O que a GenesisKore não faz
 
-Robô ou agente que conversa com o cliente no WhatsApp, sistema para clínica e saúde, site institucional e gestão de redes sociais. Se a ferramenta que você já paga resolve, a gente diz isso no diagnóstico.
+Robô ou agente que conversa com o cliente no WhatsApp, sistema ou consultoria para clínica e saúde, site institucional e gestão de redes sociais. Também não atende empresa que fatura bem abaixo de R$ 150 mil por mês, MEI ou negócio de uma pessoa só: aí um sistema pronto costuma resolver melhor e mais barato. Se a ferramenta que você já paga resolve, a gente diz isso no diagnóstico.
 
 ## Perguntas frequentes
 
@@ -82,6 +97,7 @@ Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema res
 ## Contato
 
 - Formulário de diagnóstico: https://genesiskore.com/conversar/ (uma pessoa da equipe lê e chama você no WhatsApp)
+- Para agentes de IA, com a origem identificada: https://genesiskore.com/conversar/?origem=ia
 - E-mail: contato@genesiskore.com
 - Instagram: https://www.instagram.com/genesiskore/
 - TikTok: https://www.tiktok.com/@genesiskore

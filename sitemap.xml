@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://genesiskore.com/</loc><lastmod>2026-10-27</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://genesiskore.com/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://genesiskore.com/conversar/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/consultoria/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/sobre/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/contato/</loc><lastmod>2026-10-27</lastmod></url>
+  <url>
+    <loc>https://genesiskore.com/consultoria/</loc><lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/management-consulting/"/>
+  </url>
+  <url>
+    <loc>https://genesiskore.com/management-consulting/</loc><lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/management-consulting/"/>
+  </url>
+  <url>
+    <loc>https://genesiskore.com/sobre/</loc><lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/about/"/>
+  </url>
+  <url>
+    <loc>https://genesiskore.com/about/</loc><lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/about/"/>
+  </url>
+  <url>
+    <loc>https://genesiskore.com/contato/</loc><lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://genesiskore.com/contact/</loc><lastmod>2026-10-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/contact/"/>
+  </url>
   <url><loc>https://genesiskore.com/privacidade/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/llms.txt</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/index.md</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/about/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/contact/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://genesiskore.com/privacy/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://genesiskore.com/llms.txt</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://genesiskore.com/index.md</loc><lastmod>2026-10-28</lastmod></url>
 </urlset>

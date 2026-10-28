@@ -1,0 +1,50 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "claude/*": false
+    }
+  },
+  "routes": [
+    {
+      "src": "^/(about|consultoria|contact|contato|conversar|management-consulting|privacidade|privacy|sobre)$",
+      "status": 308,
+      "headers": { "Location": "/$1/" }
+    },
+    {
+      "src": "^/$",
+      "headers": { "Vary": "Accept" },
+      "continue": true
+    },
+    {
+      "src": "^/$",
+      "has": [{ "type": "header", "key": "accept", "value": { "re": "text/markdown" } }],
+      "dest": "/index.md",
+      "headers": { "Content-Type": "text/markdown; charset=utf-8" }
+    },
+    {
+      "src": "^/.+\\.md$",
+      "headers": { "Content-Type": "text/markdown; charset=utf-8" },
+      "continue": true
+    },
+    {
+      "src": "^/llms\\.txt$",
+      "headers": { "Content-Type": "text/plain; charset=utf-8" },
+      "continue": true
+    },
+    { "handle": "filesystem" },
+    {
+      "src": "^/.*$",
+      "has": [{ "type": "header", "key": "accept", "value": { "re": "text/markdown" } }],
+      "status": 404,
+      "dest": "/404.md",
+      "headers": { "Content-Type": "text/markdown; charset=utf-8", "Vary": "Accept" }
+    },
+    {
+      "src": "^/.*$",
+      "status": 404,
+      "dest": "/404.html",
+      "headers": { "Vary": "Accept" }
+    }
+  ]
+}

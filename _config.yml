@@ -4,3 +4,5 @@ exclude:
   - AGENTS.md
   - GEMINI.md
   - execution
+  - directives
+  - vercel.json

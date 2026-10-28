@@ -1,0 +1,11 @@
+# O que não vai para a Vercel: instruções de agente, scripts e diretivas do repositório.
+# Mesma lista do exclude do _config.yml (GitHub Pages), mais o que só existe aqui.
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+execution
+directives
+.tmp
+.env
+credentials.json
+token.json
