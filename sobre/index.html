@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre | GenesisKore</title>
-    <meta name="description" content="Quem é a GenesisKore, para quem faz sistemas sob medida e consultoria de gestão e como trabalha.">
+    <meta name="description" content="Quem é a GenesisKore, quem são os quatro sócios, para quem faz sistemas sob medida e consultoria de gestão e como trabalha.">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/sobre/">
     <link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/">
@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://genesiskore.com/sobre/">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:title" content="Sobre | GenesisKore">
-    <meta property="og:description" content="Quem é a GenesisKore, para quem faz sistemas sob medida e consultoria de gestão e como trabalha.">
+    <meta property="og:description" content="Quem é a GenesisKore, quem são os quatro sócios, para quem faz sistemas sob medida e consultoria de gestão e como trabalha.">
     <meta property="og:image" content="https://genesiskore.com/previa-link.png">
     <link rel="icon" type="image/png" href="../icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="../icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
@@ -35,9 +35,115 @@
         .suave { color: var(--suave); }
         a { color: inherit; }
         .botao { display: inline-block; margin-top: 12px; padding: 14px 22px; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+        .socios { display: grid; gap: 16px; margin-top: 16px; }
+        @media (min-width: 640px) { .socios { grid-template-columns: 1fr 1fr; } }
+        .socio { border: 1px solid var(--linha); padding: 18px 20px; }
+        .socio h3 { margin: 0; font-size: 1.05rem; }
+        .socio .cargo { margin: 2px 0 10px; color: var(--suave); font-size: .85rem; letter-spacing: .02em; }
+        .socio p { margin: 0 0 12px; }
+        .socio a { font-size: .9rem; }
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; }
     </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://genesiskore.com/sobre/",
+      "url": "https://genesiskore.com/sobre/",
+      "about": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "mainEntity": {
+        "@id": "https://genesiskore.com/#organizacao"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://genesiskore.com/#organizacao",
+      "name": "GenesisKore",
+      "url": "https://genesiskore.com/",
+      "foundingDate": "2025-08",
+      "founder": [
+        {
+          "@id": "https://genesiskore.com/sobre/#felipe"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#gustavo"
+        }
+      ],
+      "member": [
+        {
+          "@id": "https://genesiskore.com/sobre/#felipe"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#gustavo"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#vitor"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#joao"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#felipe",
+      "name": "Felipe Concilio",
+      "jobTitle": "Sócio fundador, sistemas e automação",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/felipe-concilio-genesiskore"
+      ],
+      "url": "https://genesiskore.com/sobre/#felipe"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#gustavo",
+      "name": "Gustavo Cossignani",
+      "jobTitle": "Sócio fundador, comercial",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/gustavo-cossignani"
+      ],
+      "url": "https://genesiskore.com/sobre/#gustavo"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#vitor",
+      "name": "Vitor Costa",
+      "jobTitle": "Sócio, projetos e processos",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/vitor-costa-lima-de-sena-araujo-55a736340"
+      ],
+      "url": "https://genesiskore.com/sobre/#vitor"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#joao",
+      "name": "João Cavalcanti",
+      "jobTitle": "Sócio, finanças e análise de números",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/cavalcantijo%C3%A3o"
+      ],
+      "url": "https://genesiskore.com/sobre/#joao"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <header>
@@ -59,6 +165,15 @@
 
         <h2>Consultoria de gestão</h2>
         <p>Desde outubro de 2026 a GenesisKore tem um segundo produto, a Consultoria de gestão: contabilidade gerencial, análise financeira, processos, mercado, cenário econômico e experiência do cliente, para o dono decidir com número. Quem faz o diagnóstico senta à mesa com quem constrói o sistema. <a href="../consultoria/">Conheça a Consultoria</a>.</p>
+
+        <h2 id="socios">Quem são os sócios</h2>
+        <p>A GenesisKore foi fundada em agosto de 2025 por Felipe Concilio e Gustavo Cossignani. Em outubro de 2026, com a Consultoria de gestão, Vitor Costa e João Cavalcanti entraram como sócios. Na Consultoria, os quatro trabalham juntos em cada projeto.</p>
+        <div class="socios">
+            <article class="socio" id="felipe"><h3>Felipe Concilio</h3><p class="cargo">Sócio fundador · sistemas e publicidade</p><p>Constrói os sistemas e as automações que a GenesisKore entrega, da tela que a equipe usa ao que roda por trás dela. Também cuida da publicidade da casa e divide as finanças com o João.</p><a href="https://www.linkedin.com/in/felipe-concilio-genesiskore" target="_blank" rel="noopener noreferrer me">LinkedIn de Felipe Concilio</a></article>
+            <article class="socio" id="gustavo"><h3>Gustavo Cossignani</h3><p class="cargo">Sócio fundador · comercial</p><p>É quem conversa primeiro com o dono. Conduz a conversa de diagnóstico, monta a proposta e acompanha a venda até a assinatura. Com o Vitor, define o que entra em cada produto.</p><a href="https://www.linkedin.com/in/gustavo-cossignani" target="_blank" rel="noopener noreferrer me">LinkedIn de Gustavo Cossignani</a></article>
+            <article class="socio" id="vitor"><h3>Vitor Costa</h3><p class="cargo">Sócio · projetos e processos</p><p>Responde pelos projetos: escopo, cronograma e entrega no prazo. Vem da FIA Júnior, onde é especialista em projetos de consultoria, e dirige a área de processos da FIA Startups.</p><a href="https://www.linkedin.com/in/vitor-costa-lima-de-sena-araujo-55a736340" target="_blank" rel="noopener noreferrer me">LinkedIn de Vitor Costa</a></article>
+            <article class="socio" id="joao"><h3>João Cavalcanti</h3><p class="cargo">Sócio · finanças e números</p><p>Cuida dos números: margem, custo e caixa dos clientes da Consultoria, e as finanças da casa junto com o Felipe. Estuda Ciências Econômicas na FIA, preside a FIA Startups e está nas vendas ao lado do Gustavo.</p><a href="https://www.linkedin.com/in/cavalcantijo%C3%A3o" target="_blank" rel="noopener noreferrer me">LinkedIn de João Cavalcanti</a></article>
+        </div>
 
         <h2>Como a gente trabalha</h2>
         <p>Primeiro uma conversa de diagnóstico, que não custa nada. Depois uma proposta com preço fechado, em três opções, e a lista escrita do que o sistema vai fazer. A primeira parte entra em uso em até 2 semanas, e o resto vem em fases. Depois do ar, a gente acompanha, ajusta e corrige, e o próprio sistema avisa a nossa equipe quando algo falha.</p>

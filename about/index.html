@@ -37,9 +37,115 @@
         .suave { color: var(--suave); }
         a { color: inherit; }
         .botao { display: inline-block; margin-top: 12px; padding: 14px 22px; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+        .socios { display: grid; gap: 16px; margin-top: 16px; }
+        @media (min-width: 640px) { .socios { grid-template-columns: 1fr 1fr; } }
+        .socio { border: 1px solid var(--linha); padding: 18px 20px; }
+        .socio h3 { margin: 0; font-size: 1.05rem; }
+        .socio .cargo { margin: 2px 0 10px; color: var(--suave); font-size: .85rem; letter-spacing: .02em; }
+        .socio p { margin: 0 0 12px; }
+        .socio a { font-size: .9rem; }
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; }
     </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://genesiskore.com/about/",
+      "url": "https://genesiskore.com/about/",
+      "about": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "mainEntity": {
+        "@id": "https://genesiskore.com/#organizacao"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://genesiskore.com/#organizacao",
+      "name": "GenesisKore",
+      "url": "https://genesiskore.com/",
+      "foundingDate": "2025-08",
+      "founder": [
+        {
+          "@id": "https://genesiskore.com/sobre/#felipe"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#gustavo"
+        }
+      ],
+      "member": [
+        {
+          "@id": "https://genesiskore.com/sobre/#felipe"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#gustavo"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#vitor"
+        },
+        {
+          "@id": "https://genesiskore.com/sobre/#joao"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#felipe",
+      "name": "Felipe Concilio",
+      "jobTitle": "Co-founder, systems and automation",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/felipe-concilio-genesiskore"
+      ],
+      "url": "https://genesiskore.com/sobre/#felipe"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#gustavo",
+      "name": "Gustavo Cossignani",
+      "jobTitle": "Co-founder, sales",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/gustavo-cossignani"
+      ],
+      "url": "https://genesiskore.com/sobre/#gustavo"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#vitor",
+      "name": "Vitor Costa",
+      "jobTitle": "Partner, projects and processes",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/vitor-costa-lima-de-sena-araujo-55a736340"
+      ],
+      "url": "https://genesiskore.com/sobre/#vitor"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://genesiskore.com/sobre/#joao",
+      "name": "João Cavalcanti",
+      "jobTitle": "Partner, finance and numbers",
+      "worksFor": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/cavalcantijo%C3%A3o"
+      ],
+      "url": "https://genesiskore.com/sobre/#joao"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <header>
@@ -61,6 +167,15 @@
 
         <h2>Management consulting</h2>
         <p>Since October 2026 GenesisKore has a second product, GenesisKore Management Consulting: managerial accounting, financial analysis, processes, market research, economic scenarios and customer experience, so the owner decides with numbers. The people who diagnose sit at the same table as the people who build the system. <a href="../management-consulting/">See the Management Consulting</a>.</p>
+
+        <h2 id="partners">Who the partners are</h2>
+        <p>GenesisKore was founded in August 2025 by Felipe Concilio and Gustavo Cossignani. In October 2026, with the Management Consulting product, Vitor Costa and João Cavalcanti joined as partners. In Consulting, the four of them work together on every project.</p>
+        <div class="socios">
+            <article class="socio" id="felipe"><h3>Felipe Concilio</h3><p class="cargo">Co-founder · systems and marketing</p><p>Builds the systems and automations GenesisKore delivers, from the screen the team uses to what runs behind it. He also runs the company's marketing and shares the finances with João.</p><a href="https://www.linkedin.com/in/felipe-concilio-genesiskore" target="_blank" rel="noopener noreferrer me">Felipe Concilio on LinkedIn</a></article>
+            <article class="socio" id="gustavo"><h3>Gustavo Cossignani</h3><p class="cargo">Co-founder · sales</p><p>He is the first person the owner talks to. He leads the diagnosis conversation, writes the proposal and follows the sale until it is signed. With Vitor, he decides what goes into each product.</p><a href="https://www.linkedin.com/in/gustavo-cossignani" target="_blank" rel="noopener noreferrer me">Gustavo Cossignani on LinkedIn</a></article>
+            <article class="socio" id="vitor"><h3>Vitor Costa</h3><p class="cargo">Partner · projects and processes</p><p>He is responsible for projects: scope, schedule and on-time delivery. He comes from FIA Júnior, where he is a consulting project specialist, and heads processes at FIA Startups.</p><a href="https://www.linkedin.com/in/vitor-costa-lima-de-sena-araujo-55a736340" target="_blank" rel="noopener noreferrer me">Vitor Costa on LinkedIn</a></article>
+            <article class="socio" id="joao"><h3>João Cavalcanti</h3><p class="cargo">Partner · finance and numbers</p><p>He looks after the numbers: margin, cost and cash for Consulting clients, and the company's own finances together with Felipe. He studies Economics at FIA, presides over FIA Startups and works on sales alongside Gustavo.</p><a href="https://www.linkedin.com/in/cavalcantijo%C3%A3o" target="_blank" rel="noopener noreferrer me">João Cavalcanti on LinkedIn</a></article>
+        </div>
 
         <h2>How we work</h2>
         <p>First a diagnosis conversation, which costs nothing. Then a fixed-price proposal, in three options, with a written list of what the system will do. The first part is in use within 2 weeks, and the rest comes in phases. After go-live we follow up, adjust and fix, and the system itself alerts our team when something fails.</p>

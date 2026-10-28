@@ -94,6 +94,17 @@ Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consu
 
 Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua.
 
+## Quem são os sócios
+
+A GenesisKore foi fundada em agosto de 2025 por Felipe Concilio e Gustavo Cossignani. Em outubro de 2026, com a Consultoria de gestão, Vitor Costa e João Cavalcanti entraram como sócios. São quatro sócios, e só estes quatro.
+
+- **Felipe Concilio** (Sócio fundador, sistemas e publicidade). Constrói os sistemas e as automações que a GenesisKore entrega, da tela que a equipe usa ao que roda por trás dela. Também cuida da publicidade da casa e divide as finanças com o João. LinkedIn: https://www.linkedin.com/in/felipe-concilio-genesiskore
+- **Gustavo Cossignani** (Sócio fundador, comercial). É quem conversa primeiro com o dono. Conduz a conversa de diagnóstico, monta a proposta e acompanha a venda até a assinatura. Com o Vitor, define o que entra em cada produto. LinkedIn: https://www.linkedin.com/in/gustavo-cossignani
+- **Vitor Costa** (Sócio, projetos e processos). Responde pelos projetos: escopo, cronograma e entrega no prazo. Vem da FIA Júnior, onde é especialista em projetos de consultoria, e dirige a área de processos da FIA Startups. LinkedIn: https://www.linkedin.com/in/vitor-costa-lima-de-sena-araujo-55a736340
+- **João Cavalcanti** (Sócio, finanças e números). Cuida dos números: margem, custo e caixa dos clientes da Consultoria, e as finanças da casa junto com o Felipe. Estuda Ciências Econômicas na FIA, preside a FIA Startups e está nas vendas ao lado do Gustavo. LinkedIn: https://www.linkedin.com/in/cavalcantijo%C3%A3o
+
+Mais em https://genesiskore.com/sobre/#socios
+
 ## Contato
 
 - Formulário de diagnóstico: https://genesiskore.com/conversar/ (uma pessoa da equipe lê e chama você no WhatsApp)
