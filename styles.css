@@ -2802,19 +2802,6 @@ body.travado {
         font-size: 1.6rem;
     }
 
-    .grade-compromissos {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .compromisso {
-        grid-column: span 2;
-    }
-
-    .compromisso:nth-child(4),
-    .compromisso:nth-child(5) {
-        grid-column: span 3;
-    }
-
     .fechamento {
         padding: 168px 0;
     }

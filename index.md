@@ -20,7 +20,7 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 ## Como funciona
 
 1. **Conversa de diagnóstico.** Você conta como o trabalho acontece hoje. A gente mostra onde está o desperdício e diz o que vale automatizar, e o que não vale. Não custa nada.
-2. **Proposta com preço fechado.** O que vai ser feito, em quanto tempo e por quanto, em três opções. A implementação pode ser paga em até 3 vezes.
+2. **Proposta com preço fechado.** O que vai ser feito, em quanto tempo e por quanto, em três opções.
 3. **A primeira parte já em uso em até 2 semanas.** O resto vem por partes.
 4. **A gente continua junto.** Depois do ar, acompanha, ajusta e corrige. Se algo falhar, o próprio sistema avisa a equipe.
 
@@ -52,7 +52,7 @@ Robô ou agente que conversa com o cliente no WhatsApp, sistema ou consultoria p
 
 ### Quanto custa?
 
-Depende do tamanho do trabalho, e por isso não existe pacote pronto. O preço vem fechado, em três opções, depois do diagnóstico. A implementação pode ser paga em até 3 vezes, e a conversa de diagnóstico não custa nada.
+Depende do tamanho do trabalho, e por isso não existe pacote pronto. O preço vem fechado, em três opções, depois do diagnóstico, e a conversa de diagnóstico não custa nada.
 
 ### Quanto tempo leva?
 
