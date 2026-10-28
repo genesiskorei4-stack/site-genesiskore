@@ -1,6 +1,24 @@
 # Migrar genesiskore.com do GitHub Pages para a Vercel
 
-Preparado em 28/10/2026. **Ninguém executa sem o Felipe decidir.** Nada disto foi feito ainda: não existe projeto na Vercel para o site e o DNS continua apontando para o GitHub Pages.
+Preparado em 28/10/2026. **Feito no mesmo dia**, a pedido do Felipe ("pode transferir para lá"). O site está na Vercel desde 28/10/2026.
+
+## O que foi feito, e o que se aprendeu (28/10/2026)
+
+| Item | Valor |
+|---|---|
+| Projeto | `site-genesiskore` (`prj_XCM18T4CXbexHIxFIj86LUm7ynlr`), equipe `genesis-kore`, sem framework, sem build, Output `.` |
+| Primeiro deploy | `main` no commit `d93108f`, pronto em 2 segundos. Custou 1 vaga do balde (22 de 100 ocupadas antes) |
+| Domínios | `genesiskore.com` e `www.genesiskore.com`, o `www` com 308 para o apex. Os dois entraram já verificados, porque a equipe já tinha o `app.genesiskore.com` |
+| DNS novo | apex `A` `216.198.79.1` e `64.29.17.1`; `www` `CNAME` `67732ecfa8772377.vercel-dns-017.com`. TTL 300 nos três, para a volta ser rápida |
+| Certificado | Saiu cerca de 80 segundos depois da troca do DNS |
+| Teste | `testar_vercel_json.py` deu 21 de 21 no `.vercel.app` e depois no `genesiskore.com`. `CLAUDE.md`, `execution` e `directives` dão 404. O n8n e o `app.genesiskore.com/api/visita` aceitam a origem `https://genesiskore.com` (preflight 204) |
+| Email | `MX`, SPF, DKIM, DMARC e as verificações do Google e do TikTok conferidos com `dig` depois da troca, iguais aos de antes |
+
+**Três coisas que não estavam aqui e fazem diferença:**
+
+1. **O conector da Vercel precisa de acesso à equipe.** A primeira chamada de criar projeto deu `403 You must re-authenticate to this scope`. Sai com `authorize_team_access` (teamId `team_pN1yARrPYaToprbLv9lAIhr3`): ele gera um link que vale 10 minutos, um sócio abre e aprova, e a chamada passa.
+2. **A Vercel não recomenda mais o `76.76.21.21`.** O `get_domain_config` deu como primeira opção dois IPs (`216.198.79.1` e `64.29.17.1`) e um `CNAME` próprio do projeto. O `76.76.21.21` virou segunda opção. Use o que o `get_domain_config` devolver na hora.
+3. **A sessão do Claude na nuvem não alcança o site.** O proxy dela recusa `genesiskore.com` e `*.vercel.app`. O teste rodou numa máquina de teste da Vercel (`create_sandboxes_v4` com o repositório clonado, e `run_session_command`). Chamada com espera longa estoura os 60 segundos do conector: dispare e leia o resultado com `get_session_command_logs`.
 
 ## Por que trocar
 
@@ -154,13 +172,13 @@ Depois, rode o Is Agentic de novo.
 
 ### 7. Desligar o GitHub Pages, só depois de uns dias
 
-Deixe o GitHub Pages ligado por uma semana, com o arquivo `CNAME` no repositório. Ele é o plano de volta. Passado o prazo sem problema, desligue em Settings, Pages do repositório.
+Deixe o GitHub Pages ligado por uma semana (até 04/11/2026), com o arquivo `CNAME` no repositório. Ele é o plano de volta. Passado o prazo sem problema, desligue em Settings, Pages do repositório.
 
 ## Plano de volta
 
 Se algo der errado depois da troca de DNS:
 
-1. Na WordPress.com, volte o `A` do apex para os 4 IPs do GitHub Pages que você anotou e o `CNAME` do `www` para `genesiskorei4-stack.github.io`. Nada mais muda.
+1. Na WordPress.com, apague os dois `A` da Vercel (`216.198.79.1` e `64.29.17.1`) e ponha de volta os 4 do GitHub Pages (`185.199.108.153`, `185.199.109.153`, `185.199.110.153` e `185.199.111.153`). Troque o `CNAME` do `www` de `67732ecfa8772377.vercel-dns-017.com` para `genesiskorei4-stack.github.io`. Nada mais muda.
 2. Confira com `dig +short genesiskore.com A` e com o primeiro `curl` (tem de voltar `server: GitHub.com`).
 3. Se o navegador disser "Não seguro", é o certificado do GitHub Pages sendo emitido de novo: Settings, Pages, caixa Enforce HTTPS. Pode levar alguns minutos.
 4. O projeto na Vercel pode ficar parado sem custo. Para ele não gastar deploy enquanto isso, desligue o Git do projeto ou pause o projeto.
