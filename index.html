@@ -391,10 +391,10 @@
     <!-- Este continua com fundo branco de propósito: o iOS compõe ícone transparente sobre
          preto, e a marca preta sumiria. -->
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;500;700&family=Playfair+Display:ital@1&display=swap"
-        rel="stylesheet">
+    <!-- Fontes servidas pelo próprio site desde 30/10/2026: uma conexão a menos antes de pintar,
+         e o endereço de quem visita não vai para o Google. -->
+    <link rel="preload" href="/fontes/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fontes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <!-- Sem JavaScript, nada fica escondido esperando animação. -->
     <script>document.documentElement.classList.add('js')</script>
@@ -406,7 +406,7 @@
     <header class="topo" id="topo">
         <div class="container topo-linha">
             <a href="#inicio" class="marca" aria-label="GenesisKore, voltar ao início">
-                <img src="logo.png" alt="" width="36" height="40">
+                <img src="logo.webp" alt="" width="36" height="40">
                 <span>GENESISKORE</span>
             </a>
             <nav class="menu-largo" aria-label="Seções">
@@ -520,29 +520,29 @@
             <div class="marquise revelar" aria-label="Projetos construídos">
                 <div class="marquise-trilho">
                     <ul class="marquise-grupo">
-                        <li><img src="logo-auth.png" alt="AUTH" class="logo-auth" height="28" loading="lazy"></li>
-                        <li><img src="logo-cca.png" alt="Fazenda CCA" class="logo-cca" height="64" loading="lazy"></li>
-                        <li><img src="logo-rastro.png" alt="Rastro" class="logo-rastro" height="80" loading="lazy"></li>
-                        <li><img src="logo-gmf.png" alt="GMF Gráfica" class="logo-gmf" height="90" loading="lazy"></li>
+                        <li><img src="logo-auth.webp" alt="AUTH" class="logo-auth" width="100" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.webp" alt="Fazenda CCA" class="logo-cca" width="67" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.webp" alt="Rastro" class="logo-rastro" width="80" height="80" loading="lazy"></li>
+                        <li><img src="logo-gmf.webp" alt="GMF Gráfica" class="logo-gmf" width="132" height="90" loading="lazy"></li>
                     </ul>
                     <!-- As cópias só existem para a faixa girar sem emenda -->
                     <ul class="marquise-grupo" aria-hidden="true">
-                        <li><img src="logo-auth.png" alt="" class="logo-auth" height="28" loading="lazy"></li>
-                        <li><img src="logo-cca.png" alt="" class="logo-cca" height="64" loading="lazy"></li>
-                        <li><img src="logo-rastro.png" alt="" class="logo-rastro" height="80" loading="lazy"></li>
-                        <li><img src="logo-gmf.png" alt="" class="logo-gmf" height="90" loading="lazy"></li>
+                        <li><img src="logo-auth.webp" alt="" class="logo-auth" width="100" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.webp" alt="" class="logo-cca" width="67" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.webp" alt="" class="logo-rastro" width="80" height="80" loading="lazy"></li>
+                        <li><img src="logo-gmf.webp" alt="" class="logo-gmf" width="132" height="90" loading="lazy"></li>
                     </ul>
                     <ul class="marquise-grupo" aria-hidden="true">
-                        <li><img src="logo-auth.png" alt="" class="logo-auth" height="28" loading="lazy"></li>
-                        <li><img src="logo-cca.png" alt="" class="logo-cca" height="64" loading="lazy"></li>
-                        <li><img src="logo-rastro.png" alt="" class="logo-rastro" height="80" loading="lazy"></li>
-                        <li><img src="logo-gmf.png" alt="" class="logo-gmf" height="90" loading="lazy"></li>
+                        <li><img src="logo-auth.webp" alt="" class="logo-auth" width="100" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.webp" alt="" class="logo-cca" width="67" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.webp" alt="" class="logo-rastro" width="80" height="80" loading="lazy"></li>
+                        <li><img src="logo-gmf.webp" alt="" class="logo-gmf" width="132" height="90" loading="lazy"></li>
                     </ul>
                     <ul class="marquise-grupo" aria-hidden="true">
-                        <li><img src="logo-auth.png" alt="" class="logo-auth" height="28" loading="lazy"></li>
-                        <li><img src="logo-cca.png" alt="" class="logo-cca" height="64" loading="lazy"></li>
-                        <li><img src="logo-rastro.png" alt="" class="logo-rastro" height="80" loading="lazy"></li>
-                        <li><img src="logo-gmf.png" alt="" class="logo-gmf" height="90" loading="lazy"></li>
+                        <li><img src="logo-auth.webp" alt="" class="logo-auth" width="100" height="28" loading="lazy"></li>
+                        <li><img src="logo-cca.webp" alt="" class="logo-cca" width="67" height="64" loading="lazy"></li>
+                        <li><img src="logo-rastro.webp" alt="" class="logo-rastro" width="80" height="80" loading="lazy"></li>
+                        <li><img src="logo-gmf.webp" alt="" class="logo-gmf" width="132" height="90" loading="lazy"></li>
                     </ul>
                 </div>
             </div>
@@ -675,13 +675,13 @@
                 </div>
 
                 <div class="case-paineis revelar" id="casePaineis">
-                    <article class="case" id="case-auth" role="tabpanel" aria-labelledby="aba-auth" tabindex="0">
+                    <section class="case" id="case-auth" role="tabpanel" aria-labelledby="aba-auth" tabindex="0">
                         <header class="case-topo">
                             <div>
                                 <p class="etiqueta">Autenticação de peças de luxo</p>
                                 <h3>AUTH: a operação inteira num sistema só</h3>
                             </div>
-                            <img src="logo-auth.png" alt="" class="case-logo logo-auth" height="28" loading="lazy">
+                            <img src="logo-auth.webp" alt="" class="case-logo logo-auth" width="100" height="28" loading="lazy">
                         </header>
                         <div class="case-resultado">
                             <p class="resultado-numero"><span data-contar="500">500</span>%</p>
@@ -716,15 +716,15 @@
                                 class="link-seta">Ver a AUTH no Instagram</a>
                             <button type="button" class="case-proximo" data-proximo>Próximo: Fazenda CCA</button>
                         </footer>
-                    </article>
+                    </section>
 
-                    <article class="case" id="case-cca" role="tabpanel" aria-labelledby="aba-cca" tabindex="0">
+                    <section class="case" id="case-cca" role="tabpanel" aria-labelledby="aba-cca" tabindex="0">
                         <header class="case-topo">
                             <div>
                                 <p class="etiqueta">Agro e pecuária</p>
                                 <h3>Fazenda CCA: a fazenda inteira num aplicativo só</h3>
                             </div>
-                            <img src="logo-cca.png" alt="" class="case-logo logo-cca" height="64" loading="lazy">
+                            <img src="logo-cca.webp" alt="" class="case-logo logo-cca" width="67" height="64" loading="lazy">
                         </header>
                         <div class="case-resultado">
                             <p class="resultado-numero">Zero</p>
@@ -758,15 +758,15 @@
                         <footer class="case-rodape">
                             <button type="button" class="case-proximo" data-proximo>Próximo: Rastro</button>
                         </footer>
-                    </article>
+                    </section>
 
-                    <article class="case" id="case-rastro" role="tabpanel" aria-labelledby="aba-rastro" tabindex="0">
+                    <section class="case" id="case-rastro" role="tabpanel" aria-labelledby="aba-rastro" tabindex="0">
                         <header class="case-topo">
                             <div>
                                 <p class="etiqueta">Logística e frotas</p>
                                 <h3>Rastro: frota e pneus sob controle</h3>
                             </div>
-                            <img src="logo-rastro.png" alt="" class="case-logo logo-rastro" height="80" loading="lazy">
+                            <img src="logo-rastro.webp" alt="" class="case-logo logo-rastro" width="80" height="80" loading="lazy">
                         </header>
                         <div class="case-resultado">
                             <p class="resultado-numero">Zero</p>
@@ -796,16 +796,16 @@
                         <footer class="case-rodape">
                             <button type="button" class="case-proximo" data-proximo>Próximo: GenesisKore</button>
                         </footer>
-                    </article>
+                    </section>
 
 
-                    <article class="case" id="case-genesiskore" role="tabpanel" aria-labelledby="aba-genesiskore" tabindex="0">
+                    <section class="case" id="case-genesiskore" role="tabpanel" aria-labelledby="aba-genesiskore" tabindex="0">
                         <header class="case-topo">
                             <div>
                                 <p class="etiqueta">Nossa própria operação</p>
                                 <h3>GenesisKore: a gente usa o que vende</h3>
                             </div>
-                            <img src="logo.png" alt="" class="case-logo logo-casa" height="40" loading="lazy">
+                            <img src="logo.webp" alt="" class="case-logo logo-casa" width="36" height="40" loading="lazy">
                         </header>
                         <div class="case-resultado">
                             <p class="resultado-numero"><span data-contar="1">1</span> tela</p>
@@ -841,7 +841,7 @@
                         <footer class="case-rodape">
                             <button type="button" class="case-proximo" data-proximo>Voltar para a AUTH</button>
                         </footer>
-                    </article>
+                    </section>
                 </div>
                 <p class="dica-deslizar" aria-hidden="true">Deslize para o lado para ver o próximo case</p>
             </div>
@@ -1159,7 +1159,7 @@
         <div class="container rodape-grade">
             <div>
                 <a href="#inicio" class="marca">
-                    <img src="logo.png" alt="" width="32" height="36" loading="lazy">
+                    <img src="logo.webp" alt="" width="32" height="36" loading="lazy">
                     <span>GENESISKORE</span>
                 </a>
                 <p class="suave">A empresa cresceu e ainda depende de você.</p>

@@ -41,6 +41,7 @@ Por isso o `vercel.json` usa `routes`, que roda **antes** do sistema de arquivos
 | 2 | `/` | Põe `Vary: Accept` em toda resposta da raiz |
 | 3 | `/` com `accept` contendo `text/markdown` | Serve o `index.md` com `Content-Type: text/markdown; charset=utf-8` |
 | 4 | `*.md` e `llms.txt` | Fixa o `Content-Type` com `charset=utf-8` |
+| 4b | `/fontes/*.woff2` e `*.webp` da raiz | `Cache-Control` de um ano, `immutable` (desde 30/10/2026). **Trocar um desses arquivos pede nome novo**, senão quem já visitou continua vendo o antigo |
 | 5 | `handle: filesystem` | Daqui para baixo, só quando o arquivo não existe |
 | 6 | Qualquer caminho, com `text/markdown` | 404 com o corpo do `404.md` |
 | 7 | Qualquer caminho | 404 com o `404.html` de sempre |

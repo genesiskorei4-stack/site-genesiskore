@@ -230,7 +230,7 @@ def montar(pasta, md, estilo):
 </head>
 <body>
     <header>
-        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.png" alt="" width="40" height="44"><span>GENESISKORE</span></a>
+        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
         <nav aria-label="Páginas">{nav}</nav>
     </header>
     <main>
