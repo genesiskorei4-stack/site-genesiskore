@@ -6,7 +6,7 @@ Pedidos, documentos, cobrança e os números do negócio funcionando sem ningué
 
 ## Para quem
 
-Dono ou sócio de pequena e média empresa que fatura a partir de uns R$ 150 mil por mês e ainda depende dele, ou de uma pessoa só, para tudo funcionar. Foco em distribuição e atacado, varejo de alto valor e luxo, e escritórios de serviço (advocacia, contabilidade, engenharia). Atende o Brasil inteiro, remoto, a partir de São Paulo.
+Dono ou sócio de pequena e média empresa que fatura a partir de uns R$ 150 mil por mês e ainda depende dele, ou de uma pessoa só, para tudo funcionar. Foco em distribuição e atacado, varejo de alto valor e luxo, e escritórios de serviço (advocacia, contabilidade, engenharia). Atende o Brasil inteiro a partir de São Paulo, a distância ou na empresa quando precisa, em português, inglês e espanhol.
 
 ## Onde o tempo da empresa vai embora
 

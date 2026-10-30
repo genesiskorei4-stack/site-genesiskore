@@ -13,7 +13,7 @@ atualizado: 2026-10-30
 
 # Sistemas sob medida para pequenas e médias empresas
 
-A GenesisKore desenvolve sistemas sob medida para empresas que faturam a partir de uns R$ 150 mil por mês e ainda rodam no WhatsApp, na planilha e na cabeça do dono. Fica em São Paulo, foi fundada em agosto de 2025 e atende o Brasil inteiro a distância. O sistema entra em uso por partes, começando pela que mais pesa, com preço fechado antes de começar.
+A GenesisKore desenvolve sistemas sob medida para empresas que faturam a partir de uns R$ 150 mil por mês e ainda rodam no WhatsApp, na planilha e na cabeça do dono. Fica em São Paulo, foi fundada em agosto de 2025 e atende o Brasil inteiro, a distância ou na empresa quando precisa, em português, inglês e espanhol. O sistema entra em uso por partes, começando pela que mais pesa, com preço fechado antes de começar.
 
 Sistema sob medida, software personalizado, sistema web feito para a empresa: o nome muda, a ideia é a mesma. Em vez de a sua equipe se adaptar a um sistema de prateleira, o sistema é feito para o jeito que a sua empresa já trabalha.
 
@@ -67,7 +67,7 @@ Depende do tamanho do que vai ser feito, e por isso a proposta vem em três opç
 Na maioria das vezes, não. O sistema lê e escreve no ERP que você já tem e cobre só o que ele não faz do seu jeito.
 
 ### Vocês atendem fora de São Paulo?
-Sim. A GenesisKore fica em São Paulo e atende o Brasil inteiro. A conversa, a proposta e o acompanhamento acontecem a distância.
+Sim. A GenesisKore fica em São Paulo e atende o Brasil inteiro. A conversa, a proposta e o acompanhamento acontecem a distância, e a gente vai até a empresa quando precisa. O atendimento é em português, inglês ou espanhol.
 
 ## Quer conversar?
 

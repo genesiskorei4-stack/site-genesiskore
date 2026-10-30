@@ -238,7 +238,7 @@ def montar(pasta, md, estilo):
     </main>
     <footer>
         {rodape}
-        <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão. São Paulo, atendimento remoto em todo o Brasil.</p>
+        <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão. São Paulo, atendimento em todo o Brasil.</p>
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. -->
     <script src="/contagem.js" defer></script>

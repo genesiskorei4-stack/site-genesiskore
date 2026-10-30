@@ -63,7 +63,7 @@ Só se valer a pena. Quando tem tela, ela abre no celular e mostra só o que o v
 O preço vem fechado, em três opções que mudam pelo tamanho do que vai ser feito, depois da conversa de diagnóstico, que não custa nada. O que pesa no preço está em [quanto custa um sistema sob medida](https://genesiskore.com/quanto-custa-um-sistema-sob-medida/).
 
 ### Vocês atendem distribuidora fora de São Paulo?
-Sim. A GenesisKore atende o Brasil inteiro, a distância.
+Sim. A GenesisKore atende o Brasil inteiro, a distância ou indo até a distribuidora quando precisa.
 
 ## Quer conversar?
 
