@@ -34,6 +34,9 @@
         // Quem chega recomendado por um assistente de IA (ChatGPT, Perplexity, Claude, Gemini, Copilot) vira 'ia'.
         if (!achada && /(chatgpt\.com|openai\.com|perplexity\.ai|claude\.ai|gemini\.google|copilot\.microsoft)/i.test(document.referrer)) achada = 'ia';
         if (/^(chatgptcom|perplexity|claudeai|gemini|copilot)/.test(achada)) achada = 'ia';
+        // Quem chega de buscador vira 'busca' (30/10/2026), para o SEO aparecer no funil. O Modo IA e a
+        // Visão Geral do Google chegam como google.com e caem aqui também.
+        if (!achada && /(^|\.)(google|bing|duckduckgo|yahoo|ecosia|brave|yandex)\./i.test((() => { try { return new URL(document.referrer).hostname; } catch { return ''; } })())) achada = 'busca';
         try {
             if (achada) sessionStorage.setItem('origem', achada);
             else achada = sessionStorage.getItem('origem') || '';

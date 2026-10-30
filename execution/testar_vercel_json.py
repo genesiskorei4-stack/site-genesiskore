@@ -83,7 +83,8 @@ def rotear(caminho, cabecalhos, rotas):
         if 'status' in r and 'dest' not in r:
             return r['status'], juntos, None
         if 'dest' in r:
-            destino = r['dest']
+            # A Vercel troca $1, $2 do destino pelos grupos do src, como nos cabeçalhos.
+            destino = m.expand(r['dest'].replace('$', '\\'))
         if not r.get('continue'):
             break
 
@@ -192,7 +193,16 @@ def main():
     s, h, _ = pedir(base, '/consultoria', HTML)
     checar(s in (301, 308) and h.get('Location', '').endswith('/consultoria/'), f'/consultoria sem barra redireciona para /consultoria/ ({s} {h.get("Location")})')
 
-    for pagina in ('/consultoria/', '/management-consulting/', '/conversar/', '/llms.txt', '/sitemap.xml', '/styles.css'):
+    # Páginas geradas de um index.md (30/10/2026): agente que pede Markdown recebe o .md, navegador recebe o HTML.
+    s, h, corpo = pedir(base, '/sistemas-sob-medida/', MD)
+    checar(s == 200 and h.get('Content-Type', '').startswith('text/markdown') and '# Sistemas sob medida' in corpo,
+           f'/sistemas-sob-medida/ com Accept: text/markdown devolve o index.md ({s}, {h.get("Content-Type")})')
+    s, h, corpo = pedir(base, '/sistemas-sob-medida/', HTML)
+    checar(s == 200 and h.get('Content-Type', '').startswith('text/html') and 'accept' in h.get('Vary', '').lower(),
+           f'/sistemas-sob-medida/ para navegador é HTML com Vary: Accept ({s}, {h.get("Content-Type")}, {h.get("Vary")})')
+
+    for pagina in ('/consultoria/', '/management-consulting/', '/conversar/', '/llms.txt', '/sitemap.xml', '/styles.css',
+                   '/7f7a9820d89718fb34d248743a09623f.txt'):
         s, _, _ = pedir(base, pagina, HTML)
         checar(s == 200, f'{pagina} continua respondendo 200 ({s})')
 

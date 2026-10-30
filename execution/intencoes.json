@@ -1,0 +1,130 @@
+{
+ "_como_ler": "Cada intenção é uma busca que o dono faz no Google ou pergunta para uma IA, tirada da pesquisa de 30/10/2026 (autocompletar do Google, primeira página e respostas do Modo IA). Ela só conta como coberta se alguma página indexável do site tiver os termos no <title> ou no <h1>. 'todos' exige todos os termos, 'algum' exige pelo menos um. 'pagina_propria' não aceita a página inicial. A comparação ignora acento e maiúscula. Revisar quando a pesquisa mudar (directives/medir-seo-geo.md).",
+ "intencoes": [
+  {
+   "id": "marca",
+   "frente": "casa",
+   "busca": "GenesisKore",
+   "todos": [
+    "genesiskore",
+    "sistemas sob medida"
+   ]
+  },
+  {
+   "id": "software-sob-medida",
+   "frente": "sistemas",
+   "busca": "desenvolvimento de software sob medida para empresas",
+   "algum": [
+    "sistema sob medida",
+    "sistemas sob medida",
+    "software sob medida"
+   ],
+   "pagina_propria": true
+  },
+  {
+   "id": "distribuidora",
+   "frente": "sistemas",
+   "busca": "sistema para distribuidora",
+   "todos": [
+    "sistema para distribuidora"
+   ]
+  },
+  {
+   "id": "distribuidora-ramo",
+   "frente": "sistemas",
+   "busca": "sistema para distribuidora de alimentos (ou de bebidas, autopeças, cosméticos)",
+   "algum": [
+    "distribuidora de alimentos",
+    "distribuidora de bebidas",
+    "distribuidora de autopecas",
+    "distribuidora de cosmeticos"
+   ]
+  },
+  {
+   "id": "atacado",
+   "frente": "sistemas",
+   "busca": "sistema para atacado distribuidor",
+   "todos": [
+    "atacado"
+   ]
+  },
+  {
+   "id": "pedidos-b2b",
+   "frente": "sistemas",
+   "busca": "sistema de pedidos B2B para lojistas",
+   "algum": [
+    "pedidos b2b",
+    "controle de pedidos",
+    "sistema de pedidos"
+   ]
+  },
+  {
+   "id": "planilhas",
+   "frente": "sistemas",
+   "busca": "sistema para substituir planilhas (o Copilot cita página com essa frase no endereço)",
+   "todos": [
+    "planilha"
+   ]
+  },
+  {
+   "id": "automacao-de-processos",
+   "frente": "sistemas",
+   "busca": "empresa de automação de processos",
+   "todos": [
+    "automacao de processos"
+   ]
+  },
+  {
+   "id": "bling-omie",
+   "frente": "sistemas",
+   "busca": "bling ou omie, alternativa ao bling",
+   "algum": [
+    "bling",
+    "omie"
+   ]
+  },
+  {
+   "id": "quanto-custa",
+   "frente": "sistemas",
+   "busca": "quanto custa um software para empresa",
+   "todos": [
+    "quanto custa"
+   ]
+  },
+  {
+   "id": "lucro-por-produto",
+   "frente": "os dois",
+   "busca": "painel financeiro com lucro por produto a partir das notas fiscais",
+   "algum": [
+    "lucro por produto",
+    "margem por produto",
+    "lucro de cada produto"
+   ]
+  },
+  {
+   "id": "escritorio",
+   "frente": "sistemas",
+   "busca": "automação para escritório de advocacia ou contabilidade",
+   "todos": [
+    "escritorio"
+   ]
+  },
+  {
+   "id": "consultoria-de-gestao",
+   "frente": "consultoria",
+   "busca": "consultoria de gestão para pequenas empresas",
+   "todos": [
+    "consultoria de gestao"
+   ],
+   "pagina_propria": true
+  },
+  {
+   "id": "consultoria-financeira",
+   "frente": "consultoria",
+   "busca": "consultoria financeira para pequenas empresas",
+   "todos": [
+    "consultoria financeira"
+   ]
+  }
+ ]
+}

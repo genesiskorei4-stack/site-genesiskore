@@ -105,6 +105,19 @@ A GenesisKore foi fundada em agosto de 2025 por Felipe Concilio e Gustavo Cossig
 
 Mais em https://genesiskore.com/sobre/#socios
 
+## Páginas por setor e por pergunta
+
+- Sistemas sob medida, como funciona: https://genesiskore.com/sistemas-sob-medida/index.md
+- Sistema para distribuidora e atacado: https://genesiskore.com/sistema-para-distribuidora/index.md
+- Sistema para distribuidora de alimentos: https://genesiskore.com/sistema-para-distribuidora-de-alimentos/index.md
+- Sistema de pedidos B2B: https://genesiskore.com/sistema-de-pedidos-b2b/index.md
+- Painel de lucro por produto lido das notas fiscais: https://genesiskore.com/lucro-por-produto/index.md
+- Automação de processos: https://genesiskore.com/automacao-de-processos/index.md
+- Bling, Omie ou sistema sob medida: https://genesiskore.com/bling-omie-ou-sistema-sob-medida/index.md
+- Quanto custa um sistema sob medida: https://genesiskore.com/quanto-custa-um-sistema-sob-medida/index.md
+- Sistema para substituir planilhas: https://genesiskore.com/sistema-para-substituir-planilhas/index.md
+- Consultoria financeira: https://genesiskore.com/consultoria-financeira/index.md
+
 ## Contato
 
 - Formulário de diagnóstico: https://genesiskore.com/conversar/ (uma pessoa da equipe lê e chama você no WhatsApp)

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Página gerada por execution/gerar_paginas.py a partir de lucro-por-produto/index.md. Edite o .md e rode o script. -->
+    <title>Painel de lucro por produto lido das notas fiscais | GenesisKore</title>
+    <meta name="description" content="Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://genesiskore.com/lucro-por-produto/">
+    <link rel="alternate" type="text/markdown" href="https://genesiskore.com/lucro-por-produto/index.md" title="Versão em Markdown para agentes de IA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://genesiskore.com/lucro-por-produto/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="GenesisKore">
+    <meta property="og:title" content="Painel de lucro por produto | GenesisKore">
+    <meta property="og:description" content="Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.">
+    <meta property="og:image" content="https://genesiskore.com/previa-link.png">
+    <link rel="icon" type="image/png" href="/icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="/icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
+    <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://genesiskore.com/#organizacao",
+      "name": "GenesisKore",
+      "url": "https://genesiskore.com/",
+      "logo": "https://genesiskore.com/logo.png",
+      "email": "contato@genesiskore.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://genesiskore.com/lucro-por-produto/#pagina",
+      "url": "https://genesiskore.com/lucro-por-produto/",
+      "name": "Painel de lucro por produto lido das notas fiscais | GenesisKore",
+      "description": "Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://genesiskore.com/#site"
+      },
+      "publisher": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "dateModified": "2026-10-30",
+      "breadcrumb": {
+        "@id": "https://genesiskore.com/lucro-por-produto/#trilha"
+      },
+      "about": {
+        "@id": "https://genesiskore.com/lucro-por-produto/#servico"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://genesiskore.com/lucro-por-produto/#trilha",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://genesiskore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Lucro por produto",
+          "item": "https://genesiskore.com/lucro-por-produto/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://genesiskore.com/lucro-por-produto/#servico",
+      "name": "Painel de lucro por produto a partir das notas fiscais",
+      "serviceType": "Painel financeiro sob medida",
+      "url": "https://genesiskore.com/lucro-por-produto/",
+      "provider": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "description": "Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.",
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Pequenas e médias empresas que faturam a partir de uns R$ 150 mil por mês"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://genesiskore.com/lucro-por-produto/#perguntas",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de Power BI para ter um painel de lucro por produto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O painel é feito sob medida e abre no navegador e no celular. Se a empresa já usa Power BI, os dados podem ir para ele também."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se eu só tiver o PDF da nota?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O PDF (o DANFE) não é a nota, é a impressão dela. A chave de 44 dígitos impressa nele permite achar o XML."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O painel calcula imposto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ele lê o imposto que já está na nota, inclusive os campos do IBS e da CBS da reforma tributária. Regra tributária e apuração continuam com o seu contador."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A primeira parte entra em uso em até 2 semanas da assinatura, e quase sempre é o próprio painel de margem, porque ele não muda a rotina da equipe."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <style>
+        :root { --fundo: #fff; --texto: #000; --suave: #555; --linha: #d4d4d4; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--fundo); color: var(--texto); font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; }
+        header, main, footer { max-width: 44rem; margin: 0 auto; padding: 0 16px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--linha); }
+        header a { color: var(--texto); text-decoration: none; letter-spacing: .14em; font-size: .85rem; font-weight: 600; }
+        header .marca { display: flex; align-items: center; gap: 12px; font-size: .95rem; }
+        header .marca img { height: 44px; width: auto; filter: invert(1); }
+        @media (max-width: 480px) { header .marca span { display: none; } header nav a { margin-left: 14px; } }
+        header nav a { letter-spacing: 0; font-weight: 400; margin-left: 16px; color: var(--suave); }
+        main { padding-top: 40px; padding-bottom: 56px; }
+        h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.1; margin: 0 0 20px; letter-spacing: -.01em; }
+        h2 { font-size: 1.15rem; margin: 40px 0 8px; }
+        h3 { font-size: 1rem; margin: 0 0 6px; }
+        p, li { color: var(--texto); }
+        .suave { color: var(--suave); }
+        a { color: inherit; }
+        .etiqueta { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--suave); margin: 0 0 12px; }
+        .produto { border-top: 1px solid var(--linha); padding: 18px 0 6px; }
+        .fala { font-style: italic; }
+        .rotulo { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); margin-right: 6px; }
+        .socios { list-style: none; padding: 0; display: grid; gap: 18px; }
+        .socios li { display: flex; gap: 14px; align-items: flex-start; }
+        .socios p { margin: 0; }
+        .foto { flex: 0 0 56px; width: 56px; height: 56px; object-fit: cover; display: flex; align-items: center; justify-content: center; border: 1px solid var(--texto); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .85rem; letter-spacing: .08em; }
+        @media (min-width: 640px) { .socios { grid-template-columns: 1fr 1fr; } }
+        blockquote { margin: 32px 0 0; padding-left: 18px; border-left: 2px solid var(--texto); font-size: 1.15rem; }
+        .botao { display: inline-block; margin-top: 12px; padding: 14px 22px; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+        footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
+        footer a { margin-right: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.png" alt="" width="40" height="44"><span>GENESISKORE</span></a>
+        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a></nav>
+    </header>
+    <main>
+        <p class="etiqueta">Painel financeiro</p>
+        <h1>Painel de lucro por produto, cliente e canal, lido das notas fiscais</h1>
+        <p class="suave">Atualizado em 30/10/2026.</p>
+        <p>A GenesisKore constrói painéis financeiros sob medida que leem o XML das notas fiscais de venda e de compra e mostram o lucro de cada produto, cliente, vendedor e canal, sem ninguém digitar. Para uma empresa de alimentos, o painel mostra o lucro de cada venda por produto e ponto de venda. Funciona com o Bling, o Omie, o Tiny ou o emissor que a empresa já usa.</p>
+
+        <h2>Por que o relatório do ERP não mostra o lucro de verdade</h2>
+        <p>O ERP sabe quanto você vendeu. Para saber quanto sobrou, o custo tem de vir junto, e ele costuma estar espalhado:</p>
+        <ul>
+            <li>o custo de compra está na nota do fornecedor, às vezes com outro código para o mesmo produto;</li>
+            <li>o frete está no CT-e da transportadora;</li>
+            <li>a bonificação e o desconto foram combinados por fora;</li>
+            <li>o mesmo produto aparece em caixa e em unidade, como se fossem dois.</li>
+        </ul>
+        <p>Juntar isso à mão, toda semana, é o trabalho que o painel tira da equipe.</p>
+
+        <h2>Como funciona</h2>
+        <ol>
+            <li><strong>Lê o XML</strong> da NF-e, do CT-e e da NFS-e. A nota já vem preenchida e assinada, então não há formulário para ninguém preencher.</li>
+            <li><strong>Entende o sentido de cada nota</strong> pelo CNPJ: se a empresa emitiu, é venda; se recebeu, é compra.</li>
+            <li><strong>Junta o que é igual:</strong> o mesmo produto em caixa e em unidade, e o mesmo documento em XML e em PDF.</li>
+            <li><strong>Liga cada número à nota de origem.</strong> Clicou no lucro de um produto, aparecem as notas que formaram aquele número.</li>
+            <li><strong>Transforma as parcelas da nota</strong> em contas a receber e a pagar, e daí sai o caixa dos próximos meses.</li>
+        </ol>
+        <p>Documento que chega sem XML entra marcado para conferir e só conta depois que alguém confirma.</p>
+
+        <h2>O que você vê</h2>
+        <ul>
+            <li>Lucro por produto, cliente, vendedor, canal e ponto de venda.</li>
+            <li>Os produtos que vendem bem e dão pouco, e os que vendem pouco e dão muito.</li>
+            <li>O caixa dos próximos meses, a partir do que já está faturado.</li>
+            <li>Aviso quando uma venda sai abaixo da margem mínima.</li>
+        </ul>
+        <p>O painel abre no navegador e no celular, e cada pessoa vê só o que a função dela pede.</p>
+
+        <h2>Painel ou consultoria?</h2>
+        <p>O painel é sistema: ele junta os números e mostra, todo dia, sem trabalho manual. Se o que falta é decidir o que fazer com eles (que produto cortar, qual cliente renegociar, como montar o plano de contas para fechar o mês), quem entra é a <a href="/consultoria-financeira/">consultoria financeira</a>. Quem faz o diagnóstico senta à mesa com quem constrói o sistema, e cada um é contratado sozinho.</p>
+
+        <h2>Perguntas</h2>
+
+        <h3>Preciso de Power BI para ter um painel de lucro por produto?</h3>
+        <p>Não. O painel é feito sob medida e abre no navegador e no celular. Se a empresa já usa Power BI, os dados podem ir para ele também.</p>
+
+        <h3>E se eu só tiver o PDF da nota?</h3>
+        <p>O PDF (o DANFE) não é a nota, é a impressão dela. A chave de 44 dígitos impressa nele permite achar o XML.</p>
+
+        <h3>O painel calcula imposto?</h3>
+        <p>Ele lê o imposto que já está na nota, inclusive os campos do IBS e da CBS da reforma tributária. Regra tributária e apuração continuam com o seu contador.</p>
+
+        <h3>Quanto tempo leva?</h3>
+        <p>A primeira parte entra em uso em até 2 semanas da assinatura, e quase sempre é o próprio painel de margem, porque ele não muda a rotina da equipe.</p>
+
+        <h2>Quer ver o lucro de cada produto?</h2>
+        <p>Conte como você descobre hoje quanto sobra de cada venda. A conversa não custa nada.</p>
+        <a class="botao" href="/conversar/">Quero conversar</a>
+    </main>
+    <footer>
+        <a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/consultoria/">Consultoria de gestão</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Privacidade</a>
+        <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão. São Paulo, atendimento remoto em todo o Brasil.</p>
+    </footer>
+    <!-- Contagem de visitas sem cookie e sem IP. -->
+    <script src="/contagem.js" defer></script>
+</body>
+</html>

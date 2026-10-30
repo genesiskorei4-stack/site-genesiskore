@@ -1,39 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://genesiskore.com/</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://genesiskore.com/conversar/</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://genesiskore.com/</loc><lastmod>2026-10-30</lastmod></url>
   <url>
-    <loc>https://genesiskore.com/consultoria/</loc><lastmod>2026-10-28</lastmod>
+    <loc>https://genesiskore.com/about/</loc><lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/"/>
+  </url>
+  <url><loc>https://genesiskore.com/automacao-de-processos/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/bling-omie-ou-sistema-sob-medida/</loc><lastmod>2026-10-30</lastmod></url>
+  <url>
+    <loc>https://genesiskore.com/consultoria/</loc><lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/management-consulting/"/>
   </url>
+  <url><loc>https://genesiskore.com/consultoria-financeira/</loc><lastmod>2026-10-30</lastmod></url>
   <url>
-    <loc>https://genesiskore.com/management-consulting/</loc><lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/"/>
+    <loc>https://genesiskore.com/contact/</loc><lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/contato/"/>
+  </url>
+  <url>
+    <loc>https://genesiskore.com/contato/</loc><lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/contact/"/>
+  </url>
+  <url><loc>https://genesiskore.com/conversar/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/lucro-por-produto/</loc><lastmod>2026-10-30</lastmod></url>
+  <url>
+    <loc>https://genesiskore.com/management-consulting/</loc><lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/management-consulting/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/"/>
   </url>
+  <url><loc>https://genesiskore.com/privacidade/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/quanto-custa-um-sistema-sob-medida/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/sistema-de-pedidos-b2b/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/sistema-para-distribuidora/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/sistema-para-distribuidora-de-alimentos/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/sistema-para-substituir-planilhas/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/sistemas-sob-medida/</loc><lastmod>2026-10-30</lastmod></url>
   <url>
-    <loc>https://genesiskore.com/sobre/</loc><lastmod>2026-10-28</lastmod>
+    <loc>https://genesiskore.com/sobre/</loc><lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/about/"/>
   </url>
-  <url>
-    <loc>https://genesiskore.com/about/</loc><lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/about/"/>
-  </url>
-  <url>
-    <loc>https://genesiskore.com/contato/</loc><lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/contato/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/contact/"/>
-  </url>
-  <url>
-    <loc>https://genesiskore.com/contact/</loc><lastmod>2026-10-28</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/contato/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://genesiskore.com/contact/"/>
-  </url>
-  <url><loc>https://genesiskore.com/privacidade/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/privacy/</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://genesiskore.com/llms.txt</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://genesiskore.com/index.md</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://genesiskore.com/llms.txt</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://genesiskore.com/index.md</loc><lastmod>2026-10-30</lastmod></url>
 </urlset>

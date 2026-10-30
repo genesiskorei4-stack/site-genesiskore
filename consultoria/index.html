@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoria de gestão para pequenas e médias empresas | GenesisKore</title>
-    <meta name="description" content="Consultoria de gestão da GenesisKore: contabilidade gerencial, análise financeira, processos, mercado, cenário econômico e experiência do cliente, para o dono decidir com número.">
+    <title>Consultoria de gestão para pequenas empresas | GenesisKore</title>
+    <meta name="description" content="Consultoria de gestão para pequenas e médias empresas: contabilidade gerencial, análise financeira, processos, mercado e cliente, para o dono decidir com número.">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/consultoria/">
     <link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/">
@@ -26,7 +26,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://genesiskore.com/#organizacao",
       "name": "GenesisKore",
       "url": "https://genesiskore.com/",
@@ -47,8 +50,13 @@
       "serviceType": "Consultoria de gestão",
       "url": "https://genesiskore.com/consultoria/",
       "inLanguage": "pt-BR",
-      "provider": { "@id": "https://genesiskore.com/#organizacao" },
-      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "provider": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
       "audience": {
         "@type": "BusinessAudience",
         "name": "Donos de pequenas e médias empresas que faturam a partir de uns R$ 150 mil por mês"
@@ -58,12 +66,54 @@
         "@type": "OfferCatalog",
         "name": "Produtos da Consultoria de gestão",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contabilidade Gerencial", "description": "Os últimos 12 meses refeitos num resultado gerencial, um plano de contas para decidir e uma rotina de fechamento que a equipe roda sozinha. Junto com o contador, nunca no lugar dele." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise Financeira", "description": "Os pontos onde a margem vaza, em reais, por produto, cliente e canal, o caixa projetado dos próximos meses e um plano de ação em ordem de impacto." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise de Processos", "description": "Os processos críticos redesenhados e escritos, quem decide o quê, indicadores e uma rotina que anda sem o dono." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pesquisa e Mapeamento de Mercado", "description": "O tamanho do mercado com a conta aberta, o mapa dos clientes possíveis, o perfil do cliente ideal e uma recomendação." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análise Macroeconômica: o que pode afetar seu negócio", "description": "Cenários para os próximos 12 meses em reais, o teste do caixa no cenário ruim e um plano de reação para cada cenário." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Experiência do Cliente", "description": "A jornada do cliente mapeada, os pontos de atrito em ordem de impacto, um padrão de atendimento e indicadores para acompanhar." } }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contabilidade Gerencial",
+              "description": "Os últimos 12 meses refeitos num resultado gerencial, um plano de contas para decidir e uma rotina de fechamento que a equipe roda sozinha. Junto com o contador, nunca no lugar dele."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Análise Financeira",
+              "description": "Os pontos onde a margem vaza, em reais, por produto, cliente e canal, o caixa projetado dos próximos meses e um plano de ação em ordem de impacto."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Análise de Processos",
+              "description": "Os processos críticos redesenhados e escritos, quem decide o quê, indicadores e uma rotina que anda sem o dono."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pesquisa e Mapeamento de Mercado",
+              "description": "O tamanho do mercado com a conta aberta, o mapa dos clientes possíveis, o perfil do cliente ideal e uma recomendação."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Análise Macroeconômica: o que pode afetar seu negócio",
+              "description": "Cenários para os próximos 12 meses em reais, o teste do caixa no cenário ruim e um plano de reação para cada cenário."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Experiência do Cliente",
+              "description": "A jornada do cliente mapeada, os pontos de atrito em ordem de impacto, um padrão de atendimento e indicadores para acompanhar."
+            }
+          }
         ]
       }
     },
@@ -72,10 +122,56 @@
       "@id": "https://genesiskore.com/consultoria/#perguntas",
       "inLanguage": "pt-BR",
       "mainEntity": [
-        { "@type": "Question", "name": "Qual a diferença entre a Consultoria e os Sistemas?", "acceptedAnswer": { "@type": "Answer", "text": "Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum." } },
-        { "@type": "Question", "name": "A Consultoria substitui o meu contador?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consultoria transforma esses números em decisão e trabalha junto com ele." } },
-        { "@type": "Question", "name": "Preciso contratar os dois?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua." } },
-        { "@type": "Question", "name": "Quanto custa?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe tabela. O valor vem na proposta, junto com o escopo e o prazo por escrito, depois da primeira conversa, que não custa nada." } }
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre a Consultoria e os Sistemas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Consultoria substitui o meu contador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consultoria transforma esses números em decisão e trabalha junto com ele."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso contratar os dois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não existe tabela. O valor vem na proposta, junto com o escopo e o prazo por escrito, depois da primeira conversa, que não custa nada."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://genesiskore.com/consultoria/#trilha",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://genesiskore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Consultoria de gestão",
+          "item": "https://genesiskore.com/consultoria/"
+        }
       ]
     }
   ]

@@ -7,44 +7,101 @@
   },
   "routes": [
     {
-      "src": "^/(about|consultoria|contact|contato|conversar|management-consulting|privacidade|privacy|sobre)$",
+      "src": "^/(about|automacao-de-processos|bling-omie-ou-sistema-sob-medida|consultoria|consultoria-financeira|contact|contato|conversar|lucro-por-produto|management-consulting|privacidade|privacy|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida|sobre)$",
       "status": 308,
-      "headers": { "Location": "/$1/" }
+      "headers": {
+        "Location": "/$1/"
+      }
     },
     {
       "src": "^/$",
-      "headers": { "Vary": "Accept" },
+      "headers": {
+        "Vary": "Accept"
+      },
       "continue": true
     },
     {
       "src": "^/$",
-      "has": [{ "type": "header", "key": "accept", "value": { "re": "text/markdown" } }],
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": {
+            "re": "text/markdown"
+          }
+        }
+      ],
       "dest": "/index.md",
-      "headers": { "Content-Type": "text/markdown; charset=utf-8" }
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8"
+      }
+    },
+    {
+      "src": "^/(automacao-de-processos|bling-omie-ou-sistema-sob-medida|consultoria-financeira|lucro-por-produto|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
+      "headers": {
+        "Vary": "Accept"
+      },
+      "continue": true
+    },
+    {
+      "src": "^/(automacao-de-processos|bling-omie-ou-sistema-sob-medida|consultoria-financeira|lucro-por-produto|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": {
+            "re": "text/markdown"
+          }
+        }
+      ],
+      "dest": "/$1/index.md",
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "Vary": "Accept"
+      }
     },
     {
       "src": "^/.+\\.md$",
-      "headers": { "Content-Type": "text/markdown; charset=utf-8" },
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8"
+      },
       "continue": true
     },
     {
       "src": "^/llms\\.txt$",
-      "headers": { "Content-Type": "text/plain; charset=utf-8" },
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      },
       "continue": true
     },
-    { "handle": "filesystem" },
+    {
+      "handle": "filesystem"
+    },
     {
       "src": "^/.*$",
-      "has": [{ "type": "header", "key": "accept", "value": { "re": "text/markdown" } }],
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": {
+            "re": "text/markdown"
+          }
+        }
+      ],
       "status": 404,
       "dest": "/404.md",
-      "headers": { "Content-Type": "text/markdown; charset=utf-8", "Vary": "Accept" }
+      "headers": {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "Vary": "Accept"
+      }
     },
     {
       "src": "^/.*$",
       "status": 404,
       "dest": "/404.html",
-      "headers": { "Vary": "Accept" }
+      "headers": {
+        "Vary": "Accept"
+      }
     }
   ]
 }

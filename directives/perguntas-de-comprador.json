@@ -1,0 +1,23 @@
+[
+ {"id":"S1","frente":"sistemas","funil":"fundo","q":"quem faz sistema sob medida para distribuidora em São Paulo"},
+ {"id":"S2","frente":"sistemas","funil":"fundo","q":"empresa de automação de processos para pequenas e médias empresas"},
+ {"id":"S3","frente":"sistemas","funil":"fundo","q":"desenvolvimento de sistema sob medida com preço fechado para pequena empresa"},
+ {"id":"S4","frente":"sistemas","funil":"meio","q":"preciso de um sistema para substituir as planilhas da minha empresa, quem contratar?"},
+ {"id":"S5","frente":"sistemas","funil":"meio","q":"o Bling não atende mais a minha distribuidora, qual a alternativa?"},
+ {"id":"S6","frente":"sistemas","funil":"fundo","q":"empresa que faz painel financeiro com lucro por produto a partir das notas fiscais"},
+ {"id":"S7","frente":"sistemas","funil":"fundo","q":"quem faz portal de pedidos B2B sob medida para lojistas"},
+ {"id":"S8","frente":"sistemas","funil":"meio","q":"como automatizar emissão de nota fiscal e cobrança no atacado"},
+ {"id":"S9","frente":"sistemas","funil":"meio","q":"quanto custa um sistema sob medida para uma pequena empresa"},
+ {"id":"S10","frente":"sistemas","funil":"fundo","q":"melhores empresas de desenvolvimento de software sob medida em São Paulo"},
+ {"id":"C1","frente":"consultoria","funil":"fundo","q":"consultoria de gestão para pequenas e médias empresas em São Paulo"},
+ {"id":"C2","frente":"consultoria","funil":"fundo","q":"consultoria de contabilidade gerencial para PME"},
+ {"id":"C3","frente":"consultoria","funil":"topo","q":"não sei se minha empresa está dando lucro, quem pode me ajudar?"},
+ {"id":"C4","frente":"consultoria","funil":"fundo","q":"consultoria financeira para distribuidora"},
+ {"id":"C5","frente":"consultoria","funil":"meio","q":"como saber a margem de lucro de cada produto da minha empresa"},
+ {"id":"C6","frente":"consultoria","funil":"topo","q":"minha empresa depende de mim para tudo, como sair da operação?"},
+ {"id":"E1","frente":"sistemas","funil":"fundo","q":"automação de tarefas para escritório de advocacia"},
+ {"id":"E2","frente":"sistemas","funil":"fundo","q":"sistema sob medida para escritório de contabilidade"},
+ {"id":"M1","frente":"marca","funil":"marca","q":"GenesisKore"},
+ {"id":"M2","frente":"marca","funil":"marca","q":"o que é a GenesisKore e ela é confiável?"},
+ {"id":"M3","frente":"marca","funil":"marca","q":"GenesisKore sistemas sob medida e consultoria de gestão"}
+]

@@ -2231,6 +2231,13 @@ body.travado {
     border-color: var(--branco);
 }
 
+.rodape-titulo {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--suave-escuro);
+}
+
 .rodape-fim {
     margin-top: 40px;
     padding-top: 22px;
@@ -2613,6 +2620,7 @@ body.travado {
     .rodape-grade {
         grid-template-columns: 1fr auto;
         align-items: start;
+        column-gap: 56px;
     }
 }
 
@@ -3234,5 +3242,12 @@ body.travado {
 
     .progresso span::after {
         transition: none;
+    }
+}
+
+/* Rodapé com as páginas por setor e por pergunta (30/10/2026): quatro colunas no computador. */
+@media (min-width: 1024px) {
+    .rodape-grade {
+        grid-template-columns: 1.4fr repeat(3, auto);
     }
 }
