@@ -49,9 +49,9 @@ blog, vídeo, rede social) e se a GenesisKore apareceu. Some no fim:
 | Páginas no Google (`site:`) | 4 |
 | Páginas no Bing (`site:`) | 0 |
 | Site na primeira página do Google para "GenesisKore" | Não (o Google sugere "Genesis Korea") |
-| Perguntas de comprador em que o Modo IA citou a GenesisKore | ver a síntese |
-| Perguntas de comprador em que o Copilot citou a GenesisKore | ver a síntese |
-| Nota técnica do site | 56,6 de 100 |
+| Perguntas de comprador em que o Modo IA citou a GenesisKore | 0 de 11 respondidas (10 sem medir: os créditos do Firecrawl acabaram) |
+| Perguntas de comprador em que o Copilot citou a GenesisKore | 0 de 9 respondidas (12 sem medir) |
+| Nota técnica do site | 55,9 de 100 (97,2 com as páginas novas, ainda não publicadas) |
 | Sessões vindas do Google, de 21 a 30/10/2026 | 7 de 35 |
 | Sessões vindas de IA, de 21 a 30/10/2026 | 0 |
 
@@ -73,7 +73,15 @@ Para saber antes se o texto novo é mais citável, simule a etapa final da IA:
    preço fechado, para quem é) foram levados para a resposta.
 5. Rode com pelo menos dois modelos diferentes e compare antes com depois.
 
-O resultado de 30/10/2026 está na síntese da wiki.
+**Resultado de 30/10/2026** (7 perguntas, 8 avaliadores cegos de dois modelos, 28 respostas por condição):
+recomendada em 13 de 28 com a página inicial e em 26 de 28 com as páginas novas; em primeiro lugar em 1 de
+28 antes e em 15 de 28 depois. A faixa de preço na página de preço não mudou nada. Detalhe na síntese da wiki,
+dados e script em `genesiskore/seo/medicoes/2026-10-30/` no repositório `ai-os`.
+
+**As fontes dos concorrentes vêm só do Firecrawl** (o título e a descrição que a própria IA deu de cada uma).
+Em 30/10/2026 uma máquina de teste da Vercel foi usada para baixar o texto inteiro das páginas, e o sistema de
+permissões da sessão barrou o passo seguinte por contornar a regra de rede. **Não use a máquina de teste para
+abrir site de fora.** Ela continua valendo para testar o próprio site com cabeçalho.
 
 ## O que aprendi e não está escrito em outro lugar
 
