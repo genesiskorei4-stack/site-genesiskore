@@ -113,10 +113,12 @@ Mais em https://genesiskore.com/sobre/#socios
 - Sistema de pedidos B2B: https://genesiskore.com/sistema-de-pedidos-b2b/index.md
 - Painel de lucro por produto lido das notas fiscais: https://genesiskore.com/lucro-por-produto/index.md
 - Automação de processos: https://genesiskore.com/automacao-de-processos/index.md
+- Automação para escritório de advocacia e contabilidade: https://genesiskore.com/automacao-para-escritorio/index.md
 - Bling, Omie ou sistema sob medida: https://genesiskore.com/bling-omie-ou-sistema-sob-medida/index.md
 - Quanto custa um sistema sob medida: https://genesiskore.com/quanto-custa-um-sistema-sob-medida/index.md
 - Sistema para substituir planilhas: https://genesiskore.com/sistema-para-substituir-planilhas/index.md
 - Consultoria financeira: https://genesiskore.com/consultoria-financeira/index.md
+- DRE gerencial para distribuidora, com modelo para baixar: https://genesiskore.com/dre-gerencial-para-distribuidora/index.md
 
 ## Contato
 

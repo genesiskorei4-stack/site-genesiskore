@@ -125,6 +125,14 @@
    "todos": [
     "consultoria financeira"
    ]
+  },
+  {
+   "id": "dre-gerencial",
+   "frente": "consultoria",
+   "busca": "dre gerencial para distribuidora",
+   "todos": [
+    "dre gerencial"
+   ]
   }
  ]
 }

@@ -7,7 +7,7 @@
   },
   "routes": [
     {
-      "src": "^/(about|automacao-de-processos|bling-omie-ou-sistema-sob-medida|consultoria|consultoria-financeira|contact|contato|conversar|lucro-por-produto|management-consulting|privacidade|privacy|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida|sobre)$",
+      "src": "^/(about|automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria|consultoria-financeira|contact|contato|conversar|dre-gerencial-para-distribuidora|lucro-por-produto|management-consulting|privacidade|privacy|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida|sobre)$",
       "status": 308,
       "headers": {
         "Location": "/$1/"
@@ -37,14 +37,14 @@
       }
     },
     {
-      "src": "^/(automacao-de-processos|bling-omie-ou-sistema-sob-medida|consultoria-financeira|lucro-por-produto|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
+      "src": "^/(automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria-financeira|dre-gerencial-para-distribuidora|lucro-por-produto|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
       "headers": {
         "Vary": "Accept"
       },
       "continue": true
     },
     {
-      "src": "^/(automacao-de-processos|bling-omie-ou-sistema-sob-medida|consultoria-financeira|lucro-por-produto|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
+      "src": "^/(automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria-financeira|dre-gerencial-para-distribuidora|lucro-por-produto|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
       "has": [
         {
           "type": "header",
