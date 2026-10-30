@@ -2,7 +2,7 @@
 gerar: sim
 titulo: Quanto custa um sistema sob medida em 2026 | GenesisKore
 titulo_curto: Quanto custa um sistema sob medida | GenesisKore
-descricao: O que pesa no preço de um sistema sob medida, o que entra na implementação e na mensalidade, o que encarece e o que perguntar ao comparar propostas.
+descricao: Preço sob consulta: o que pesa no valor de um sistema sob medida, o que entra na implementação e na mensalidade e o que perguntar ao comparar propostas.
 etiqueta: Preço
 trilha: Quanto custa
 tipo_pagina: Article
@@ -11,7 +11,7 @@ atualizado: 2026-10-30
 
 # Quanto custa um sistema sob medida para empresa
 
-O preço de um sistema sob medida depende de três coisas: quantos processos ele cobre, com quantos sistemas ele conversa e quantas pessoas usam. Na GenesisKore a proposta vem em três opções com preço fechado. A primeira resolve a dor principal, a do meio resolve a dor principal e mais duas, e a de cima cobre a operação inteira. Tem a implementação, paga uma vez, e a mensalidade, que mantém o sistema no ar.
+Na GenesisKore o preço é sob consulta, porque cada sistema é feito sob medida: ele depende de quantos processos o sistema cobre, com quantos sistemas ele conversa e quantas pessoas usam. Depois da conversa de diagnóstico, a proposta vem em três opções com preço fechado. A primeira resolve a dor principal, a do meio resolve a dor principal e mais duas, e a de cima cobre a operação inteira. Tem a implementação, paga uma vez, e a mensalidade, que mantém o sistema no ar.
 
 ## O que entra na implementação
 
@@ -65,7 +65,7 @@ Para você escolher o tamanho do passo. A primeira resolve a dor principal, a do
 Tem. Ela cobre hospedagem, monitoramento, correção e suporte, e o custo dos serviços de terceiros que o sistema usa. Sem ela o sistema fica sem ninguém de olho.
 
 ### Dá para saber o preço antes da conversa?
-O preço depende do que vai ser feito, e por isso vem depois da conversa de diagnóstico, que não custa nada e não obriga a nada.
+Não. O preço é sob consulta, porque depende do que vai ser feito. Ele vem fechado na proposta, depois da conversa de diagnóstico, que não custa nada e não obriga a nada.
 
 ## Quer saber o preço do seu caso?
 

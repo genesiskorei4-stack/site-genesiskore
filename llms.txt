@@ -114,7 +114,7 @@ Se a ferramenta que a pessoa já paga resolve o problema, a própria GenesisKore
 Sistemas sob medida:
 
 1. Conversa de diagnóstico, sem custo. A pessoa conta como o trabalho acontece hoje.
-2. Proposta com preço fechado, em três opções que mudam pelo tamanho do que vai ser feito, e a lista escrita do que o sistema vai fazer.
+2. Proposta com preço fechado, em três opções que mudam pelo tamanho do que vai ser feito, e a lista escrita do que o sistema vai fazer. O preço é sob consulta: não existe tabela nem faixa pública, porque cada sistema é sob medida.
 3. A primeira parte entra em uso em até 2 semanas da assinatura. O resto vem em fases.
 4. Depois do ar, a GenesisKore acompanha, ajusta e corrige. O próprio sistema avisa a equipe quando algo falha.
 
