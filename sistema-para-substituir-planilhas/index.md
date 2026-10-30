@@ -34,7 +34,7 @@ A planilha deixa de servir quando mais de uma pessoa precisa mexer nela ao mesmo
 ## Como trocar sem parar a empresa
 
 1. **A planilha continua no começo.** O sistema começa lendo dela, e a equipe não muda nada no primeiro dia.
-2. **A primeira parte entra em uso em até 2 semanas**, quase sempre a tarefa que mais toma tempo.
+2. **A primeira parte entra em uso antes do resto**, quase sempre a tarefa que mais toma tempo.
 3. **O resto entra em fases.** Cada uma funciona antes de a próxima começar.
 4. **A planilha sai quando ninguém mais precisa abrir.** Ninguém é obrigado a largar ela de um dia para o outro.
 

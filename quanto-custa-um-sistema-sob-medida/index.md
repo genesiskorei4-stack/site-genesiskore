@@ -17,7 +17,7 @@ Na GenesisKore o preço é sob consulta, porque cada sistema é feito sob medida
 
 - O levantamento de como o trabalho acontece hoje, feito na conversa de diagnóstico, que não custa nada.
 - A lista escrita do que o sistema vai fazer. É ela que diz se o projeto foi entregue.
-- A construção, em fases, com a primeira parte em uso em até 2 semanas da assinatura.
+- A construção, em fases, com a primeira parte em uso antes do resto ficar pronto.
 - A ligação com o que a empresa já usa: ERP, planilha, e-mail, WhatsApp.
 - O ajuste com a equipe usando, antes de passar para a próxima fase.
 

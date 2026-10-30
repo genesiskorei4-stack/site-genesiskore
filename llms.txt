@@ -115,7 +115,7 @@ Sistemas sob medida:
 
 1. Conversa de diagnóstico, sem custo. A pessoa conta como o trabalho acontece hoje.
 2. Proposta com preço fechado, em três opções que mudam pelo tamanho do que vai ser feito, e a lista escrita do que o sistema vai fazer. O preço é sob consulta: não existe tabela nem faixa pública, porque cada sistema é sob medida.
-3. A primeira parte entra em uso em até 2 semanas da assinatura. O resto vem em fases.
+3. O sistema entra em uso por partes, começando pela que mais pesa. O prazo de cada parte vem escrito na proposta, porque muda de projeto para projeto.
 4. Depois do ar, a GenesisKore acompanha, ajusta e corrige. O próprio sistema avisa a equipe quando algo falha.
 
 Consultoria de gestão:

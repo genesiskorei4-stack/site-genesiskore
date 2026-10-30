@@ -13,7 +13,7 @@ atualizado: 2026-10-30
 
 # Sistema para distribuidora e atacado, feito do jeito da sua operação
 
-A GenesisKore, de São Paulo, constrói sistemas sob medida para distribuidoras e atacados que faturam a partir de uns R$ 150 mil por mês. O pedido do vendedor e do lojista entra sozinho, a nota e a cobrança saem sem digitação, e o lucro de cada produto aparece numa tela. Tudo isso funciona junto com o ERP que você já usa, e a primeira parte entra em uso em até 2 semanas, com preço fechado antes de começar.
+A GenesisKore, de São Paulo, constrói sistemas sob medida para distribuidoras e atacados que faturam a partir de uns R$ 150 mil por mês. O pedido do vendedor e do lojista entra sozinho, a nota e a cobrança saem sem digitação, e o lucro de cada produto aparece numa tela. Tudo isso funciona junto com o ERP que você já usa, entra em uso por partes e vem com preço fechado antes de começar.
 
 ## Onde a distribuidora perde tempo e margem
 
@@ -49,7 +49,7 @@ Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins (Lei Co
 
 ## Como funciona
 
-Conversa de diagnóstico sem custo, proposta com preço fechado em três opções, a primeira parte em uso em até 2 semanas e o resto em fases. Depois do ar, a mensalidade cobre hospedagem, monitoramento e suporte. O passo a passo está em [sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
+Conversa de diagnóstico sem custo, proposta com preço fechado em três opções, a primeira parte em uso antes do resto e o prazo de cada fase escrito na proposta. Depois do ar, a mensalidade cobre hospedagem, monitoramento e suporte. O passo a passo está em [sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 
 ## Perguntas
 

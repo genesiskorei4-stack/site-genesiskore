@@ -2,7 +2,7 @@
 gerar: sim
 titulo: Desenvolvimento de sistema sob medida em São Paulo | GenesisKore
 titulo_curto: Sistemas sob medida | GenesisKore
-descricao: Sistema sob medida para pequenas e médias empresas: pedido, nota, cobrança e lucro por produto rodando sozinhos. Primeira parte em até 2 semanas, preço fechado.
+descricao: Sistema sob medida para pequenas e médias empresas: pedido, nota, cobrança e lucro por produto rodando sozinhos, entregue por partes e com preço fechado.
 etiqueta: Sistemas sob medida
 trilha: Sistemas sob medida
 servico: Desenvolvimento de sistema sob medida
@@ -13,7 +13,7 @@ atualizado: 2026-10-30
 
 # Sistemas sob medida para pequenas e médias empresas
 
-A GenesisKore desenvolve sistemas sob medida para empresas que faturam a partir de uns R$ 150 mil por mês e ainda rodam no WhatsApp, na planilha e na cabeça do dono. Fica em São Paulo, foi fundada em agosto de 2025 e atende o Brasil inteiro a distância. A primeira parte do sistema entra em uso em até 2 semanas da assinatura, com preço fechado antes de começar.
+A GenesisKore desenvolve sistemas sob medida para empresas que faturam a partir de uns R$ 150 mil por mês e ainda rodam no WhatsApp, na planilha e na cabeça do dono. Fica em São Paulo, foi fundada em agosto de 2025 e atende o Brasil inteiro a distância. O sistema entra em uso por partes, começando pela que mais pesa, com preço fechado antes de começar.
 
 Sistema sob medida, software personalizado, sistema web feito para a empresa: o nome muda, a ideia é a mesma. Em vez de a sua equipe se adaptar a um sistema de prateleira, o sistema é feito para o jeito que a sua empresa já trabalha.
 
@@ -42,7 +42,7 @@ Também não fazemos robô que conversa com cliente no WhatsApp, sistema para cl
 
 1. **Conversa de diagnóstico, sem custo.** Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale.
 2. **Proposta com preço fechado**, em três opções que mudam pelo tamanho do que vai ser feito, com a lista escrita do que o sistema vai fazer.
-3. **A primeira parte em uso em até 2 semanas.** O resto entra em fases, cada uma funcionando antes da próxima.
+3. **A primeira parte em uso antes do resto ficar pronto.** O resto entra em fases, cada uma funcionando antes da próxima.
 4. **Depois do ar, a gente continua junto.** A mensalidade cobre hospedagem, monitoramento, correção e suporte. Se algo falha, o próprio sistema avisa a nossa equipe.
 
 Sem porcentagem sobre o faturamento e sem taxa escondida. Cada cliente tem o próprio banco de dados, separado dos outros, dentro da LGPD.
@@ -58,7 +58,7 @@ Sem porcentagem sobre o faturamento e sem taxa escondida. Cada cliente tem o pr�
 ## Perguntas
 
 ### Quanto tempo leva para um sistema sob medida ficar pronto?
-A primeira parte entra em uso em até 2 semanas da assinatura. O resto vem em fases, e o prazo de cada uma vem escrito na proposta.
+Depende do que vai ser feito. O sistema entra em uso por partes, e o prazo de cada uma vem escrito na proposta, junto com o preço.
 
 ### Quanto custa um sistema sob medida?
 Depende do tamanho do que vai ser feito, e por isso a proposta vem em três opções com preço fechado. Tem a implementação, paga uma vez, e a mensalidade, que mantém o sistema no ar. O que pesa no preço está em [quanto custa um sistema sob medida](https://genesiskore.com/quanto-custa-um-sistema-sob-medida/).

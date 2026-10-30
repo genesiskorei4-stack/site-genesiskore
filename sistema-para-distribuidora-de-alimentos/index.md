@@ -37,7 +37,7 @@ Cada número da tela leva à nota de onde ele saiu. Nota cancelada sai da conta 
 
 ## Como começa
 
-A primeira parte entra em uso em até 2 semanas da assinatura, e quase sempre é o painel de margem lido das notas, porque ele não muda nada na rotina da equipe. Pedido do vendedor, portal do cliente e cobrança vêm depois, em fases. O caminho completo está em [sistema para distribuidora e atacado](https://genesiskore.com/sistema-para-distribuidora/).
+A primeira parte a entrar em uso quase sempre é o painel de margem lido das notas, porque ele não muda nada na rotina da equipe. Pedido do vendedor, portal do cliente e cobrança vêm depois, em fases. O caminho completo está em [sistema para distribuidora e atacado](https://genesiskore.com/sistema-para-distribuidora/).
 
 ## Quando não precisa
 

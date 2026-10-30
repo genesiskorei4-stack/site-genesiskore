@@ -61,7 +61,7 @@ O PDF (o DANFE) não é a nota, é a impressão dela. A chave de 44 dígitos imp
 Ele lê o imposto que já está na nota, inclusive os campos do IBS e da CBS da reforma tributária. Regra tributária e apuração continuam com o seu contador.
 
 ### Quanto tempo leva?
-A primeira parte entra em uso em até 2 semanas da assinatura, e quase sempre é o próprio painel de margem, porque ele não muda a rotina da equipe.
+Depende do que vai ser feito, e o prazo vem escrito na proposta. A primeira parte a entrar em uso quase sempre é o próprio painel de margem, porque ele não muda a rotina da equipe.
 
 ## Quer ver o lucro de cada produto?
 

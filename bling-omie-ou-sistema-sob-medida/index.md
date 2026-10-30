@@ -36,7 +36,7 @@ Um sinal sozinho ainda não pede sistema sob medida. Três ou mais, com gente da
 
 O ERP continua com a nota, o estoque e o fiscal. O sistema sob medida cobre só o que ele não faz do seu jeito: o portal do lojista com a tabela de preço dele, o painel de lucro lido das notas, a cobrança que sai sozinha, o aviso para o cliente. Os dois conversam, e ninguém digita duas vezes.
 
-É o desenho mais comum nos projetos da GenesisKore, porque troca menos coisa na rotina da equipe e entrega a primeira parte em até 2 semanas.
+É o desenho mais comum nos projetos da GenesisKore, porque troca menos coisa na rotina da equipe e põe a primeira parte em uso mais cedo.
 
 ## Quando o caminho é um ERP maior
 

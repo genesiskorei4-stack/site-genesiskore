@@ -48,7 +48,7 @@ Não. O portal abre no navegador do celular ou do computador, com login próprio
 Sim. Cada CNPJ vê a própria tabela, o próprio desconto e a própria condição de pagamento.
 
 ### Quanto tempo leva?
-A primeira parte entra em uso em até 2 semanas da assinatura. O resto vem em fases, com preço fechado antes de começar.
+Depende do que vai ser feito, e o prazo vem escrito na proposta. O portal entra em uso por partes, com preço fechado antes de começar.
 
 ## Quer parar de digitar pedido?
 

@@ -13,7 +13,7 @@ atualizado: 2026-10-30
 
 # Automação de processos para pequenas e médias empresas
 
-A GenesisKore é uma empresa de São Paulo que automatiza os processos que se repetem todo dia em pequenas e médias empresas: pedido, nota, cobrança, aviso ao cliente, relatório e conferência de documento. A automação roda por trás do e-mail, da planilha, do WhatsApp e do ERP que a empresa já usa. A primeira parte entra em uso em até 2 semanas, com preço fechado antes de começar.
+A GenesisKore é uma empresa de São Paulo que automatiza os processos que se repetem todo dia em pequenas e médias empresas: pedido, nota, cobrança, aviso ao cliente, relatório e conferência de documento. A automação roda por trás do e-mail, da planilha, do WhatsApp e do ERP que a empresa já usa. Ela entra em uso por partes, com preço fechado antes de começar.
 
 ## O que dá para automatizar
 

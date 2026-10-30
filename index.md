@@ -21,7 +21,7 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 
 1. **Conversa de diagnóstico.** Você conta como o trabalho acontece hoje. A gente mostra onde está o desperdício e diz o que vale automatizar, e o que não vale. Não custa nada.
 2. **Proposta com preço fechado.** O que vai ser feito, em quanto tempo e por quanto, em três opções.
-3. **A primeira parte já em uso em até 2 semanas.** O resto vem por partes.
+3. **A primeira parte já em uso antes do resto ficar pronto.** O resto vem por partes, e o prazo de cada uma vem escrito na proposta.
 4. **A gente continua junto.** Depois do ar, acompanha, ajusta e corrige. Se algo falhar, o próprio sistema avisa a equipe.
 
 
@@ -56,7 +56,7 @@ Depende do tamanho do trabalho, e por isso não existe pacote pronto. O preço v
 
 ### Quanto tempo leva?
 
-A primeira parte fica pronta em até 2 semanas. O projeto inteiro leva, na maioria dos casos, de 2 a 6 semanas depois da proposta aprovada. Quando é uma plataforma inteira, leva mais, e entra por partes: cada uma já em uso antes da próxima. O prazo fechado vem junto com o preço.
+Depende do que vai ser feito, e por isso o prazo vem escrito na proposta, junto com o preço. O sistema entra em uso por partes, começando pela que mais pesa: cada uma já funciona antes da próxima.
 
 ### E se não funcionar do jeito combinado?
 
