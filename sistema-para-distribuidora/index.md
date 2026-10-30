@@ -47,6 +47,8 @@ Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins (Lei Co
 - **Distribuidora de alimentos:** lote, validade, a mesma mercadoria em caixa e em unidade, e margem por ponto de venda. Tem [página própria](https://genesiskore.com/sistema-para-distribuidora-de-alimentos/).
 - **Bebidas, autopeças, cosméticos, papel e embalagem:** o desenho muda (comodato, aplicação por veículo, grade de cor e tamanho), a lógica é a mesma. Conte como funciona a sua na conversa.
 
+Para montar a conta do mês antes de qualquer sistema, use o [modelo de DRE gerencial para distribuidora](https://genesiskore.com/dre-gerencial-para-distribuidora/).
+
 ## Como funciona
 
 Conversa de diagnóstico sem custo, proposta com preço fechado em três opções, a primeira parte em uso antes do resto e o prazo de cada fase escrito na proposta. Depois do ar, a mensalidade cobre hospedagem, monitoramento e suporte. O passo a passo está em [sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).

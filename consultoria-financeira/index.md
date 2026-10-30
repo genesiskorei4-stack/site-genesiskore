@@ -27,7 +27,7 @@ São dois dos seis produtos da [Consultoria de gestão](https://genesiskore.com/
 
 ## DRE gerencial e DRE contábil
 
-O DRE contábil é feito pelo contador para o fisco: segue a lei, junta as contas do jeito que o fisco pede e nem sempre sai todo mês. O DRE gerencial é feito para o dono decidir: separa o resultado por linha de negócio, produto ou canal, mostra o custo onde ele acontece e fecha todo mês. Os dois usam os mesmos números de partida, e por isso a Consultoria trabalha junto com o seu contador.
+O DRE contábil é feito pelo contador para o fisco: segue a lei, junta as contas do jeito que o fisco pede e nem sempre sai todo mês. O DRE gerencial é feito para o dono decidir: separa o resultado por linha de negócio, produto ou canal, mostra o custo onde ele acontece e fecha todo mês. Os dois usam os mesmos números de partida, e por isso a Consultoria trabalha junto com o seu contador. Para quem quer começar sozinho, há um [modelo de DRE gerencial para distribuidora](https://genesiskore.com/dre-gerencial-para-distribuidora/) para baixar.
 
 ## Fluxo de caixa projetado
 

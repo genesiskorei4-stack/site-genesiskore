@@ -25,6 +25,8 @@ A GenesisKore é uma empresa de São Paulo que automatiza os processos que se re
 
 **Na gestão:** os números do negócio numa tela só, atualizados enquanto a empresa trabalha, e o aviso quando algo sai do normal.
 
+Em escritório de advocacia, contabilidade ou engenharia o desenho muda: veja [automação para escritório](https://genesiskore.com/automacao-para-escritorio/).
+
 ## Zapier, Make ou uma empresa?
 
 Se é para ligar dois aplicativos com uma regra simples, como mandar para uma planilha todo formulário que chega, o Zapier ou o Make resolvem, e alguém da equipe monta. Não precisa contratar ninguém.

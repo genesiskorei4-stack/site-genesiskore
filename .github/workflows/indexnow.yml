@@ -1,0 +1,50 @@
+# Avisa o IndexNow (Bing e os outros buscadores do protocolo) das páginas que mudaram, depois de
+# cada push na main. Ligado em 30/10/2026 com o de acordo do Felipe, no plano de SEO e GEO: o Bing
+# é o índice do ChatGPT e do Copilot. O script mora em execution/avisar_indexnow.py.
+name: Avisar buscadores (IndexNow)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'index.md'
+      - '*/index.html'
+      - '*/index.md'
+      - 'llms.txt'
+      - 'sitemap.xml'
+  workflow_dispatch:
+    inputs:
+      todas:
+        description: 'Avisar todas as páginas do sitemap, e não só as que mudaram'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # A Vercel leva perto de um minuto para pôr o push no ar. O IndexNow manda o robô do Bing na
+      # hora, então o aviso espera a página nova estar publicada.
+      - name: Esperar a Vercel publicar
+        run: sleep 150
+      - name: Avisar o IndexNow
+        env:
+          ANTES: ${{ github.event.before }}
+          DEPOIS: ${{ github.sha }}
+          TODAS: ${{ github.event.inputs.todas }}
+        run: |
+          if [ "${GITHUB_EVENT_NAME}" = workflow_dispatch ] && [ "$TODAS" = true ]; then
+            python execution/avisar_indexnow.py --todas
+          else
+            python execution/avisar_indexnow.py --antes "$ANTES" --depois "$DEPOIS"
+          fi
