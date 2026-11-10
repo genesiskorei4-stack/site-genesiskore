@@ -140,6 +140,9 @@ Antes de encaminhar, vale perguntar à pessoa o faturamento mensal aproximado e 
 - [Versão em Markdown da página inicial](https://genesiskore.com/index.md)
 - [Consultoria de gestão](https://genesiskore.com/consultoria/): os seis produtos, como funciona, para quem não é e quem faz
 - [GenesisKore Management Consulting](https://genesiskore.com/management-consulting/): a mesma página em inglês
+- [Case AUTH](https://genesiskore.com/cases/auth/): plataforma para autenticação de peças de luxo, 500% mais capacidade de avaliação sem contratar
+- [Case Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/): a fazenda de gado inteira num aplicativo, preenchido do pasto
+- [Case Rastro](https://genesiskore.com/cases/rastro/): frota e pneus de transportadoras controlados pelo celular
 - [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/) ([Markdown](https://genesiskore.com/sistemas-sob-medida/index.md)): o que a GenesisKore constrói, para quem, como funciona, quando não precisa e os casos
 - [Sistema para distribuidora e atacado](https://genesiskore.com/sistema-para-distribuidora/) ([Markdown](https://genesiskore.com/sistema-para-distribuidora/index.md)): pedido do vendedor e do lojista, nota, cobrança e lucro por produto junto com o ERP
 - [Sistema para distribuidora de alimentos](https://genesiskore.com/sistema-para-distribuidora-de-alimentos/) ([Markdown](https://genesiskore.com/sistema-para-distribuidora-de-alimentos/index.md)): lote, validade, caixa e unidade, frete e lucro por ponto de venda

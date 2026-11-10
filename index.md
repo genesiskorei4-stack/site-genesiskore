@@ -40,6 +40,8 @@ A primeira conversa não custa nada, e a proposta traz escopo e prazo por escrit
 
 Página: https://genesiskore.com/consultoria/ (em inglês: https://genesiskore.com/management-consulting/)
 
+Cases por inteiro: https://genesiskore.com/cases/auth/ · https://genesiskore.com/cases/fazenda-cca/ · https://genesiskore.com/cases/rastro/
+
 ## Sistema ou consultoria?
 
 Se o que trava é uma tarefa que se repete todo dia do mesmo jeito, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.

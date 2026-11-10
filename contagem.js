@@ -13,6 +13,18 @@
  * chama `gkContar` de fora também se protege.
  */
 (() => {
+    // Tempo de carregamento de verdade, medido pela Vercel (Speed Insights, 10/11/2026). Só no site no ar,
+    // sem cookie. Precisa estar ligado no painel do projeto: desligado, o arquivo não existe e nada acontece.
+    try {
+        if (/(^|\.)genesiskore\.com$/.test(location.hostname)) {
+            window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+            const medidor = document.createElement('script');
+            medidor.defer = true;
+            medidor.src = '/_vercel/speed-insights/script.js';
+            document.head.appendChild(medidor);
+        }
+    } catch { /* a medição nunca quebra o site */ }
+
     const ENDERECO = 'https://app.genesiskore.com/api/visita';
     const curto = (v, n = 100) => String(v || '').slice(0, n);
 

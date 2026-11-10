@@ -135,6 +135,12 @@ function aoRolar() {
     linksMenu.forEach((a) => a.classList.toggle('ativo', a.getAttribute('href') === `#${idAtual}`));
 
     linhaDoTempo();
+
+    // O desenho do topo desce e gira um pouco enquanto a primeira tela vai embora.
+    if (abertura && !menosMovimento) {
+        const saiu = Math.min(1, Math.max(0, y / Math.max(1, abertura.offsetHeight)));
+        if (saiu < 1 || abertura.style.getPropertyValue('--rola') !== '1') abertura.style.setProperty('--rola', saiu.toFixed(3));
+    }
 }
 
 window.addEventListener('scroll', () => {
@@ -470,6 +476,63 @@ if (temMouse) {
             el.style.setProperty('--my', `${e.clientY - caixa.top}px`);
         });
     });
+}
+
+/* ------------------------------------------------------------ o topo acompanha o mouse (computador) */
+
+if (temMouse && !menosMovimento && abertura) {
+    let quadroMouse = 0;
+    abertura.addEventListener('pointermove', (e) => {
+        if (quadroMouse) return;
+        quadroMouse = requestAnimationFrame(() => {
+            quadroMouse = 0;
+            const caixa = abertura.getBoundingClientRect();
+            abertura.style.setProperty('--px', ((e.clientX - caixa.left) / caixa.width - 0.5).toFixed(3));
+            abertura.style.setProperty('--py', ((e.clientY - caixa.top) / caixa.height - 0.5).toFixed(3));
+        });
+    });
+
+    // O botão principal puxa de leve na direção do mouse e volta quando ele sai.
+    document.querySelectorAll('.botao-brilho').forEach((botao) => {
+        botao.addEventListener('pointermove', (e) => {
+            const caixa = botao.getBoundingClientRect();
+            botao.style.setProperty('--ima-x', `${(((e.clientX - caixa.left) / caixa.width - 0.5) * 10).toFixed(1)}px`);
+            botao.style.setProperty('--ima-y', `${(((e.clientY - caixa.top) / caixa.height - 0.5) * 8).toFixed(1)}px`);
+        });
+        botao.addEventListener('pointerleave', () => {
+            botao.style.removeProperty('--ima-x');
+            botao.style.removeProperty('--ima-y');
+        });
+    });
+}
+
+/* ------------------------------------------------------------ cenas em fileira (celular) */
+
+const gradeDores = document.getElementById('gradeDores');
+const doresPasso = document.getElementById('doresPasso');
+
+if (gradeDores && doresPasso && 'IntersectionObserver' in window) {
+    const cartoes = [...gradeDores.children];
+    const conta = document.getElementById('doresConta');
+    const doisDigitos = (n) => String(n).padStart(2, '0');
+    // O cartão que ocupa o meio da fileira é o da vez: risca o "antes" e anda o contador.
+    const naVista = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (!entrada.isIntersecting) return;
+            entrada.target.classList.add('na-vista');
+            const i = cartoes.indexOf(entrada.target);
+            conta.textContent = `${doisDigitos(i + 1)} / ${doisDigitos(cartoes.length)}`;
+            doresPasso.style.setProperty('--feito', ((i + 1) / cartoes.length).toFixed(3));
+            doresPasso.lastElementChild.hidden = i > 0;
+        });
+    }, { root: gradeDores, threshold: 0.6 });
+    // O primeiro só risca quando a seção chega na tela.
+    const chegou = new IntersectionObserver(([entrada]) => {
+        if (!entrada.isIntersecting) return;
+        chegou.disconnect();
+        cartoes.forEach((c) => naVista.observe(c));
+    }, { threshold: 0.3 });
+    chegou.observe(gradeDores);
 }
 
 /* ------------------------------------------------------------ medidas que dependem da fonte */

@@ -37,7 +37,7 @@ def url_do_arquivo(caminho):
     """De um arquivo do repositório para o endereço público, ou None se não for página."""
     if caminho in ('index.html', 'index.md'):
         return BASE
-    m = re.match(r'^([a-z0-9-]+)/index\.(html|md)$', caminho)
+    m = re.match(r'^([a-z0-9-]+(?:/[a-z0-9-]+)?)/index\.(html|md)$', caminho)
     if m:
         return f'{BASE}{m.group(1)}/'
     if caminho == 'llms.txt':

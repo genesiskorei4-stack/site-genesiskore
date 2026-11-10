@@ -210,6 +210,7 @@ def montar(pasta, md, estilo):
     <!-- Página gerada por execution/gerar_paginas.py a partir de {pasta}/index.md. Edite o .md e rode o script. -->
     <title>{titulo}</title>
     <meta name="description" content="{descricao}">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="{url}">
     <link rel="alternate" type="text/markdown" href="{url}index.md" title="Versão em Markdown para agentes de IA">
@@ -251,6 +252,10 @@ def sitemap(lastmods):
     """Toda página canônica dela mesma entra, com os pares de idioma que ela declara."""
     entradas = []
     pastas = [''] + sorted(p for p in os.listdir(RAIZ) if os.path.isfile(os.path.join(RAIZ, p, 'index.html')))
+    # As páginas de case moram um nível abaixo (cases/<nome>/), geradas por gerar_paginas_de_case.py.
+    casos = os.path.join(RAIZ, 'cases')
+    if os.path.isdir(casos):
+        pastas += sorted('cases/' + p for p in os.listdir(casos) if os.path.isfile(os.path.join(casos, p, 'index.html')))
     for pasta in pastas:
         rel = (pasta + '/' if pasta else '') + 'index.html'
         pagina = ler(rel)

@@ -7,6 +7,7 @@
     <title>GenesisKore | Sistemas sob medida e consultoria de gestão</title>
     <meta name="description"
         content="A empresa cresceu e ainda depende de você. A GenesisKore faz sistemas sob medida e consultoria de gestão para pequenas e médias empresas no Brasil.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/">
     <link rel="alternate" type="text/markdown" href="https://genesiskore.com/index.md" title="Versão em Markdown para agentes de IA">
@@ -576,7 +577,7 @@
                 <p class="lead revelar">Se alguma destas cenas é do seu dia a dia, tem hora de trabalho sendo paga
                     para fazer o que um sistema faz sozinho.</p>
 
-                <ul class="grade-dores">
+                <ul class="grade-dores" id="gradeDores">
                     <li class="cartao revelar">
                         <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9h8M8 12h5" /></svg>
                         <p class="mini">Hoje</p>
@@ -615,6 +616,8 @@
                             <a href="#consultoria" class="link-seta">Ver a Consultoria</a></p>
                     </li>
                 </ul>
+                <!-- Só no celular: onde a pessoa está na fileira de cartões -->
+                <p class="dores-passo" id="doresPasso" aria-hidden="true"><span id="doresConta">01 / 05</span><span class="dores-trilho"></span><span>deslize</span></p>
             </div>
         </section>
 
@@ -712,6 +715,7 @@
                                 trabalhar, e se conserta sozinho nas falhas que a gente já conhece.</li>
                         </ul>
                         <footer class="case-rodape">
+                            <a href="cases/auth/" class="link-seta">Ver o case da AUTH por inteiro</a>
                             <a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer"
                                 class="link-seta">Ver a AUTH no Instagram</a>
                             <button type="button" class="case-proximo" data-proximo>Próximo: Fazenda CCA</button>
@@ -756,6 +760,7 @@
                                 caixa.</li>
                         </ul>
                         <footer class="case-rodape">
+                            <a href="cases/fazenda-cca/" class="link-seta">Ver o case da Fazenda CCA por inteiro</a>
                             <button type="button" class="case-proximo" data-proximo>Próximo: Rastro</button>
                         </footer>
                     </section>
@@ -794,6 +799,7 @@
                                 rodiziar.</li>
                         </ul>
                         <footer class="case-rodape">
+                            <a href="cases/rastro/" class="link-seta">Ver o case da Rastro por inteiro</a>
                             <button type="button" class="case-proximo" data-proximo>Próximo: GenesisKore</button>
                         </footer>
                     </section>
@@ -1202,8 +1208,8 @@
         <svg class="seta" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
     </a>
 
-    <script src="contagem.js"></script>
-    <script src="script.js"></script>
+    <script src="contagem.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

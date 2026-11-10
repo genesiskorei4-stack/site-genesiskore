@@ -3281,3 +3281,225 @@ body.travado {
         grid-template-columns: 1.4fr repeat(3, auto);
     }
 }
+
+/* ------------------------------------------------------------ 10/11/2026: celular primeiro e mais movimento
+   Pedido do Felipe: mais atrativo, pensado para o telefone, mais interativo, sem perder a sobriedade.
+   Tudo aqui é acréscimo: sem JavaScript ou com "menos movimento" ligado, a página fica como era. */
+
+/* A troca de página (início, consultoria, sobre, formulário) vira um fundido curto em vez de um piscar. */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.28s;
+}
+
+/* O desenho do topo acompanha a rolagem e, no computador, o mouse. `translate` e `rotate` são
+   propriedades próprias: somam com o `transform` que centraliza o desenho, sem brigar com ele. */
+.abertura .nucleo {
+    translate: calc(var(--px, 0) * 14px) calc(var(--rola, 0) * 70px + var(--py, 0) * 14px);
+    rotate: calc(var(--rola, 0) * 10deg);
+}
+
+.abertura .abertura-luz {
+    translate: calc(var(--px, 0) * -22px) calc(var(--py, 0) * -22px);
+}
+
+/* O toque responde: o botão afunda um nada quando o dedo encosta. */
+.botao {
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.45s var(--ease), border-color 0.45s var(--ease), background-color 0.45s var(--ease), transform 0.25s var(--ease);
+}
+
+.botao:active {
+    transform: scale(0.975);
+}
+
+/* O botão principal do topo puxa de leve na direção do mouse (só no computador). */
+.botao-brilho {
+    translate: var(--ima-x, 0) var(--ima-y, 0);
+    transition: translate 0.5s var(--ease), background-color 0.45s var(--ease), color 0.45s var(--ease), transform 0.25s var(--ease);
+}
+
+/* A resposta da pergunta abre crescendo, em vez de aparecer de uma vez. Navegador antigo abre como antes. */
+@supports (interpolate-size: allow-keywords) {
+    .perguntas {
+        interpolate-size: allow-keywords;
+    }
+
+    .perguntas details::details-content {
+        block-size: 0;
+        overflow: clip;
+        transition: block-size 0.5s var(--ease), content-visibility 0.5s allow-discrete;
+    }
+
+    .perguntas details[open]::details-content {
+        block-size: auto;
+    }
+}
+
+/* No celular, as cinco cenas viram uma fileira para deslizar com o dedo: a seção cabe numa tela
+   em vez de cinco, e o cartão seguinte aparece na beirada para avisar que tem mais. */
+.dores-passo {
+    display: none;
+}
+
+@media (max-width: 719px) {
+    .js .grade-dores {
+        grid-auto-flow: column;
+        grid-auto-columns: 84%;
+        gap: 10px;
+        margin-left: calc(var(--margem) * -1);
+        margin-right: calc(var(--margem) * -1);
+        padding: 0 var(--margem) 4px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: var(--margem);
+        scrollbar-width: none;
+    }
+
+    .js .grade-dores::-webkit-scrollbar {
+        display: none;
+    }
+
+    .js .grade-dores .cartao {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    /* Os cartões entram juntos com a fileira: o que está na beirada não pode ficar invisível. */
+    .js .grade-dores .cartao.revelar {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* O risco do "antes" espera o cartão chegar ao centro. */
+    .js .grade-dores .cartao.revelar .antes {
+        background-size: 0% 1.5px;
+        transition-delay: 0.15s;
+    }
+
+    .js .grade-dores .cartao.na-vista .antes {
+        background-size: 100% 1.5px;
+    }
+
+    .js .dores-passo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 18px;
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--suave);
+    }
+
+    .dores-trilho {
+        position: relative;
+        flex: 1;
+        height: 1px;
+        background: var(--linha);
+    }
+
+    .dores-trilho::after {
+        content: '';
+        position: absolute;
+        inset: -0.5px 0;
+        background: var(--tinta);
+        transform-origin: left;
+        transform: scaleX(var(--feito, 0.2));
+        transition: transform 0.5s var(--ease);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .abertura .nucleo,
+    .abertura .abertura-luz,
+    .botao-brilho {
+        translate: none;
+        rotate: none;
+    }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+}
+
+/* ------------------------------------------------------------ 10/11/2026: celular mais enxuto
+   Pedido do Felipe: página mais minimalista e pensada para o telefone. No celular fica o essencial
+   de cada seção, e o detalhe mora na página própria (cases, consultoria). No computador nada muda. */
+
+@media (max-width: 719px) {
+    .secao {
+        padding: 68px 0;
+    }
+
+    /* O rótulo acima de cada título repetia o título. Fica só onde diz algo novo (dentro dos cases). */
+    .secao > .container > .etiqueta,
+    .secao > .container > div:first-child:not(.painel-resultado) > .etiqueta {
+        display: none;
+    }
+
+    .abertura-consultoria {
+        display: none;
+    }
+
+    /* Cases: o número, o antes e o que foi feito. A lista inteira está na página do case. */
+    .case-lista {
+        display: none;
+    }
+
+    /* Como funciona: só o passo. */
+    .sua-parte {
+        display: none;
+    }
+
+    /* Consultoria: seis linhas no lugar de seis cartões. As falas e os passos estão em /consultoria/. */
+    .grade-produtos {
+        gap: 0;
+        border-bottom: 1px solid var(--linha);
+    }
+
+    .grade-produtos .produto {
+        padding: 18px 0;
+        border: 0;
+        border-top: 1px solid var(--linha);
+        background: none;
+    }
+
+    .produto-fala,
+    .passos-consultoria {
+        display: none;
+    }
+
+    /* Compromissos: linha com o ícone ao lado, sem caixa. */
+    .grade-compromissos {
+        gap: 0;
+    }
+
+    .grade-compromissos .compromisso {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        column-gap: 16px;
+        padding: 20px 0;
+        border: 0;
+        border-top: 1px solid var(--linha-escura);
+        background: none;
+    }
+
+    .grade-compromissos .compromisso::before {
+        display: none;
+    }
+
+    .grade-compromissos .compromisso .icone {
+        grid-row: 1 / span 2;
+        width: 22px;
+        height: 22px;
+        margin: 2px 0 0;
+    }
+}

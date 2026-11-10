@@ -1,5 +1,23 @@
 # Buscadores e agentes de IA são bem-vindos em todo o site.
+# Os robôs de IA estão listados pelo nome porque alguns só entram quando são citados.
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: DuckAssistBot
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://genesiskore.com/sitemap.xml
