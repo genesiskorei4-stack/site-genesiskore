@@ -4508,3 +4508,54 @@ main [id] {
         padding: 0 12px 0 0;
     }
 }
+
+/* ------------------------------------------------------------ página mais leve e vídeo sem controle (13/11/2026)
+   Auditoria: o vidro fosco (backdrop-filter) refazia o desfoque a cada quadro e segurava a rolagem em
+   47 quadros por segundo no computador. Sem ele e com os enfeites parados fora da tela, 60. O fundo
+   de cada peça ficou quase cheio para o texto continuar legível. */
+
+.topo,
+.topo.solido,
+.topo.claro,
+.menu-celular,
+.vidro,
+.cta-fixo,
+.conversa-topo {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+.topo.solido {
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.topo.claro {
+    background: rgba(245, 245, 245, 0.95);
+}
+
+.menu-celular {
+    background: rgba(0, 0, 0, 0.97);
+}
+
+.vidro {
+    background: rgba(14, 14, 14, 0.9);
+}
+
+.parado::before,
+.parado::after,
+.parado *::before,
+.parado *::after {
+    animation-play-state: paused !important;
+}
+
+/* O vídeo roda sozinho e ninguém mexe nele: sem controle, sem clique, sem menu. */
+.case-video,
+.video-tela {
+    pointer-events: none;
+    user-select: none;
+}
+
+.case-video::-webkit-media-controls,
+.video-tela::-webkit-media-controls {
+    display: none !important;
+}

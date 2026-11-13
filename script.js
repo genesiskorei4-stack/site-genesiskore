@@ -210,7 +210,8 @@ if ('IntersectionObserver' in window) {
     const pausar = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => entrada.target.classList.toggle('parado', !entrada.isIntersecting));
     });
-    document.querySelectorAll('[data-anima]').forEach((el) => pausar.observe(el));
+    // 13/11/2026: vale para toda seção e para cada título com brilho, não só para as três marcadas.
+    document.querySelectorAll('[data-anima], main > section, .enfase, .botao-brilho').forEach((el) => pausar.observe(el));
 } else {
     revelaveis.forEach((el) => el.classList.add('visivel'));
 }
@@ -621,31 +622,39 @@ try {
     }
 } catch { /* a contagem nunca quebra o site */ }
 
-/* ------------------------------------------------------------ vídeos das telas, sempre sem som (13/11/2026)
-   Só carrega e toca quando aparece na tela. Com "menos movimento" ligado, fica a imagem e o botão de tocar. */
+/* ------------------------------------------------------------ vídeos das telas (13/11/2026)
+   Sem som e sem controle: rodam sozinhos enquanto aparecem e param fora da tela ou com a aba escondida.
+   O arquivo começa a baixar um pouco antes de entrar na tela, para não engasgar no começo.
+   Com "menos movimento" ligado no aparelho, fica só a imagem. */
 
-document.querySelectorAll('.case-video, .video-tela').forEach((video) => {
-    try {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-            video.controls = true;
-            return;
-        }
-        new IntersectionObserver(([entrada]) => {
-            if (entrada.isIntersecting) video.play().catch(() => { video.controls = true; });
-            else video.pause();
-        }, { threshold: 0.4 }).observe(video);
-    } catch { video.controls = true; }
-});
-
-/* ------------------------------------------------------------ consultoria: os outros três produtos, no celular (13/11/2026) */
-
-const produtosMais = document.getElementById('produtosMais');
-const gradeProdutos = document.getElementById('gradeProdutos');
-if (produtosMais && gradeProdutos) {
-    produtosMais.addEventListener('click', () => {
-        gradeProdutos.classList.add('aberta');
-        gradeProdutos.querySelectorAll('.produto-extra').forEach((cartao) => cartao.classList.add('visivel'));
-        produtosMais.setAttribute('aria-expanded', 'true');
-        produtosMais.hidden = true;
+(() => {
+    const videos = [...document.querySelectorAll('.case-video, .video-tela')];
+    if (!videos.length || !('IntersectionObserver' in window)) return;
+    videos.forEach((video) => {
+        video.controls = false;
+        video.muted = true;
+        video.disablePictureInPicture = true;
+        video.setAttribute('disableremoteplayback', '');
+        video.setAttribute('controlslist', 'nodownload nofullscreen noremoteplayback noplaybackrate');
     });
-}
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const naTela = new Set();
+    const tocar = (video) => { video.play().catch(() => { /* o navegador recusou: fica a imagem */ }); };
+    const perto = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (!entrada.isIntersecting) return;
+            entrada.target.preload = 'auto';
+            perto.unobserve(entrada.target);
+        });
+    }, { rootMargin: '900px 0px' });
+    const ver = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) { naTela.add(entrada.target); if (!document.hidden) tocar(entrada.target); }
+            else { naTela.delete(entrada.target); entrada.target.pause(); }
+        });
+    }, { threshold: 0.35 });
+    videos.forEach((video) => { perto.observe(video); ver.observe(video); });
+    document.addEventListener('visibilitychange', () => {
+        naTela.forEach((video) => (document.hidden ? video.pause() : tocar(video)));
+    });
+})();
