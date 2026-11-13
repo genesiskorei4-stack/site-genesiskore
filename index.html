@@ -29,7 +29,7 @@
       "url": "https://genesiskore.com/",
       "logo": "https://genesiskore.com/logo.png",
       "image": "https://genesiskore.com/previa-link.png",
-      "description": "Sistemas sob medida e consultoria de gestão para pequenas e médias empresas que faturam a partir de R$ 150 mil por mês. Sistemas: portais, painéis financeiros, automação de pedidos, documentos e cobrança, e avisos automáticos por e-mail e WhatsApp. Consultoria: contabilidade gerencial, análise financeira, processos, mercado, cenário econômico e experiência do cliente.",
+      "description": "Sistemas sob medida e consultoria de gestão para pequenas e médias empresas que faturam a partir de R$ 150 mil por mês. Sistemas: portais, painéis financeiros, automação de pedidos, documentos e cobrança, e avisos automáticos por e-mail e WhatsApp. Consultoria: consultoria de IA para o negócio, contabilidade gerencial, análise financeira, processos, mercado, cenário econômico e experiência do cliente.",
       "foundingDate": "2025-08",
       "email": "contato@genesiskore.com",
       "areaServed": {
@@ -64,6 +64,8 @@
         "painel financeiro",
         "lucro por produto",
         "consultoria de gestão",
+        "consultoria de IA",
+        "inteligência artificial para pequenas empresas",
         "contabilidade gerencial",
         "análise financeira",
         "análise de processos",
@@ -131,6 +133,15 @@
             "alternateName": "GenesisKore Management Consulting",
             "url": "https://genesiskore.com/consultoria/",
             "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Consultoria de IA para o seu negócio",
+                  "url": "https://genesiskore.com/consultoria-de-ia/",
+                  "description": "O produto principal da Consultoria. O mapa de quais tarefas a IA pode assumir na empresa, o kit de IA já configurado com o jeito dela (Claude, ChatGPT, Gemini ou Copilot), uma aula ao vivo com a equipe e um retorno 30 dias depois. Em geral, três semanas."
+                }
+              },
               {
                 "@type": "Offer",
                 "itemOffered": {
@@ -313,6 +324,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a Consultoria de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É o produto principal da Consultoria. A equipe entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e entrega a IA já configurada com o jeito da empresa, com uma aula ao vivo para a equipe e um retorno 30 dias depois. Em geral, leva três semanas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais ferramentas de IA vocês usam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As que fizerem sentido para a empresa: Claude, ChatGPT, Gemini, o Copilot do Office ou a IA que já vem no sistema que vocês usam. A assinatura fica no nome da empresa. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Depois da Consultoria de IA eu preciso de um sistema?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Muitas tarefas se resolvem com a IA de prateleira bem configurada, e o kit é feito para isso. Quando alguma tarefa pede sistema sob medida, ela aparece no mapa com o motivo, e vira proposta à parte só se você quiser."
           }
         }
       ]
@@ -506,7 +541,8 @@
                     <p class="garantia-curta entrada">A conversa de diagnóstico não custa nada. Você sai dela sabendo o que
                         vale automatizar, mesmo que não feche com a gente.</p>
                     <p class="abertura-consultoria entrada">Quando o problema é não saber se a empresa está ganhando dinheiro,
-                        quem entra é a <a href="#consultoria">Consultoria de gestão</a>.</p>
+                        quem entra é a <a href="#consultoria">Consultoria de gestão</a>. Se a dúvida é por onde começar com IA,
+                        tem a <a href="#consultoria-de-ia">Consultoria de IA</a>.</p>
                 </div>
             </div>
 
@@ -966,6 +1002,40 @@
                     números, os processos e o mercado da sua empresa e entrega o que fazer, em ordem de impacto.</p>
 
                 <ul class="grade-produtos">
+                    <!-- 13/11/2026: a Consultoria de IA é o produto principal da Consultoria (pedido do Gustavo).
+                         Cartão maior, na linha inteira. Sem preço e sem prazo fechado: "em geral, três semanas". -->
+                    <li class="cartao produto produto-destaque revelar" id="consultoria-de-ia">
+                        <div class="destaque-texto">
+                            <p class="destaque-rotulo">O produto principal da Consultoria</p>
+                            <h3>Consultoria de IA para o seu negócio</h3>
+                            <p class="destaque-fala">&ldquo;Todo mundo fala de IA. Eu não sei o que ela faria aqui dentro.&rdquo;</p>
+                            <p>A gente entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e deixa
+                                ela configurada com o jeito da empresa. Funciona com Claude, ChatGPT, Gemini ou o Copilot do
+                                Office. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.</p>
+                            <p class="destaque-nota">Em geral, três semanas. A tarefa que pedir sistema aparece no mapa, e vira proposta à parte só se você quiser.</p>
+                            <div class="destaque-acoes">
+                                <a href="conversar/" class="botao botao-cheio">Quero conversar</a>
+                                <a href="consultoria-de-ia/" class="link-seta">Ver o kit e as etapas</a>
+                            </div>
+                        </div>
+                        <div class="destaque-detalhe">
+                            <ol class="destaque-etapas">
+                                <li><strong>Entender a empresa.</strong> A semana de cada área vira uma lista de tarefas: quem faz, quanto tempo leva, em que ferramenta.</li>
+                                <li><strong>Onde a IA entra.</strong> Cada tarefa ganha um destino: IA de prateleira, automação simples ou sistema sob medida. E a lista do que não comprar.</li>
+                                <li><strong>O kit pronto.</strong> A IA montada e testada na conta da empresa.</li>
+                                <li><strong>Aula e retorno.</strong> Duas horas ao vivo com a equipe, nas tarefas reais da semana. Trinta dias depois, a gente volta para medir o que pegou.</li>
+                            </ol>
+                            <p class="destaque-rotulo">O que vem no kit</p>
+                            <ul class="destaque-kit">
+                                <li>O arquivo da empresa, que a IA lê antes de cada conversa</li>
+                                <li>Assistentes prontos, um por tarefa</li>
+                                <li>Skills do Claude, ou GPTs no ChatGPT</li>
+                                <li>Conectores com Drive, Gmail e agenda</li>
+                                <li>A biblioteca de pedidos testados</li>
+                                <li>Regras de uso seguro, dentro da LGPD</li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="cartao produto revelar">
                         <h3>Contabilidade Gerencial</h3>
                         <p class="produto-fala">&ldquo;O contador manda o balanço e o dono não consegue decidir nada com ele. O mês fecha pelo extrato do banco.&rdquo;</p>
@@ -1133,6 +1203,24 @@
                             <p>Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua.</p>
                         </div>
                     </details>
+                    <details>
+                        <summary>O que é a Consultoria de IA?</summary>
+                        <div class="resposta">
+                            <p>É o produto principal da Consultoria. A equipe entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e entrega a IA já configurada com o jeito da empresa, com uma aula ao vivo para a equipe e um retorno 30 dias depois. Em geral, leva três semanas.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Quais ferramentas de IA vocês usam?</summary>
+                        <div class="resposta">
+                            <p>As que fizerem sentido para a empresa: Claude, ChatGPT, Gemini, o Copilot do Office ou a IA que já vem no sistema que vocês usam. A assinatura fica no nome da empresa. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Depois da Consultoria de IA eu preciso de um sistema?</summary>
+                        <div class="resposta">
+                            <p>Não. Muitas tarefas se resolvem com a IA de prateleira bem configurada, e o kit é feito para isso. Quando alguma tarefa pede sistema sob medida, ela aparece no mapa com o motivo, e vira proposta à parte só se você quiser.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -1185,6 +1273,7 @@
                 <li><a href="bling-omie-ou-sistema-sob-medida/">Bling, Omie ou sob medida</a></li>
                 <li><a href="quanto-custa-um-sistema-sob-medida/">Quanto custa</a></li>
                 <li><a href="sistema-para-substituir-planilhas/">Substituir planilhas</a></li>
+                <li><a href="consultoria-de-ia/">Consultoria de IA</a></li>
                 <li><a href="consultoria-financeira/">Consultoria financeira</a></li>
                 <li><a href="dre-gerencial-para-distribuidora/">DRE gerencial (modelo)</a></li>
             </ul>

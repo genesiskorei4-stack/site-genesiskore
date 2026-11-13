@@ -133,6 +133,14 @@
    "todos": [
     "dre gerencial"
    ]
+  },
+  {
+   "id": "consultoria-de-ia",
+   "frente": "consultoria",
+   "busca": "consultoria de IA para empresas",
+   "todos": [
+    "consultoria de ia"
+   ]
   }
  ]
 }

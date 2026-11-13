@@ -27,7 +27,20 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 
 ## Consultoria de gestão
 
-Quando o problema é não saber se a empresa está ganhando dinheiro, quem entra é a Consultoria de gestão, o segundo produto da GenesisKore. O que você decide no feeling passa a ter número. São seis produtos:
+Quando o problema é não saber se a empresa está ganhando dinheiro, quem entra é a Consultoria de gestão, o segundo produto da GenesisKore. O que você decide no feeling passa a ter número.
+
+### Consultoria de IA para o seu negócio (o produto principal da Consultoria)
+
+Todo mundo fala de IA. Pouca gente sabe o que ela faz dentro da própria empresa. A equipe entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e deixa a IA configurada com o jeito da empresa. Em geral, três semanas.
+
+1. **Entender a empresa.** A semana de cada área vira uma lista de tarefas: quem faz, quanto tempo leva, em que ferramenta.
+2. **Onde a IA entra.** Cada tarefa ganha um destino: IA de prateleira (Claude, ChatGPT, Gemini, o Copilot do Office), automação simples ou sistema sob medida. E a lista do que não comprar.
+3. **O kit pronto.** O arquivo da empresa que a IA lê antes de cada conversa, assistentes prontos por tarefa, skills do Claude (ou GPTs no ChatGPT), conectores com Drive, Gmail e agenda, a biblioteca de pedidos testados e as regras de uso seguro, dentro da LGPD.
+4. **Aula e retorno.** Duas horas ao vivo com a equipe, nas tarefas reais da semana, e um retorno 30 dias depois para medir o que pegou.
+
+Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra. A tarefa que pedir sistema aparece no mapa, e vira proposta à parte só se você quiser. Página: https://genesiskore.com/consultoria-de-ia/
+
+### Os outros seis produtos
 
 - Contabilidade Gerencial: o resultado do mês por linha de negócio, todo mês, do mesmo jeito. Junto com o seu contador, nunca no lugar dele.
 - Análise Financeira: onde a margem vaza, em reais, por produto, cliente e canal, e o caixa dos próximos meses.
@@ -96,6 +109,18 @@ Não. O contador cuida do fisco: escrituração, imposto e obrigações. A Consu
 
 Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema resolve parte do problema, a gente fala, e a decisão é sua.
 
+### O que é a Consultoria de IA?
+
+É o produto principal da Consultoria. A equipe entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e entrega a IA já configurada com o jeito da empresa, com uma aula ao vivo para a equipe e um retorno 30 dias depois. Em geral, leva três semanas.
+
+### Quais ferramentas de IA vocês usam?
+
+As que fizerem sentido para a empresa: Claude, ChatGPT, Gemini, o Copilot do Office ou a IA que já vem no sistema que vocês usam. A assinatura fica no nome da empresa. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.
+
+### Depois da Consultoria de IA eu preciso de um sistema?
+
+Não. Muitas tarefas se resolvem com a IA de prateleira bem configurada, e o kit é feito para isso. Quando alguma tarefa pede sistema sob medida, ela aparece no mapa com o motivo, e vira proposta à parte só se você quiser.
+
 ## Quem são os sócios
 
 A GenesisKore foi fundada em agosto de 2025 por Felipe Concilio e Gustavo Cossignani. Em outubro de 2026, com a Consultoria de gestão, Vitor Costa e João Cavalcanti entraram como sócios. São quatro sócios, e só estes quatro.
@@ -119,6 +144,7 @@ Mais em https://genesiskore.com/sobre/#socios
 - Bling, Omie ou sistema sob medida: https://genesiskore.com/bling-omie-ou-sistema-sob-medida/index.md
 - Quanto custa um sistema sob medida: https://genesiskore.com/quanto-custa-um-sistema-sob-medida/index.md
 - Sistema para substituir planilhas: https://genesiskore.com/sistema-para-substituir-planilhas/index.md
+- Consultoria de IA para o seu negócio: https://genesiskore.com/consultoria-de-ia/index.md
 - Consultoria financeira: https://genesiskore.com/consultoria-financeira/index.md
 - DRE gerencial para distribuidora, com modelo para baixar: https://genesiskore.com/dre-gerencial-para-distribuidora/index.md
 

@@ -87,7 +87,9 @@ checar(bool(org.get('contactPoint')) and bool(org.get('address')), 'organizaçã
 checar('rel="canonical"' in inicio, 'página inicial tem canonical')
 catalogos = {c['name']: c for c in org['hasOfferCatalog']['itemListElement']}
 checar(set(catalogos) == {'Sistemas sob medida', 'Consultoria de gestão'}, 'catálogo da organização separa Sistemas e Consultoria')
-checar(len(catalogos.get('Consultoria de gestão', {}).get('itemListElement', [])) == 6, 'catálogo da Consultoria tem os seis produtos')
+# 13/11/2026: a Consultoria de IA entrou como produto principal, na frente dos seis.
+checar(len(catalogos.get('Consultoria de gestão', {}).get('itemListElement', [])) == 7, 'catálogo da Consultoria tem a Consultoria de IA e os seis produtos')
+checar('Consultoria de IA' in llms and 'https://genesiskore.com/consultoria-de-ia/' in llms, 'llms.txt traz a Consultoria de IA')
 faq_visivel(inicio, 'início')
 
 for pt, en in PARES:
@@ -101,7 +103,9 @@ for pt, en in PARES:
 for nome, produtos in (('consultoria', PRODUTOS), ('management-consulting', PRODUCTS)):
     html = ler(nome + '/')
     servico = next((n for n in json_ld(html) if n.get('@type') == 'Service'), None)
-    checar(servico is not None and len(servico['hasOfferCatalog']['itemListElement']) == 6, f'/{nome}/ tem JSON-LD de Service com os seis produtos')
+    # A página em português traz também a Consultoria de IA (13/11/2026); a em inglês ainda não.
+    esperado = 7 if nome == 'consultoria' else 6
+    checar(servico is not None and len(servico['hasOfferCatalog']['itemListElement']) == esperado, f'/{nome}/ tem JSON-LD de Service com os produtos')
     checar(all(p in texto_visivel(html) for p in produtos), f'/{nome}/ mostra os seis produtos na página')
     faq_visivel(html, nome)
 checar('GenesisKore Management Consulting' in re.search(r'<title>(.*?)</title>', ler('management-consulting/')).group(1),

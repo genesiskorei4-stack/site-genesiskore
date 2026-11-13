@@ -2994,6 +2994,175 @@ body.travado {
     }
 }
 
+/* ------------------------------------------------------------ consultoria de IA (13/11/2026)
+   O produto principal da Consultoria. Cartão preto na linha inteira da grade, acima dos outros seis:
+   à esquerda o que é e o botão, à direita as quatro etapas e o kit. */
+
+.grade-produtos .produto-destaque {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 32px;
+    padding: 32px 22px 34px;
+    background: var(--preto-1);
+    border-color: var(--preto-1);
+    color: var(--branco);
+}
+
+.produto-destaque h3 {
+    font-size: clamp(1.5rem, 4.4vw, 2.2rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.destaque-rotulo {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--suave-escuro);
+    margin-bottom: 14px;
+}
+
+.destaque-fala {
+    font-family: var(--serifa);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.destaque-texto > p:not(.destaque-rotulo):not(.destaque-fala) {
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 52ch;
+}
+
+.destaque-texto .destaque-nota {
+    margin-top: 14px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 0.88rem;
+    color: var(--suave-escuro);
+}
+
+.destaque-acoes {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.destaque-acoes .link-seta {
+    align-self: flex-start;
+    color: var(--branco);
+}
+
+.produto-destaque .botao-cheio {
+    background: var(--branco);
+    border-color: var(--branco);
+    color: var(--preto);
+}
+
+.produto-destaque .botao-cheio::before {
+    background: var(--preto);
+}
+
+@media (hover: hover) {
+    .produto-destaque .botao-cheio:hover {
+        color: var(--branco);
+    }
+}
+
+.destaque-etapas {
+    list-style: none;
+    counter-reset: etapa;
+    display: grid;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--linha-escura);
+}
+
+.destaque-etapas li {
+    counter-increment: etapa;
+    position: relative;
+    padding: 14px 0 14px 44px;
+    border-top: 1px solid var(--linha-escura);
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.destaque-etapas li::before {
+    content: counter(etapa, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 16px;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--branco);
+}
+
+.destaque-etapas strong {
+    color: var(--branco);
+    font-weight: 500;
+}
+
+.destaque-kit {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.destaque-kit li {
+    position: relative;
+    padding-left: 18px;
+}
+
+.destaque-kit li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 8px;
+    height: 1px;
+    background: var(--branco);
+}
+
+@media (min-width: 720px) {
+    .grade-produtos .produto-destaque {
+        padding: 44px 40px;
+    }
+
+    .destaque-acoes {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .destaque-acoes .link-seta {
+        align-self: center;
+    }
+
+    .destaque-kit {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grade-produtos .produto-destaque {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        padding: 52px 48px;
+    }
+
+    .destaque-kit {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ------------------------------------------------------------ página do formulário (27/10/2026)
    O formulário saiu da janela e virou página própria, em cinco etapas, com a linha de progresso
    no alto e o faturamento por último. A lógica mora em conversar/conversar.js. */
@@ -3501,5 +3670,26 @@ body.travado {
         width: 22px;
         height: 22px;
         margin: 2px 0 0;
+    }
+}
+
+/* 13/11/2026: no celular o cartão da Consultoria de IA continua cartão (as linhas acima valem para os
+   outros seis). Fica o que é, as quatro etapas e o botão. O kit inteiro está em /consultoria-de-ia/. */
+@media (max-width: 719px) {
+    .grade-produtos .produto-destaque {
+        margin-bottom: 8px;
+        padding: 28px 20px 30px;
+        border: 1px solid var(--preto-1);
+        background: var(--preto-1);
+    }
+
+    .produto-destaque .destaque-kit,
+    .produto-destaque .destaque-detalhe > .destaque-rotulo,
+    .produto-destaque .destaque-fala {
+        display: none;
+    }
+
+    .destaque-etapas {
+        margin-bottom: 0;
     }
 }
