@@ -569,3 +569,83 @@ if (sistemasMais && gradeSistemas) {
         gradeSistemas.querySelector('.sistema-extra a, .sistema-extra')?.focus?.();
     });
 }
+
+/* ------------------------------------------------------------ perguntas: as outras oito (13/11/2026) */
+
+const perguntasMais = document.getElementById('perguntasMais');
+const listaPerguntas = document.getElementById('listaPerguntas');
+if (perguntasMais && listaPerguntas) {
+    const abrirPerguntas = () => {
+        listaPerguntas.classList.add('aberta');
+        perguntasMais.setAttribute('aria-expanded', 'true');
+        perguntasMais.hidden = true;
+    };
+    perguntasMais.addEventListener('click', () => {
+        abrirPerguntas();
+        listaPerguntas.querySelector('.pergunta-extra summary')?.focus();
+    });
+    // Quem chega por um link direto para uma pergunta escondida vê a lista inteira.
+    if (location.hash && listaPerguntas.querySelector(`.pergunta-extra${location.hash}, .pergunta-extra ${location.hash}`)) abrirPerguntas();
+}
+
+/* ------------------------------------------------------------ botão fixo cede a vez ao botão da seção (13/11/2026) */
+
+if (ctaFixo && 'IntersectionObserver' in window) {
+    const naTela = new Set();
+    const ceder = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) naTela.add(entrada.target);
+            else naTela.delete(entrada.target);
+        });
+        ctaFixo.classList.toggle('cedeu', naTela.size > 0);
+    }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('main a[href^="conversar/"]').forEach((botao) => ceder.observe(botao));
+}
+
+/* ------------------------------------------------------------ até onde a pessoa rola (13/11/2026)
+   Uma batida por seção e por sessão, sem nada que identifique alguém. A plataforma mostra em que
+   seção as pessoas param. Nunca pode quebrar a página. */
+
+try {
+    if ('IntersectionObserver' in window && typeof window.gkSecao === 'function') {
+        const vistas = new Set();
+        const olhar = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada) => {
+                if (!entrada.isIntersecting || vistas.has(entrada.target.id)) return;
+                vistas.add(entrada.target.id);
+                olhar.unobserve(entrada.target);
+                window.gkSecao(entrada.target.id);
+            });
+        }, { rootMargin: '0px 0px -35% 0px' });
+        document.querySelectorAll('main > section[id]:not([hidden])').forEach((secao) => olhar.observe(secao));
+    }
+} catch { /* a contagem nunca quebra o site */ }
+
+/* ------------------------------------------------------------ vídeo das telas da AUTH (13/11/2026)
+   Só carrega e toca quando aparece na tela. Com "menos movimento" ligado, fica a imagem e o botão de tocar. */
+
+document.querySelectorAll('.case-video').forEach((video) => {
+    try {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+            video.controls = true;
+            return;
+        }
+        new IntersectionObserver(([entrada]) => {
+            if (entrada.isIntersecting) video.play().catch(() => { video.controls = true; });
+            else video.pause();
+        }, { threshold: 0.4 }).observe(video);
+    } catch { video.controls = true; }
+});
+
+/* ------------------------------------------------------------ consultoria: os outros três produtos, no celular (13/11/2026) */
+
+const produtosMais = document.getElementById('produtosMais');
+const gradeProdutos = document.getElementById('gradeProdutos');
+if (produtosMais && gradeProdutos) {
+    produtosMais.addEventListener('click', () => {
+        gradeProdutos.classList.add('aberta');
+        gradeProdutos.querySelectorAll('.produto-extra').forEach((cartao) => cartao.classList.add('visivel'));
+        produtosMais.setAttribute('aria-expanded', 'true');
+        produtosMais.hidden = true;
+    });
+}

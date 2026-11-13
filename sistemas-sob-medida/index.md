@@ -8,7 +8,7 @@ trilha: Sistemas sob medida
 servico: Desenvolvimento de sistema sob medida
 tipo_servico: Desenvolvimento de software sob medida
 publico: Pequenas e médias empresas que faturam a partir de uns R$ 150 mil por mês
-atualizado: 2026-10-30
+atualizado: 2026-11-13
 ---
 
 # Sistemas sob medida para pequenas e médias empresas
@@ -37,6 +37,15 @@ A pergunta que decide é uma só: isso se repete todo dia do mesmo jeito? Se sim
 Se a empresa fatura bem abaixo de R$ 150 mil por mês, ou se o Bling, o Omie ou a ferramenta que você já paga resolvem, um sistema sob medida sai mais caro que o problema. A gente diz isso na primeira conversa, sem proposta nenhuma. A comparação está em [Bling, Omie ou sistema sob medida](https://genesiskore.com/bling-omie-ou-sistema-sob-medida/).
 
 Também não fazemos robô que conversa com cliente no WhatsApp, sistema para clínica, site institucional nem loja virtual pronta.
+
+## Prateleira ou sob medida
+
+- **Jeito de trabalhar.** No sistema de prateleira, a sua equipe aprende a trabalhar do jeito do sistema. No sob medida, o sistema aprende o jeito da sua equipe.
+- **O que você paga.** Na prateleira, você paga por recurso que nunca vai usar. No sob medida, só pelo que resolve o seu problema.
+- **Tela nova.** A prateleira traz tela nova para todo mundo aprender. O sob medida funciona no WhatsApp, no email e na planilha que vocês já usam, ou numa tela simples feita para cada função.
+- **Suporte.** Na prateleira, fila e protocolo. Aqui, você fala direto com quem construiu.
+
+Se o Bling, o Omie ou a ferramenta que você já paga resolver o seu problema, a gente fala.
 
 ## Como funciona
 

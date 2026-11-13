@@ -17,6 +17,12 @@ Dono ou sócio de pequena e média empresa que fatura a partir de uns R$ 150 mil
 
 Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório chegam sozinhos, por e-mail ou WhatsApp, sem ninguém parar o que está fazendo.
 
+## O que o cliente diz
+
+> "A Genesis Kore tornou nossos processos na AUTH muito mais rápidos, completos e seguros."
+
+Theodoro Janz, fundador da AUTH (autenticação de artigos de luxo), em recomendação publicada no LinkedIn em 29/10/2026. A AUTH contratou a GenesisKore três vezes: o emissor de certificados, o sistema da equipe de autenticação e, agora, a plataforma geral de autenticações.
+
 ## Como funciona
 
 1. **Conversa de diagnóstico.** Você conta como o trabalho acontece hoje. A gente mostra onde está o desperdício e diz o que vale automatizar, e o que não vale. Não custa nada.

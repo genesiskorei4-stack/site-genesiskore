@@ -126,6 +126,22 @@
         } catch { /* a contagem nunca derruba o site */ }
     }
 
+    // Até onde a pessoa rola (13/11/2026): uma batida por seção da página inicial, com o id dela.
+    function gkSecao(secao) {
+        try {
+            if (desligada) return;
+            if (!base) base = montarBase();
+            const id = String(secao || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40);
+            if (!id) return;
+            const corpo = JSON.stringify({ evento: 'secao_vista', secao: id, sessao: base.sessao, dispositivo: base.dispositivo, origem: base.origem });
+            if (navigator.sendBeacon && navigator.sendBeacon(ENDERECO, new Blob([corpo], { type: 'text/plain' }))) return;
+            if (window.fetch) {
+                fetch(ENDERECO, { method: 'POST', body: corpo, keepalive: true, mode: 'no-cors', headers: { 'Content-Type': 'text/plain' } }).catch(() => {});
+            }
+        } catch { /* a contagem nunca derruba o site */ }
+    }
+
     window.gkContar = gkContar;
+    window.gkSecao = gkSecao;
     gkContar('visita');
 })();

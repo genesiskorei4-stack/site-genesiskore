@@ -38,6 +38,16 @@ for cid,(slug,nome,tit) in CASES.items():
     outros=' · '.join(f'<a href="../{s}/">{n}</a>' for k,(s,n,_) in CASES.items() if k!=cid)
     lis='\n'.join(f'        <section class="produto">\n            <h3>{a}</h3>\n            <p>{b}</p>\n        </section>' for a,b in itens)
     insta='\n        <p class="suave"><a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer">Ver a AUTH no Instagram</a></p>' if cid=='auth' else ''
+    # 13/11/2026: a página da AUTH leva as telas reais (dados de exemplo) e o depoimento do fundador,
+    # recomendação pública no LinkedIn em 29/10/2026. Texto dele, sem correção.
+    extra='''
+        <p><video muted loop playsinline controls preload="none" poster="/tela-auth-fila.webp" width="1006" height="948" style="max-width:100%;height:auto;background:#000" aria-label="Vídeo sem som da plataforma da AUTH: a fila de autenticação, o checklist da peça, o certificado emitido e a conferência pelo celular"><source src="/tela-auth.mp4" type="video/mp4"><source src="/tela-auth.webm" type="video/webm"></video></p>
+        <p class="suave">A plataforma da AUTH em uso: fila, checklist, certificado e conferência pelo celular. Dados de exemplo.</p>
+        <h2>O que o fundador da AUTH diz</h2>
+        <blockquote>&ldquo;A Genesis Kore tornou nossos processos na AUTH muito mais rápidos, completos e seguros.&rdquo;</blockquote>
+        <p>&ldquo;Iniciamos com o processo de automatização da emissão dos Certificados AUTH, onde isso tornou-se possível com o trabalho executado com total excelência e compreensão do Felipe Concílio, após o Emissor de Certificados AUTH, os contatamos novamente para o desenvolvimento do sistema interno operacional da equipe de autenticação e sistema de administração geral, onde o resultado seguiu a mesma lógica, excelência do total.&rdquo;</p>
+        <p>&ldquo;E no momento, estão trabalhando no desenvolvimento da plataforma geral de autenticações da AUTH, após mostrarem responsabilidade, comprometimento e expertise técnica nos projetos propostos.&rdquo;</p>
+        <p class="suave">Theodoro Janz, fundador da AUTH. Recomendação publicada no LinkedIn em 29/10/2026.</p>''' if cid=='auth' else ''
     pg=f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -71,7 +81,7 @@ for cid,(slug,nome,tit) in CASES.items():
     <main>
         <p class="etiqueta">Case · {setor}</p>
         <h1>{h3}</h1>
-        <blockquote>{num} {resto}</blockquote>
+        <blockquote>{num} {resto}</blockquote>{extra}
 
         <h2>Antes</h2>
         <p>{antes}</p>

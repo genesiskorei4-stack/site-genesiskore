@@ -3969,32 +3969,10 @@ body.travado {
     max-width: 26ch;
 }
 
-.processo-sob-medida {
-    margin-top: 72px;
-    padding-top: 56px;
-    border-top: 1px solid var(--linha-escura);
-}
 
-.processo-sob-medida h3 {
-    font-size: clamp(1.4rem, 3.4vw, 2.2rem);
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    line-height: 1.08;
-    max-width: 24ch;
-    margin-bottom: 28px;
-}
 
-.processo-sob-medida .comparacao {
-    border: 1px solid var(--linha-escura);
-}
 
-.processo-sob-medida .honestidade {
-    border-left-color: var(--branco);
-}
 
-.processo-sob-medida .honestidade footer {
-    color: var(--suave-escuro);
-}
 
 #compromissos {
     border-top: 1px solid var(--linha-escura);
@@ -4090,22 +4068,389 @@ main [id] {
         padding-left: 0;
     }
 
-    /* Prateleira x GenesisKore: no celular fica só o que a casa faz, em quatro linhas. */
-    .processo-sob-medida .comparacao-cabecalho,
-    .processo-sob-medida .comparacao-linha span:first-child {
+}
+
+
+/* ------------------------------------------------------------ prova de verdade e página mais curta (13/11/2026)
+   Depoimento do fundador da AUTH, telas reais no case, passos em linha no computador,
+   seis perguntas à vista. */
+
+.fala-cliente {
+    display: grid;
+    gap: 22px;
+    margin: 8px 0 44px;
+    padding: 28px 0 0;
+    border-top: 1px solid var(--linha-escura);
+}
+
+.fala-cliente blockquote p {
+    font-family: var(--serifa);
+    font-style: italic;
+    font-size: clamp(1.5rem, 4.6vw, 2.7rem);
+    line-height: 1.22;
+    max-width: 24ch;
+    color: var(--branco);
+}
+
+.fala-cliente figcaption {
+    display: grid;
+    gap: 4px;
+    justify-items: start;
+    align-content: start;
+}
+
+.fala-cliente figcaption strong {
+    font-family: var(--titulo);
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.fala-cliente figcaption span {
+    color: var(--suave-escuro);
+    font-size: 0.92rem;
+}
+
+.fala-cliente .link-seta {
+    margin-top: 6px;
+}
+
+.case-telas {
+    display: grid;
+    gap: 18px;
+    margin: 4px 0 28px;
+    padding: 14px;
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.case-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1006 / 948;
+    background: var(--preto);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.case-telas figcaption {
+    display: grid;
+    gap: 16px;
+    align-content: center;
+    padding: 4px 6px 8px;
+}
+
+.case-passos-video {
+    list-style: none;
+    counter-reset: tela;
+    display: grid;
+    gap: 0;
+}
+
+.case-passos-video li {
+    counter-increment: tela;
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: baseline;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-family: var(--titulo);
+    font-size: 1.05rem;
+    line-height: 1.25;
+}
+
+.case-passos-video li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.case-passos-video li::before {
+    content: counter(tela, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--suave-escuro);
+}
+
+.case-telas figcaption span {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    color: var(--suave-escuro);
+}
+
+@media (min-width: 860px) {
+    .case-telas {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: 28px;
+        padding: 18px;
+    }
+
+    .case-telas figcaption {
+        padding: 0 10px 0 0;
+    }
+}
+
+.case-fala {
+    margin: 28px 0 8px;
+    padding: 22px 0 0;
+    border-top: 1px solid var(--linha);
+}
+
+.case-fala-fato {
+    font-family: var(--titulo);
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    max-width: 40ch;
+    margin-bottom: 18px;
+}
+
+.case-fala blockquote {
+    display: grid;
+    gap: 12px;
+    padding-left: 18px;
+    border-left: 2px solid var(--tinta);
+}
+
+.case-fala blockquote p {
+    font-family: var(--serifa);
+    font-style: italic;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    max-width: 62ch;
+}
+
+.case-fala figcaption {
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--suave);
+}
+
+.processo-fim {
+    display: grid;
+    gap: 20px;
+    justify-items: start;
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--linha-escura);
+}
+
+.processo-fim .honestidade {
+    margin: 0;
+    border-left-color: var(--branco);
+}
+
+.processo-fim .honestidade footer {
+    color: var(--suave-escuro);
+}
+
+.js .perguntas:not(.aberta) .pergunta-extra {
+    display: none;
+}
+
+.perguntas-mais {
+    display: none;
+}
+
+.js .perguntas-mais {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 56px;
+    margin-top: 18px;
+    padding: 0 18px;
+    border: 1px solid var(--tinta);
+    background: transparent;
+    color: var(--tinta);
+    font-family: var(--titulo);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease);
+}
+
+.js .perguntas-mais::after {
+    content: '+';
+    font-family: var(--mono);
+    font-size: 1.1rem;
+}
+
+.js .perguntas-mais[hidden] {
+    display: none;
+}
+
+@media (hover: hover) {
+    .js .perguntas-mais:hover {
+        background: var(--tinta);
+        color: var(--branco);
+    }
+}
+
+/* O botão fixo sai da frente quando a seção já mostra o botão dela. */
+.cta-fixo.cedeu {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (min-width: 720px) {
+    .fala-cliente {
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+        gap: 48px;
+        align-items: end;
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Como funciona: os quatro passos lado a lado, com o trilho deitado. */
+    .grade-processo {
+        display: block;
+    }
+
+    .processo-cabeca {
+        position: static;
+        max-width: 720px;
+    }
+
+    .passos {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 32px;
+        margin-top: 56px;
+        padding: 40px 0 0;
+    }
+
+    .passos::before,
+    .passos::after {
+        left: 0;
+        top: 7px;
+        width: 100%;
+        height: 1px;
+    }
+
+    .passos::after {
+        transform-origin: left;
+        transform: scaleX(var(--progresso));
+    }
+
+    .passo {
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .passo-no {
+        left: 0;
+        top: -40px;
+    }
+
+    .passo h3 {
+        font-size: 1.25rem;
+    }
+
+    .passo .sua-parte {
+        margin-top: auto;
+    }
+
+    .passo > p:not(.passo-numero):not(.sua-parte) {
+        margin-bottom: 16px;
+    }
+}
+
+.case-mais {
+    margin-top: 8px;
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+}
+
+.case-mais summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--titulo);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.case-mais summary::-webkit-details-marker {
+    display: none;
+}
+
+.case-mais summary::after {
+    content: '+';
+    font-family: var(--mono);
+    font-size: 1.1rem;
+}
+
+.case-mais[open] summary::after {
+    content: '\2212';
+}
+
+.case-mais summary:focus-visible {
+    outline: 2px solid var(--tinta);
+    outline-offset: 2px;
+}
+
+.case-mais .case-lista {
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 719px) {
+    /* No celular fica o fato e a frase mais curta do fundador. A recomendação inteira está na página do caso. */
+    .case-fala blockquote p:first-child {
+        display: none;
+    }
+}
+
+.produtos-mais {
+    display: none;
+}
+
+@media (max-width: 719px) {
+    .js .grade-produtos:not(.aberta) .produto-extra {
         display: none;
     }
 
-    .processo-sob-medida .comparacao-linha:not(.comparacao-cabecalho) {
-        display: block;
+    .js .produtos-mais {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 56px;
+        margin-top: 4px;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid var(--tinta);
+        background: transparent;
+        color: var(--tinta);
+        font-family: var(--titulo);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        cursor: pointer;
     }
 
-    .processo-sob-medida .comparacao-linha span:last-child {
-        display: block;
+    .js .produtos-mais::after {
+        content: '+';
+        font-family: var(--mono);
+        font-size: 1.1rem;
     }
 
-    .processo-sob-medida {
-        margin-top: 48px;
-        padding-top: 40px;
+    .js .produtos-mais[hidden] {
+        display: none;
     }
 }
