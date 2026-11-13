@@ -621,10 +621,10 @@ try {
     }
 } catch { /* a contagem nunca quebra o site */ }
 
-/* ------------------------------------------------------------ vídeo das telas da AUTH (13/11/2026)
+/* ------------------------------------------------------------ vídeos das telas, sempre sem som (13/11/2026)
    Só carrega e toca quando aparece na tela. Com "menos movimento" ligado, fica a imagem e o botão de tocar. */
 
-document.querySelectorAll('.case-video').forEach((video) => {
+document.querySelectorAll('.case-video, .video-tela').forEach((video) => {
     try {
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
             video.controls = true;
