@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacidade e LGPD no formulário | GenesisKore</title>
-    <meta name="description" content="Como a GenesisKore usa os dados do formulário de diagnóstico e os seus direitos pela LGPD.">
+    <title>Política de privacidade | GenesisKore</title>
+    <meta name="description" content="Que dados pessoais a GenesisKore usa, para quê, com quem ficam e como exercer os seus direitos pela LGPD.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/privacidade/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://genesiskore.com/privacidade/">
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Privacidade | GenesisKore">
-    <meta property="og:description" content="Como a GenesisKore usa os dados do formulário de diagnóstico e os seus direitos pela LGPD.">
+    <meta property="og:title" content="Política de privacidade | GenesisKore">
+    <meta property="og:description" content="Que dados pessoais a GenesisKore usa, para quê, com quem ficam e como exercer os seus direitos pela LGPD.">
     <meta property="og:image" content="https://genesiskore.com/previa-link.png">
     <link rel="icon" type="image/png" href="../icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="../icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
@@ -37,6 +37,12 @@
         .botao { display: inline-block; margin-top: 12px; padding: 14px 22px; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 4px 0; }
+        .tabela { overflow-x: auto; margin: 12px 0; }
+        table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+        th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--linha); }
+        th { font-weight: 600; }
+        @media (max-width: 600px) { .tabela table, .tabela tbody, .tabela tr, .tabela td { display: block; } .tabela thead { display: none; } .tabela tr { border-bottom: 1px solid var(--linha); padding: 10px 0; } .tabela td { border: 0; padding: 3px 0; } .tabela td::before { content: attr(data-rotulo); display: block; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); } }
+        h3 { font-size: 1rem; margin: 24px 0 6px; }
         @view-transition { navigation: auto; }
     </style>
     <script type="application/ld+json">
@@ -47,8 +53,8 @@
       "@type": "WebPage",
       "@id": "https://genesiskore.com/privacidade/#pagina",
       "url": "https://genesiskore.com/privacidade/",
-      "name": "Privacidade e LGPD no formulário | GenesisKore",
-      "description": "Como a GenesisKore usa os dados do formulário de diagnóstico e os seus direitos pela LGPD.",
+      "name": "Política de privacidade | GenesisKore",
+      "description": "Que dados pessoais a GenesisKore usa, para quê, com quem ficam e como exercer os seus direitos pela LGPD.",
       "inLanguage": "pt-BR",
       "isPartOf": {
         "@id": "https://genesiskore.com/#site"
@@ -73,7 +79,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Privacidade",
+          "name": "Política de privacidade",
           "item": "https://genesiskore.com/privacidade/"
         }
       ]
@@ -88,40 +94,41 @@
         <nav aria-label="Páginas"><a href="../consultoria/">Consultoria</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a></nav>
     </header>
     <main>
-        <h1>Privacidade</h1>
-        <p class="suave">Atualizada em 27 de outubro de 2026.</p>
-        <p>Esta página explica o que a GenesisKore faz com os dados que você coloca no formulário de diagnóstico do site, e quais são os seus direitos pela Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
-
-        <h2>Quem cuida dos dados</h2>
-        <p>A GenesisKore, de São Paulo, SP, está em formalização. Para qualquer assunto sobre os seus dados, escreva para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>.</p>
-
-        <h2>O que a gente coleta</h2>
-        <p>O que você digita no formulário: nome, empresa, WhatsApp ou e-mail e, se quiser, a faixa de faturamento da empresa e a tarefa que mais toma o tempo da sua equipe. Junto vai de onde você chegou ao site (por exemplo, Instagram, LinkedIn ou uma indicação).</p>
-        <p>Se você fizer o diagnóstico rápido da página inicial, as respostas ficam só no seu navegador. Elas só chegam até a gente de dois jeitos: se você mandar o formulário, e aí vão junto com a sua mensagem, aparecendo antes do envio para você conferir ou tirar, ou se você pedir o Raio X em PDF.</p>
-        <p>Para montar o Raio X, a gente recebe as seis respostas, o seu nome, a empresa, o e-mail e, se você quiser, o WhatsApp. O Raio X é montado por regras fixas, sem inteligência artificial, e fica num link que só quem tem o endereço abre, por 90 dias. A faixa de faturamento entra na conta, mas não aparece no Raio X. Para barrar envio automático, guardamos uma marca embaralhada do seu endereço de internet, que não permite descobrir o endereço.</p>
-        <p>O site também conta as visitas, sem cookie e sem guardar o seu IP. Cada página aberta manda a página visitada, o site de onde você veio (só o nome do site), as etiquetas de campanha do link, se é celular ou computador e um código aleatório que vale só enquanto a aba está aberta. Nada disso identifica você. O site não usa cookies de anúncio nem ferramentas de rastreamento de terceiros.</p>
-
-        <h2>Para que usa</h2>
-        <ul>
-            <li>Para responder o seu pedido e marcar a conversa de diagnóstico, pelo WhatsApp ou por e-mail.</li>
-            <li>Para montar o seu Raio X, quando você pedir.</li>
-            <li>Para mandar o e-mail de confirmação de que o pedido chegou.</li>
-            <li>Para preparar a conversa: uma ferramenta de inteligência artificial resume o que você escreveu, para a nossa equipe chegar sabendo do que se trata.</li>
-            <li>Para saber quantas pessoas abrem cada página e de onde elas vêm, sem saber quem são.</li>
-        </ul>
-        <p>A base legal é o seu consentimento, dado na caixa do formulário, e o procedimento que antecede um possível contrato.</p>
-
-        <h2>Com quem os dados ficam</h2>
-        <p>Os dados passam pelos serviços que a gente usa para operar: o servidor de automação (hospedado na Hostinger), o banco de dados da nossa plataforma interna (Supabase), o e-mail (Google) e o serviço de inteligência artificial que faz o resumo. Eles não são vendidos, alugados nem usados para anúncio.</p>
-
-        <h2>Por quanto tempo</h2>
-        <p>Enquanto houver conversa com você. Se a conversa não virar trabalho, os dados são apagados em até 12 meses depois do último contato, ou antes, se você pedir.</p>
-
-        <h2>Seus direitos</h2>
-        <p>Você pode pedir, a qualquer momento, para ver os dados que a gente tem sobre você, corrigir, apagar, saber com quem foram compartilhados ou retirar o consentimento. Basta escrever para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>. A gente responde em até 15 dias.</p>
+        <h1>Política de privacidade</h1>
+        <p class="suave">Versão de 13 de novembro de 2026.</p>
+        <p>Esta política explica quais dados pessoais a GenesisKore usa, para quê, com quem eles ficam e como você exerce os seus direitos pela Lei Geral de Proteção de Dados (Lei 13.709/2018, a LGPD). Vale para o site, para os Sistemas sob medida, para a Consultoria e para os perfis da empresa nas redes.</p>
+        <h2>1. Quem cuida dos dados</h2>
+        <p>A GenesisKore, de São Paulo, SP, está em formalização. Razão social, CNPJ e endereço entram aqui assim que a empresa for aberta.</p>
+        <p>Canal para assuntos de dados pessoais: <strong><a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a></strong>. A GenesisKore é empresa de pequeno porte e, como a Resolução CD/ANPD 2/2022 permite, não tem encarregado nomeado. Esse email faz o papel do canal com você (Resolução CD/ANPD 2/2022, art. 11).</p>
+        <h2>2. Dois papéis diferentes</h2>
+        <p><strong>Quando a GenesisKore decide o que fazer com o dado, ela é a controladora.</strong> É o caso dos dados de quem visita o site, de quem pede conversa, das empresas que a GenesisKore procura para oferecer os serviços, dos contatos de quem é cliente e de quem fala com a empresa nas redes. Esta política trata desses casos.</p>
+        <p><strong>Quando a GenesisKore trata dados em nome de um cliente, ela é a operadora.</strong> É o caso dos dados que o cliente coloca no sistema que a GenesisKore fez para ele (clientes, funcionários e fornecedores do cliente), ou que passa para a Consultoria. Quem decide sobre esses dados é o cliente. Se você é cliente de um cliente nosso, quem responde pelos seus dados é a empresa com quem você tem relação, e é com ela que você fala primeiro. A GenesisKore ajuda essa empresa a atender o seu pedido.</p>
+        <h2>3. Que dados, para quê e com que base legal</h2>
+        <div class="tabela"><table><thead><tr><th>Situação</th><th>Dados</th><th>Para quê</th><th>Base legal (LGPD, art. 7º)</th></tr></thead><tbody><tr><td data-rotulo="Situação">Formulário e Raio X do site</td><td data-rotulo="Dados">Nome, empresa, email, WhatsApp, faixa de faturamento, o que você escreveu e as respostas do diagnóstico</td><td data-rotulo="Para quê">Responder, marcar a conversa, mandar o Raio X e preparar a reunião</td><td data-rotulo="Base legal (LGPD, art. 7º)">Consentimento (inciso I) e procedimentos antes de um contrato (inciso V)</td></tr><tr><td data-rotulo="Situação">Visita ao site</td><td data-rotulo="Dados">Página aberta, site de onde você veio, etiquetas de campanha do link, tipo de aparelho, um código que vale só enquanto a aba está aberta e o tempo de carregamento da página</td><td data-rotulo="Para quê">Contar visitas e ver se o site está rápido. Nada disso identifica você</td><td data-rotulo="Base legal (LGPD, art. 7º)">Legítimo interesse (inciso IX)</td></tr><tr><td data-rotulo="Situação">Prospecção</td><td data-rotulo="Dados">Nome da empresa, CNPJ, site, telefone e email comerciais, e nome e cargo de sócios ou gestores, tirados de fontes públicas (site da empresa, cadastro na Receita Federal, LinkedIn e buscadores)</td><td data-rotulo="Para quê">Mandar um email ou fazer um contato oferecendo os serviços</td><td data-rotulo="Base legal (LGPD, art. 7º)">Legítimo interesse (inciso IX). Você pode pedir para não receber mais (item 6)</td></tr><tr><td data-rotulo="Situação">Conversa comercial e cliente</td><td data-rotulo="Dados">Nome, cargo, email, telefone, anotações, gravação ou transcrição das reuniões (quando avisada no começo), proposta e contrato</td><td data-rotulo="Para quê">Preparar e cumprir a proposta e o contrato</td><td data-rotulo="Base legal (LGPD, art. 7º)">Execução de contrato (inciso V)</td></tr><tr><td data-rotulo="Situação">Faturamento e cobrança</td><td data-rotulo="Dados">Dados de quem paga, notas fiscais e pagamentos</td><td data-rotulo="Para quê">Cobrar e cumprir obrigação fiscal</td><td data-rotulo="Base legal (LGPD, art. 7º)">Execução de contrato (inciso V) e obrigação legal (inciso II)</td></tr><tr><td data-rotulo="Situação">Redes sociais</td><td data-rotulo="Dados">Nome do perfil e o que você escreveu em comentário ou mensagem para a GenesisKore</td><td data-rotulo="Para quê">Responder</td><td data-rotulo="Base legal (LGPD, art. 7º)">Legítimo interesse (inciso IX)</td></tr></tbody></table></div>
+        <p><strong>Detalhes do formulário e do Raio X.</strong> O diagnóstico rápido da página inicial fica só no seu navegador. As respostas só chegam à GenesisKore se você mandar o formulário (e aí aparecem antes do envio para você conferir ou tirar) ou se pedir o Raio X. O Raio X é montado por regras fixas, sem inteligência artificial, e fica num link que só quem tem o endereço abre, por 90 dias. A faixa de faturamento entra na conta, mas não aparece no Raio X. Para barrar envio automático por robô, a GenesisKore guarda uma marca embaralhada do seu endereço de internet, que não permite descobrir o endereço.</p>
+        <p>A GenesisKore não usa dado sensível (saúde, religião, biometria e afins) nos serviços dela. Não vende, não aluga e não usa os seus dados para anúncio de terceiros. O site não usa cookie de anúncio nem rastreador de terceiros.</p>
+        <h2>4. Inteligência artificial</h2>
+        <p>A GenesisKore usa serviços de inteligência artificial para resumir o que você escreveu no formulário antes da reunião, para rascunhar respostas que uma pessoa da equipe revisa antes de mandar e, nos sistemas e na Consultoria de IA, quando a proposta prevê. A GenesisKore usa esses serviços só por API ou em plano empresarial, em que os termos do fornecedor dizem que os dados não são usados para treinar os modelos dele. A equipe não usa conta pessoal de inteligência artificial com dado de cliente. Nenhuma decisão que afete você é tomada só por máquina.</p>
+        <h2>5. Com quem os dados ficam</h2>
+        <p>Para funcionar, a GenesisKore usa estes serviços, que guardam ou processam dados em nome dela:</p>
+        <div class="tabela"><table><thead><tr><th>Serviço</th><th>Para quê</th><th>Onde</th></tr></thead><tbody><tr><td data-rotulo="Serviço">Supabase</td><td data-rotulo="Para quê">Banco de dados da plataforma interna e dos sistemas dos clientes</td><td data-rotulo="Onde">Brasil (São Paulo) na plataforma interna. No sistema de cada cliente, a região escrita na proposta</td></tr><tr><td data-rotulo="Serviço">Vercel</td><td data-rotulo="Para quê">Hospedagem do site e dos sistemas</td><td data-rotulo="Onde">Estados Unidos e outros países</td></tr><tr><td data-rotulo="Serviço">Hostinger</td><td data-rotulo="Para quê">Servidor de automação (n8n)</td><td data-rotulo="Onde">A confirmar com o fornecedor</td></tr><tr><td data-rotulo="Serviço">Google Workspace</td><td data-rotulo="Para quê">Email e documentos</td><td data-rotulo="Onde">Estados Unidos e outros países</td></tr><tr><td data-rotulo="Serviço">OpenAI, OpenRouter e Anthropic</td><td data-rotulo="Para quê">Inteligência artificial</td><td data-rotulo="Onde">Estados Unidos</td></tr><tr><td data-rotulo="Serviço">Assinatura gov.br</td><td data-rotulo="Para quê">Assinatura de contrato</td><td data-rotulo="Onde">Brasil</td></tr><tr><td data-rotulo="Serviço">Banco da conta da GenesisKore</td><td data-rotulo="Para quê">Pix e boleto</td><td data-rotulo="Onde">Brasil</td></tr></tbody></table></div>
+        <p>Parte desses serviços fica fora do Brasil, e por isso há transferência internacional de dados. Ela é feita com fornecedores que se comprometem por contrato a proteger os dados, como pedem o art. 33 da LGPD e a Resolução CD/ANPD 19/2024.</p>
+        <p>Fora isso, a GenesisKore só passa dados a autoridade pública quando a lei ou uma ordem judicial obriga.</p>
+        <h2>6. Seus direitos</h2>
+        <p>Pelo art. 18 da LGPD você pode pedir, a qualquer momento: confirmação de que tratamos dados seus, acesso a eles, correção, anonimização ou exclusão do que for desnecessário, cópia em formato aberto, saber com quem foram compartilhados, retirar o consentimento e se opor a um tratamento feito por legítimo interesse.</p>
+        <p>Para não receber mais emails de prospecção, responda o email com "sair" ou escreva para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>. O seu endereço entra numa lista de bloqueio e não recebe mais nada.</p>
+        <p>Pedidos para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>. A resposta sai em até 15 dias. Se não ficar satisfeito, você pode reclamar à Autoridade Nacional de Proteção de Dados (<a href="https://www.gov.br/anpd">gov.br/anpd</a>).</p>
+        <h2>7. Por quanto tempo</h2>
+        <div class="tabela"><table><thead><tr><th>Dado</th><th>Prazo</th></tr></thead><tbody><tr><td data-rotulo="Dado">Pedido pelo site e conversa que não virou contrato</td><td data-rotulo="Prazo">Até 12 meses depois do último contato, ou antes, se você pedir</td></tr><tr><td data-rotulo="Dado">Raio X</td><td data-rotulo="Prazo">O link funciona por 90 dias</td></tr><tr><td data-rotulo="Dado">Prospecção</td><td data-rotulo="Prazo">Até 12 meses depois do último contato. Quem pediu para sair fica só na lista de bloqueio, com o email, para não receber de novo</td></tr><tr><td data-rotulo="Dado">Cliente</td><td data-rotulo="Prazo">Enquanto durar o contrato e depois pelo prazo que a lei exige (5 anos para documento fiscal e contábil e para eventual cobrança)</td></tr><tr><td data-rotulo="Dado">Dados que o cliente colocou no sistema</td><td data-rotulo="Prazo">90 dias depois do fim do contrato, para ele pedir uma cópia. Depois são apagados, com aviso antes</td></tr><tr><td data-rotulo="Dado">Registro de acesso aos sistemas</td><td data-rotulo="Prazo">6 meses (Marco Civil da Internet, art. 15)</td></tr><tr><td data-rotulo="Dado">Gravação de reunião</td><td data-rotulo="Prazo">90 dias. O resumo ou a ata que sai dela fica junto do contrato</td></tr></tbody></table></div>
+        <h2>8. Segurança</h2>
+        <p>Os sistemas só abrem com login, a senha de acesso a cada serviço fica guardada no servidor e não na tela, a conexão é cifrada (HTTPS), cada pessoa da equipe tem acesso só ao que precisa e as cópias de segurança são automáticas. Se acontecer um incidente com risco para você, a GenesisKore avisa você e a ANPD em até 3 dias úteis, como manda a Resolução CD/ANPD 15/2024.</p>
+        <h2>9. Crianças e adolescentes</h2>
+        <p>O site e os serviços da GenesisKore são para empresas e não são feitos para menores de 18 anos. Quando um cliente guarda no sistema dado de criança ou adolescente (uma escola, por exemplo), o sistema segue o que o cliente, como controlador, precisa cumprir pela LGPD (art. 14) e pelo ECA Digital (Lei 15.211/2025).</p>
+        <h2>10. Mudanças</h2>
+        <p>Quando esta política mudar, a data abaixo muda junto. Mudança grande é avisada no site e, para cliente, por email.</p>
     </main>
     <footer>
-        <a href="../">Início</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a><a href="../privacidade/">Privacidade</a>
+        <a href="../">Início</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a><a href="../termos/">Termos</a><a href="../privacidade/">Privacidade</a>
         <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. Caminho absoluto porque a 404 responde em qualquer endereço. -->

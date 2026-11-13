@@ -201,7 +201,7 @@ def montar(pasta, md, estilo):
     descricao = html.escape(dados['descricao'])
     nav = '<a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a>'
     rodape = ('<a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/consultoria/">Consultoria de gestão</a>'
-              '<a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Privacidade</a>')
+              '<a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/termos/">Termos</a><a href="/privacidade/">Privacidade</a>')
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>

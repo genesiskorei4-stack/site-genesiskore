@@ -90,7 +90,7 @@ for cid,(slug,nome,tit) in CASES.items():
         <p>{outros}</p>
     </main>
     <footer>
-        <a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/privacidade/">Privacidade</a>
+        <a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/termos/">Termos</a><a href="/privacidade/">Privacidade</a>
         <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
     </footer>
     <script src="/contagem.js" defer></script>

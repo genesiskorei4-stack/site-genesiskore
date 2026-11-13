@@ -17,7 +17,7 @@ NO_AR = '--no-ar' in sys.argv
 BASE = 'https://genesiskore.com/'
 ARQUIVOS = {'': 'index.html', 'llms.txt': 'llms.txt', 'sitemap.xml': 'sitemap.xml', 'robots.txt': 'robots.txt',
             'index.md': 'index.md', '404.md': '404.md'}
-PAGINAS = ('sobre', 'contato', 'privacidade', 'about', 'contact', 'privacy', 'consultoria', 'management-consulting')
+PAGINAS = ('sobre', 'contato', 'privacidade', 'termos', 'about', 'contact', 'privacy', 'consultoria', 'management-consulting')
 for p in PAGINAS:
     ARQUIVOS[p + '/'] = p + '/index.html'
 # Pares de idioma: a página em português e a versão em inglês apontam uma para a outra.
@@ -110,7 +110,7 @@ for nome, produtos in (('consultoria', PRODUTOS), ('management-consulting', PROD
 checar('GenesisKore Management Consulting' in re.search(r'<title>(.*?)</title>', ler('management-consulting/')).group(1),
        '/management-consulting/ tem "GenesisKore Management Consulting" no título')
 
-for p in ('sobre', 'contato', 'privacidade', 'about', 'contact', 'privacy', 'consultoria', 'management-consulting'):
+for p in ('sobre', 'contato', 'privacidade', 'termos', 'about', 'contact', 'privacy', 'consultoria', 'management-consulting'):
     corpo = re.search(r'<main>(.*)</main>', ler(p + '/'), re.S).group(1)
     texto = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', corpo)).strip()
     checar(len(texto) >= 500, f'/{p}/ tem pelo menos 500 caracteres ({len(texto)})')
