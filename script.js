@@ -630,6 +630,10 @@ try {
 (() => {
     const videos = [...document.querySelectorAll('.case-video, .video-tela')];
     if (!videos.length || !('IntersectionObserver' in window)) return;
+    /* No celular o vídeo é o vertical: a imagem parada troca junto, antes de qualquer coisa baixar. */
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        videos.forEach((video) => { if (video.dataset.posterCel) video.poster = video.dataset.posterCel; });
+    }
     videos.forEach((video) => {
         video.controls = false;
         video.muted = true;
@@ -638,23 +642,32 @@ try {
         video.setAttribute('controlslist', 'nodownload nofullscreen noremoteplayback noplaybackrate');
     });
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const naTela = new Set();
-    const tocar = (video) => { video.play().catch(() => { /* o navegador recusou: fica a imagem */ }); };
+    /* Só um vídeo roda por vez: o que ocupa mais a tela. Os outros ficam parados na imagem.
+       Enquanto um vídeo roda, os enfeites animados da página param, para sobrar máquina para ele. */
+    const visto = new Map();
+    let atual = null;
+    const escolher = () => {
+        let melhor = null;
+        let maior = 0.5;
+        visto.forEach((fatia, video) => { if (fatia > maior) { maior = fatia; melhor = video; } });
+        if (document.hidden) melhor = null;
+        if (melhor === atual) return;
+        if (atual) atual.pause();
+        atual = melhor;
+        document.documentElement.classList.toggle('video-rodando', Boolean(atual));
+        if (atual) atual.play().catch(() => { /* o navegador recusou: fica a imagem */ });
+    };
     const perto = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => {
             if (!entrada.isIntersecting) return;
             entrada.target.preload = 'auto';
             perto.unobserve(entrada.target);
         });
-    }, { rootMargin: '900px 0px' });
+    }, { rootMargin: '600px 0px' });
     const ver = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => {
-            if (entrada.isIntersecting) { naTela.add(entrada.target); if (!document.hidden) tocar(entrada.target); }
-            else { naTela.delete(entrada.target); entrada.target.pause(); }
-        });
-    }, { threshold: 0.35 });
+        entradas.forEach((entrada) => visto.set(entrada.target, entrada.isIntersecting ? entrada.intersectionRatio : 0));
+        escolher();
+    }, { threshold: [0, 0.25, 0.5, 0.6, 0.75, 0.9, 1] });
     videos.forEach((video) => { perto.observe(video); ver.observe(video); });
-    document.addEventListener('visibilitychange', () => {
-        naTela.forEach((video) => (document.hidden ? video.pause() : tocar(video)));
-    });
+    document.addEventListener('visibilitychange', escolher);
 })();

@@ -4560,21 +4560,69 @@ main [id] {
     display: none !important;
 }
 
-/* O segundo vídeo da seção fica com o texto à esquerda, para os dois não parecerem repetidos. */
-.sistema-video + .sistema-video {
-    margin-top: 16px;
+/* ------------------------------------------------------------ cartão do vídeo com a cor do fundo do vídeo (13/11/2026)
+   Pedido do Gustavo. O aplicativo financeiro é branco e o sistema de notificações é papel claro: o cartão
+   leva a mesma cor, para o vídeo não parecer uma janela recortada. Os dois ficam separados pela lista de
+   sistemas, e o script só deixa um rodar por vez. */
+
+.sistema-video {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--preto);
 }
 
-@media (min-width: 1024px) {
-    .sistema-video-invertido {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr);
+.sistema-video-papel {
+    background: #f8f7f3;
+    border-color: #f8f7f3;
+}
+
+.sistema-video-papel .video-tela {
+    background: #f8f7f3;
+}
+
+.sistema-video figcaption span {
+    color: #4a4a4a;
+}
+
+.sistema-video .link-seta {
+    color: var(--preto);
+}
+
+.sistema-video-antes {
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+
+/* O vídeo ganha camada própria e o navegador não redesenha a vizinhança a cada quadro. */
+.case-video,
+.video-tela {
+    transform: translateZ(0);
+    contain: layout paint;
+}
+
+/* Enquanto um vídeo roda, os enfeites em volta ficam parados. */
+.video-rodando *,
+.video-rodando *::before,
+.video-rodando *::after {
+    animation-play-state: paused !important;
+}
+
+/* No celular o vídeo dos sistemas é o vertical, que enche a tela em vez de virar uma faixa. */
+@media (max-width: 767px) {
+    .sistema-video {
+        padding: 10px;
+        gap: 14px;
     }
 
-    .sistema-video-invertido video {
-        order: 2;
+    .video-tela {
+        aspect-ratio: 720 / 1192;
+        width: auto;
+        max-width: 100%;
+        max-height: 74svh;
+        margin: 0 auto;
     }
 
-    .sistema-video-invertido figcaption {
-        padding: 0 0 0 12px;
+    .sistema-video figcaption {
+        padding: 0 6px 10px;
     }
 }
