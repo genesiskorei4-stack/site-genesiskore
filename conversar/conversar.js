@@ -17,6 +17,16 @@ const menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 // A origem do lead e a contagem moram no contagem.js. Se ele não carregar, a origem vira 'direto'.
 const origemDoLead = window.gkOrigem || 'direto';
+// Em que etapa a pessoa para (13/11/2026): uma batida por etapa e por visita, pelo mesmo caminho
+// que conta as seções da página inicial. A plataforma mostra em "Onde param no formulário".
+const etapasContadas = new Set();
+const registrarEtapa = (id) => {
+    try {
+        if (etapasContadas.has(id)) return;
+        etapasContadas.add(id);
+        window.gkSecao?.(id);
+    } catch { /* contagem nunca quebra o site */ }
+};
 const registrarEvento = (evento) => {
     try { window.gkContar?.(evento); } catch { /* contagem nunca quebra o site */ }
 };
@@ -47,6 +57,7 @@ function irPara(n, { historico = true } = {}) {
     atual = Math.min(Math.max(1, n), liberada);
     etapas.forEach((etapa) => { etapa.hidden = Number(etapa.dataset.etapa) !== atual; });
     if (atual === 3) montarConta();
+    registrarEtapa(`etapa-${atual}`);
     mostrarProgresso(atual - 1);
     if (historico) history.pushState({ etapa: atual }, '', `${location.search}#etapa-${atual}`);
     window.scrollTo({ top: 0, behavior: menosMovimento ? 'auto' : 'smooth' });
@@ -287,6 +298,7 @@ async function enviar() {
         });
         if (!resposta.ok) throw new Error(`Falha ao enviar (${resposta.status})`);
         registrarEvento('formulario_enviado');
+        registrarEtapa('recebido');
         mostrarSucesso(dados);
     } catch (erro) {
         console.error('Erro ao enviar o pedido de diagnóstico:', erro);

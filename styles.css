@@ -4741,3 +4741,81 @@ p, li, dd, blockquote, figcaption span, .lead {
         line-height: 1.6;
     }
 }
+
+/* ------------------------------------------------------------ página inicial curta no celular (13/11/2026)
+   Pedido do Gustavo: no celular a informação tem de ser entendida batendo o olho. Abaixo de 768 px a
+   página inicial fica com o título, o número e o botão de cada bloco. O texto de apoio continua no
+   computador e nas páginas internas. No celular fica um vídeo só na seção Sistemas. */
+
+.so-celular {
+    display: none;
+}
+
+/* No computador também: a lista de detalhes de cada caso mora na página do caso. */
+#cases .case-lista,
+#cases > .container > .lead,
+#onde-trava .lead,
+.sistemas .lead,
+.grade-produtos .produto:not(.produto-destaque) .produto-fala {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .so-largo {
+        display: none !important;
+    }
+
+    .so-celular {
+        display: block;
+    }
+
+    .secao {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .avisos-vivos,
+    .indice,
+    #onde-trava .lead,
+    .sistemas .lead,
+    .consultoria > .container > .lead,
+    #calculadora .lead,
+    .processo-cabeca .suave,
+    .sistema-video-papel,
+    .sistema-video figcaption span,
+    .sistema .produto-fala,
+    .sistemas-fim p,
+    .produto-destaque .destaque-fala,
+    .grade-produtos .produto:not(.produto-destaque) p,
+    .honestidade footer,
+    #cases .case-historia,
+    #cases .case-mais,
+    #cases .case-fala blockquote,
+    #cases .case-fala figcaption,
+    #cases .case-fala cite,
+    .passo > p:not(.passo-numero),
+    .compromisso p,
+    .grade-sistemas .sistema > p:not(.sistema-topo),
+    #cases .case-rodape a[href*="instagram"] {
+        display: none;
+    }
+
+    .grade-sistemas .sistema {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .grade-produtos .produto:not(.produto-destaque) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .passo {
+        padding-bottom: 22px;
+    }
+
+    .compromisso {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
