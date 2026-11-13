@@ -19,7 +19,7 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 
 ## O que o cliente diz
 
-> "A Genesis Kore tornou nossos processos na AUTH muito mais rápidos, completos e seguros."
+> "A GenesisKore tornou nossos processos na AUTH muito mais rápidos, completos e seguros."
 
 Theodoro Janz, fundador da AUTH (autenticação de artigos de luxo), em recomendação publicada no LinkedIn em 29/10/2026. A AUTH contratou a GenesisKore três vezes: o emissor de certificados, o sistema da equipe de autenticação e, agora, a plataforma geral de autenticações.
 

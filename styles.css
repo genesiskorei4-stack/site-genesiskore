@@ -197,7 +197,7 @@ h3 {
 
 .etiqueta {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -267,7 +267,7 @@ h3 {
 
 .mini {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -708,7 +708,7 @@ h3 {
     margin-top: auto;
     padding-top: 28px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -986,7 +986,7 @@ body.travado {
     gap: 10px;
     margin-bottom: 8px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1090,7 +1090,7 @@ body.travado {
 
 .aviso-hora {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -1159,7 +1159,7 @@ body.travado {
 }
 
 .abertura .etiqueta {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
 }
 
@@ -1310,7 +1310,7 @@ body.travado {
 
 .grade-numeros dt {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1416,7 +1416,7 @@ body.travado {
     display: block;
     margin-top: 4px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.45);
@@ -1505,7 +1505,7 @@ body.travado {
 
 .resultado-titulo {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1590,7 +1590,7 @@ body.travado {
 
 .case-aba span {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.12em;
 }
 
@@ -1783,7 +1783,7 @@ body.travado {
     border: 0;
     cursor: pointer;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1814,7 +1814,7 @@ body.travado {
     gap: 10px;
     margin-top: 16px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #6e6e6e;
@@ -1938,7 +1938,7 @@ body.travado {
 
 .passo-numero {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.16em;
     color: rgba(255, 255, 255, 0.45);
     margin-bottom: 8px;
@@ -1967,7 +1967,7 @@ body.travado {
     display: block;
     margin-bottom: 2px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -2013,7 +2013,7 @@ body.travado {
 .comparacao-cabecalho span {
     border-top: 0;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -2262,7 +2262,7 @@ body.travado {
 }
 
 .rodape-titulo {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--suave-escuro);
@@ -2667,7 +2667,7 @@ body.travado {
         position: relative;
         padding: 6px 0;
         font-family: var(--titulo);
-        font-size: 0.74rem;
+        font-size: 0.75rem;
         font-weight: 500;
         letter-spacing: 0.14em;
         text-transform: uppercase;
@@ -3016,7 +3016,7 @@ body.travado {
 
 .destaque-rotulo {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -3197,7 +3197,7 @@ body.travado {
 
 .conversa-sair {
     font-family: var(--titulo);
-    font-size: 0.74rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -3239,7 +3239,7 @@ body.travado {
     gap: 12px;
     padding: 10px 0 12px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--suave);
@@ -3390,7 +3390,7 @@ body.travado {
     background: none;
     border: 0;
     font-family: var(--titulo);
-    font-size: 0.74rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -3405,7 +3405,7 @@ body.travado {
     padding-top: 14px;
     border-top: 1px solid var(--linha);
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--suave);
@@ -3561,7 +3561,7 @@ body.travado {
         gap: 14px;
         margin-top: 18px;
         font-family: var(--mono);
-        font-size: 0.72rem;
+        font-size: 0.75rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--suave);
@@ -3780,7 +3780,7 @@ body.travado {
     justify-content: space-between;
     gap: 6px 14px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--suave-escuro);
@@ -4167,14 +4167,14 @@ main [id] {
 .case-passos-video li::before {
     content: counter(tela, decimal-leading-zero);
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.1em;
     color: var(--suave-escuro);
 }
 
 .case-telas figcaption span {
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     line-height: 1.5;
     color: var(--suave-escuro);
@@ -4225,7 +4225,7 @@ main [id] {
 .case-fala figcaption {
     margin-top: 14px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     color: var(--suave);
 }
@@ -4834,4 +4834,58 @@ p, li, dd, blockquote, figcaption span, .lead {
 
 .cartao:not(.cartao-ponte) .mini:not(.mini-depois) {
     color: #5f5f5f;
+}
+
+
+/* ------------------------------------------------------------ auditoria de leitura e toque (13/11/2026)
+   Medido em 10 páginas, no celular e no computador. Nenhum texto abaixo de 12 px (os rótulos em letra
+   de máquina tinham 11,5). Contraste mínimo de 4,5 nos rótulos e nas abas. No celular, a marca, o
+   botão do topo e os controles deslizantes têm 44 px de altura de toque. */
+
+.mini {
+    color: #5f5f5f;
+}
+
+.escuro .mini,
+.cartao-ponte .mini,
+.produto-destaque .mini,
+.case-telas .mini {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.case-aba,
+.case-aba span {
+    color: #666666;
+}
+
+.case-aba[aria-selected="true"],
+.case-aba[aria-selected="true"] span {
+    color: var(--tinta);
+}
+
+.passo-numero,
+.dica {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 767px) {
+    .marca {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    .topo .botao {
+        min-height: 44px;
+    }
+
+    .controle input[type="range"] {
+        min-height: 44px;
+    }
+}
+
+.conversa-sair {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
 }
