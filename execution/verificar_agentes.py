@@ -103,9 +103,8 @@ for pt, en in PARES:
 for nome, produtos in (('consultoria', PRODUTOS), ('management-consulting', PRODUCTS)):
     html = ler(nome + '/')
     servico = next((n for n in json_ld(html) if n.get('@type') == 'Service'), None)
-    # A página em português traz também a Consultoria de IA (13/11/2026); a em inglês ainda não.
-    esperado = 7 if nome == 'consultoria' else 6
-    checar(servico is not None and len(servico['hasOfferCatalog']['itemListElement']) == esperado, f'/{nome}/ tem JSON-LD de Service com os produtos')
+    # As duas páginas trazem a Consultoria de IA na frente dos seis produtos (13/11/2026).
+    checar(servico is not None and len(servico['hasOfferCatalog']['itemListElement']) == 7, f'/{nome}/ tem JSON-LD de Service com os produtos')
     checar(all(p in texto_visivel(html) for p in produtos), f'/{nome}/ mostra os seis produtos na página')
     faq_visivel(html, nome)
 checar('GenesisKore Management Consulting' in re.search(r'<title>(.*?)</title>', ler('management-consulting/')).group(1),
