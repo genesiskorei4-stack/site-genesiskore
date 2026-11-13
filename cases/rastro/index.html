@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rastro: aplicativo sob medida para controle de frota e de pneus | GenesisKore</title>
+    <title>Case Rastro: aplicativo de frota e pneus | GenesisKore</title>
     <meta name="description" content="Como a Rastro passou a controlar frota e pneus pelo celular: cada pneu com história, desgaste calculado na medição e relatório do que trocar todo mês.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/cases/rastro/">
+    <link rel="alternate" type="text/markdown" href="https://genesiskore.com/cases/rastro/index.md" title="Versão em Markdown para agentes de IA">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://genesiskore.com/cases/rastro/">
     <meta property="og:locale" content="pt_BR">
@@ -29,8 +30,26 @@
       ],
       "@id": "https://genesiskore.com/#organizacao",
       "name": "GenesisKore",
+      "alternateName": "Genesis Kore",
       "url": "https://genesiskore.com/",
-      "logo": "https://genesiskore.com/logo.png"
+      "logo": "https://genesiskore.com/logo.png",
+      "foundingDate": "2025-08",
+      "email": "contato@genesiskore.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://www.instagram.com/genesiskore/",
+        "https://www.tiktok.com/@genesiskore",
+        "https://www.linkedin.com/company/genesiskore"
+      ]
     },
     {
       "@type": "Article",
@@ -43,7 +62,7 @@
       "articleSection": "Logística e frotas",
       "image": "https://genesiskore.com/previa-link.png",
       "datePublished": "2026-11-10",
-      "dateModified": "2026-11-10",
+      "dateModified": "2026-11-13",
       "author": {
         "@id": "https://genesiskore.com/#organizacao"
       },
@@ -119,16 +138,47 @@
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
         @view-transition { navigation: auto; }
+    
+        .tabela { overflow-x: auto; margin: 20px 0 8px; }
+        .tabela table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .92rem; }
+        .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--linha); }
+        .tabela thead th { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); font-weight: 500; border-top: 0; }
+        .tabela tbody th { font-weight: 600; }
+        @media (max-width: 600px) {
+            .tabela table { min-width: 0; }
+            .tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+            .tabela tr, .tabela th, .tabela td { display: block; }
+            .tabela tr { border-top: 1px solid var(--linha); padding: 12px 0; }
+            .tabela th, .tabela td { border-top: 0; padding: 4px 0; }
+            .tabela td::before { content: attr(data-rotulo); display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
+        }
+        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
+           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
+           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        header nav a:hover, footer a:hover { color: var(--texto); }
+        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+        .conversa-fixa { display: none; }
+        @media (max-width: 768px) {
+            header nav a.nav-conversa { display: none; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+            body { padding-bottom: 84px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/contato/">Contato</a></nav>
+        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a></nav>
     </header>
     <main>
         <p class="etiqueta">Case · Logística e frotas</p>
         <h1>Rastro: frota e pneus sob controle</h1>
+        <p class="suave">Atualizado em 13/11/2026.</p>
         <blockquote>Zero trabalho manual entre a medição e a decisão de cada pneu.</blockquote>
 
         <h2>Antes</h2>
@@ -152,7 +202,7 @@
         </section>
 
         <h2>Como um projeto assim começa</h2>
-        <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e a primeira parte entra em uso em até 2 semanas. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
+        <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
         <a class="botao" href="/conversar/">Quero conversar</a>
 
         <h2>Outros projetos</h2>
@@ -163,5 +213,6 @@
         <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
     </footer>
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>
 </html>

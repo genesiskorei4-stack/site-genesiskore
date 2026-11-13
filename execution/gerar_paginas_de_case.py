@@ -5,6 +5,8 @@ import re, json, os, html
 t=open('index.html',encoding='utf-8').read()
 estilo=re.search(r'<style>.*?</style>',open('consultoria/index.html',encoding='utf-8').read(),re.S).group(0)
 limpa=lambda s: re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s)).strip()
+TITULO={'auth':'Case AUTH: sistema para autenticar peças de luxo','cca':'Case Fazenda CCA: aplicativo de gestão da fazenda','rastro':'Case Rastro: aplicativo de frota e pneus'}
+ATUALIZADO='2026-11-13'
 CASES={'auth':('auth','AUTH','Sistema sob medida para autenticação de peças de luxo'),
        'cca':('fazenda-cca','Fazenda CCA','Aplicativo de gestão de fazenda de gado feito sob medida'),
        'rastro':('rastro','Rastro','Aplicativo sob medida para controle de frota e de pneus')}
@@ -26,9 +28,9 @@ for cid,(slug,nome,tit) in CASES.items():
     U=f'https://genesiskore.com/cases/{slug}/'
     desc=DESCRICAO[cid]
     ld={"@context":"https://schema.org","@graph":[
-      {"@type":["Organization","ProfessionalService"],"@id":"https://genesiskore.com/#organizacao","name":"GenesisKore","url":"https://genesiskore.com/","logo":"https://genesiskore.com/logo.png"},
+      {"@type":["Organization","ProfessionalService"],"@id":"https://genesiskore.com/#organizacao","name":"GenesisKore","alternateName":"Genesis Kore","url":"https://genesiskore.com/","logo":"https://genesiskore.com/logo.png","foundingDate":"2025-08","email":"contato@genesiskore.com","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"areaServed":{"@type":"Country","name":"Brasil"},"sameAs":["https://www.instagram.com/genesiskore/","https://www.tiktok.com/@genesiskore","https://www.linkedin.com/company/genesiskore"]},
       {"@type":"Article","@id":U+"#case","headline":h3,"description":f"{antes} {fez}","inLanguage":"pt-BR","url":U,"mainEntityOfPage":U,"articleSection":setor,
-       "image":"https://genesiskore.com/previa-link.png","datePublished":"2026-11-10","dateModified":"2026-11-10",
+       "image":"https://genesiskore.com/previa-link.png","datePublished":"2026-11-10","dateModified":ATUALIZADO,
        "author":{"@id":"https://genesiskore.com/#organizacao"},"publisher":{"@id":"https://genesiskore.com/#organizacao"},
        "about":[{"@type":"Thing","name":"sistema sob medida"},{"@type":"Thing","name":setor}]},
       {"@type":"BreadcrumbList","itemListElement":[
@@ -40,6 +42,8 @@ for cid,(slug,nome,tit) in CASES.items():
     insta='\n        <p class="suave"><a href="https://www.instagram.com/auth.br/" target="_blank" rel="noopener noreferrer">Ver a AUTH no Instagram</a></p>' if cid=='auth' else ''
     # 13/11/2026: a página da AUTH leva as telas reais (dados de exemplo) e o depoimento do fundador,
     # recomendação pública no LinkedIn em 29/10/2026. Texto dele, sem correção.
+    # 13/11/2026: o número do case diz de onde vem. O da AUTH é o que ela mesma divulga, medido por ela.
+    fonte='\n        <p class="suave">Número divulgado pela própria AUTH: aumento da capacidade de avaliação da equipe, com as mesmas pessoas.</p>' if cid=='auth' else ''
     extra='''
         <p><video muted loop playsinline controls preload="none" poster="/tela-auth-fila.webp" width="1006" height="948" style="max-width:100%;height:auto;background:#000" aria-label="Vídeo sem som da plataforma da AUTH: a fila de autenticação, o checklist da peça, o certificado emitido e a conferência pelo celular"><source src="/tela-auth.mp4" type="video/mp4"><source src="/tela-auth.webm" type="video/webm"></video></p>
         <p class="suave">A plataforma da AUTH em uso: fila, checklist, certificado e conferência pelo celular. Dados de exemplo.</p>
@@ -53,11 +57,12 @@ for cid,(slug,nome,tit) in CASES.items():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{nome}: {tit[0].lower()+tit[1:]} | GenesisKore</title>
+    <title>{TITULO[cid]} | GenesisKore</title>
     <meta name="description" content="{html.escape(desc,quote=True)}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="{U}">
+    <link rel="alternate" type="text/markdown" href="{U}index.md" title="Versão em Markdown para agentes de IA">
     <meta property="og:type" content="article">
     <meta property="og:url" content="{U}">
     <meta property="og:locale" content="pt_BR">
@@ -76,12 +81,13 @@ for cid,(slug,nome,tit) in CASES.items():
 <body>
     <header>
         <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/contato/">Contato</a></nav>
+        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a></nav>
     </header>
     <main>
         <p class="etiqueta">Case · {setor}</p>
         <h1>{h3}</h1>
-        <blockquote>{num} {resto}</blockquote>{extra}
+        <p class="suave">Atualizado em 13/11/2026.</p>
+        <blockquote>{num} {resto}</blockquote>{fonte}{extra}
 
         <h2>Antes</h2>
         <p>{antes}</p>
@@ -93,7 +99,7 @@ for cid,(slug,nome,tit) in CASES.items():
 {lis}{insta}
 
         <h2>Como um projeto assim começa</h2>
-        <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e a primeira parte entra em uso em até 2 semanas. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
+        <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
         <a class="botao" href="/conversar/">Quero conversar</a>
 
         <h2>Outros projetos</h2>
@@ -104,6 +110,7 @@ for cid,(slug,nome,tit) in CASES.items():
         <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
     </footer>
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>
 </html>
 '''

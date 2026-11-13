@@ -37,14 +37,14 @@
       }
     },
     {
-      "src": "^/(automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria-de-ia|consultoria-financeira|dre-gerencial-para-distribuidora|lucro-por-produto|cobranca-automatica|documento-automatico|ficha-de-cliente-para-joalheria|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
+      "src": "^/(automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria-de-ia|consultoria-financeira|dre-gerencial-para-distribuidora|lucro-por-produto|cobranca-automatica|documento-automatico|ficha-de-cliente-para-joalheria|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida|about|contact|consultoria|contato|management-consulting|sobre|cases/auth|cases/fazenda-cca|cases/rastro)/$",
       "headers": {
         "Vary": "Accept"
       },
       "continue": true
     },
     {
-      "src": "^/(automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria-de-ia|consultoria-financeira|dre-gerencial-para-distribuidora|lucro-por-produto|cobranca-automatica|documento-automatico|ficha-de-cliente-para-joalheria|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida)/$",
+      "src": "^/(automacao-de-processos|automacao-para-escritorio|bling-omie-ou-sistema-sob-medida|consultoria-de-ia|consultoria-financeira|dre-gerencial-para-distribuidora|lucro-por-produto|cobranca-automatica|documento-automatico|ficha-de-cliente-para-joalheria|quanto-custa-um-sistema-sob-medida|sistema-de-pedidos-b2b|sistema-para-distribuidora|sistema-para-distribuidora-de-alimentos|sistema-para-substituir-planilhas|sistemas-sob-medida|about|contact|consultoria|contato|management-consulting|sobre|cases/auth|cases/fazenda-cca|cases/rastro)/$",
       "has": [
         {
           "type": "header",

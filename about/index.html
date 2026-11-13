@@ -9,6 +9,7 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/about/">
+    <link rel="alternate" type="text/markdown" href="https://genesiskore.com/about/index.md" title="Markdown version for AI agents">
     <link rel="alternate" hreflang="en" href="https://genesiskore.com/about/">
     <link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/sobre/">
     <link rel="alternate" hreflang="x-default" href="https://genesiskore.com/sobre/">
@@ -50,6 +51,23 @@
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
         @view-transition { navigation: auto; }
+    
+        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
+           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
+           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        header nav a:hover, footer a:hover { color: var(--texto); }
+        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+        .conversa-fixa { display: none; }
+        @media (max-width: 768px) {
+            header nav a.nav-conversa { display: none; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+            body { padding-bottom: 84px; }
+        }
     </style>
     <script type="application/ld+json">
 {
@@ -64,7 +82,8 @@
       },
       "mainEntity": {
         "@id": "https://genesiskore.com/#organizacao"
-      }
+      },
+      "dateModified": "2026-11-13"
     },
     {
       "@type": "Organization",
@@ -93,6 +112,24 @@
         {
           "@id": "https://genesiskore.com/sobre/#joao"
         }
+      ],
+      "alternateName": "Genesis Kore",
+      "logo": "https://genesiskore.com/logo.png",
+      "email": "contato@genesiskore.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://www.instagram.com/genesiskore/",
+        "https://www.tiktok.com/@genesiskore",
+        "https://www.linkedin.com/company/genesiskore"
       ]
     },
     {
@@ -172,10 +209,11 @@
 <body>
     <header>
         <a href="../" class="marca" aria-label="GenesisKore, home page"><img src="../logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Pages"><a href="../management-consulting/">Consulting</a><a href="../about/">About</a><a href="../contact/">Contact</a></nav>
+        <nav aria-label="Pages"><a href="../management-consulting/">Consulting</a><a href="../about/">About</a><a href="../contact/">Contact</a><a class="nav-conversa" href="/conversar/">Talk to us</a></nav>
     </header>
     <main>
         <h1>About GenesisKore</h1>
+        <p class="suave">Updated on November 13, 2026.</p>
         <p>The company grew and still depends on you. GenesisKore builds custom systems and automations, and organizes the management behind them, for small and mid-sized Brazilian companies that have already made it and still depend on the owner, or on a single person, for everything to work.</p>
         <p>The company was founded in August 2025 in São Paulo and serves all of Brazil, remotely or on site when needed. The team is small and, on larger projects, works with partner developers. Conversations and proposals can be in Portuguese, English or Spanish.</p>
 
@@ -210,5 +248,6 @@
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. Caminho absoluto porque a 404 responde em qualquer endereço. -->
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Get my diagnosis</a>
 </body>
 </html>

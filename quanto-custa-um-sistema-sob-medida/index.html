@@ -31,15 +31,26 @@
       ],
       "@id": "https://genesiskore.com/#organizacao",
       "name": "GenesisKore",
+      "alternateName": "Genesis Kore",
       "url": "https://genesiskore.com/",
       "logo": "https://genesiskore.com/logo.png",
+      "foundingDate": "2025-08",
       "email": "contato@genesiskore.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
         "addressCountry": "BR"
-      }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://www.instagram.com/genesiskore/",
+        "https://www.tiktok.com/@genesiskore",
+        "https://www.linkedin.com/company/genesiskore"
+      ]
     },
     {
       "@type": "Article",
@@ -142,12 +153,42 @@
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
         @view-transition { navigation: auto; }
+    
+        .tabela { overflow-x: auto; margin: 20px 0 8px; }
+        .tabela table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .92rem; }
+        .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--linha); }
+        .tabela thead th { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); font-weight: 500; border-top: 0; }
+        .tabela tbody th { font-weight: 600; }
+        @media (max-width: 600px) {
+            .tabela table { min-width: 0; }
+            .tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+            .tabela tr, .tabela th, .tabela td { display: block; }
+            .tabela tr { border-top: 1px solid var(--linha); padding: 12px 0; }
+            .tabela th, .tabela td { border-top: 0; padding: 4px 0; }
+            .tabela td::before { content: attr(data-rotulo); display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
+        }
+        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
+           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
+           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        header nav a:hover, footer a:hover { color: var(--texto); }
+        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+        .conversa-fixa { display: none; }
+        @media (max-width: 768px) {
+            header nav a.nav-conversa { display: none; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+            body { padding-bottom: 84px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a></nav>
+        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a></nav>
     </header>
     <main>
         <p class="etiqueta">Preço</p>
@@ -166,6 +207,19 @@
 
         <h2>O que entra na mensalidade</h2>
         <p>Hospedagem, monitoramento, correção de falha e suporte. O custo de serviços de terceiros que o sistema usa, como inteligência artificial e envio de mensagem, também entra nela: você paga um valor só. Quando algo falha, o próprio sistema avisa a nossa equipe.</p>
+
+        <h2>O que muda o preço</h2>
+        <div class="tabela"><table>
+            <thead><tr><th scope="col">Fator</th><th scope="col">Deixa mais barato</th><th scope="col">Deixa mais caro</th></tr></thead>
+            <tbody>
+            <tr><th scope="row">Escopo</th><td data-rotulo="Deixa mais barato">Começar pela dor principal e deixar o resto para as próximas fases</td><td data-rotulo="Deixa mais caro">Escopo que muda no meio do caminho</td></tr>
+            <tr><th scope="row">Ligação com outros sistemas</th><td data-rotulo="Deixa mais barato">Trabalhar por trás do ERP, da planilha e do WhatsApp que a empresa já usa</td><td data-rotulo="Deixa mais caro">Sistema antigo sem integração pronta</td></tr>
+            <tr><th scope="row">Usuários</th><td data-rotulo="Deixa mais barato">Poucos tipos de usuário</td><td data-rotulo="Deixa mais caro">Muitos tipos de usuário, cada um vendo uma coisa</td></tr>
+            <tr><th scope="row">Regras</th><td data-rotulo="Deixa mais barato">Regra de preço e fiscal simples</td><td data-rotulo="Deixa mais caro">Regra fiscal ou de preço com muita exceção</td></tr>
+            <tr><th scope="row">Internet</th><td data-rotulo="Deixa mais barato">Uso com internet</td><td data-rotulo="Deixa mais caro">Aplicativo que precisa funcionar sem internet</td></tr>
+            <tr><th scope="row">Equipe do cliente</th><td data-rotulo="Deixa mais barato">Uma pessoa que responde rápido às dúvidas</td><td data-rotulo="Deixa mais caro">Ninguém com tempo para responder</td></tr>
+            </tbody>
+        </table></div>
 
         <h2>O que encarece</h2>
         <ul>
@@ -220,5 +274,6 @@
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. -->
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>
 </html>

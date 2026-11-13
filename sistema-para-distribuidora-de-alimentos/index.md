@@ -2,7 +2,7 @@
 gerar: sim
 titulo: Sistema para distribuidora de alimentos sob medida | GenesisKore
 titulo_curto: Sistema para distribuidora de alimentos | GenesisKore
-descricao: Sistema sob medida para distribuidora de alimentos: lê as notas fiscais e mostra o lucro de cada venda por produto e ponto de venda, com lote, validade e frete na conta.
+descricao: Sistema sob medida para distribuidora de alimentos: lê as notas fiscais e mostra o lucro de cada venda por produto e cliente, com lote, validade e frete.
 etiqueta: Distribuição de alimentos
 trilha: Distribuidora de alimentos
 servico: Sistema sob medida para distribuidora de alimentos

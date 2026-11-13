@@ -10,6 +10,7 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/management-consulting/">
+    <link rel="alternate" type="text/markdown" href="https://genesiskore.com/management-consulting/index.md" title="Markdown version for AI agents">
     <link rel="alternate" hreflang="en" href="https://genesiskore.com/management-consulting/">
     <link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/consultoria/">
     <link rel="alternate" hreflang="x-default" href="https://genesiskore.com/consultoria/">
@@ -43,7 +44,18 @@
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
         "addressCountry": "BR"
-      }
+      },
+      "alternateName": "Genesis Kore",
+      "foundingDate": "2025-08",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://www.instagram.com/genesiskore/",
+        "https://www.tiktok.com/@genesiskore",
+        "https://www.linkedin.com/company/genesiskore"
+      ]
     },
     {
       "@type": "Service",
@@ -238,16 +250,47 @@
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
         @view-transition { navigation: auto; }
+    
+        .tabela { overflow-x: auto; margin: 20px 0 8px; }
+        .tabela table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .92rem; }
+        .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--linha); }
+        .tabela thead th { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); font-weight: 500; border-top: 0; }
+        .tabela tbody th { font-weight: 600; }
+        @media (max-width: 600px) {
+            .tabela table { min-width: 0; }
+            .tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+            .tabela tr, .tabela th, .tabela td { display: block; }
+            .tabela tr { border-top: 1px solid var(--linha); padding: 12px 0; }
+            .tabela th, .tabela td { border-top: 0; padding: 4px 0; }
+            .tabela td::before { content: attr(data-rotulo); display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
+        }
+        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
+           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
+           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        header nav a:hover, footer a:hover { color: var(--texto); }
+        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+        .conversa-fixa { display: none; }
+        @media (max-width: 768px) {
+            header nav a.nav-conversa { display: none; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+            body { padding-bottom: 84px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="../" class="marca" aria-label="GenesisKore, home page"><img src="../logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Pages"><a href="../about/">About</a><a href="../contact/">Contact</a></nav>
+        <nav aria-label="Pages"><a href="../about/">About</a><a href="../contact/">Contact</a><a class="nav-conversa" href="/conversar/">Talk to us</a></nav>
     </header>
     <main>
         <p class="etiqueta">GenesisKore Management Consulting</p>
         <h1>What you decide on gut feeling gets a number.</h1>
+        <p class="suave">Updated on November 13, 2026.</p>
         <p>For the owner who already sells well and does not know how much is left over. GenesisKore Management Consulting looks at your company's numbers, processes and market and delivers what to do, in order of impact. It is the second product of GenesisKore, a Brazilian company based in São Paulo, next to the <a href="../">Custom Systems</a>.</p>
         <p class="suave">For companies with revenue from about R$ 150 thousand per month, in distribution and wholesale, high-value retail and service firms. The work is done remotely or on site when needed, for companies anywhere in Brazil, in Portuguese, English or Spanish.</p>
 
@@ -372,5 +415,6 @@
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. Caminho absoluto porque a 404 responde em qualquer endereço. -->
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Get my diagnosis</a>
 </body>
 </html>

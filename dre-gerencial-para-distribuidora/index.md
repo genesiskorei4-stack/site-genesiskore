@@ -1,8 +1,8 @@
 ---
 gerar: sim
-titulo: DRE gerencial para distribuidora, com modelo para baixar | GenesisKore
+titulo: DRE gerencial para distribuidora, com modelo | GenesisKore
 titulo_curto: DRE gerencial para distribuidora | GenesisKore
-descricao: Como montar o DRE gerencial de uma distribuidora: a ordem das linhas, o que costuma ficar de fora da margem e um modelo em planilha para baixar, com a margem por produto.
+descricao: Como montar o DRE gerencial de uma distribuidora: a ordem das linhas, o que fica de fora da margem e um modelo em planilha com a margem por produto.
 etiqueta: Gestão financeira
 trilha: DRE gerencial para distribuidora
 tipo_pagina: Article

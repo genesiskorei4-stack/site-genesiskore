@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Página gerada por execution/gerar_paginas.py a partir de lucro-por-produto/index.md. Edite o .md e rode o script. -->
     <title>Painel de lucro por produto lido das notas fiscais | GenesisKore</title>
-    <meta name="description" content="Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.">
+    <meta name="description" content="Painel que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://genesiskore.com/lucro-por-produto/">
@@ -15,7 +15,7 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="GenesisKore">
     <meta property="og:title" content="Painel de lucro por produto | GenesisKore">
-    <meta property="og:description" content="Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.">
+    <meta property="og:description" content="Painel que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida.">
     <meta property="og:image" content="https://genesiskore.com/previa-link.png">
     <link rel="icon" type="image/png" href="/icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="/icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
@@ -31,22 +31,33 @@
       ],
       "@id": "https://genesiskore.com/#organizacao",
       "name": "GenesisKore",
+      "alternateName": "Genesis Kore",
       "url": "https://genesiskore.com/",
       "logo": "https://genesiskore.com/logo.png",
+      "foundingDate": "2025-08",
       "email": "contato@genesiskore.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "São Paulo",
         "addressRegion": "SP",
         "addressCountry": "BR"
-      }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "sameAs": [
+        "https://www.instagram.com/genesiskore/",
+        "https://www.tiktok.com/@genesiskore",
+        "https://www.linkedin.com/company/genesiskore"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://genesiskore.com/lucro-por-produto/#pagina",
       "url": "https://genesiskore.com/lucro-por-produto/",
       "name": "Painel de lucro por produto lido das notas fiscais | GenesisKore",
-      "description": "Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.",
+      "description": "Painel que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida.",
       "inLanguage": "pt-BR",
       "isPartOf": {
         "@id": "https://genesiskore.com/#site"
@@ -93,7 +104,7 @@
         "@type": "Country",
         "name": "Brasil"
       },
-      "description": "Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.",
+      "description": "Painel que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida.",
       "audience": {
         "@type": "BusinessAudience",
         "name": "Pequenas e médias empresas que faturam a partir de uns R$ 150 mil por mês"
@@ -172,12 +183,42 @@
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
         @view-transition { navigation: auto; }
+    
+        .tabela { overflow-x: auto; margin: 20px 0 8px; }
+        .tabela table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .92rem; }
+        .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--linha); }
+        .tabela thead th { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); font-weight: 500; border-top: 0; }
+        .tabela tbody th { font-weight: 600; }
+        @media (max-width: 600px) {
+            .tabela table { min-width: 0; }
+            .tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+            .tabela tr, .tabela th, .tabela td { display: block; }
+            .tabela tr { border-top: 1px solid var(--linha); padding: 12px 0; }
+            .tabela th, .tabela td { border-top: 0; padding: 4px 0; }
+            .tabela td::before { content: attr(data-rotulo); display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
+        }
+        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
+           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
+           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        header nav a:hover, footer a:hover { color: var(--texto); }
+        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+        .conversa-fixa { display: none; }
+        @media (max-width: 768px) {
+            header nav a.nav-conversa { display: none; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+            body { padding-bottom: 84px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a></nav>
+        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a></nav>
     </header>
     <main>
         <p class="etiqueta">Painel financeiro</p>
@@ -241,5 +282,6 @@
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. -->
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>
 </html>

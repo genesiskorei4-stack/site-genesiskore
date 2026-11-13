@@ -2765,14 +2765,17 @@ body.travado {
         left: 50%;
         bottom: 22px;
         z-index: 1;
-        width: 1px;
+        /* 13/11/2026: o traço continua de 1 px, mas o alvo do clique tem 44 px de largura. */
+        width: 44px;
+        margin-left: -22px;
         height: 44px;
         overflow: hidden;
-        background: rgba(255, 255, 255, 0.18);
+        background: linear-gradient(to right, transparent 21.5px, rgba(255, 255, 255, 0.18) 21.5px, rgba(255, 255, 255, 0.18) 22.5px, transparent 22.5px);
     }
 
     .rolar span {
         display: block;
+        margin: 0 auto;
         width: 1px;
         height: 100%;
         background: var(--branco);
@@ -3271,14 +3274,16 @@ body.travado {
 }
 
 .etapa h1,
-.conversa-fim h1 {
+.etapa h2,
+.conversa-fim h2 {
     font-size: clamp(1.9rem, 7.5vw, 2.8rem);
     line-height: 1.04;
     margin-bottom: 16px;
 }
 
 .etapa h1:focus,
-.conversa-fim h1:focus {
+.etapa h2:focus,
+.conversa-fim h2:focus {
     outline: none;
 }
 
@@ -3995,17 +4000,19 @@ main [id] {
     display: none;
 }
 
-@media (max-width: 719px) {
-    .rodape-links a,
-    .rodape-fim a {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-    }
+/* 13/11/2026: os links do rodapé com 44 px também no computador (tinham 23 px de altura). */
+.rodape-links a,
+.rodape-fim a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
 
-    .rodape-links {
-        gap: 0;
-    }
+.rodape-links {
+    gap: 0;
+}
+
+@media (max-width: 719px) {
 
     .js .grade-sistemas:not(.aberta) .sistema-extra {
         display: none;

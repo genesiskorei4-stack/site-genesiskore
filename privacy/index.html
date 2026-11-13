@@ -1,23 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<!-- Cópia de /privacidade/ no endereço em inglês que os agentes de IA procuram. A versão oficial é a em português. -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacidade | GenesisKore</title>
-    <meta name="description" content="Como a GenesisKore usa os dados do formulário de diagnóstico e os seus direitos pela LGPD.">
+    <!-- English version of /privacidade/ (13/11/2026). The Portuguese page is the official one: change both together. -->
+    <title>Privacy and data protection | GenesisKore</title>
+    <meta name="description" content="How GenesisKore uses the data from the diagnosis form and your rights under Brazil's data protection law (LGPD).">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#000000">
-    <link rel="canonical" href="https://genesiskore.com/privacidade/">
+    <link rel="canonical" href="https://genesiskore.com/privacy/">
+    <link rel="alternate" hreflang="en" href="https://genesiskore.com/privacy/">
+    <link rel="alternate" hreflang="pt-BR" href="https://genesiskore.com/privacidade/">
+    <link rel="alternate" hreflang="x-default" href="https://genesiskore.com/privacidade/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://genesiskore.com/privacidade/">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="Privacidade | GenesisKore">
-    <meta property="og:description" content="Como a GenesisKore usa os dados do formulário de diagnóstico e os seus direitos pela LGPD.">
+    <meta property="og:url" content="https://genesiskore.com/privacy/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Privacy | GenesisKore">
+    <meta property="og:description" content="How GenesisKore uses the data from the diagnosis form and your rights under Brazil's data protection law (LGPD).">
     <meta property="og:image" content="https://genesiskore.com/previa-link.png">
     <link rel="icon" type="image/png" href="../icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="../icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
     <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://genesiskore.com/privacy/#page",
+      "url": "https://genesiskore.com/privacy/",
+      "name": "Privacy and data protection on the contact form | GenesisKore",
+      "description": "How GenesisKore uses the data from the diagnosis form and your rights under Brazil's data protection law (LGPD).",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://genesiskore.com/#site"
+      },
+      "publisher": {
+        "@id": "https://genesiskore.com/#organizacao"
+      },
+      "dateModified": "2026-11-13",
+      "translationOfWork": {
+        "@id": "https://genesiskore.com/privacidade/#pagina"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "GenesisKore",
+          "item": "https://genesiskore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy",
+          "item": "https://genesiskore.com/privacy/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
     <style>
         :root { --fundo: #fff; --texto: #000; --suave: #555; --linha: #d4d4d4; }
         * { box-sizing: border-box; }
@@ -39,51 +84,68 @@
         footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
         footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
         @view-transition { navigation: auto; }
+    
+        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
+           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
+           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
+        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        header nav a:hover, footer a:hover { color: var(--texto); }
+        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+        .conversa-fixa { display: none; }
+        @media (max-width: 768px) {
+            header nav a.nav-conversa { display: none; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+            body { padding-bottom: 84px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="../" class="marca" aria-label="GenesisKore, home page"><img src="../logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="../consultoria/">Consultoria</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a></nav>
+        <nav aria-label="Pages"><a href="../management-consulting/">Consulting</a><a href="../about/">About</a><a href="../contact/">Contact</a></nav>
     </header>
     <main>
-        <h1>Privacidade</h1>
-        <p class="suave">Atualizada em 27 de outubro de 2026.</p>
-        <p>Esta página explica o que a GenesisKore faz com os dados que você coloca no formulário de diagnóstico do site, e quais são os seus direitos pela Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+        <h1>Privacy</h1>
+        <p class="suave">Updated on November 13, 2026. This is a translation: the <a href="../privacidade/" hreflang="pt-BR" lang="pt-BR">Portuguese version</a> is the official one.</p>
+        <p>This page explains what GenesisKore does with the data you enter in the diagnosis form on this site, and what your rights are under Brazil's General Data Protection Law (LGPD, Law 13,709/2018).</p>
 
-        <h2>Quem cuida dos dados</h2>
-        <p>A GenesisKore, de São Paulo, SP, está em formalização. Para qualquer assunto sobre os seus dados, escreva para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>.</p>
+        <h2>Who looks after the data</h2>
+        <p>GenesisKore, based in São Paulo, Brazil, is in the process of incorporation. For anything about your data, write to <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>.</p>
 
-        <h2>O que a gente coleta</h2>
-        <p>O que você digita no formulário: nome, empresa, WhatsApp ou e-mail e, se quiser, a faixa de faturamento da empresa e a tarefa que mais toma o tempo da sua equipe. Junto vai de onde você chegou ao site (por exemplo, Instagram, LinkedIn ou uma indicação).</p>
-        <p>Se você fizer o diagnóstico rápido da página inicial, as respostas ficam só no seu navegador. Elas só chegam até a gente de dois jeitos: se você mandar o formulário, e aí vão junto com a sua mensagem, aparecendo antes do envio para você conferir ou tirar, ou se você pedir o Raio X em PDF.</p>
-        <p>Para montar o Raio X, a gente recebe as seis respostas, o seu nome, a empresa, o e-mail e, se você quiser, o WhatsApp. O Raio X é montado por regras fixas, sem inteligência artificial, e fica num link que só quem tem o endereço abre, por 90 dias. A faixa de faturamento entra na conta, mas não aparece no Raio X. Para barrar envio automático, guardamos uma marca embaralhada do seu endereço de internet, que não permite descobrir o endereço.</p>
-        <p>O site também conta as visitas, sem cookie e sem guardar o seu IP. Cada página aberta manda a página visitada, o site de onde você veio (só o nome do site), as etiquetas de campanha do link, se é celular ou computador e um código aleatório que vale só enquanto a aba está aberta. Nada disso identifica você. O site não usa cookies de anúncio nem ferramentas de rastreamento de terceiros.</p>
+        <h2>What we collect</h2>
+        <p>What you type in the form: name, company, WhatsApp or email and, if you want, the company's revenue range and the task that takes most of your team's time. It also records where you came to the site from (for example, Instagram, LinkedIn or a referral).</p>
+        <p>If you take the quick diagnosis on the home page, the answers stay in your browser. They only reach us in two ways: if you send the form, in which case they go with your message and are shown before sending so you can check or remove them, or if you ask for the X-ray report in PDF.</p>
+        <p>To build the X-ray report, we receive the six answers, your name, company, email and, if you want, your WhatsApp. The report is built by fixed rules, with no artificial intelligence, and sits at a link that only someone with the address can open, for 90 days. The revenue range goes into the calculation but does not appear in the report. To block automated submissions, we keep a scrambled mark of your internet address, which cannot be turned back into the address.</p>
+        <p>The site also counts visits, with no cookies and without storing your IP. Each page view sends the page visited, the site you came from (only the site name), the campaign tags in the link, whether it is a phone or a computer, and a random code that lasts only while the tab is open. None of this identifies you. The site uses no advertising cookies and no third-party tracking tools.</p>
 
-        <h2>Para que usa</h2>
+        <h2>What we use it for</h2>
         <ul>
-            <li>Para responder o seu pedido e marcar a conversa de diagnóstico, pelo WhatsApp ou por e-mail.</li>
-            <li>Para montar o seu Raio X, quando você pedir.</li>
-            <li>Para mandar o e-mail de confirmação de que o pedido chegou.</li>
-            <li>Para preparar a conversa: uma ferramenta de inteligência artificial resume o que você escreveu, para a nossa equipe chegar sabendo do que se trata.</li>
-            <li>Para saber quantas pessoas abrem cada página e de onde elas vêm, sem saber quem são.</li>
+            <li>To answer your request and book the diagnosis conversation, by WhatsApp or email.</li>
+            <li>To build your X-ray report, when you ask for it.</li>
+            <li>To send the email confirming that your request arrived.</li>
+            <li>To prepare the conversation: an artificial intelligence tool summarizes what you wrote, so our team arrives knowing what it is about.</li>
+            <li>To know how many people open each page and where they come from, without knowing who they are.</li>
         </ul>
-        <p>A base legal é o seu consentimento, dado na caixa do formulário, e o procedimento que antecede um possível contrato.</p>
+        <p>The legal basis is your consent, given in the form's checkbox, and the steps that come before a possible contract.</p>
 
-        <h2>Com quem os dados ficam</h2>
-        <p>Os dados passam pelos serviços que a gente usa para operar: o servidor de automação (hospedado na Hostinger), o banco de dados da nossa plataforma interna (Supabase), o e-mail (Google) e o serviço de inteligência artificial que faz o resumo. Eles não são vendidos, alugados nem usados para anúncio.</p>
+        <h2>Who the data stays with</h2>
+        <p>The data goes through the services we use to operate: the automation server (hosted at Hostinger), the database of our internal platform (Supabase), email (Google) and the artificial intelligence service that writes the summary. It is not sold, rented or used for advertising.</p>
 
-        <h2>Por quanto tempo</h2>
-        <p>Enquanto houver conversa com você. Se a conversa não virar trabalho, os dados são apagados em até 12 meses depois do último contato, ou antes, se você pedir.</p>
+        <h2>For how long</h2>
+        <p>For as long as we are in conversation with you. If the conversation does not become a project, the data is deleted within 12 months of the last contact, or sooner if you ask.</p>
 
-        <h2>Seus direitos</h2>
-        <p>Você pode pedir, a qualquer momento, para ver os dados que a gente tem sobre você, corrigir, apagar, saber com quem foram compartilhados ou retirar o consentimento. Basta escrever para <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>. A gente responde em até 15 dias.</p>
+        <h2>Your rights</h2>
+        <p>At any time you can ask to see the data we hold about you, correct it, delete it, know who it was shared with, or withdraw your consent. Just write to <a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a>. We answer within 15 days.</p>
     </main>
     <footer>
-        <a href="../">Início</a><a href="../sobre/">Sobre</a><a href="../contato/">Contato</a><a href="../privacidade/">Privacidade</a>
-        <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
+        <a href="../">Home</a><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy/">Privacy</a>
+        <p>© 2026 GenesisKore. Custom systems and management consulting.</p>
     </footer>
-    <!-- Contagem de visitas sem cookie e sem IP. Caminho absoluto porque a 404 responde em qualquer endereço. -->
+    <!-- Visit count with no cookies and no IP. -->
     <script src="/contagem.js" defer></script>
 </body>
 </html>

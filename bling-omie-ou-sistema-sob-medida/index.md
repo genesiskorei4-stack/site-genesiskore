@@ -13,6 +13,12 @@ atualizado: 2026-10-30
 
 Para a maioria das empresas pequenas, o Bling ou o Omie resolvem, e custam menos que qualquer sistema sob medida. O sob medida faz sentido quando a empresa já fatura a partir de uns R$ 150 mil por mês e tem um processo que o ERP não faz do jeito dela. Mesmo assim ele costuma trabalhar junto com o ERP, e não no lugar. Quem escreve isto é a GenesisKore, que vende sistema sob medida.
 
+| Situação | Caminho | O que fica com o ERP |
+|---|---|---|
+| Nota, estoque e contas a pagar e a receber, com venda em caminho padrão | Bling, Omie, Tiny ou Conta Azul bem configurados | Tudo |
+| Planilha paralela, regra de preço que não cabe no cadastro, lojista perguntando tudo no WhatsApp | Sistema sob medida por cima do ERP | Nota, estoque e fiscal |
+| Mais de um galpão, endereçamento, separação, filial em outro estado ou fiscal pesado | ERP maior ou sistema de armazém | Tudo, num ERP mais completo |
+
 ## Quando o Bling ou o Omie bastam
 
 - Você precisa emitir nota, controlar estoque e acompanhar contas a pagar e a receber.

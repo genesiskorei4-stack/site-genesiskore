@@ -25,6 +25,17 @@ Na GenesisKore o preço é sob consulta, porque cada sistema é feito sob medida
 
 Hospedagem, monitoramento, correção de falha e suporte. O custo de serviços de terceiros que o sistema usa, como inteligência artificial e envio de mensagem, também entra nela: você paga um valor só. Quando algo falha, o próprio sistema avisa a nossa equipe.
 
+## O que muda o preço
+
+| Fator | Deixa mais barato | Deixa mais caro |
+|---|---|---|
+| Escopo | Começar pela dor principal e deixar o resto para as próximas fases | Escopo que muda no meio do caminho |
+| Ligação com outros sistemas | Trabalhar por trás do ERP, da planilha e do WhatsApp que a empresa já usa | Sistema antigo sem integração pronta |
+| Usuários | Poucos tipos de usuário | Muitos tipos de usuário, cada um vendo uma coisa |
+| Regras | Regra de preço e fiscal simples | Regra fiscal ou de preço com muita exceção |
+| Internet | Uso com internet | Aplicativo que precisa funcionar sem internet |
+| Equipe do cliente | Uma pessoa que responde rápido às dúvidas | Ninguém com tempo para responder |
+
 ## O que encarece
 
 - Conversar com sistema antigo que não tem integração pronta.

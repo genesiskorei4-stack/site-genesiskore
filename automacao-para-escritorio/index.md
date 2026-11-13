@@ -1,8 +1,8 @@
 ---
 gerar: sim
-titulo: Automação para escritório de advocacia e contabilidade | GenesisKore
+titulo: Automação para escritório de advocacia e contábil | GenesisKore
 titulo_curto: Automação para escritório | GenesisKore
-descricao: Automação para escritórios de advocacia, contabilidade e engenharia: documento a partir do modelo do escritório, prazo que avisa, cobrança de honorário e pedido de documento ao cliente.
+descricao: Automação para escritório de advocacia, contabilidade e engenharia: documento no modelo da casa, prazo que avisa, cobrança de honorário e pedido ao cliente.
 etiqueta: Escritórios de serviço
 trilha: Automação para escritório
 servico: Automação para escritórios de serviço

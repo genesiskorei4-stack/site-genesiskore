@@ -19,16 +19,16 @@ Sistema sob medida, software personalizado, sistema web feito para a empresa: o 
 
 ## O que a gente constrói
 
-- **Automação de pedido, nota e cobrança.** O pedido entra uma vez e segue sozinho: vira nota, vira cobrança e avisa o cliente. Mais em [automação de processos](https://genesiskore.com/automacao-de-processos/).
+- **Automação de pedido, nota e cobrança.** O pedido entra uma vez e segue sozinho: vira nota, vira cobrança e avisa o cliente. Mais em [automação de processos](https://genesiskore.com/automacao-de-processos/), [cobrança automática](https://genesiskore.com/cobranca-automatica/) e [documento automático](https://genesiskore.com/documento-automatico/).
 - **Portal para a equipe, para o lojista ou para o cliente final**, que abre no celular e mostra a cada pessoa só o que a função dela pede. Veja o [sistema de pedidos B2B](https://genesiskore.com/sistema-de-pedidos-b2b/).
 - **Painel financeiro lido das notas fiscais**, com o lucro de cada produto, cliente e canal. Veja o [painel de lucro por produto](https://genesiskore.com/lucro-por-produto/).
-- **Integração com o que a empresa já usa:** o ERP (Bling, Omie, Tiny), a planilha, o e-mail e o WhatsApp. Muitas vezes a automação trabalha por trás deles e ninguém precisa aprender tela nova.
+- **Integração com o que a empresa já usa:** o ERP (Bling, Omie, Tiny), a planilha, o e-mail e o WhatsApp. Muitas vezes a automação trabalha por trás deles e ninguém precisa aprender tela nova. Quando a planilha já não aguenta, veja o [sistema para substituir planilhas](https://genesiskore.com/sistema-para-substituir-planilhas/).
 
 ## Para quem faz sentido
 
 Para o dono que já vende bem e tem gente da equipe gastando o dia com tarefa que se repete do mesmo jeito. Copiar pedido de uma planilha para outra, conferir nota à mão, avisar cliente por cliente que a mercadoria saiu.
 
-Os setores em que a casa tem foco são distribuição e atacado ([sistema para distribuidora](https://genesiskore.com/sistema-para-distribuidora/)), varejo de alto valor e escritórios de serviço, como advocacia, contabilidade e engenharia.
+Os setores em que a casa tem foco são distribuição e atacado ([sistema para distribuidora](https://genesiskore.com/sistema-para-distribuidora/)), varejo de alto valor ([ficha de cliente para joalheria](https://genesiskore.com/ficha-de-cliente-para-joalheria/)) e escritórios de serviço, como advocacia, contabilidade e engenharia.
 
 A pergunta que decide é uma só: isso se repete todo dia do mesmo jeito? Se sim, um sistema faz. Se o problema é não saber se a empresa está ganhando dinheiro, quem entra é a [Consultoria de gestão](https://genesiskore.com/consultoria/).
 

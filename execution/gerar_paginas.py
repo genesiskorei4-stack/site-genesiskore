@@ -23,10 +23,14 @@ ORGANIZACAO = {
     '@type': ['Organization', 'ProfessionalService'],
     '@id': BASE + '#organizacao',
     'name': 'GenesisKore',
+    'alternateName': 'Genesis Kore',
     'url': BASE,
     'logo': BASE + 'logo.png',
+    'foundingDate': '2025-08',
     'email': 'contato@genesiskore.com',
     'address': {'@type': 'PostalAddress', 'addressLocality': 'São Paulo', 'addressRegion': 'SP', 'addressCountry': 'BR'},
+    'areaServed': {'@type': 'Country', 'name': 'Brasil'},
+    'sameAs': ['https://www.instagram.com/genesiskore/', 'https://www.tiktok.com/@genesiskore', 'https://www.linkedin.com/company/genesiskore'],
 }
 
 
@@ -106,6 +110,15 @@ def blocos(corpo):
             fechar()
             saida.append(('blockquote', s[2:]))
             continue
+        if s.startswith('|') and s.endswith('|'):
+            celulas = [c.strip() for c in s.strip('|').split('|')]
+            if all(re.fullmatch(r':?-{3,}:?', c) for c in celulas):
+                continue
+            if not saida or saida[-1][0] != 'table' or paragrafo or lista:
+                fechar()
+                saida.append(('table', []))
+            saida[-1][1].append(celulas)
+            continue
         if lista:
             lista[-1] += ' ' + s
         else:
@@ -148,6 +161,11 @@ def montar(pasta, md, estilo):
                 corpo_html.append(f'        <p>{em_linha(c)}</p>')
         elif t == 'blockquote':
             corpo_html.append(f'        <blockquote>{em_linha(c)}</blockquote>')
+        elif t == 'table':
+            cab = ''.join(f'<th scope="col">{em_linha(x)}</th>' for x in c[0])
+            # data-rotulo: no celular a tabela vira cartão, e cada célula mostra o nome da coluna antes.
+            linhas = '\n'.join('            <tr><th scope="row">' + em_linha(r[0]) + '</th>' + ''.join(f'<td data-rotulo="{html.escape(texto_puro(c[0][i + 1]))}">{em_linha(x)}</td>' for i, x in enumerate(r[1:])) + '</tr>' for r in c[1:])
+            corpo_html.append(f'        <div class="tabela"><table>\n            <thead><tr>{cab}</tr></thead>\n            <tbody>\n{linhas}\n            </tbody>\n        </table></div>')
         else:
             itens = '\n'.join(f'            <li>{em_linha(i)}</li>' for i in c)
             corpo_html.append(f'        <{t}>\n{itens}\n        </{t}>')
@@ -199,7 +217,7 @@ def montar(pasta, md, estilo):
     ld = json.dumps({'@context': 'https://schema.org', '@graph': grafo}, ensure_ascii=False, indent=2)
     titulo = html.escape(dados['titulo'])
     descricao = html.escape(dados['descricao'])
-    nav = '<a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a>'
+    nav = '<a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a>'
     rodape = ('<a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/consultoria/">Consultoria de gestão</a>'
               '<a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Privacidade</a>')
     return f'''<!DOCTYPE html>
@@ -243,6 +261,7 @@ def montar(pasta, md, estilo):
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. -->
     <script src="/contagem.js" defer></script>
+    <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>
 </html>
 '''

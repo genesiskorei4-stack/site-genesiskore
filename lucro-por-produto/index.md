@@ -2,7 +2,7 @@
 gerar: sim
 titulo: Painel de lucro por produto lido das notas fiscais | GenesisKore
 titulo_curto: Painel de lucro por produto | GenesisKore
-descricao: Painel financeiro que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida pela GenesisKore.
+descricao: Painel que lê o XML das notas de venda e de compra e mostra o lucro por produto, cliente, vendedor e canal, sem digitação. Feito sob medida.
 etiqueta: Painel financeiro
 trilha: Lucro por produto
 servico: Painel de lucro por produto a partir das notas fiscais

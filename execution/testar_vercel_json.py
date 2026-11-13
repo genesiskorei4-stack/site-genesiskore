@@ -201,6 +201,12 @@ def main():
     checar(s == 200 and h.get('Content-Type', '').startswith('text/html') and 'accept' in h.get('Vary', '').lower(),
            f'/sistemas-sob-medida/ para navegador é HTML com Vary: Accept ({s}, {h.get("Content-Type")}, {h.get("Vary")})')
 
+    # Páginas escritas à mão e cases (13/11/2026): o .md sai de execution/gerar_markdown_das_paginas.py.
+    for pagina, titulo in (('/cases/auth/', '# AUTH'), ('/sobre/', '# '), ('/consultoria/', '# ')):
+        s, h, corpo = pedir(base, pagina, MD)
+        checar(s == 200 and h.get('Content-Type', '').startswith('text/markdown') and titulo in corpo,
+               f'{pagina} com Accept: text/markdown devolve o index.md ({s}, {h.get("Content-Type")})')
+
     for pagina in ('/consultoria/', '/management-consulting/', '/conversar/', '/llms.txt', '/sitemap.xml', '/styles.css',
                    '/7f7a9820d89718fb34d248743a09623f.txt'):
         s, _, _ = pedir(base, pagina, HTML)
