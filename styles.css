@@ -4626,3 +4626,118 @@ main [id] {
         padding: 0 6px 10px;
     }
 }
+
+
+/* ------------------------------------------------------------ leitura no celular (13/11/2026)
+   Pedido do Gustavo: no telefone as palavras dos títulos ficavam coladas e muita linha terminava com
+   uma palavra sozinha. O navegador agora equilibra as linhas de título, rótulo e botão, e evita a palavra
+   órfã no fim do parágrafo. No celular os títulos ganham espaço entre as palavras e os rótulos em
+   letra de máquina perdem um pouco do espaçamento entre letras, para caberem numa linha. */
+
+h1, h2, h3, h4, summary, figcaption strong, .etiqueta, .botao, .link-seta, .mini, .sistema-topo, .dica-deslizar,
+.resultado-rotulo, .conta-do-ano, .indice strong, .porta span, .case-aba, .case-rodape a {
+    text-wrap: balance;
+}
+
+p, li, dd, blockquote, figcaption span, .lead {
+    text-wrap: pretty;
+}
+
+@media (max-width: 767px) {
+    .botao,
+    .campo-grupo legend,
+    .case-aba,
+    .case-fala-fato,
+    .case-lista strong,
+    .case-mais summary,
+    .case-passos-video li,
+    .conta-do-ano strong,
+    .controle output,
+    .conversa-sair,
+    .cta-fixo,
+    .fala-cliente figcaption strong,
+    .grade-numeros dd,
+    .indice strong,
+    .js .perguntas-mais,
+    .js .produtos-mais,
+    .js .sistemas-mais,
+    .link-seta,
+    .marca,
+    .menu-celular a,
+    .menu-largo a,
+    .perguntas summary,
+    .porta span,
+    .resultado-horas,
+    .resultado-numero,
+    .resultado-valor,
+    .sistema-video figcaption strong,
+    .voltar,
+    h1,
+    h2,
+    h3 {
+        word-spacing: 0.14em;
+    }
+
+    .a-seguir,
+    .abertura .etiqueta,
+    .avisos-rotulo,
+    .botao,
+    .case-aba span,
+    .case-mais summary,
+    .comparacao-cabecalho span,
+    .conversa-sair,
+    .cta-fixo,
+    .destaque-rotulo,
+    .dica,
+    .etiqueta,
+    .grade-numeros dt,
+    .js .case-proximo,
+    .js .dica-deslizar,
+    .js .dores-passo,
+    .js .perguntas-mais,
+    .js .produtos-mais,
+    .js .sistemas-mais,
+    .link-seta,
+    .marca,
+    .menu-largo a,
+    .mini,
+    .passo-numero,
+    .progresso-texto,
+    .prova h2.etiqueta,
+    .resultado-titulo,
+    .rodape-titulo,
+    .sistema-topo,
+    .sua-parte span,
+    .voltar {
+        letter-spacing: 0.09em;
+    }
+
+    .botao {
+        letter-spacing: 0.08em;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* O desenho de fundo do último bloco passava por cima do título e do texto. */
+    .fechamento-fundo {
+        display: none;
+    }
+
+    .fechamento {
+        padding: 88px 0;
+    }
+
+    .fechamento h2 {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+    }
+
+    /* Rodapé: a frase numa linha e os links juntos embaixo, sem ponto solto no fim da linha. */
+    .rodape-fim {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 6px;
+        row-gap: 0;
+        line-height: 1.6;
+    }
+}
