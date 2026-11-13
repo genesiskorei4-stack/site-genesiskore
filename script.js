@@ -629,11 +629,23 @@ try {
 
 (() => {
     const videos = [...document.querySelectorAll('.case-video, .video-tela')];
-    if (!videos.length || !('IntersectionObserver' in window)) return;
-    /* No celular o vídeo é o vertical: a imagem parada troca junto, antes de qualquer coisa baixar. */
-    if (window.matchMedia('(max-width: 767px)').matches) {
-        videos.forEach((video) => { if (video.dataset.posterCel) video.poster = video.dataset.posterCel; });
-    }
+    if (!videos.length) return;
+    /* A imagem parada de cada vídeo só baixa quando ele chega perto da tela (o relatório do Google de
+       13/11/2026 mostrou as cinco baixando na abertura). No celular vale a imagem do vídeo vertical. */
+    const noCelular = window.matchMedia('(max-width: 767px)').matches;
+    const porImagem = (video) => {
+        const imagem = (noCelular && video.dataset.posterCel) || video.dataset.poster;
+        if (imagem && !video.poster) video.poster = imagem;
+    };
+    if (!('IntersectionObserver' in window)) { videos.forEach(porImagem); return; }
+    const chegando = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (!entrada.isIntersecting) return;
+            porImagem(entrada.target);
+            chegando.unobserve(entrada.target);
+        });
+    }, { rootMargin: '1200px 0px' });
+    videos.forEach((video) => chegando.observe(video));
     videos.forEach((video) => {
         video.controls = false;
         video.muted = true;

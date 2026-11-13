@@ -4819,3 +4819,19 @@ p, li, dd, blockquote, figcaption span, .lead {
         padding-bottom: 16px;
     }
 }
+
+/* ------------------------------------------------------------ ajustes do relatório do Google (13/11/2026)
+   O PageSpeed mediu 4,3 s até o texto principal da abertura aparecer no celular, porque ele esperava
+   a animação de entrada. O texto agora aparece na hora e só os botões entram depois. O rótulo "Hoje"
+   dos cartões claros ficou mais escuro para passar no contraste. */
+
+.js .abertura .lead.entrada {
+    animation: none;
+}
+
+.js .abertura .acoes.entrada { animation-delay: 0.3s; }
+.js .abertura .garantia-curta.entrada { animation-delay: 0.4s; }
+
+.cartao:not(.cartao-ponte) .mini:not(.mini-depois) {
+    color: #5f5f5f;
+}

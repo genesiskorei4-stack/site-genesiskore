@@ -103,7 +103,7 @@
             utm_campaign: curto(params.get('utm_campaign')),
             origem,
             sessao: idDaSessao(),
-            dispositivo: window.innerWidth < 768 ? 'celular' : 'computador',
+            dispositivo: window.matchMedia('(max-width: 767px)').matches ? 'celular' : 'computador',
         };
     }
 
