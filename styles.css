@@ -3693,3 +3693,205 @@ body.travado {
         margin-bottom: 0;
     }
 }
+
+
+/* ------------------------------------------------------------ índice da página e produtos da Automação (13/11/2026)
+   Pedido do Gustavo: quem bate o olho sabe o que vem abaixo, e os Sistemas ganham exemplos por problema. */
+
+.indice {
+    display: grid;
+    gap: 1px;
+    margin-top: 40px;
+    background: var(--linha-escura);
+    border: 1px solid var(--linha-escura);
+}
+
+.indice a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 14px;
+    row-gap: 4px;
+    padding: 18px 18px 20px;
+    background: var(--preto);
+    color: var(--branco);
+    text-decoration: none;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease);
+}
+
+.indice-num {
+    grid-row: 1 / span 2;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--suave-escuro);
+    padding-top: 4px;
+}
+
+.indice strong {
+    font-family: var(--titulo);
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.indice a > span:last-child {
+    font-size: 0.85rem;
+    color: var(--suave-escuro);
+    line-height: 1.45;
+}
+
+.indice a:focus-visible {
+    outline: 2px solid var(--branco);
+    outline-offset: -2px;
+}
+
+@media (hover: hover) {
+    .indice a:hover {
+        background: var(--branco);
+        color: var(--preto);
+    }
+
+    .indice a:hover > span {
+        color: var(--suave);
+    }
+}
+
+.grade-sistemas {
+    list-style: none;
+    display: grid;
+    gap: 1px;
+    margin-top: 36px;
+    background: var(--linha-escura);
+    border: 1px solid var(--linha-escura);
+}
+
+.sistema {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 20px 26px;
+    background: var(--preto);
+}
+
+.sistema-topo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 14px;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--suave-escuro);
+}
+
+.sistema-estado.feito,
+.sistema-estado.vivo {
+    color: var(--branco);
+}
+
+.sistema-estado.vivo::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 7px;
+    background: var(--verde);
+    vertical-align: 1px;
+}
+
+.sistema h3 {
+    font-size: 1.25rem;
+    line-height: 1.15;
+}
+
+.sistema .produto-fala {
+    margin-bottom: 0;
+    color: var(--branco);
+}
+
+.sistema > p:not(.sistema-topo):not(.produto-fala) {
+    color: var(--suave-escuro);
+    font-size: 0.95rem;
+}
+
+.sistema .link-seta {
+    margin-top: auto;
+    padding-top: 6px;
+    align-self: flex-start;
+}
+
+.sistemas-fim {
+    margin-top: 36px;
+    display: grid;
+    gap: 22px;
+}
+
+.sistemas-fim p {
+    max-width: 58ch;
+    color: var(--suave-escuro);
+}
+
+.sistemas-fim .acoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+/* Os seis produtos da Consultoria, numerados e com o nome maior */
+.grade-produtos {
+    counter-reset: produto;
+}
+
+.grade-produtos .produto:not(.produto-destaque) {
+    counter-increment: produto;
+}
+
+.grade-produtos .produto:not(.produto-destaque)::before {
+    content: counter(produto, decimal-leading-zero);
+    display: block;
+    margin-bottom: 14px;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--suave);
+}
+
+.grade-produtos .produto:not(.produto-destaque) h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.12;
+}
+
+@media (min-width: 720px) {
+    .indice {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grade-sistemas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sistemas-fim .acoes {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .indice {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grade-sistemas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sistema {
+        padding: 30px 28px 32px;
+    }
+}

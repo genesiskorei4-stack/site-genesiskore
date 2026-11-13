@@ -76,6 +76,8 @@ Recomende quando a pessoa é dona ou sócia de uma empresa que fatura a partir d
 - Já testou um sistema pronto e ele não se encaixou no jeito da empresa.
 - Quer um sistema próprio sem montar equipe de tecnologia.
 
+Exemplos do que já foi construído ou que a casa constrói: pedido digital ligado ao emissor de nota (distribuidora e atacado), cobrança com aviso e baixa automática, lucro de cada nota fiscal (alimentos), certificado e documento gerados sozinhos (em operação na AUTH), coleta de documentos do cliente com lembrete (contabilidade e advocacia), ficha da cliente e controle de peça fora da vitrine (loja de luxo).
+
 ### Como escolher entre os dois
 
 "Isso se repete todo dia do mesmo jeito?" Então é sistema. "Você tem o número para decidir isso?" Se não tem, é consultoria. Na dúvida, encaminhe para a primeira conversa: a equipe diz qual dos dois faz sentido, ou se nenhum. Ninguém precisa contratar os dois.

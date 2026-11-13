@@ -446,10 +446,10 @@
                 <span>GENESISKORE</span>
             </a>
             <nav class="menu-largo" aria-label="Seções">
-                <a href="#cases">Resultados</a>
-                <a href="#calculadora">Calculadora</a>
-                <a href="#como-funciona">Como funciona</a>
+                <a href="#sistemas">Sistemas</a>
                 <a href="#consultoria">Consultoria</a>
+                <a href="#cases">Resultados</a>
+                <a href="#como-funciona">Como funciona</a>
                 <a href="#perguntas">Perguntas</a>
             </nav>
             <a href="conversar/" class="botao botao-cheio botao-pequeno topo-cta">
@@ -464,11 +464,11 @@
     </header>
 
     <nav class="menu-celular" id="menuCelular" aria-label="Seções">
-        <a href="#cases">Resultados</a>
-        <a href="#onde-trava">Onde o tempo vai embora</a>
-        <a href="#calculadora">Calculadora</a>
-        <a href="#como-funciona">Como funciona</a>
+        <a href="#sistemas">Sistemas sob medida</a>
         <a href="#consultoria">Consultoria de gestão</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#cases">Resultados</a>
+        <a href="#como-funciona">Como funciona</a>
         <a href="#compromissos">Compromissos</a>
         <a href="#perguntas">Perguntas</a>
         <a href="conversar/" class="botao botao-cheio botao-largo">Quero conversar</a>
@@ -603,6 +603,15 @@
                     </div>
                 </dl>
             </div>
+            <!-- 13/11/2026: o índice da página, para quem bate o olho saber o que vem abaixo (pedido do Gustavo). -->
+            <div class="container">
+                <nav class="indice revelar" aria-label="Nesta página">
+                    <a href="#sistemas"><span class="indice-num">01</span><strong>Sistemas sob medida</strong><span>Seis exemplos do que a gente constrói</span></a>
+                    <a href="#consultoria"><span class="indice-num">02</span><strong>Consultoria de gestão</strong><span>Sete produtos, a começar pela Consultoria de IA</span></a>
+                    <a href="#cases"><span class="indice-num">03</span><strong>Resultados</strong><span>Quatro projetos, com o antes e o depois</span></a>
+                    <a href="#como-funciona"><span class="indice-num">04</span><strong>Como funciona</strong><span>Da primeira conversa ao sistema em uso</span></a>
+                </nav>
+            </div>
         </section>
 
         <!-- 3. A dor do cliente antes da empresa -->
@@ -654,6 +663,166 @@
                 </ul>
                 <!-- Só no celular: onde a pessoa está na fileira de cartões -->
                 <p class="dores-passo" id="doresPasso" aria-hidden="true"><span id="doresConta">01 / 05</span><span class="dores-trilho"></span><span>deslize</span></p>
+            </div>
+        </section>
+
+        <!-- 3b. Produtos da Automação (13/11/2026, pedido do Gustavo): seis exemplos de setores e problemas
+             diferentes, tirados de aut_produtos na plataforma. Sem preço e sem número de cliente. Só a AUTH
+             é "em operação"; o resto é "já construído" ou "a gente constrói". -->
+        <section class="secao escuro sistemas" id="sistemas" aria-labelledby="titulo-sistemas">
+            <div class="container">
+                <p class="etiqueta revelar">Sistemas sob medida</p>
+                <h2 id="titulo-sistemas" class="titulo-secao revelar">O que a gente constrói, por <em class="enfase">problema</em>.</h2>
+                <p class="lead revelar">Seis exemplos, de setores diferentes. Todo sistema é feito para uma empresa só:
+                    o seu pode juntar dois deles ou não se parecer com nenhum.</p>
+
+                <ul class="grade-sistemas">
+                    <li class="sistema revelar">
+                        <p class="sistema-topo"><span>Distribuidora e atacado</span><span class="sistema-estado">A gente constrói</span></p>
+                        <h3>Pedido digital ligado à nota</h3>
+                        <p class="produto-fala">&ldquo;O vendedor manda o pedido no WhatsApp e alguém digita tudo de novo.&rdquo;</p>
+                        <p>O pedido entra uma vez, pelo celular do vendedor ou pelo próprio cliente, e segue para o emissor de nota que a empresa já usa.</p>
+                        <a href="sistema-de-pedidos-b2b/" class="link-seta">Ver pedidos B2B</a>
+                    </li>
+                    <li class="sistema revelar">
+                        <p class="sistema-topo"><span>Quem vende a prazo</span><span class="sistema-estado feito">Roda na GenesisKore</span></p>
+                        <h3>Cobrança que anda sozinha</h3>
+                        <p class="produto-fala">&ldquo;Cobrar depende de alguém lembrar. Quando lembra, já venceu faz tempo.&rdquo;</p>
+                        <p>Aviso antes do vencimento, lembrete depois dele e baixa quando o pagamento cai. A sua equipe só entra no caso que pede conversa.</p>
+                    </li>
+                    <li class="sistema revelar">
+                        <p class="sistema-topo"><span>Indústria e distribuição de alimentos</span><span class="sistema-estado feito">Já construído</span></p>
+                        <h3>Lucro de cada nota fiscal</h3>
+                        <p class="produto-fala">&ldquo;Eu sei quanto vendi no mês. Quanto sobrou de cada venda, não sei.&rdquo;</p>
+                        <p>O sistema lê as notas fiscais e mostra o lucro de cada venda, por produto e por ponto de venda.</p>
+                        <a href="lucro-por-produto/" class="link-seta">Ver lucro por produto</a>
+                    </li>
+                    <li class="sistema revelar">
+                        <p class="sistema-topo"><span>Serviço e varejo de alto valor</span><span class="sistema-estado vivo">Em operação na AUTH</span></p>
+                        <h3>Documento que sai pronto</h3>
+                        <p class="produto-fala">&ldquo;Cada certificado é montado à mão, peça por peça.&rdquo;</p>
+                        <p>Certificado, laudo ou recibo gerado na hora em que o trabalho termina, com QR code, e entregue ao cliente sem ninguém montar.</p>
+                        <a href="#cases" class="link-seta">Ver o caso da AUTH</a>
+                    </li>
+                    <li class="sistema revelar">
+                        <p class="sistema-topo"><span>Contabilidade e advocacia</span><span class="sistema-estado">A gente constrói</span></p>
+                        <h3>Documentos do cliente sem correr atrás</h3>
+                        <p class="produto-fala">&ldquo;Todo mês é a mesma novela: pedir o documento, lembrar, pedir de novo.&rdquo;</p>
+                        <p>O cliente recebe a lista do que falta, envia por um link e é lembrado até completar. O escritório vê quem está em dia.</p>
+                        <a href="automacao-para-escritorio/" class="link-seta">Ver para escritório</a>
+                    </li>
+                    <li class="sistema revelar">
+                        <p class="sistema-topo"><span>Loja de luxo e joalheria</span><span class="sistema-estado">A gente constrói</span></p>
+                        <h3>Ficha da cliente e peça fora da vitrine</h3>
+                        <p class="produto-fala">&ldquo;A vendedora sabe de cabeça o que cada cliente gosta. Quando ela sai, a informação vai junto.&rdquo;</p>
+                        <p>O histórico de cada cliente e o paradeiro de cada peça que saiu em consignação ou para ajuste, num lugar só.</p>
+                    </li>
+                </ul>
+
+                <div class="sistemas-fim revelar">
+                    <p>Não achou o seu problema aqui? Conte na conversa. Quase todo sistema que a gente fez começou de um problema que não estava em lista nenhuma.</p>
+                    <div class="acoes">
+                        <a href="conversar/" class="botao botao-cheio">Quero conversar</a>
+                        <a href="sistemas-sob-medida/" class="link-seta">Como funciona um sistema sob medida</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8b. Consultoria de gestão, o segundo produto (decisão do Felipe em 26/10/2026, site em 27/10/2026).
+             Os Sistemas vêm primeiro em todo texto público. Sem preço (não definido), sem prazo (estimativa
+             ainda não validada pelos sócios) e sem número de caso. Os produtos são os de cons_produtos
+             com situação "vender", na plataforma. -->
+        <section class="secao consultoria" id="consultoria" aria-labelledby="titulo-consultoria">
+            <div class="container">
+                <p class="etiqueta revelar">Consultoria de gestão</p>
+                <h2 id="titulo-consultoria" class="titulo-secao revelar">O que você decide no feeling passa a ter
+                    <em class="enfase">número</em>.</h2>
+                <p class="lead revelar">Para o dono que já vende bem e não sabe quanto sobra. A Consultoria olha os
+                    números, os processos e o mercado da sua empresa e entrega o que fazer, em ordem de impacto.</p>
+
+                <ul class="grade-produtos">
+                    <!-- 13/11/2026: a Consultoria de IA é o produto principal da Consultoria (pedido do Gustavo).
+                         Cartão maior, na linha inteira. Sem preço e sem prazo fechado: "em geral, três semanas". -->
+                    <li class="cartao produto produto-destaque revelar" id="consultoria-de-ia">
+                        <div class="destaque-texto">
+                            <p class="destaque-rotulo">O produto principal da Consultoria</p>
+                            <h3>Consultoria de IA para o seu negócio</h3>
+                            <p class="destaque-fala">&ldquo;Todo mundo fala de IA. Eu não sei o que ela faria aqui dentro.&rdquo;</p>
+                            <p>A gente entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e deixa
+                                ela configurada com o jeito da empresa. Funciona com Claude, ChatGPT, Gemini ou o Copilot do
+                                Office. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.</p>
+                            <p class="destaque-nota">Em geral, três semanas. A tarefa que pedir sistema aparece no mapa, e vira proposta à parte só se você quiser.</p>
+                            <div class="destaque-acoes">
+                                <a href="conversar/" class="botao botao-cheio">Quero conversar</a>
+                                <a href="consultoria-de-ia/" class="link-seta">Ver o kit e as etapas</a>
+                            </div>
+                        </div>
+                        <div class="destaque-detalhe">
+                            <ol class="destaque-etapas">
+                                <li><strong>Entender a empresa.</strong> A semana de cada área vira uma lista de tarefas: quem faz, quanto tempo leva, em que ferramenta.</li>
+                                <li><strong>Onde a IA entra.</strong> Cada tarefa ganha um destino: IA de prateleira, automação simples ou sistema sob medida. E a lista do que não comprar.</li>
+                                <li><strong>O kit pronto.</strong> A IA montada e testada na conta da empresa.</li>
+                                <li><strong>Aula e retorno.</strong> Duas horas ao vivo com a equipe, nas tarefas reais da semana. Trinta dias depois, a gente volta para medir o que pegou.</li>
+                            </ol>
+                            <p class="destaque-rotulo">O que vem no kit</p>
+                            <ul class="destaque-kit">
+                                <li>O arquivo da empresa, que a IA lê antes de cada conversa</li>
+                                <li>Assistentes prontos, um por tarefa</li>
+                                <li>Skills do Claude, ou GPTs no ChatGPT</li>
+                                <li>Conectores com Drive, Gmail e agenda</li>
+                                <li>A biblioteca de pedidos testados</li>
+                                <li>Regras de uso seguro, dentro da LGPD</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="cartao produto revelar">
+                        <h3>Contabilidade Gerencial</h3>
+                        <p class="produto-fala">&ldquo;O contador manda o balanço e o dono não consegue decidir nada com ele. O mês fecha pelo extrato do banco.&rdquo;</p>
+                        <p>O resultado do mês por linha de negócio, todo mês, do mesmo jeito. Junto com o seu contador, nunca no lugar dele.</p>
+                    </li>
+                    <li class="cartao produto revelar">
+                        <h3>Análise Financeira</h3>
+                        <p class="produto-fala">&ldquo;Eu sei vender. O que eu não sei é se estou ganhando dinheiro.&rdquo;</p>
+                        <p>Onde a margem vaza, em reais, por produto, cliente e canal, e o caixa dos próximos meses.</p>
+                    </li>
+                    <li class="cartao produto revelar">
+                        <h3>Análise de Processos</h3>
+                        <p class="produto-fala">&ldquo;A empresa não anda sem mim.&rdquo;</p>
+                        <p>Os processos que travam, redesenhados e escritos, com quem decide o quê.</p>
+                    </li>
+                    <li class="cartao produto revelar">
+                        <h3>Pesquisa e Mapeamento de Mercado</h3>
+                        <p class="produto-fala">&ldquo;Quero abrir uma linha nova, ou ir para outra cidade, e não sei se tem mercado.&rdquo;</p>
+                        <p>O tamanho do mercado com a conta aberta, quem compra e onde tem espaço.</p>
+                    </li>
+                    <li class="cartao produto revelar">
+                        <h3>Análise Macroeconômica</h3>
+                        <p class="produto-fala">&ldquo;Os juros subiram, o dólar subiu, e eu não sei o que isso faz com a minha empresa.&rdquo;</p>
+                        <p>Juros, câmbio, inflação e crédito traduzidos em venda, custo e caixa, com um plano para cada cenário.</p>
+                    </li>
+                    <li class="cartao produto revelar">
+                        <h3>Experiência do Cliente</h3>
+                        <p class="produto-fala">&ldquo;O cliente compra uma vez e some.&rdquo;</p>
+                        <p>Onde o cliente desiste, reclama ou deixa de voltar, e o que mudar primeiro.</p>
+                    </li>
+                </ul>
+
+                <ol class="passos-consultoria revelar">
+                    <li><strong>Conversa sem custo.</strong> Você sai dela sabendo onde a empresa perde tempo e dinheiro, mesmo que não feche com a gente.</li>
+                    <li><strong>Proposta com escopo e prazo.</strong> O que vai ser entregue, por escrito, antes de começar.</li>
+                    <li><strong>Entrega em fases.</strong> Status toda semana e cada entrega mostrada a você, não guardada para o fim.</li>
+                </ol>
+
+                <blockquote class="honestidade revelar">
+                    <p>Quem faz o diagnóstico senta à mesa com quem constrói o sistema.</p>
+                    <footer>Quando a análise mostra que um sistema resolve, os Sistemas sob medida entram. Quando não resolve, a gente fala.</footer>
+                </blockquote>
+
+                <div class="acoes revelar">
+                    <a href="consultoria/" class="botao botao-vazio">Conheça a Consultoria e quem faz</a>
+                    <a href="conversar/" class="botao botao-cheio">Quero conversar</a>
+                </div>
             </div>
         </section>
 
@@ -986,103 +1155,6 @@
                     <p>E se o Bling, o Omie ou a ferramenta que você já paga resolver o seu problema, a gente fala.</p>
                     <footer>Você sai da conversa sabendo disso, sem proposta nenhuma na mão.</footer>
                 </blockquote>
-            </div>
-        </section>
-
-        <!-- 8b. Consultoria de gestão, o segundo produto (decisão do Felipe em 26/10/2026, site em 27/10/2026).
-             Os Sistemas vêm primeiro em todo texto público. Sem preço (não definido), sem prazo (estimativa
-             ainda não validada pelos sócios) e sem número de caso. Os produtos são os de cons_produtos
-             com situação "vender", na plataforma. -->
-        <section class="secao consultoria" id="consultoria" aria-labelledby="titulo-consultoria">
-            <div class="container">
-                <p class="etiqueta revelar">Consultoria de gestão</p>
-                <h2 id="titulo-consultoria" class="titulo-secao revelar">O que você decide no feeling passa a ter
-                    <em class="enfase">número</em>.</h2>
-                <p class="lead revelar">Para o dono que já vende bem e não sabe quanto sobra. A Consultoria olha os
-                    números, os processos e o mercado da sua empresa e entrega o que fazer, em ordem de impacto.</p>
-
-                <ul class="grade-produtos">
-                    <!-- 13/11/2026: a Consultoria de IA é o produto principal da Consultoria (pedido do Gustavo).
-                         Cartão maior, na linha inteira. Sem preço e sem prazo fechado: "em geral, três semanas". -->
-                    <li class="cartao produto produto-destaque revelar" id="consultoria-de-ia">
-                        <div class="destaque-texto">
-                            <p class="destaque-rotulo">O produto principal da Consultoria</p>
-                            <h3>Consultoria de IA para o seu negócio</h3>
-                            <p class="destaque-fala">&ldquo;Todo mundo fala de IA. Eu não sei o que ela faria aqui dentro.&rdquo;</p>
-                            <p>A gente entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e deixa
-                                ela configurada com o jeito da empresa. Funciona com Claude, ChatGPT, Gemini ou o Copilot do
-                                Office. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.</p>
-                            <p class="destaque-nota">Em geral, três semanas. A tarefa que pedir sistema aparece no mapa, e vira proposta à parte só se você quiser.</p>
-                            <div class="destaque-acoes">
-                                <a href="conversar/" class="botao botao-cheio">Quero conversar</a>
-                                <a href="consultoria-de-ia/" class="link-seta">Ver o kit e as etapas</a>
-                            </div>
-                        </div>
-                        <div class="destaque-detalhe">
-                            <ol class="destaque-etapas">
-                                <li><strong>Entender a empresa.</strong> A semana de cada área vira uma lista de tarefas: quem faz, quanto tempo leva, em que ferramenta.</li>
-                                <li><strong>Onde a IA entra.</strong> Cada tarefa ganha um destino: IA de prateleira, automação simples ou sistema sob medida. E a lista do que não comprar.</li>
-                                <li><strong>O kit pronto.</strong> A IA montada e testada na conta da empresa.</li>
-                                <li><strong>Aula e retorno.</strong> Duas horas ao vivo com a equipe, nas tarefas reais da semana. Trinta dias depois, a gente volta para medir o que pegou.</li>
-                            </ol>
-                            <p class="destaque-rotulo">O que vem no kit</p>
-                            <ul class="destaque-kit">
-                                <li>O arquivo da empresa, que a IA lê antes de cada conversa</li>
-                                <li>Assistentes prontos, um por tarefa</li>
-                                <li>Skills do Claude, ou GPTs no ChatGPT</li>
-                                <li>Conectores com Drive, Gmail e agenda</li>
-                                <li>A biblioteca de pedidos testados</li>
-                                <li>Regras de uso seguro, dentro da LGPD</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="cartao produto revelar">
-                        <h3>Contabilidade Gerencial</h3>
-                        <p class="produto-fala">&ldquo;O contador manda o balanço e o dono não consegue decidir nada com ele. O mês fecha pelo extrato do banco.&rdquo;</p>
-                        <p>O resultado do mês por linha de negócio, todo mês, do mesmo jeito. Junto com o seu contador, nunca no lugar dele.</p>
-                    </li>
-                    <li class="cartao produto revelar">
-                        <h3>Análise Financeira</h3>
-                        <p class="produto-fala">&ldquo;Eu sei vender. O que eu não sei é se estou ganhando dinheiro.&rdquo;</p>
-                        <p>Onde a margem vaza, em reais, por produto, cliente e canal, e o caixa dos próximos meses.</p>
-                    </li>
-                    <li class="cartao produto revelar">
-                        <h3>Análise de Processos</h3>
-                        <p class="produto-fala">&ldquo;A empresa não anda sem mim.&rdquo;</p>
-                        <p>Os processos que travam, redesenhados e escritos, com quem decide o quê.</p>
-                    </li>
-                    <li class="cartao produto revelar">
-                        <h3>Pesquisa e Mapeamento de Mercado</h3>
-                        <p class="produto-fala">&ldquo;Quero abrir uma linha nova, ou ir para outra cidade, e não sei se tem mercado.&rdquo;</p>
-                        <p>O tamanho do mercado com a conta aberta, quem compra e onde tem espaço.</p>
-                    </li>
-                    <li class="cartao produto revelar">
-                        <h3>Análise Macroeconômica</h3>
-                        <p class="produto-fala">&ldquo;Os juros subiram, o dólar subiu, e eu não sei o que isso faz com a minha empresa.&rdquo;</p>
-                        <p>Juros, câmbio, inflação e crédito traduzidos em venda, custo e caixa, com um plano para cada cenário.</p>
-                    </li>
-                    <li class="cartao produto revelar">
-                        <h3>Experiência do Cliente</h3>
-                        <p class="produto-fala">&ldquo;O cliente compra uma vez e some.&rdquo;</p>
-                        <p>Onde o cliente desiste, reclama ou deixa de voltar, e o que mudar primeiro.</p>
-                    </li>
-                </ul>
-
-                <ol class="passos-consultoria revelar">
-                    <li><strong>Conversa sem custo.</strong> Você sai dela sabendo onde a empresa perde tempo e dinheiro, mesmo que não feche com a gente.</li>
-                    <li><strong>Proposta com escopo e prazo.</strong> O que vai ser entregue, por escrito, antes de começar.</li>
-                    <li><strong>Entrega em fases.</strong> Status toda semana e cada entrega mostrada a você, não guardada para o fim.</li>
-                </ol>
-
-                <blockquote class="honestidade revelar">
-                    <p>Quem faz o diagnóstico senta à mesa com quem constrói o sistema.</p>
-                    <footer>Quando a análise mostra que um sistema resolve, os Sistemas sob medida entram. Quando não resolve, a gente fala.</footer>
-                </blockquote>
-
-                <div class="acoes revelar">
-                    <a href="consultoria/" class="botao botao-vazio">Conheça a Consultoria e quem faz</a>
-                    <a href="conversar/" class="botao botao-cheio">Quero conversar</a>
-                </div>
             </div>
         </section>
 

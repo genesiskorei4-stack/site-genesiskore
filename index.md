@@ -25,6 +25,17 @@ Com a GenesisKore, o aviso, o andamento do pedido, o documento e o relatório ch
 4. **A gente continua junto.** Depois do ar, acompanha, ajusta e corrige. Se algo falhar, o próprio sistema avisa a equipe.
 
 
+## Sistemas sob medida: exemplos do que a gente constrói
+
+Seis exemplos, de setores diferentes. Todo sistema é feito para uma empresa só: o seu pode juntar dois deles ou não se parecer com nenhum.
+
+- **Pedido digital ligado à nota** (distribuidora e atacado). O pedido entra uma vez, pelo celular do vendedor ou pelo próprio cliente, e segue para o emissor de nota que a empresa já usa.
+- **Cobrança que anda sozinha** (quem vende a prazo). Aviso antes do vencimento, lembrete depois dele e baixa quando o pagamento cai. Roda na própria GenesisKore.
+- **Lucro de cada nota fiscal** (indústria e distribuição de alimentos). O sistema lê as notas fiscais e mostra o lucro de cada venda, por produto e por ponto de venda. Já construído.
+- **Documento que sai pronto** (serviço e varejo de alto valor). Certificado, laudo ou recibo gerado na hora em que o trabalho termina, com QR code. Em operação na AUTH.
+- **Documentos do cliente sem correr atrás** (contabilidade e advocacia). O cliente recebe a lista do que falta, envia por um link e é lembrado até completar.
+- **Ficha da cliente e peça fora da vitrine** (loja de luxo e joalheria). O histórico de cada cliente e o paradeiro de cada peça que saiu em consignação ou para ajuste.
+
 ## Consultoria de gestão
 
 Quando o problema é não saber se a empresa está ganhando dinheiro, quem entra é a Consultoria de gestão, o segundo produto da GenesisKore. O que você decide no feeling passa a ter número.
