@@ -4559,3 +4559,22 @@ main [id] {
 .video-tela::-webkit-media-controls {
     display: none !important;
 }
+
+/* O segundo vídeo da seção fica com o texto à esquerda, para os dois não parecerem repetidos. */
+.sistema-video + .sistema-video {
+    margin-top: 16px;
+}
+
+@media (min-width: 1024px) {
+    .sistema-video-invertido {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr);
+    }
+
+    .sistema-video-invertido video {
+        order: 2;
+    }
+
+    .sistema-video-invertido figcaption {
+        padding: 0 0 0 12px;
+    }
+}
