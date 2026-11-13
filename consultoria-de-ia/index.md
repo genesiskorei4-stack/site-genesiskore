@@ -80,7 +80,7 @@ Nesse caso, quem fez o mapa senta com quem constrói os [Sistemas sob medida](ht
 ## Perguntas
 
 ### O que é uma consultoria de IA?
-É um trabalho curto para descobrir onde a inteligência artificial ajuda a sua empresa, deixar a IA configurada com o jeito dela e ensinar a equipe a usar. Na GenesisKore são quatro etapas: entender a empresa, mapear onde a IA entra, montar o kit e dar a aula, com um retorno 30 dias depois.
+É um trabalho curto para descobrir onde a inteligência artificial ajuda a sua empresa, deixar a IA configurada com o jeito dela e ensinar a equipe. São quatro etapas: entender, mapear, montar o kit e dar a aula, com retorno 30 dias depois.
 
 ### Quais ferramentas de IA vocês usam?
 As que fizerem sentido para a empresa: Claude, ChatGPT, Gemini, o Copilot do Office ou a IA que já vem no sistema que vocês usam. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.

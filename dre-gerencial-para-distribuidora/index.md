@@ -42,7 +42,7 @@ Com muitos produtos, fazer isso na mão todo mês fica pesado. Daí vale ler a m
 
 ## O que muda em 2027
 
-Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins (Lei Complementar 214/2025). A linha de imposto sobre a venda muda de conta, e com ela a margem de cada produto. Para saber como fica a regra de cada produto da sua distribuidora, confirme com o seu contador: este modelo é gerencial e não substitui a apuração.
+Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins ([Lei Complementar 214/2025](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm)). A linha de imposto sobre a venda muda de conta, e com ela a margem de cada produto. Para saber como fica a regra de cada produto da sua distribuidora, confirme com o seu contador: este modelo é gerencial e não substitui a apuração.
 
 ## Como usar o modelo
 

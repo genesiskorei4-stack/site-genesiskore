@@ -47,7 +47,7 @@ for cid,(slug,nome,tit) in CASES.items():
     extra='''
         <p><video muted loop playsinline controls preload="none" poster="/tela-auth-fila.webp" width="1006" height="948" style="max-width:100%;height:auto;background:#000" aria-label="Vídeo sem som da plataforma da AUTH: a fila de autenticação, o checklist da peça, o certificado emitido e a conferência pelo celular"><source src="/tela-auth.mp4" type="video/mp4"><source src="/tela-auth.webm" type="video/webm"></video></p>
         <p class="suave">A plataforma da AUTH em uso: fila, checklist, certificado e conferência pelo celular. Dados de exemplo.</p>
-        <h2>O que o fundador da AUTH diz</h2>
+        <h2>O que o fundador da AUTH diz?</h2>
         <blockquote>&ldquo;A GenesisKore tornou nossos processos na AUTH muito mais rápidos, completos e seguros.&rdquo;</blockquote>
         <p>&ldquo;Iniciamos com o processo de automatização da emissão dos Certificados AUTH, onde isso tornou-se possível com o trabalho executado com total excelência e compreensão do Felipe Concílio, após o Emissor de Certificados AUTH, os contatamos novamente para o desenvolvimento do sistema interno operacional da equipe de autenticação e sistema de administração geral, onde o resultado seguiu a mesma lógica, excelência do total.&rdquo;</p>
         <p>&ldquo;E no momento, estão trabalhando no desenvolvimento da plataforma geral de autenticações da AUTH, após mostrarem responsabilidade, comprometimento e expertise técnica nos projetos propostos.&rdquo;</p>
@@ -89,16 +89,16 @@ for cid,(slug,nome,tit) in CASES.items():
         <p class="suave">Atualizado em 13/11/2026.</p>
         <blockquote>{num} {resto}</blockquote>{fonte}{extra}
 
-        <h2>Antes</h2>
+        <h2>Como era antes?</h2>
         <p>{antes}</p>
 
-        <h2>O que a GenesisKore fez</h2>
+        <h2>O que a GenesisKore fez?</h2>
         <p>{fez}</p>
 
-        <h2>O que o sistema faz</h2>
+        <h2>O que o sistema faz?</h2>
 {lis}{insta}
 
-        <h2>Como um projeto assim começa</h2>
+        <h2>Como um projeto assim começa?</h2>
         <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
         <a class="botao" href="/conversar/">Quero conversar</a>
 

@@ -6,7 +6,7 @@ descricao: Preço sob consulta: o que pesa no valor de um sistema sob medida, o 
 etiqueta: Preço
 trilha: Quanto custa
 tipo_pagina: Article
-atualizado: 2026-10-30
+atualizado: 2026-11-13
 ---
 
 # Quanto custa um sistema sob medida para empresa
@@ -56,7 +56,7 @@ Porcentagem sobre o faturamento, taxa escondida e a conversa de diagnóstico. O 
 
 ## Quando não vale o investimento
 
-Se a empresa fatura bem abaixo de R$ 150 mil por mês, ou se o Bling, o Omie ou a ferramenta que você já paga resolvem, o sistema sob medida custa mais que o problema. Veja [Bling, Omie ou sistema sob medida](https://genesiskore.com/bling-omie-ou-sistema-sob-medida/). Para estimar quanto o trabalho repetitivo custa hoje, use a [calculadora do site](https://genesiskore.com/#calculadora): ela conta o funcionário CLT como 1,85 vez o salário, por causa de INSS, FGTS, 13º e férias.
+Se a empresa fatura bem abaixo de R$ 150 mil por mês, ou se o Bling, o Omie ou a ferramenta que você já paga resolvem, o sistema sob medida custa mais que o problema. Veja [Bling, Omie ou sistema sob medida](https://genesiskore.com/bling-omie-ou-sistema-sob-medida/). Para estimar quanto o trabalho repetitivo custa hoje, use a [calculadora do site](https://genesiskore.com/#calculadora): ela conta o funcionário CLT como 1,85 vez o salário. É uma estimativa da GenesisKore para empresa fora do Simples, somando o INSS da empresa ([Lei 8.212/1991](https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm), artigo 22), o FGTS ([Lei 8.036/1990](https://www.planalto.gov.br/ccivil_03/leis/l8036consol.htm)), o 13º salário ([Lei 4.090/1962](https://www.planalto.gov.br/ccivil_03/leis/l4090.htm)), as férias com um terço a mais ([Constituição, artigo 7º](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)) e os encargos sobre eles. No Simples Nacional o número é menor.
 
 ## O que perguntar ao comparar propostas
 

@@ -109,7 +109,7 @@ When the analysis shows that a system solves part of the problem, the Custom Sys
 
 ### What is the difference between the Consulting and the Custom Systems?
 
-The Custom Systems take the work that repeats every day off the team's hands. The Management Consulting gives the owner the number to decide: margin, cash, process, market. If what holds the company back is a task that repeats, it is a system. If it is a decision made without a number, it is consulting. In the first conversation we say which of the two makes sense, or neither.
+The Custom Systems take the task that repeats every day off the team's hands. The Management Consulting gives the owner the number to decide: margin, cash, process, market. In the first conversation we say which of the two makes sense, or neither.
 
 ### Does the Consulting replace my accountant?
 
@@ -125,7 +125,7 @@ Whichever fits the company: Claude, ChatGPT, Gemini, Microsoft Copilot or the AI
 
 ### Do I need a custom system after the AI Consulting?
 
-No. Many tasks are solved by off-the-shelf AI that is set up well, and the kit is built for that. When a task does call for a system, it shows up in the map with the reason, and becomes a separate proposal only if you want one.
+No. Many tasks are solved by off-the-shelf AI that is set up well, and the kit is built for that. When a task does call for a system, the map says why, and it becomes a separate proposal only if you want one.
 
 ### How much does it cost?
 

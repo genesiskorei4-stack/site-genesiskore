@@ -141,6 +141,25 @@
    "todos": [
     "consultoria de ia"
    ]
+  },
+  {
+   "id": "erp-sob-medida",
+   "frente": "sistemas",
+   "busca": "ERP sob medida para distribuidora (citada pelo Modo IA do Google em 13/11/2026)",
+   "todos": [
+    "erp sob medida"
+   ],
+   "pagina_propria": true
+  },
+  {
+   "id": "escolher-empresa",
+   "frente": "sistemas",
+   "busca": "como escolher empresa de software sob medida (o Modo IA citou guias de escolha em 13/11/2026)",
+   "todos": [
+    "escolher",
+    "software sob medida"
+   ],
+   "pagina_propria": true
   }
  ]
 }

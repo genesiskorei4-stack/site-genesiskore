@@ -45,7 +45,7 @@ Se a distribuidora vende poucos produtos, para poucos clientes, e o relatório d
 
 ## O que muda em 2027
 
-Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins (Lei Complementar 214/2025), e a conta do custo de cada produto muda. O sistema lê os campos do IBS e da CBS da nota desde o primeiro dia. A regra de cada produto, confirme com o seu contador.
+Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins ([Lei Complementar 214/2025](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm)), e a conta do custo de cada produto muda. O sistema lê os campos do IBS e da CBS da nota desde o primeiro dia. A regra de cada produto, confirme com o seu contador.
 
 ## Perguntas
 

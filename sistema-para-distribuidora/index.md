@@ -8,7 +8,7 @@ trilha: Sistema para distribuidora
 servico: Sistema sob medida para distribuidora e atacado
 tipo_servico: Desenvolvimento de software sob medida
 publico: Distribuidoras e atacadistas que faturam a partir de uns R$ 150 mil por mês
-atualizado: 2026-10-30
+atualizado: 2026-11-13
 ---
 
 # Sistema para distribuidora e atacado, feito do jeito da sua operação
@@ -36,11 +36,11 @@ A GenesisKore, de São Paulo, constrói sistemas sob medida para distribuidoras 
 
 O ERP segue sendo o lugar da nota e do estoque. O sistema sob medida cobre o que ele não faz do seu jeito e conversa com ele. Se o Bling ou o Omie já resolvem a sua operação, a gente fala isso na primeira conversa e você sai sem proposta. A comparação honesta está em [Bling, Omie ou sistema sob medida](https://genesiskore.com/bling-omie-ou-sistema-sob-medida/).
 
-Se o que trava é estoque em mais de um galpão, com endereçamento e separação, o caminho pode ser um ERP maior ou um sistema de armazém. A gente também diz isso.
+Se o que trava é estoque em mais de um galpão, com endereçamento e separação, o caminho pode ser um ERP maior ou um sistema de armazém. A gente também diz isso. Se a dúvida é fazer um ERP inteiro, veja [ERP sob medida para distribuidora](https://genesiskore.com/erp-sob-medida-para-distribuidora/).
 
 ## O que muda em 2027
 
-Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins (Lei Complementar 214/2025). Para quem calcula margem pela nota, o custo de cada produto muda de conta. Os sistemas que a GenesisKore constrói leem os campos do IBS e da CBS da nota desde o primeiro dia. A regra tributária de cada produto, confirme com o seu contador: a gente não dá parecer tributário.
+Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins ([Lei Complementar 214/2025](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm)). Para quem calcula margem pela nota, o custo de cada produto muda de conta. Os sistemas que a GenesisKore constrói leem os campos do IBS e da CBS da nota desde o primeiro dia. A regra tributária de cada produto, confirme com o seu contador: a gente não dá parecer tributário.
 
 ## Por ramo
 

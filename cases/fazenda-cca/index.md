@@ -9,15 +9,15 @@ Atualizado em 13/11/2026.
 
 > Zero dificuldade para a equipe: tudo pelo celular, direto do pasto.
 
-## Antes
+## Como era antes?
 
 As vendas de gado eram anotadas em bloquinho, que se perdia na caminhonete. O dono não enxergava o caixa.
 
-## O que a GenesisKore fez
+## O que a GenesisKore fez?
 
 Um sistema de gestão completo, feito para quem está no campo. Num aplicativo só, simples o bastante para o peão usar e preencher, a fazenda cuida de tudo o que antes ficava espalhado.
 
-## O que o sistema faz
+## O que o sistema faz?
 
 ### Pastos e lotes
 
@@ -39,7 +39,7 @@ Quem prefere não abrir o aplicativo manda pelo celular. O sistema entende, orga
 
 Todo mês, semestre e ano sai o relatório completo do caixa.
 
-## Como um projeto assim começa
+## Como um projeto assim começa?
 
 Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 

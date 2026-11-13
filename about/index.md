@@ -9,13 +9,13 @@ The company grew and still depends on you. GenesisKore builds custom systems and
 
 The company was founded in August 2025 in São Paulo and serves all of Brazil, remotely or on site when needed. The team is small and, on larger projects, works with partner developers. Conversations and proposals can be in Portuguese, English or Spanish.
 
-## What we do
+## What does GenesisKore do?
 
 We take repetitive work off the team's hands. Orders checked, documents issued, invoices sent, customers told about their delivery, the monthly report ready in the inbox. Often this runs behind the WhatsApp, e-mail and spreadsheets the company already uses. When a new screen is needed, it is made for that person's job and opens on the phone.
 
 The other half of the work is showing the money: how much is left over per product, per customer and per channel, and whether the month closes.
 
-## Who it is for
+## Who is it for?
 
 For the owner whose company has revenue from about R$ 150 thousand per month and who wants to step out of the day-to-day operation. The sectors where we work most are distribution and wholesale, high-value retail and service firms such as law, accounting and engineering offices.
 
@@ -25,7 +25,7 @@ What we don't do: chatbots that talk to customers on WhatsApp, software for clin
 
 Since October 2026 GenesisKore has a second product, GenesisKore Management Consulting: managerial accounting, financial analysis, processes, market research, economic scenarios and customer experience, so the owner decides with numbers. The people who diagnose sit at the same table as the people who build the system. [See the Management Consulting](https://genesiskore.com/management-consulting/).
 
-## Who the partners are
+## Who are the partners?
 
 GenesisKore was founded in August 2025 by Felipe Concilio and Gustavo Cossignani. In October 2026, with the Management Consulting product, Vitor Costa and João Cavalcanti joined as partners. In Consulting, the four of them work together on every project.
 
@@ -53,7 +53,7 @@ Partner · finance and numbers
 
 He looks after the numbers: margin, cost and cash for Consulting clients, and the company's own finances together with Felipe. He studies Economics at FIA, presides over FIA Startups and works on sales alongside Gustavo.
 
-## How we work
+## How does GenesisKore work?
 
 First a diagnosis conversation, which costs nothing. Then a fixed-price proposal, in three options, with a written list of what the system will do. The first part is in use within 2 weeks, and the rest comes in phases. After go-live we follow up, adjust and fix, and the system itself alerts our team when something fails.
 

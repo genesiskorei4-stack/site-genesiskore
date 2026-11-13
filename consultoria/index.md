@@ -59,6 +59,14 @@ O que você recebe Cenários para os próximos 12 meses em reais, o teste do cai
 
 O que você recebe A jornada do cliente mapeada, os pontos de atrito em ordem de impacto, um padrão de atendimento e indicadores para acompanhar.
 
+## Consultoria ou sistema sob medida?
+
+| Situação | O que resolve | O que você recebe |
+|---|---|---|
+| A decisão é tomada sem número: margem, caixa, processo, mercado | Consultoria de gestão | O número para decidir, com a análise escrita |
+| A equipe repete a mesma tarefa todo dia, do mesmo jeito | [Sistema sob medida](https://genesiskore.com/sistemas-sob-medida/) | A tarefa rodando sozinha |
+| Não sabe por onde a IA entra no trabalho da empresa | Consultoria de IA | O mapa, a IA configurada e a aula com a equipe |
+
 ## Como funciona
 
 - **Conversa sem custo.** Você sai dela sabendo onde a empresa perde tempo e dinheiro, mesmo que não feche com a gente.
@@ -90,7 +98,7 @@ Quando a análise mostra que um sistema resolve parte do problema, os Sistemas s
 
 ### Qual a diferença entre a Consultoria e os Sistemas?
 
-Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.
+Os Sistemas sob medida tiram da equipe a tarefa que se repete todo dia. A Consultoria de gestão dá ao dono o número para decidir: margem, caixa, processo, mercado. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.
 
 ### A Consultoria substitui o meu contador?
 

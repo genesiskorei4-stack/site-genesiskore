@@ -13,7 +13,7 @@ import html, os, re, sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://genesiskore.com/'
-PAGINAS = ('sobre', 'contato', 'consultoria', 'management-consulting', 'about', 'contact',
+PAGINAS = ('sobre', 'contato', 'consultoria', 'management-consulting', 'about', 'contact', 'privacidade', 'privacy',
            'cases/auth', 'cases/fazenda-cca', 'cases/rastro')
 
 
@@ -55,7 +55,12 @@ def markdown(pasta):
         tag, corpo = m.group(1), m.group(2)
         if tag == 'tr':
             celulas = [em_linha(c, pasta) for c in re.findall(r'<t[hd][^>]*>(.*?)</t[hd]>', corpo, re.S)]
+            primeira = not saida or not saida[-1].startswith('|')
+            if primeira and saida and saida[-1] != '':
+                saida.append('')
             saida.append('| ' + ' | '.join(celulas) + ' |')
+            if primeira:  # a linha do cabeçalho pede a linha de traços embaixo
+                saida.append('|' + '---|' * len(celulas))
             continue
         texto = em_linha(corpo, pasta)
         if not texto:

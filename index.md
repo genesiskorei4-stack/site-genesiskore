@@ -92,7 +92,7 @@ Depende do que vai ser feito, e por isso o prazo vem escrito na proposta, junto 
 
 ### E se não funcionar do jeito combinado?
 
-A proposta diz por escrito o que o sistema vai fazer. Cada parte entra em uso pela sua equipe antes da próxima, e o que não fizer o que está escrito ali a gente corrige. Depois do ar, o acompanhamento e as correções estão na mensalidade.
+A gente corrige. A proposta diz por escrito o que o sistema vai fazer, cada parte entra em uso antes da próxima, e o que não fizer o que está escrito é corrigido. Depois do ar, as correções estão na mensalidade.
 
 ### Minha empresa é pequena demais?
 
@@ -116,7 +116,7 @@ Não. Você explica como o seu negócio funciona, do seu jeito. A parte técnica
 
 ### Qual a diferença entre a Consultoria e os Sistemas?
 
-Os Sistemas sob medida tiram da mão da equipe o trabalho que se repete todo dia. A Consultoria de gestão dá o número para decidir: margem, caixa, processo, mercado. Se o que trava é uma tarefa que se repete, é sistema. Se é uma decisão tomada sem número, é consultoria. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.
+Os Sistemas sob medida tiram da equipe a tarefa que se repete todo dia. A Consultoria de gestão dá ao dono o número para decidir: margem, caixa, processo, mercado. Na conversa a gente diz qual dos dois faz sentido, ou se nenhum.
 
 ### A Consultoria substitui o meu contador?
 
@@ -128,11 +128,11 @@ Não. Cada um é contratado sozinho. Quando a análise mostra que um sistema res
 
 ### O que é a Consultoria de IA?
 
-É o produto principal da Consultoria. A equipe entende como a sua empresa trabalha, mostra quais tarefas a IA pode assumir e entrega a IA já configurada com o jeito da empresa, com uma aula ao vivo para a equipe e um retorno 30 dias depois. Em geral, leva três semanas.
+É o produto principal da Consultoria: a gente mostra quais tarefas a IA pode assumir, entrega a IA configurada com o jeito da empresa e dá uma aula ao vivo para a equipe, com um retorno 30 dias depois. Em geral, leva três semanas.
 
 ### Quais ferramentas de IA vocês usam?
 
-As que fizerem sentido para a empresa: Claude, ChatGPT, Gemini, o Copilot do Office ou a IA que já vem no sistema que vocês usam. A assinatura fica no nome da empresa. Se a ferramenta que você já paga resolve, a gente configura essa e não indica outra.
+As que fizerem sentido para a empresa: Claude, ChatGPT, Gemini, o Copilot do Office ou a IA do sistema que vocês já usam, com a assinatura no nome da empresa. Se a que você já paga resolve, a gente configura essa.
 
 ### Depois da Consultoria de IA eu preciso de um sistema?
 

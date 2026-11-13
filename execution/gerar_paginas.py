@@ -127,6 +127,40 @@ def blocos(corpo):
     return saida
 
 
+# "Leia também" no fim de cada página gerada (13/11/2026, auditoria de SEO): duas ou três vizinhas do
+# mesmo assunto, para nenhuma página depender de um link só. O nome vem do campo `trilha` de cada uma.
+RELACIONADAS = {
+    'automacao-de-processos': ['cobranca-automatica', 'documento-automatico', 'sistemas-sob-medida'],
+    'automacao-para-escritorio': ['documento-automatico', 'cobranca-automatica', 'automacao-de-processos'],
+    'bling-omie-ou-sistema-sob-medida': ['erp-sob-medida-para-distribuidora', 'quanto-custa-um-sistema-sob-medida', 'sistema-para-substituir-planilhas'],
+    'cobranca-automatica': ['automacao-de-processos', 'documento-automatico', 'lucro-por-produto'],
+    'como-escolher-empresa-de-software-sob-medida': ['quanto-custa-um-sistema-sob-medida', 'bling-omie-ou-sistema-sob-medida', 'sistemas-sob-medida'],
+    'consultoria-de-ia': ['consultoria-financeira', 'automacao-de-processos'],
+    'consultoria-financeira': ['dre-gerencial-para-distribuidora', 'lucro-por-produto', 'consultoria-de-ia'],
+    'documento-automatico': ['automacao-para-escritorio', 'cobranca-automatica', 'automacao-de-processos'],
+    'dre-gerencial-para-distribuidora': ['lucro-por-produto', 'consultoria-financeira', 'sistema-para-distribuidora'],
+    'erp-sob-medida-para-distribuidora': ['sistema-para-distribuidora', 'bling-omie-ou-sistema-sob-medida', 'sistema-de-pedidos-b2b'],
+    'ficha-de-cliente-para-joalheria': ['sistemas-sob-medida', 'documento-automatico', 'automacao-de-processos'],
+    'lucro-por-produto': ['dre-gerencial-para-distribuidora', 'sistema-para-distribuidora', 'consultoria-financeira'],
+    'quanto-custa-um-sistema-sob-medida': ['como-escolher-empresa-de-software-sob-medida', 'bling-omie-ou-sistema-sob-medida', 'sistemas-sob-medida'],
+    'sistema-de-pedidos-b2b': ['sistema-para-distribuidora', 'erp-sob-medida-para-distribuidora', 'cobranca-automatica'],
+    'sistema-para-distribuidora': ['erp-sob-medida-para-distribuidora', 'sistema-para-distribuidora-de-alimentos', 'sistema-de-pedidos-b2b'],
+    'sistema-para-distribuidora-de-alimentos': ['sistema-para-distribuidora', 'lucro-por-produto', 'dre-gerencial-para-distribuidora'],
+    'sistema-para-substituir-planilhas': ['bling-omie-ou-sistema-sob-medida', 'como-escolher-empresa-de-software-sob-medida', 'automacao-de-processos'],
+    'sistemas-sob-medida': ['como-escolher-empresa-de-software-sob-medida', 'quanto-custa-um-sistema-sob-medida', 'erp-sob-medida-para-distribuidora'],
+}
+
+
+def leia_tambem(pasta):
+    itens = []
+    for vizinha in RELACIONADAS.get(pasta, []):
+        dados, _ = cabecalho(ler(os.path.join(vizinha, 'index.md')))
+        itens.append(f'            <li><a href="/{vizinha}/">{html.escape(dados.get("trilha", vizinha))}</a></li>')
+    if not itens:
+        return ''
+    return '\n        <h2>Leia também</h2>\n        <ul class="leia-tambem">\n' + '\n'.join(itens) + '\n        </ul>'
+
+
 def montar(pasta, md, estilo):
     dados, corpo = cabecalho(md)
     url = BASE + pasta + '/'
@@ -169,6 +203,7 @@ def montar(pasta, md, estilo):
         else:
             itens = '\n'.join(f'            <li>{em_linha(i)}</li>' for i in c)
             corpo_html.append(f'        <{t}>\n{itens}\n        </{t}>')
+    corpo_html.append(leia_tambem(pasta))
     atualizado = dados.get('atualizado', '')
     if atualizado:
         a, m_, d = atualizado.split('-')

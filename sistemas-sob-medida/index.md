@@ -34,16 +34,18 @@ A pergunta que decide é uma só: isso se repete todo dia do mesmo jeito? Se sim
 
 ## Quando você não precisa de sistema sob medida
 
-Se a empresa fatura bem abaixo de R$ 150 mil por mês, ou se o Bling, o Omie ou a ferramenta que você já paga resolvem, um sistema sob medida sai mais caro que o problema. A gente diz isso na primeira conversa, sem proposta nenhuma. A comparação está em [Bling, Omie ou sistema sob medida](https://genesiskore.com/bling-omie-ou-sistema-sob-medida/).
+Se a empresa fatura bem abaixo de R$ 150 mil por mês, ou se o Bling, o Omie ou a ferramenta que você já paga resolvem, um sistema sob medida sai mais caro que o problema. A gente diz isso na primeira conversa, sem proposta nenhuma. A comparação está em [Bling, Omie ou sistema sob medida](https://genesiskore.com/bling-omie-ou-sistema-sob-medida/), e o que perguntar a quem vai construir está em [como escolher empresa de software sob medida](https://genesiskore.com/como-escolher-empresa-de-software-sob-medida/).
 
 Também não fazemos robô que conversa com cliente no WhatsApp, sistema para clínica, site institucional nem loja virtual pronta.
 
 ## Prateleira ou sob medida
 
-- **Jeito de trabalhar.** No sistema de prateleira, a sua equipe aprende a trabalhar do jeito do sistema. No sob medida, o sistema aprende o jeito da sua equipe.
-- **O que você paga.** Na prateleira, você paga por recurso que nunca vai usar. No sob medida, só pelo que resolve o seu problema.
-- **Tela nova.** A prateleira traz tela nova para todo mundo aprender. O sob medida funciona no WhatsApp, no email e na planilha que vocês já usam, ou numa tela simples feita para cada função.
-- **Suporte.** Na prateleira, fila e protocolo. Aqui, você fala direto com quem construiu.
+| Ponto | Sistema de prateleira | Sistema sob medida |
+|---|---|---|
+| Jeito de trabalhar | A equipe aprende o jeito do sistema | O sistema aprende o jeito da equipe |
+| O que você paga | Recurso que nunca vai usar | Só o que resolve o seu problema |
+| Tela nova | Tela nova para todo mundo aprender | Funciona no WhatsApp, no e-mail e na planilha que vocês já usam, ou numa tela simples para cada função |
+| Suporte | Fila e protocolo | Direto com quem construiu |
 
 Se o Bling, o Omie ou a ferramenta que você já paga resolver o seu problema, a gente fala.
 
@@ -70,7 +72,7 @@ Sem porcentagem sobre o faturamento e sem taxa escondida. Cada cliente tem o pr�
 Depende do que vai ser feito. O sistema entra em uso por partes, e o prazo de cada uma vem escrito na proposta, junto com o preço.
 
 ### Quanto custa um sistema sob medida?
-Depende do tamanho do que vai ser feito, e por isso a proposta vem em três opções com preço fechado. Tem a implementação, paga uma vez, e a mensalidade, que mantém o sistema no ar. O que pesa no preço está em [quanto custa um sistema sob medida](https://genesiskore.com/quanto-custa-um-sistema-sob-medida/).
+Depende do tamanho do que vai ser feito: a proposta vem em três opções com preço fechado, com a implementação paga uma vez e a mensalidade que mantém o sistema no ar. O que pesa no preço está em [quanto custa um sistema sob medida](https://genesiskore.com/quanto-custa-um-sistema-sob-medida/).
 
 ### Preciso trocar o ERP que já uso?
 Na maioria das vezes, não. O sistema lê e escreve no ERP que você já tem e cobre só o que ele não faz do seu jeito.

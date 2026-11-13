@@ -9,15 +9,15 @@ Atualizado em 13/11/2026.
 
 > Zero trabalho manual entre a medição e a decisão de cada pneu.
 
-## Antes
+## Como era antes?
 
 Centenas de pneus controlados no olho, sem histórico. Resultado: troca antes da hora e pneu falhando na estrada.
 
-## O que a GenesisKore fez
+## O que a GenesisKore fez?
 
 Um aplicativo para a Rastro cuidar da frota de caminhões e do estoque de pneus dos clientes dela, que são transportadoras. Um controle muito mais fino, e rastreável do começo ao fim.
 
-## O que o sistema faz
+## O que o sistema faz?
 
 ### Cada pneu com história
 
@@ -31,7 +31,7 @@ O técnico mede, e o sistema calcula o desgaste e guarda tudo numa ficha em PDF.
 
 Todo mês chega o relatório dizendo o que trocar e o que rodiziar.
 
-## Como um projeto assim começa
+## Como um projeto assim começa?
 
 Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 
