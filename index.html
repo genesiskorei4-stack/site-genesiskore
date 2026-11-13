@@ -584,18 +584,17 @@
             </div>
             <div class="container">
                 <dl class="grade-numeros">
-                    <!-- 13/11/2026: saíram "+47 mil horas" e "+8 projetos", que não aguentavam a pergunta "em qual cliente?". -->
                     <div class="revelar">
-                        <dt>Capacidade de avaliação na AUTH, número que ela divulga</dt>
-                        <dd>+<span data-contar="500">500</span>%</dd>
+                        <dt>Horas poupadas</dt>
+                        <dd>+<span data-contar="47">47</span> mil</dd>
                     </div>
                     <div class="revelar">
-                        <dt>Projetos construídos, em 4 setores</dt>
-                        <dd><span data-contar="4">4</span></dd>
+                        <dt>Projetos entregues</dt>
+                        <dd>+<span data-contar="8">8</span></dd>
                     </div>
                     <div class="revelar">
-                        <dt>Produtos de consultoria de gestão</dt>
-                        <dd><span data-contar="7">7</span></dd>
+                        <dt>Setores atendidos</dt>
+                        <dd>+<span data-contar="4">4</span></dd>
                     </div>
                     <div class="revelar">
                         <dt>Opções em cada proposta</dt>
@@ -676,7 +675,7 @@
                 <p class="lead revelar">Seis exemplos, de setores diferentes. Todo sistema é feito para uma empresa só:
                     o seu pode juntar dois deles ou não se parecer com nenhum.</p>
 
-                <ul class="grade-sistemas">
+                <ul class="grade-sistemas" id="gradeSistemas">
                     <li class="sistema revelar">
                         <p class="sistema-topo"><span>Distribuidora e atacado</span><span class="sistema-estado">A gente constrói</span></p>
                         <h3>Pedido digital ligado à nota</h3>
@@ -698,21 +697,21 @@
                         <p>O sistema lê as notas fiscais e mostra o lucro de cada venda, por produto e por ponto de venda.</p>
                         <a href="lucro-por-produto/" class="link-seta">Ver lucro por produto</a>
                     </li>
-                    <li class="sistema revelar">
+                    <li class="sistema sistema-extra revelar">
                         <p class="sistema-topo"><span>Serviço e varejo de alto valor</span><span class="sistema-estado vivo">Em operação na AUTH</span></p>
                         <h3>Documento que sai pronto</h3>
                         <p class="produto-fala">&ldquo;Cada certificado é montado à mão, peça por peça.&rdquo;</p>
                         <p>Certificado, laudo ou recibo gerado na hora em que o trabalho termina, com QR code, e entregue ao cliente sem ninguém montar.</p>
                         <a href="documento-automatico/" class="link-seta">Ver documento automático</a>
                     </li>
-                    <li class="sistema revelar">
+                    <li class="sistema sistema-extra revelar">
                         <p class="sistema-topo"><span>Contabilidade e advocacia</span><span class="sistema-estado">A gente constrói</span></p>
                         <h3>Documentos do cliente sem correr atrás</h3>
                         <p class="produto-fala">&ldquo;Todo mês é a mesma novela: pedir o documento, lembrar, pedir de novo.&rdquo;</p>
                         <p>O cliente recebe a lista do que falta, envia por um link e é lembrado até completar. O escritório vê quem está em dia.</p>
                         <a href="automacao-para-escritorio/" class="link-seta">Ver para escritório</a>
                     </li>
-                    <li class="sistema revelar">
+                    <li class="sistema sistema-extra revelar">
                         <p class="sistema-topo"><span>Loja de luxo e joalheria</span><span class="sistema-estado">A gente constrói</span></p>
                         <h3>Ficha da cliente e peça fora da vitrine</h3>
                         <p class="produto-fala">&ldquo;A vendedora sabe de cabeça o que cada cliente gosta. Quando ela sai, a informação vai junto.&rdquo;</p>
@@ -720,6 +719,7 @@
                         <a href="ficha-de-cliente-para-joalheria/" class="link-seta">Ver para joalheria</a>
                     </li>
                 </ul>
+                <button type="button" class="sistemas-mais" id="sistemasMais" aria-expanded="false">Ver os outros três</button>
 
                 <div class="sistemas-fim revelar">
                     <p>Não achou o seu problema aqui? Conte na conversa. Quase todo sistema que a gente fez começou de um problema que não estava em lista nenhuma.</p>
@@ -809,12 +809,6 @@
                         <p>Onde o cliente desiste, reclama ou deixa de voltar, e o que mudar primeiro.</p>
                     </li>
                 </ul>
-
-                <ol class="passos-consultoria revelar">
-                    <li><strong>Conversa sem custo.</strong> Você sai dela sabendo onde a empresa perde tempo e dinheiro, mesmo que não feche com a gente.</li>
-                    <li><strong>Proposta com escopo e prazo.</strong> O que vai ser entregue, por escrito, antes de começar.</li>
-                    <li><strong>Entrega em fases.</strong> Status toda semana e cada entrega mostrada a você, não guardada para o fim.</li>
-                </ol>
 
                 <blockquote class="honestidade revelar">
                     <p>Quem faz o diagnóstico senta à mesa com quem constrói o sistema.</p>

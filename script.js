@@ -555,3 +555,17 @@ remedir();
 if (location.hash === '#conversar' || location.hash === '#diagnostico') {
     location.replace(`conversar/${location.search}`);
 }
+
+/* ------------------------------------------------------------ sistemas: os outros três, no celular (13/11/2026) */
+
+const sistemasMais = document.getElementById('sistemasMais');
+const gradeSistemas = document.getElementById('gradeSistemas');
+if (sistemasMais && gradeSistemas) {
+    sistemasMais.addEventListener('click', () => {
+        gradeSistemas.classList.add('aberta');
+        gradeSistemas.querySelectorAll('.sistema-extra').forEach((cartao) => cartao.classList.add('visivel'));
+        sistemasMais.setAttribute('aria-expanded', 'true');
+        sistemasMais.hidden = true;
+        gradeSistemas.querySelector('.sistema-extra a, .sistema-extra')?.focus?.();
+    });
+}

@@ -197,7 +197,7 @@ h3 {
 
 .etiqueta {
     font-family: var(--mono);
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -267,7 +267,7 @@ h3 {
 
 .mini {
     font-family: var(--mono);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -986,7 +986,7 @@ body.travado {
     gap: 10px;
     margin-bottom: 8px;
     font-family: var(--mono);
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1090,7 +1090,7 @@ body.travado {
 
 .aviso-hora {
     font-family: var(--mono);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -1159,7 +1159,7 @@ body.travado {
 }
 
 .abertura .etiqueta {
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
 }
 
@@ -1310,7 +1310,7 @@ body.travado {
 
 .grade-numeros dt {
     font-family: var(--mono);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1416,7 +1416,7 @@ body.travado {
     display: block;
     margin-top: 4px;
     font-family: var(--mono);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.45);
@@ -1505,7 +1505,7 @@ body.travado {
 
 .resultado-titulo {
     font-family: var(--mono);
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1590,7 +1590,7 @@ body.travado {
 
 .case-aba span {
     font-family: var(--mono);
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     letter-spacing: 0.12em;
 }
 
@@ -1783,7 +1783,7 @@ body.travado {
     border: 0;
     cursor: pointer;
     font-family: var(--mono);
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1814,7 +1814,7 @@ body.travado {
     gap: 10px;
     margin-top: 16px;
     font-family: var(--mono);
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #6e6e6e;
@@ -1938,7 +1938,7 @@ body.travado {
 
 .passo-numero {
     font-family: var(--mono);
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     letter-spacing: 0.16em;
     color: rgba(255, 255, 255, 0.45);
     margin-bottom: 8px;
@@ -1967,7 +1967,7 @@ body.travado {
     display: block;
     margin-bottom: 2px;
     font-family: var(--mono);
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -2013,7 +2013,7 @@ body.travado {
 .comparacao-cabecalho span {
     border-top: 0;
     font-family: var(--mono);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -3016,7 +3016,7 @@ body.travado {
 
 .destaque-rotulo {
     font-family: var(--mono);
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -3239,7 +3239,7 @@ body.travado {
     gap: 12px;
     padding: 10px 0 12px;
     font-family: var(--mono);
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--suave);
@@ -3405,7 +3405,7 @@ body.travado {
     padding-top: 14px;
     border-top: 1px solid var(--linha);
     font-family: var(--mono);
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--suave);
@@ -3561,7 +3561,7 @@ body.travado {
         gap: 14px;
         margin-top: 18px;
         font-family: var(--mono);
-        font-size: 0.68rem;
+        font-size: 0.72rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--suave);
@@ -3780,7 +3780,7 @@ body.travado {
     justify-content: space-between;
     gap: 6px 14px;
     font-family: var(--mono);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--suave-escuro);
@@ -3998,4 +3998,114 @@ body.travado {
 
 #compromissos {
     border-top: 1px solid var(--linha-escura);
+}
+
+
+/* ------------------------------------------------------------ leitura e toque (13/11/2026)
+   Auditoria da página: etiqueta de 10 px subiu para 11,5 px (acima), todo alvo de toque no celular
+   tem 44 px de altura, a âncora não para debaixo do topo fixo, e o celular mostra menos de uma vez. */
+
+main [id] {
+    scroll-margin-top: calc(var(--topo) + 12px);
+}
+
+.link-seta {
+    min-height: 44px;
+}
+
+.sistemas-mais {
+    display: none;
+}
+
+@media (max-width: 719px) {
+    .rodape-links a,
+    .rodape-fim a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    .rodape-links {
+        gap: 0;
+    }
+
+    .js .grade-sistemas:not(.aberta) .sistema-extra {
+        display: none;
+    }
+
+    .js .sistemas-mais {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 56px;
+        padding: 0 20px;
+        border: 1px solid var(--linha-escura);
+        border-top: 0;
+        background: var(--preto);
+        color: var(--branco);
+        font-family: var(--titulo);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .js .sistemas-mais::after {
+        content: '+';
+        font-family: var(--mono);
+        font-size: 1.1rem;
+    }
+
+    .js .sistemas-mais[hidden] {
+        display: none;
+    }
+
+    /* No celular o cartão da Consultoria de IA fica com as quatro etapas. O kit está na página dela. */
+    .destaque-detalhe .destaque-rotulo,
+    .destaque-kit {
+        display: none;
+    }
+}
+
+@media (max-width: 719px) {
+    /* Consultoria de IA no celular: o que é e o botão. As etapas e o kit estão na página dela. */
+    .destaque-etapas {
+        display: none;
+    }
+
+    .grade-produtos .produto:not(.produto-destaque) {
+        position: relative;
+        padding-right: 44px;
+    }
+
+    .grade-produtos .produto:not(.produto-destaque)::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: inherit;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* Prateleira x GenesisKore: no celular fica só o que a casa faz, em quatro linhas. */
+    .processo-sob-medida .comparacao-cabecalho,
+    .processo-sob-medida .comparacao-linha span:first-child {
+        display: none;
+    }
+
+    .processo-sob-medida .comparacao-linha:not(.comparacao-cabecalho) {
+        display: block;
+    }
+
+    .processo-sob-medida .comparacao-linha span:last-child {
+        display: block;
+    }
+
+    .processo-sob-medida {
+        margin-top: 48px;
+        padding-top: 40px;
+    }
 }
