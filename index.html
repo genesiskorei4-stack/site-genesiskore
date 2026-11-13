@@ -523,15 +523,17 @@
                     <h1 class="abertura-titulo">
                         <span class="palavra"><span>O</span></span>
                         <span class="palavra"><span>trabalho</span></span>
-                        <span class="palavra"><span>repetitivo</span></span>
-                        <span class="palavra"><span>da</span></span>
-                        <span class="palavra"><span>sua</span></span>
-                        <span class="palavra"><span>empresa,</span></span>
+                        <span class="palavra"><span>repetitivo,</span></span>
                         <span class="palavra"><span>rodando</span></span>
                         <span class="palavra"><span><em class="enfase">sozinho</em>.</span></span>
                     </h1>
-                    <p class="lead suave entrada">Pedidos, documentos, cobrança e os números do negócio funcionando
-                        sem ninguém fazer à mão. Do jeito da sua empresa, com preço fechado antes de começar.</p>
+                    <p class="lead suave entrada">Sistemas sob medida tiram da mão da equipe o pedido, o documento e a
+                        cobrança. A Consultoria de gestão mostra quanto sobra e por onde a IA entra na sua empresa.</p>
+                    <!-- 13/11/2026: as duas entradas da casa na primeira tela (pedido do Gustavo). -->
+                    <div class="portas entrada">
+                        <a href="#sistemas" class="porta"><span>Sistemas sob medida</span><small>Para o trabalho que se repete</small></a>
+                        <a href="#consultoria" class="porta"><span>Consultoria de gestão</span><small>Para decidir com número, e começar com IA</small></a>
+                    </div>
                     <div class="acoes entrada">
                         <a href="conversar/" class="botao botao-cheio botao-brilho">
                             Quero conversar
@@ -539,10 +541,7 @@
                         </a>
                     </div>
                     <p class="garantia-curta entrada">A conversa de diagnóstico não custa nada. Você sai dela sabendo o que
-                        vale automatizar, mesmo que não feche com a gente.</p>
-                    <p class="abertura-consultoria entrada">Quando o problema é não saber se a empresa está ganhando dinheiro,
-                        quem entra é a <a href="#consultoria">Consultoria de gestão</a>. Se a dúvida é por onde começar com IA,
-                        tem a <a href="#consultoria-de-ia">Consultoria de IA</a>.</p>
+                        vale fazer, mesmo que não feche com a gente.</p>
                 </div>
             </div>
 
@@ -585,17 +584,18 @@
             </div>
             <div class="container">
                 <dl class="grade-numeros">
+                    <!-- 13/11/2026: saíram "+47 mil horas" e "+8 projetos", que não aguentavam a pergunta "em qual cliente?". -->
                     <div class="revelar">
-                        <dt>Horas poupadas</dt>
-                        <dd>+<span data-contar="47">47</span> mil</dd>
+                        <dt>Capacidade de avaliação na AUTH, número que ela divulga</dt>
+                        <dd>+<span data-contar="500">500</span>%</dd>
                     </div>
                     <div class="revelar">
-                        <dt>Projetos entregues</dt>
-                        <dd>+<span data-contar="8">8</span></dd>
+                        <dt>Projetos construídos, em 4 setores</dt>
+                        <dd><span data-contar="4">4</span></dd>
                     </div>
                     <div class="revelar">
-                        <dt>Setores atendidos</dt>
-                        <dd>+<span data-contar="4">4</span></dd>
+                        <dt>Produtos de consultoria de gestão</dt>
+                        <dd><span data-contar="7">7</span></dd>
                     </div>
                     <div class="revelar">
                         <dt>Opções em cada proposta</dt>
@@ -689,6 +689,7 @@
                         <h3>Cobrança que anda sozinha</h3>
                         <p class="produto-fala">&ldquo;Cobrar depende de alguém lembrar. Quando lembra, já venceu faz tempo.&rdquo;</p>
                         <p>Aviso antes do vencimento, lembrete depois dele e baixa quando o pagamento cai. A sua equipe só entra no caso que pede conversa.</p>
+                        <a href="cobranca-automatica/" class="link-seta">Ver cobrança automática</a>
                     </li>
                     <li class="sistema revelar">
                         <p class="sistema-topo"><span>Indústria e distribuição de alimentos</span><span class="sistema-estado feito">Já construído</span></p>
@@ -702,7 +703,7 @@
                         <h3>Documento que sai pronto</h3>
                         <p class="produto-fala">&ldquo;Cada certificado é montado à mão, peça por peça.&rdquo;</p>
                         <p>Certificado, laudo ou recibo gerado na hora em que o trabalho termina, com QR code, e entregue ao cliente sem ninguém montar.</p>
-                        <a href="#cases" class="link-seta">Ver o caso da AUTH</a>
+                        <a href="documento-automatico/" class="link-seta">Ver documento automático</a>
                     </li>
                     <li class="sistema revelar">
                         <p class="sistema-topo"><span>Contabilidade e advocacia</span><span class="sistema-estado">A gente constrói</span></p>
@@ -716,6 +717,7 @@
                         <h3>Ficha da cliente e peça fora da vitrine</h3>
                         <p class="produto-fala">&ldquo;A vendedora sabe de cabeça o que cada cliente gosta. Quando ela sai, a informação vai junto.&rdquo;</p>
                         <p>O histórico de cada cliente e o paradeiro de cada peça que saiu em consignação ou para ajuste, num lugar só.</p>
+                        <a href="ficha-de-cliente-para-joalheria/" class="link-seta">Ver para joalheria</a>
                     </li>
                 </ul>
 
@@ -1118,15 +1120,10 @@
                     </li>
                 </ol>
             </div>
-        </section>
 
-        <!-- 8. Personalização, e a admissão: dizer o que ele não precisa comprar -->
-        <section class="secao" id="sob-medida" aria-labelledby="titulo-sob-medida">
-            <div class="container">
-                <p class="etiqueta revelar">Feito para a sua empresa</p>
-                <h2 id="titulo-sob-medida" class="titulo-secao revelar">Sistema de prateleira faz você mudar. O nosso muda
-                    para você.</h2>
-
+            <!-- 13/11/2026: a seção "Sistema de prateleira" veio para cá, para a página ficar mais curta. -->
+            <div class="container processo-sob-medida" id="sob-medida">
+                <h3 class="revelar">Sistema de prateleira faz você mudar. O nosso muda para você.</h3>
                 <div class="comparacao revelar" role="table" aria-label="Sistema de prateleira comparado com a GenesisKore">
                     <div class="comparacao-linha comparacao-cabecalho" role="row">
                         <span role="columnheader">Sistema de prateleira</span>

@@ -3895,3 +3895,107 @@ body.travado {
         padding: 30px 28px 32px;
     }
 }
+
+
+/* ------------------------------------------------------------ abertura mais curta, duas portas e seção única de como funciona (13/11/2026) */
+
+.abertura-titulo {
+    font-size: clamp(2.3rem, 9.4vw, 5rem);
+}
+
+.portas {
+    display: grid;
+    gap: 1px;
+    margin: 22px 0 22px;
+    max-width: 560px;
+    background: var(--linha-escura);
+    border: 1px solid var(--linha-escura);
+}
+
+.porta {
+    display: grid;
+    gap: 4px;
+    padding: 14px 16px 15px;
+    background: rgba(0, 0, 0, 0.55);
+    color: var(--branco);
+    text-decoration: none;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease);
+}
+
+.porta span {
+    font-family: var(--titulo);
+    font-weight: 500;
+    font-size: 0.98rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.porta span::after {
+    content: ' \2193';
+    font-family: var(--mono);
+    color: var(--suave-escuro);
+}
+
+.porta small {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--suave-escuro);
+}
+
+.porta:focus-visible {
+    outline: 2px solid var(--branco);
+    outline-offset: -2px;
+}
+
+@media (hover: hover) {
+    .porta:hover {
+        background: var(--branco);
+        color: var(--preto);
+    }
+
+    .porta:hover small,
+    .porta:hover span::after {
+        color: var(--suave);
+    }
+}
+
+@media (min-width: 560px) {
+    .portas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.grade-numeros dt {
+    max-width: 26ch;
+}
+
+.processo-sob-medida {
+    margin-top: 72px;
+    padding-top: 56px;
+    border-top: 1px solid var(--linha-escura);
+}
+
+.processo-sob-medida h3 {
+    font-size: clamp(1.4rem, 3.4vw, 2.2rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    max-width: 24ch;
+    margin-bottom: 28px;
+}
+
+.processo-sob-medida .comparacao {
+    border: 1px solid var(--linha-escura);
+}
+
+.processo-sob-medida .honestidade {
+    border-left-color: var(--branco);
+}
+
+.processo-sob-medida .honestidade footer {
+    color: var(--suave-escuro);
+}
+
+#compromissos {
+    border-top: 1px solid var(--linha-escura);
+}

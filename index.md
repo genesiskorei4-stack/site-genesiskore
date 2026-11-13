@@ -150,6 +150,9 @@ Mais em https://genesiskore.com/sobre/#socios
 - Sistema para distribuidora de alimentos: https://genesiskore.com/sistema-para-distribuidora-de-alimentos/index.md
 - Sistema de pedidos B2B: https://genesiskore.com/sistema-de-pedidos-b2b/index.md
 - Painel de lucro por produto lido das notas fiscais: https://genesiskore.com/lucro-por-produto/index.md
+- Cobrança automática, com aviso e baixa: https://genesiskore.com/cobranca-automatica/index.md
+- Certificado, laudo e recibo gerados automaticamente: https://genesiskore.com/documento-automatico/index.md
+- Ficha de cliente e controle de peças para joalheria: https://genesiskore.com/ficha-de-cliente-para-joalheria/index.md
 - Automação de processos: https://genesiskore.com/automacao-de-processos/index.md
 - Automação para escritório de advocacia e contabilidade: https://genesiskore.com/automacao-para-escritorio/index.md
 - Bling, Omie ou sistema sob medida: https://genesiskore.com/bling-omie-ou-sistema-sob-medida/index.md
