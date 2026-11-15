@@ -5,7 +5,7 @@ Case · Logística e frotas
 
 # Rastro: frota e pneus sob controle
 
-Atualizado em 13/11/2026.
+Atualizado em 15/11/2026.
 
 > Zero trabalho manual entre a medição e a decisão de cada pneu.
 
@@ -30,6 +30,38 @@ O técnico mede, e o sistema calcula o desgaste e guarda tudo numa ficha em PDF.
 ### Decisão pronta
 
 Todo mês chega o relatório dizendo o que trocar e o que rodiziar.
+
+O aplicativo da Rastro em uso. Dados de exemplo.
+
+## O que mais o aplicativo faz?
+
+### Mapa do caminhão
+
+Cada posição mostra o sulco medido e quanto falta até a troca, em verde, amarelo ou vermelho. Quando um lado gasta mais que o outro, o aplicativo sugere o rodízio.
+
+### Medição guiada
+
+O km entra uma vez e a medição segue um pneu de cada vez. Sulco abaixo do limite de troca da transportadora para a tela, pede confirmação e abre um alerta.
+
+### Pátio e recapagem
+
+Estoque endereçado por prateleira, inventário e o caminho da carcaça até a recapadora e de volta, com os dias que cada uma está lá.
+
+### Etiqueta com QR Code
+
+O leitor do celular abre a ficha do pneu, com todo o histórico dele.
+
+### Ordens de serviço
+
+A oficina abre, executa e fecha o serviço no mesmo lugar onde o pneu está registrado.
+
+### Painel do mês
+
+Primeiro o que precisa de ação. Depois o gasto do mês contra o anterior, o custo por km rodado e quanto a recapagem evitou de compra de pneu novo.
+
+### Relatório por link
+
+A transportadora recebe um endereço para ver o relatório da frota dela, que vale por 30 dias.
 
 ## Como um projeto assim começa?
 

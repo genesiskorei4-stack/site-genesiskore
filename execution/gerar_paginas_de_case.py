@@ -7,6 +7,8 @@ estilo=re.search(r'<style>.*?</style>',open('consultoria/index.html',encoding='u
 limpa=lambda s: re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s)).strip()
 TITULO={'auth':'Case AUTH: sistema para autenticar peças de luxo','cca':'Case Fazenda CCA: aplicativo de gestão da fazenda','rastro':'Case Rastro: aplicativo de frota e pneus'}
 ATUALIZADO='2026-11-13'
+# 15/11/2026: a página da Rastro ganhou o vídeo do aplicativo e as funções que faltavam, então a data dela anda sozinha.
+ATUALIZADO_CASE={'rastro':'2026-11-15'}
 CASES={'auth':('auth','AUTH','Sistema sob medida para autenticação de peças de luxo'),
        'cca':('fazenda-cca','Fazenda CCA','Aplicativo de gestão de fazenda de gado feito sob medida'),
        'rastro':('rastro','Rastro','Aplicativo sob medida para controle de frota e de pneus')}
@@ -30,7 +32,7 @@ for cid,(slug,nome,tit) in CASES.items():
     ld={"@context":"https://schema.org","@graph":[
       {"@type":["Organization","ProfessionalService"],"@id":"https://genesiskore.com/#organizacao","name":"GenesisKore","alternateName":"Genesis Kore","url":"https://genesiskore.com/","logo":"https://genesiskore.com/logo.png","foundingDate":"2025-08","email":"contato@genesiskore.com","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"areaServed":{"@type":"Country","name":"Brasil"},"sameAs":["https://www.instagram.com/genesiskore/","https://www.tiktok.com/@genesiskore","https://www.linkedin.com/company/genesiskore"]},
       {"@type":"Article","@id":U+"#case","headline":h3,"description":f"{antes} {fez}","inLanguage":"pt-BR","url":U,"mainEntityOfPage":U,"articleSection":setor,
-       "image":"https://genesiskore.com/previa-link.png","datePublished":"2026-11-10","dateModified":ATUALIZADO,
+       "image":"https://genesiskore.com/previa-link.png","datePublished":"2026-11-10","dateModified":ATUALIZADO_CASE.get(cid,ATUALIZADO),
        "author":{"@id":"https://genesiskore.com/#organizacao"},"publisher":{"@id":"https://genesiskore.com/#organizacao"},
        "about":[{"@type":"Thing","name":"sistema sob medida"},{"@type":"Thing","name":setor}]},
       {"@type":"BreadcrumbList","itemListElement":[
@@ -52,6 +54,43 @@ for cid,(slug,nome,tit) in CASES.items():
         <p>&ldquo;Iniciamos com o processo de automatização da emissão dos Certificados AUTH, onde isso tornou-se possível com o trabalho executado com total excelência e compreensão do Felipe Concílio, após o Emissor de Certificados AUTH, os contatamos novamente para o desenvolvimento do sistema interno operacional da equipe de autenticação e sistema de administração geral, onde o resultado seguiu a mesma lógica, excelência do total.&rdquo;</p>
         <p>&ldquo;E no momento, estão trabalhando no desenvolvimento da plataforma geral de autenticações da AUTH, após mostrarem responsabilidade, comprometimento e expertise técnica nos projetos propostos.&rdquo;</p>
         <p class="suave">Theodoro Janz, fundador da AUTH. Recomendação publicada no LinkedIn em 29/10/2026.</p>''' if cid=='auth' else ''
+    # 15/11/2026, pedido do Felipe: o vídeo do aplicativo da Rastro (frota inventada, dados de exemplo, sem som)
+    # e o que o aplicativo faz além dos três itens do case na inicial. Fundo do vídeo na cor do aplicativo (#f9f8f4).
+    mais_rastro='''
+
+        <style>.video-cel{display:none}@media (max-width:767px){.video-pc{display:none}.video-cel{display:block;margin:0 auto}}</style>
+        <p><video class="video-pc" muted loop playsinline controls preload="none" poster="/tela-rastro.webp" width="1280" height="720" style="max-width:100%;height:auto;background:#f9f8f4" aria-label="Vídeo sem som do aplicativo da Rastro: o mapa de pneus do caminhão, a medição pelo celular, as carcaças na recapadora e o painel do mês"><source src="/tela-rastro.mp4" type="video/mp4"><source src="/tela-rastro.webm" type="video/webm"></video><video class="video-cel" muted loop playsinline controls preload="none" poster="/tela-rastro-vertical.webp" width="720" height="1280" style="max-width:100%;height:auto;background:#f9f8f4" aria-label="Vídeo sem som do aplicativo da Rastro: o mapa de pneus do caminhão, a medição pelo celular, as carcaças na recapadora e o painel do mês"><source src="/tela-rastro-vertical.mp4" type="video/mp4"><source src="/tela-rastro-vertical.webm" type="video/webm"></video></p>
+        <p class="suave">O aplicativo da Rastro em uso. Dados de exemplo.</p>
+
+        <h2>O que mais o aplicativo faz?</h2>
+        <section class="produto">
+            <h3>Mapa do caminhão</h3>
+            <p>Cada posição mostra o sulco medido e quanto falta até a troca, em verde, amarelo ou vermelho. Quando um lado gasta mais que o outro, o aplicativo sugere o rodízio.</p>
+        </section>
+        <section class="produto">
+            <h3>Medição guiada</h3>
+            <p>O km entra uma vez e a medição segue um pneu de cada vez. Sulco abaixo do limite de troca da transportadora para a tela, pede confirmação e abre um alerta.</p>
+        </section>
+        <section class="produto">
+            <h3>Pátio e recapagem</h3>
+            <p>Estoque endereçado por prateleira, inventário e o caminho da carcaça até a recapadora e de volta, com os dias que cada uma está lá.</p>
+        </section>
+        <section class="produto">
+            <h3>Etiqueta com QR Code</h3>
+            <p>O leitor do celular abre a ficha do pneu, com todo o histórico dele.</p>
+        </section>
+        <section class="produto">
+            <h3>Ordens de serviço</h3>
+            <p>A oficina abre, executa e fecha o serviço no mesmo lugar onde o pneu está registrado.</p>
+        </section>
+        <section class="produto">
+            <h3>Painel do mês</h3>
+            <p>Primeiro o que precisa de ação. Depois o gasto do mês contra o anterior, o custo por km rodado e quanto a recapagem evitou de compra de pneu novo.</p>
+        </section>
+        <section class="produto">
+            <h3>Relatório por link</h3>
+            <p>A transportadora recebe um endereço para ver o relatório da frota dela, que vale por 30 dias.</p>
+        </section>''' if cid=='rastro' else ''
     pg=f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -86,7 +125,7 @@ for cid,(slug,nome,tit) in CASES.items():
     <main>
         <p class="etiqueta">Case · {setor}</p>
         <h1>{h3}</h1>
-        <p class="suave">Atualizado em 13/11/2026.</p>
+        <p class="suave">Atualizado em {"/".join(reversed(ATUALIZADO_CASE.get(cid,ATUALIZADO).split("-")))}.</p>
         <blockquote>{num} {resto}</blockquote>{fonte}{extra}
 
         <h2>Como era antes?</h2>
@@ -96,7 +135,7 @@ for cid,(slug,nome,tit) in CASES.items():
         <p>{fez}</p>
 
         <h2>O que o sistema faz?</h2>
-{lis}{insta}
+{lis}{insta}{mais_rastro}
 
         <h2>Como um projeto assim começa?</h2>
         <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
