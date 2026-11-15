@@ -4926,3 +4926,9 @@ p, li, dd, blockquote, figcaption span, .lead {
 .case-telas-claro .case-video-largo {
     align-self: center;
 }
+
+/* 15/11/2026: o vídeo da plataforma da GenesisKore tem fundo branco, a cor da plataforma. */
+.case-telas-branco,
+.case-telas-branco .case-video {
+    background: #fff;
+}
