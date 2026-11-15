@@ -4896,3 +4896,33 @@ p, li, dd, blockquote, figcaption span, .lead {
     align-items: center;
     min-height: 44px;
 }
+
+/* 15/11/2026: o cartão do vídeo da Rastro tem o fundo claro do aplicativo dela, e o vídeo é largo (16 por 9). */
+.case-telas-claro {
+    background: #f9f8f4;
+    color: #111;
+    border: 1px solid var(--linha);
+}
+
+.case-telas-claro .case-video {
+    background: #f9f8f4;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.case-telas-claro .case-passos-video li,
+.case-telas-claro .case-passos-video li:last-child {
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.case-telas-claro .case-passos-video li::before,
+.case-telas-claro figcaption span {
+    color: #6b6b6b;
+}
+
+.case-video-largo {
+    aspect-ratio: 1280 / 720;
+}
+
+.case-telas-claro .case-video-largo {
+    align-self: center;
+}

@@ -47,7 +47,7 @@ for cid,(slug,nome,tit) in CASES.items():
     # 13/11/2026: o número do case diz de onde vem. O da AUTH é o que ela mesma divulga, medido por ela.
     fonte='\n        <p class="suave">Número divulgado pela própria AUTH: aumento da capacidade de avaliação da equipe, com as mesmas pessoas.</p>' if cid=='auth' else ''
     extra='''
-        <p><video muted loop playsinline controls preload="none" poster="/tela-auth-fila.webp" width="1006" height="948" style="max-width:100%;height:auto;background:#000" aria-label="Vídeo sem som da plataforma da AUTH: a fila de autenticação, o checklist da peça, o certificado emitido e a conferência pelo celular"><source src="/tela-auth.mp4" type="video/mp4"><source src="/tela-auth.webm" type="video/webm"></video></p>
+        <p><video class="video-auto" muted loop playsinline disablepictureinpicture preload="none" poster="/tela-auth-fila.webp" width="1006" height="948" style="max-width:100%;height:auto;background:#000" aria-label="Vídeo sem som da plataforma da AUTH: a fila de autenticação, o checklist da peça, o certificado emitido e a conferência pelo celular"><source src="/tela-auth.mp4" type="video/mp4"><source src="/tela-auth.webm" type="video/webm"></video></p>
         <p class="suave">A plataforma da AUTH em uso: fila, checklist, certificado e conferência pelo celular. Dados de exemplo.</p>
         <h2>O que o fundador da AUTH diz?</h2>
         <blockquote>&ldquo;A GenesisKore tornou nossos processos na AUTH muito mais rápidos, completos e seguros.&rdquo;</blockquote>
@@ -59,7 +59,7 @@ for cid,(slug,nome,tit) in CASES.items():
     mais_rastro='''
 
         <style>.video-cel{display:none}@media (max-width:767px){.video-pc{display:none}.video-cel{display:block;margin:0 auto}}</style>
-        <p><video class="video-pc" muted loop playsinline controls preload="none" poster="/tela-rastro.webp" width="1280" height="720" style="max-width:100%;height:auto;background:#f9f8f4" aria-label="Vídeo sem som do aplicativo da Rastro: o mapa de pneus do caminhão, a medição pelo celular, as carcaças na recapadora e o painel do mês"><source src="/tela-rastro.mp4" type="video/mp4"><source src="/tela-rastro.webm" type="video/webm"></video><video class="video-cel" muted loop playsinline controls preload="none" poster="/tela-rastro-vertical.webp" width="720" height="1280" style="max-width:100%;height:auto;background:#f9f8f4" aria-label="Vídeo sem som do aplicativo da Rastro: o mapa de pneus do caminhão, a medição pelo celular, as carcaças na recapadora e o painel do mês"><source src="/tela-rastro-vertical.mp4" type="video/mp4"><source src="/tela-rastro-vertical.webm" type="video/webm"></video></p>
+        <p><video class="video-pc video-auto" muted loop playsinline disablepictureinpicture preload="none" poster="/tela-rastro.webp" width="1280" height="720" style="max-width:100%;height:auto;background:#f9f8f4" aria-label="Vídeo sem som do aplicativo da Rastro: o mapa de pneus do caminhão, a medição pelo celular, as carcaças na recapadora e o painel do mês"><source src="/tela-rastro.mp4" type="video/mp4"><source src="/tela-rastro.webm" type="video/webm"></video><video class="video-cel video-auto" muted loop playsinline disablepictureinpicture preload="none" poster="/tela-rastro-vertical.webp" width="720" height="1280" style="max-width:100%;height:auto;background:#f9f8f4" aria-label="Vídeo sem som do aplicativo da Rastro: o mapa de pneus do caminhão, a medição pelo celular, as carcaças na recapadora e o painel do mês"><source src="/tela-rastro-vertical.mp4" type="video/mp4"><source src="/tela-rastro-vertical.webm" type="video/webm"></video></p>
         <p class="suave">O aplicativo de pneus que a GenesisKore construiu para a Rastro. Dados de exemplo.</p>
 
         <h2>O que mais o aplicativo faz?</h2>
@@ -91,6 +91,25 @@ for cid,(slug,nome,tit) in CASES.items():
             <h3>Relatório por link</h3>
             <p>A transportadora recebe um endereço para ver o relatório da frota dela, que vale por 30 dias.</p>
         </section>''' if cid=='rastro' else ''
+    # 15/11/2026, pedido do Felipe: o vídeo da página do case roda sozinho, sem som, quando aparece na tela,
+    # como os da página inicial. Para fora da tela, com a aba escondida ou com "menos movimento" ligado, fica parado.
+    auto='''
+    <script>
+    (() => {
+        const videos = [...document.querySelectorAll('video.video-auto')];
+        if (!videos.length || !('IntersectionObserver' in window)) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const ver = new IntersectionObserver((entradas) => {
+            entradas.forEach((e) => {
+                const v = e.target;
+                if (e.isIntersecting && e.intersectionRatio >= 0.5 && !document.hidden) { v.preload = 'auto'; v.play().catch(() => {}); }
+                else v.pause();
+            });
+        }, { threshold: [0, 0.5, 0.75] });
+        videos.forEach((v) => { v.muted = true; ver.observe(v); });
+        document.addEventListener('visibilitychange', () => { if (document.hidden) videos.forEach((v) => v.pause()); });
+    })();
+    </script>''' if ('video-auto' in extra or 'video-auto' in mais_rastro) else ''
     pg=f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -148,7 +167,7 @@ for cid,(slug,nome,tit) in CASES.items():
         <a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/privacidade/">Privacidade</a>
         <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
     </footer>
-    <script src="/contagem.js" defer></script>
+    <script src="/contagem.js" defer></script>{auto}
     <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>
 </html>
