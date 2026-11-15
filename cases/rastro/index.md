@@ -31,7 +31,7 @@ O técnico mede, e o sistema calcula o desgaste e guarda tudo numa ficha em PDF.
 
 Todo mês chega o relatório dizendo o que trocar e o que rodiziar.
 
-O aplicativo da Rastro em uso. Dados de exemplo.
+O aplicativo de pneus que a GenesisKore construiu para a Rastro. Dados de exemplo.
 
 ## O que mais o aplicativo faz?
 
