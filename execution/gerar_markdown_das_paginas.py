@@ -14,7 +14,7 @@ import html, os, re, sys
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://genesiskore.com/'
 PAGINAS = ('sobre', 'contato', 'consultoria', 'management-consulting', 'about', 'contact', 'privacidade', 'privacy',
-           'cases/auth', 'cases/fazenda-cca', 'cases/rastro')
+           'cases/auth', 'cases/fazenda-cca', 'cases/rastro', 'cases/gmf')
 
 
 def em_linha(t, pasta):

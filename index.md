@@ -70,7 +70,7 @@ A primeira conversa não custa nada, e a proposta traz escopo e prazo por escrit
 
 Página: https://genesiskore.com/consultoria/ (em inglês: https://genesiskore.com/management-consulting/)
 
-Cases por inteiro: https://genesiskore.com/cases/auth/ · https://genesiskore.com/cases/fazenda-cca/ · https://genesiskore.com/cases/rastro/
+Cases por inteiro: https://genesiskore.com/cases/auth/ · https://genesiskore.com/cases/fazenda-cca/ · https://genesiskore.com/cases/rastro/ · https://genesiskore.com/cases/gmf/
 
 ## Sistema ou consultoria?
 

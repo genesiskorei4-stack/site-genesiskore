@@ -914,7 +914,8 @@
                     <button type="button" role="tab" class="case-aba" id="aba-auth" aria-controls="case-auth" aria-selected="true"><span>01</span>AUTH</button>
                     <button type="button" role="tab" class="case-aba" id="aba-cca" aria-controls="case-cca" aria-selected="false" tabindex="-1"><span>02</span>Fazenda CCA</button>
                     <button type="button" role="tab" class="case-aba" id="aba-rastro" aria-controls="case-rastro" aria-selected="false" tabindex="-1"><span>03</span>Rastro</button>
-                    <button type="button" role="tab" class="case-aba" id="aba-genesiskore" aria-controls="case-genesiskore" aria-selected="false" tabindex="-1"><span>04</span>GenesisKore</button>
+                    <button type="button" role="tab" class="case-aba" id="aba-gmf" aria-controls="case-gmf" aria-selected="false" tabindex="-1"><span>04</span>GMF Gráfica</button>
+                    <button type="button" role="tab" class="case-aba" id="aba-genesiskore" aria-controls="case-genesiskore" aria-selected="false" tabindex="-1"><span>05</span>GenesisKore</button>
                     <span class="case-indicador" aria-hidden="true"></span>
                 </div>
 
@@ -1087,6 +1088,64 @@
                         </ul>
                         <footer class="case-rodape">
                             <a href="cases/rastro/" class="link-seta">Ver o case da Rastro por inteiro</a>
+                            <button type="button" class="case-proximo" data-proximo>Próximo: GMF Gráfica</button>
+                        </footer>
+                    </section>
+
+                    <section class="case" id="case-gmf" role="tabpanel" aria-labelledby="aba-gmf" tabindex="0">
+                        <header class="case-topo">
+                            <div>
+                                <p class="etiqueta">Gráfica e comunicação visual</p>
+                                <h3>GMF Gráfica: cada pedido no seu passo</h3>
+                            </div>
+                            <img src="logo-gmf.webp" alt="" class="case-logo logo-gmf" width="132" height="90" loading="lazy">
+                        </header>
+                        <div class="case-resultado">
+                            <p class="resultado-numero"><span data-contar="1">1</span> link</p>
+                            <p>para o cliente acompanhar o próprio pedido, sem ligar para a gráfica.</p>
+                        </div>
+                        <figure class="case-telas case-telas-gmf">
+                            <!-- 18/11/2026, pedido do Felipe: o vídeo das telas reais do sistema da GMF, como o da Rastro.
+                                 Sem som, pedidos e clientes inventados (dados de exemplo). Fundo escuro porque o sistema é escuro.
+                                 A GMF não foi para produção: o verbo é construímos (27/10/2026). -->
+                            <video class="case-video case-video-largo" muted loop playsinline disablepictureinpicture preload="none" data-poster="tela-gmf.webp" width="1280" height="720"
+                                aria-label="Vídeo sem som do sistema de pedidos que a GenesisKore construiu para a GMF Gráfica: o quadro de pedidos, o acompanhamento do cliente pelo celular, o pedido aberto e o caixa dos próximos 30 dias">
+                                <source src="tela-gmf.mp4" type="video/mp4">
+                                <source src="tela-gmf.webm" type="video/webm">
+                            </video>
+                            <figcaption>
+                                <ol class="case-passos-video">
+                                    <li>Cada pedido no seu passo, do orçamento à entrega</li>
+                                    <li>O cliente acompanha o pedido por um link</li>
+                                    <li>Prazo, arte e pagamento num lugar só</li>
+                                    <li>O que entra no caixa nos próximos 30 dias</li>
+                                </ol>
+                                <span>O sistema da GMF em uso. Dados de exemplo.</span>
+                            </figcaption>
+                        </figure>
+                        <div class="case-historia">
+                            <div>
+                                <p class="mini">Antes</p>
+                                <p>Pedido de gráfica passa por orçamento, sinal, arte, revisão com o cliente, impressão e
+                                    acabamento. Espalhado entre WhatsApp e papel, ninguém sabe em que passo cada um está, e o
+                                    cliente liga para perguntar.</p>
+                            </div>
+                            <div>
+                                <p class="mini">O que fizemos</p>
+                                <p>Construímos o sistema de pedidos da GMF Gráfica Rápida, do jeito que uma gráfica trabalha.
+                                    Comercial, arte, produção e financeiro olham o mesmo pedido, cada um na sua parte.</p>
+                            </div>
+                        </div>
+                        <ul class="case-lista">
+                            <li><strong>Quadro de pedidos</strong> Cada pedido anda por quinze passos, do orçamento à
+                                entrega, e o quadro mostra em qual está, com a prioridade e o prazo.</li>
+                            <li><strong>Cliente acompanha por link</strong> O cliente recebe um endereço e vê sozinho em que
+                                passo está o pedido dele.</li>
+                            <li><strong>Caixa dos próximos 30 dias</strong> O que entra e o que sai nas próximas semanas, a
+                                partir dos pedidos e dos gastos lançados.</li>
+                        </ul>
+                        <footer class="case-rodape">
+                            <a href="cases/gmf/" class="link-seta">Ver o case da GMF Gráfica por inteiro</a>
                             <button type="button" class="case-proximo" data-proximo>Próximo: GenesisKore</button>
                         </footer>
                     </section>

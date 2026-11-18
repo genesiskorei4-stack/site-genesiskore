@@ -1680,6 +1680,7 @@ body.travado {
 .case-logo.logo-auth { height: 20px; margin-top: 4px; }
 .case-logo.logo-cca { height: 46px; }
 .case-logo.logo-rastro { height: 56px; margin-top: -6px; }
+.case-logo.logo-gmf { height: 72px; margin: -14px -12px -14px 0; }
 .case-logo.logo-medicina { height: 38px; }
 .case-logo.logo-casa { height: 34px; }
 
@@ -2616,6 +2617,7 @@ body.travado {
     .case-logo.logo-auth { height: 26px; }
     .case-logo.logo-cca { height: 60px; }
     .case-logo.logo-rastro { height: 76px; }
+    .case-logo.logo-gmf { height: 96px; margin: -18px -16px -18px 0; }
     .case-logo.logo-medicina { height: 50px; }
     .case-logo.logo-casa { height: 44px; }
 
@@ -4921,6 +4923,12 @@ p, li, dd, blockquote, figcaption span, .lead {
 
 .case-video-largo {
     aspect-ratio: 1280 / 720;
+}
+
+/* 18/11/2026: o cartão do vídeo da GMF tem o fundo azul escuro do sistema dela (#0a0e1a), e o vídeo é largo. */
+.case-telas-gmf,
+.case-telas-gmf .case-video {
+    background: #0a0e1a;
 }
 
 .case-telas-claro .case-video-largo {

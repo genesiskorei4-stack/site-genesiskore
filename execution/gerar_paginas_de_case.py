@@ -5,17 +5,25 @@ import re, json, os, html
 t=open('index.html',encoding='utf-8').read()
 estilo=re.search(r'<style>.*?</style>',open('consultoria/index.html',encoding='utf-8').read(),re.S).group(0)
 limpa=lambda s: re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s)).strip()
-TITULO={'auth':'Case AUTH: sistema para autenticar peças de luxo','cca':'Case Fazenda CCA: aplicativo de gestão da fazenda','rastro':'Case Rastro: aplicativo de frota e pneus'}
+TITULO={'auth':'Case AUTH: sistema para autenticar peças de luxo','cca':'Case Fazenda CCA: aplicativo de gestão da fazenda','rastro':'Case Rastro: aplicativo de frota e pneus','gmf':'Case GMF Gráfica: sistema de pedidos da gráfica'}
 ATUALIZADO='2026-11-13'
 # 15/11/2026: a página da Rastro ganhou o vídeo do aplicativo e as funções que faltavam, então a data dela anda sozinha.
-ATUALIZADO_CASE={'rastro':'2026-11-15'}
+ATUALIZADO_CASE={'rastro':'2026-11-15','gmf':'2026-11-18'}
+# 18/11/2026: a GMF entrou nos cases neste dia, e a data de publicação dela é essa.
+PUBLICADO_CASE={'gmf':'2026-11-18'}
+# A GMF não tem registro de como a gráfica trabalhava antes: o texto de "Antes" fala do problema de uma
+# gráfica rápida, e o título da seção diz isso. E ela não foi para produção, então o verbo é construiu (27/10/2026).
+TITULO_ANTES={'gmf':'Qual é o problema de uma gráfica rápida?'}
+TITULO_FEZ={'gmf':'O que a GenesisKore construiu?'}
 CASES={'auth':('auth','AUTH','Sistema sob medida para autenticação de peças de luxo'),
        'cca':('fazenda-cca','Fazenda CCA','Aplicativo de gestão de fazenda de gado feito sob medida'),
-       'rastro':('rastro','Rastro','Aplicativo sob medida para controle de frota e de pneus')}
+       'rastro':('rastro','Rastro','Aplicativo sob medida para controle de frota e de pneus'),
+       'gmf':('gmf','GMF Gráfica','Sistema sob medida de pedidos para gráfica')}
 # A descrição que aparece no resultado de busca: o que era, o que virou, sem número que não esteja na página.
 DESCRICAO={'auth':'Como a AUTH, que autentica peças de luxo, ganhou 500% de capacidade de avaliação sem contratar: certificado automático e uma plataforma para equipe, loja e cliente.',
            'cca':'Como a Fazenda CCA trocou o bloquinho por um aplicativo só: pastos, lotes, entradas, saídas e o caixa, preenchidos pelo celular, direto do pasto.',
-           'rastro':'Como a Rastro passou a controlar frota e pneus pelo celular: cada pneu com história, desgaste calculado na medição e relatório do que trocar todo mês.'}
+           'rastro':'Como a Rastro passou a controlar frota e pneus pelo celular: cada pneu com história, desgaste calculado na medição e relatório do que trocar todo mês.',
+           'gmf':'O sistema de pedidos que a GenesisKore construiu para a GMF Gráfica Rápida: cada pedido no seu passo, a arte com versão e aprovação, o link para o cliente acompanhar e o caixa dos próximos 30 dias.'}
 feitos=[]
 for cid,(slug,nome,tit) in CASES.items():
     art=re.search(r'<(?:article|section) class="case" id="case-%s".*?</(?:article|section)>'%cid,t,re.S).group(0)
@@ -32,7 +40,7 @@ for cid,(slug,nome,tit) in CASES.items():
     ld={"@context":"https://schema.org","@graph":[
       {"@type":["Organization","ProfessionalService"],"@id":"https://genesiskore.com/#organizacao","name":"GenesisKore","alternateName":"Genesis Kore","url":"https://genesiskore.com/","logo":"https://genesiskore.com/logo.png","foundingDate":"2025-08","email":"contato@genesiskore.com","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"areaServed":{"@type":"Country","name":"Brasil"},"sameAs":["https://www.instagram.com/genesiskore/","https://www.tiktok.com/@genesiskore","https://www.linkedin.com/company/genesiskore"]},
       {"@type":"Article","@id":U+"#case","headline":h3,"description":f"{antes} {fez}","inLanguage":"pt-BR","url":U,"mainEntityOfPage":U,"articleSection":setor,
-       "image":"https://genesiskore.com/previa-link.png","datePublished":"2026-11-10","dateModified":ATUALIZADO_CASE.get(cid,ATUALIZADO),
+       "image":"https://genesiskore.com/previa-link.png","datePublished":PUBLICADO_CASE.get(cid,"2026-11-10"),"dateModified":ATUALIZADO_CASE.get(cid,ATUALIZADO),
        "author":{"@id":"https://genesiskore.com/#organizacao"},"publisher":{"@id":"https://genesiskore.com/#organizacao"},
        "about":[{"@type":"Thing","name":"sistema sob medida"},{"@type":"Thing","name":setor}]},
       {"@type":"BreadcrumbList","itemListElement":[
@@ -91,6 +99,40 @@ for cid,(slug,nome,tit) in CASES.items():
             <h3>Relatório por link</h3>
             <p>A transportadora recebe um endereço para ver o relatório da frota dela, que vale por 30 dias.</p>
         </section>''' if cid=='rastro' else ''
+    # 18/11/2026, pedido do Felipe: o vídeo do sistema da GMF (pedidos e clientes inventados, dados de exemplo, sem som),
+    # como o da Rastro, e o que o sistema faz além dos três itens do case na inicial. Fundo na cor do sistema (#0a0e1a).
+    if cid=='gmf':
+        mais_rastro='''
+
+        <style>.video-cel{display:none}@media (max-width:767px){.video-pc{display:none}.video-cel{display:block;margin:0 auto}}</style>
+        <p><video class="video-pc video-auto" muted loop playsinline disablepictureinpicture preload="none" poster="/tela-gmf.webp" width="1280" height="720" style="max-width:100%;height:auto;background:#0a0e1a" aria-label="Vídeo sem som do sistema da GMF Gráfica: o quadro de pedidos, o acompanhamento do cliente pelo celular, o pedido aberto e o caixa dos próximos 30 dias"><source src="/tela-gmf.mp4" type="video/mp4"><source src="/tela-gmf.webm" type="video/webm"></video><video class="video-cel video-auto" muted loop playsinline disablepictureinpicture preload="none" poster="/tela-gmf-vertical.webp" width="720" height="1280" style="max-width:100%;height:auto;background:#0a0e1a" aria-label="Vídeo sem som do sistema da GMF Gráfica: o quadro de pedidos, o acompanhamento do cliente pelo celular, o pedido aberto e o caixa dos próximos 30 dias"><source src="/tela-gmf-vertical.mp4" type="video/mp4"><source src="/tela-gmf-vertical.webm" type="video/webm"></video></p>
+        <p class="suave">O sistema de pedidos que a GenesisKore construiu para a GMF Gráfica Rápida. Dados de exemplo.</p>
+
+        <h2>O que mais o sistema faz?</h2>
+        <section class="produto">
+            <h3>Arte com versão e aprovação</h3>
+            <p>Cada arquivo de arte fica no pedido, com o número da versão. A arte só segue para a impressão depois de aprovada.</p>
+        </section>
+        <section class="produto">
+            <h3>Pedido aberto</h3>
+            <p>Prazo, arte, valor, sinal pago e o que falta receber na mesma tela, com o histórico de quem mexeu em cada passo.</p>
+        </section>
+        <section class="produto">
+            <h3>Cada função na sua parte</h3>
+            <p>Comercial, arte, produção e financeiro entram com o próprio acesso e veem o que a função pede.</p>
+        </section>
+        <section class="produto">
+            <h3>Controle de qualidade</h3>
+            <p>Antes de faturar, o pedido passa pela conferência, que aprova ou devolve.</p>
+        </section>
+        <section class="produto">
+            <h3>Clientes, agenda e metas</h3>
+            <p>A ficha de cada cliente com os pedidos dele, a agenda com o prazo de cada pedido e as metas do mês.</p>
+        </section>
+        <section class="produto">
+            <h3>Financeiro</h3>
+            <p>Gastos, fluxo de caixa e o cálculo do preço de cada produto.</p>
+        </section>'''
     # 15/11/2026, pedido do Felipe: o vídeo da página do case roda sozinho, sem som, quando aparece na tela,
     # como os da página inicial. Para fora da tela, com a aba escondida ou com "menos movimento" ligado, fica parado.
     auto='''
@@ -130,7 +172,7 @@ for cid,(slug,nome,tit) in CASES.items():
     <link rel="icon" type="image/png" href="/icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="/icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
     <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
-    <!-- Gerada do texto do case na página inicial (10/11/2026). Mudou lá, mude aqui. -->
+    <!-- Gerada do texto do case na página inicial ({"/".join(reversed(PUBLICADO_CASE.get(cid,"2026-11-10").split("-")))}). Mudou lá, mude aqui. -->
     <script type="application/ld+json">
 {json.dumps(ld,ensure_ascii=False,indent=2)}
     </script>
@@ -147,10 +189,10 @@ for cid,(slug,nome,tit) in CASES.items():
         <p class="suave">Atualizado em {"/".join(reversed(ATUALIZADO_CASE.get(cid,ATUALIZADO).split("-")))}.</p>
         <blockquote>{num} {resto}</blockquote>{fonte}{extra}
 
-        <h2>Como era antes?</h2>
+        <h2>{TITULO_ANTES.get(cid,"Como era antes?")}</h2>
         <p>{antes}</p>
 
-        <h2>O que a GenesisKore fez?</h2>
+        <h2>{TITULO_FEZ.get(cid,"O que a GenesisKore fez?")}</h2>
         <p>{fez}</p>
 
         <h2>O que o sistema faz?</h2>

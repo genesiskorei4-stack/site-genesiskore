@@ -45,6 +45,6 @@ Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabal
 
 ## Outros projetos
 
-[AUTH](https://genesiskore.com/cases/auth/) · [Rastro](https://genesiskore.com/cases/rastro/)
+[AUTH](https://genesiskore.com/cases/auth/) · [Rastro](https://genesiskore.com/cases/rastro/) · [GMF Gráfica](https://genesiskore.com/cases/gmf/)
 
 Resumo: Como a Fazenda CCA trocou o bloquinho por um aplicativo só: pastos, lotes, entradas, saídas e o caixa, preenchidos pelo celular, direto do pasto.

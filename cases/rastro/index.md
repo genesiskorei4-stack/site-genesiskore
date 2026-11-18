@@ -69,6 +69,6 @@ Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabal
 
 ## Outros projetos
 
-[AUTH](https://genesiskore.com/cases/auth/) · [Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/)
+[AUTH](https://genesiskore.com/cases/auth/) · [Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/) · [GMF Gráfica](https://genesiskore.com/cases/gmf/)
 
 Resumo: Como a Rastro passou a controlar frota e pneus pelo celular: cada pneu com história, desgaste calculado na medição e relatório do que trocar todo mês.

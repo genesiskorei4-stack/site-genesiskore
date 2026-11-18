@@ -57,6 +57,6 @@ Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabal
 
 ## Outros projetos
 
-[Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/) · [Rastro](https://genesiskore.com/cases/rastro/)
+[Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/) · [Rastro](https://genesiskore.com/cases/rastro/) · [GMF Gráfica](https://genesiskore.com/cases/gmf/)
 
 Resumo: Como a AUTH, que autentica peças de luxo, ganhou 500% de capacidade de avaliação sem contratar: certificado automático e uma plataforma para equipe, loja e cliente.
