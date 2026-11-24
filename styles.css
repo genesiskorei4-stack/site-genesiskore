@@ -39,6 +39,29 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Transição da identidade, semana 1 (24/11/2026, pedido do Felipe): as letras da identidade
+ * nova ficam declaradas aqui, ainda sem uso. O navegador só baixa uma fonte quando alguma regra
+ * a usa, então nada muda para quem visita até a semana 2. Plano na wiki:
+ * sinteses/2026-11-24-transicao-para-o-azul-ultramarino e
+ * sinteses/2026-11-24-auditoria-visual-e-plano-de-repaginacao-do-site. */
+@font-face {
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url('/fontes/inter-tight-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fontes/jetbrains-mono-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
     --preto: #000000;
     --preto-1: #0a0a0a;
@@ -52,6 +75,19 @@
     --linha-escura: rgba(255, 255, 255, 0.12);
     --verde: #4ade80;
     --vermelho: #ef4444;
+
+    /* Identidade nova (semana 1, ainda sem uso): o ultramarino e a régua de tamanhos e espaços
+     * que entram na semana 2. Proporção de chegada: branco 65%, preto 20%, ultramarino 15%. */
+    --ultramarino: #120A8F;
+    --letra-nova: 'Inter Tight', system-ui, sans-serif;
+    --mono-nova: 'JetBrains Mono', ui-monospace, monospace;
+    --t-1: 0.875rem;
+    --t-2: 1rem;
+    --t-3: 1.25rem;
+    --t-4: 2rem;
+    --t-5: 3.5rem;
+    --espaco-secao: 96px;
+    --espaco-titulo: 16px;
 
     --titulo: 'Outfit', system-ui, sans-serif;
     --texto: 'Inter', system-ui, sans-serif;
