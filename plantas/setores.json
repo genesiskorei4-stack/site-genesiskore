@@ -1,0 +1,85 @@
+{
+ "distribuidora": {
+  "chapeu": "Para distribuidoras e atacado",
+  "frase": "Cada pedido vira nota e você vê quanto sobrou",
+  "legenda": [
+   "O pedido do WhatsApp entra sozinho",
+   "A nota sai sozinha",
+   "Você vê o lucro de cada entrega"
+  ]
+ },
+ "escritorio": {
+  "chapeu": "Para escritórios de advocacia, contabilidade e engenharia",
+  "frase": "O escritório anda sem você conferir cada prazo",
+  "legenda": [
+   "O documento do cliente chega organizado",
+   "O prazo entra na agenda sozinho",
+   "O cliente acompanha sem ligar"
+  ]
+ },
+ "varejo": {
+  "chapeu": "Para lojas e varejo",
+  "frase": "O cliente para de perguntar cadê o meu pedido",
+  "legenda": [
+   "O cliente vê o andamento sozinho",
+   "A ficha de cada cliente na mão da equipe",
+   "O aviso de pronto sai sozinho"
+  ]
+ },
+ "industria": {
+  "chapeu": "Para indústrias",
+  "frase": "A fábrica produz o que vendeu e você sabe quanto custou",
+  "legenda": [
+   "A ordem de produção sai do pedido",
+   "A matéria prima é comprada antes de faltar",
+   "O custo de cada produto, de verdade"
+  ]
+ },
+ "imobiliaria": {
+  "chapeu": "Para imobiliárias",
+  "frase": "Do anúncio ao repasse sem planilha no meio",
+  "legenda": [
+   "O interessado do portal vira visita marcada",
+   "O aluguel é cobrado sozinho",
+   "O repasse ao proprietário sai certo"
+  ]
+ },
+ "agencia": {
+  "chapeu": "Para agências e eventos",
+  "frase": "Cada evento no prazo e cada fornecedor no lugar",
+  "legenda": [
+   "Cada fornecedor no orçamento certo",
+   "O cronograma do evento para todo mundo",
+   "O contrato e o pagamento sem correr atrás"
+  ]
+ },
+ "escola": {
+  "chapeu": "Para escolas e cursos",
+  "frase": "A matrícula entra sozinha e a mensalidade também",
+  "legenda": [
+   "A matrícula entra pelo site",
+   "A mensalidade é cobrada sozinha",
+   "O responsável recebe o aviso"
+  ]
+ },
+ "startup": {
+  "chapeu": "Para startups",
+  "frase": "Mais clientes todo mês sem crescer a planilha",
+  "legenda": [
+   "O cliente novo entra sozinho",
+   "Os números do mês num painel só",
+   "A cobrança recorrente roda sozinha"
+  ]
+ },
+ "outro": {
+  "chapeu": "Para qualquer empresa",
+  "frase": "Do primeiro pedido ao dinheiro na conta, sem depender de alguém lembrar",
+  "legenda": [
+   "O cliente pede",
+   "O sistema registra",
+   "A proposta sai",
+   "A equipe recebe",
+   "O dinheiro entra"
+  ]
+ }
+}
