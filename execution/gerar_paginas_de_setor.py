@@ -525,11 +525,15 @@ def boas_vindas(meta):
     return f'''        <section class="boas-vindas" id="inicio" aria-labelledby="titulo-inicio">
             <p class="bv-chapeu">Sistemas sob medida · Consultoria de gestão</p>
             <h1 class="bv-titulo" id="titulo-inicio"><span class="linha">{LEMA[0]}</span> <span class="linha">{LEMA[1]}</span></h1>
+            <p class="bv-dor">A empresa cresceu e ainda depende de você.</p>
             <figure class="bv-planta" style="--proporcao:{proporcao(pc)}">
                 <div class="so-pc">{pc}</div>
                 <div class="so-cel">{cel}</div>
                 <figcaption><ol class="bv-legenda">{legenda}</ol></figcaption>
             </figure>
+            <p class="bv-sub">Sistemas sob medida tiram da mão da equipe o pedido, o documento e a cobrança. A Consultoria de gestão mostra quanto sobra e por onde a IA entra na sua empresa.</p>
+            <a class="bv-botao" href="/conversar/">Quero conversar</a>
+            <p class="bv-garantia">A conversa de diagnóstico não custa nada. Você sai dela sabendo o que vale fazer, mesmo que não feche com a gente.</p>
         </section>'''
 
 

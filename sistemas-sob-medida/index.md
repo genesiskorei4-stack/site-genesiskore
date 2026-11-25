@@ -32,7 +32,7 @@ Se o seu setor tem página própria (distribuidora, escritório, loja, indústri
 
 ## O que construímos
 
-- **Automação de pedido, nota e cobrança.** O pedido entra uma vez e segue sozinho: vira nota, vira cobrança e avisa o cliente. Mais em [automação de processos](https://genesiskore.com/automacao-de-processos/).
+- **Automação de pedido, nota e cobrança.** O pedido entra uma vez e segue sozinho: vira nota, vira cobrança e avisa o cliente. Mais em [automação de processos](https://genesiskore.com/automacao-de-processos/) e [cobrança automática](https://genesiskore.com/cobranca-automatica/).
 - **Proposta e documento que saem prontos.** No modelo da empresa. Veja o [documento automático](https://genesiskore.com/documento-automatico/).
 - **Portal para a equipe, para o lojista ou para o cliente final.** Abre no celular e mostra a cada pessoa só o que a função dela pede. Veja o [sistema de pedidos B2B](https://genesiskore.com/sistema-de-pedidos-b2b/).
 - **Quadro de tarefas da equipe.** Alimentado pelo próprio pedido, sem ninguém repassar.
@@ -95,7 +95,7 @@ Na maioria das vezes, não. O sistema lê e escreve no ERP que você já tem e c
 Sim. A GenesisKore fica em São Paulo e atende o Brasil inteiro. A conversa, a proposta e o acompanhamento acontecem a distância, e a gente vai até a empresa quando precisa. O atendimento é em português, inglês ou espanhol.
 
 ### O meu setor não está na lista. Vocês atendem assim mesmo?
-Atendem, se o trabalho se repete todo dia do mesmo jeito. Quase todo sistema que a gente fez começou de um problema que não estava em lista nenhuma. Clínica e empresa de saúde ficam de fora.
+Atendem, se o trabalho se repete todo dia do mesmo jeito. Os setores com página própria estão na entrada do site, como o [sistema para distribuidora](https://genesiskore.com/sistema-para-distribuidora/) e, no varejo de alto valor, a [ficha de cliente para joalheria](https://genesiskore.com/ficha-de-cliente-para-joalheria/). Quase todo sistema que a gente fez começou de um problema que não estava em lista nenhuma. Clínica e empresa de saúde ficam de fora.
 
 ## Quer conversar?
 

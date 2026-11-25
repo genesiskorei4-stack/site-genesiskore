@@ -66,6 +66,8 @@ Ainda não temos uma distribuidora em operação para mostrar, e preferimos dize
 3. **A primeira parte em uso antes do resto.** Em geral, a que mais pesa: o pedido ou o lucro por produto.
 4. **Depois do ar, a gente continua junto.** A mensalidade cobre hospedagem, monitoramento e suporte.
 
+O passo a passo completo está em [sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
+
 ## A garantia
 
 Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
