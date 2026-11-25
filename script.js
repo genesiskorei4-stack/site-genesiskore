@@ -105,6 +105,8 @@ function aoRolar() {
     const claro = !!debaixoDoTopo && !fundoEscuro(debaixoDoTopo);
     topo.classList.toggle('claro', claro);
     topo.classList.toggle('solido', y > 10 && !claro);
+    // Lançamento de 05/01/2027: em cima da primeira tela azul, o topo é azul também.
+    topo.classList.toggle('sobre-azul', !!abertura && debaixoDoTopo === abertura);
 
     // Descendo, o topo sai do caminho. Subindo, volta.
     if (!menuAberto()) {
@@ -682,4 +684,52 @@ try {
     }, { threshold: [0, 0.25, 0.5, 0.6, 0.75, 0.9, 1] });
     videos.forEach((video) => { perto.observe(video); ver.observe(video); });
     document.addEventListener('visibilitychange', escolher);
+})();
+
+/* ------------------------------------------------------------ a pergunta do setor (lançamento de 05/01/2027)
+   "Qual é o setor da sua empresa?" abre toda vez que alguém chega na página inicial. Cada opção é um
+   link de verdade para a página do setor, e o navegador já baixa as nove enquanto a pessoa lê. Quem
+   chega por um endereço com # (o menu de uma página de setor, por exemplo) vai direto para a seção.
+   Fecha com o X, com "Pular, quero ver tudo", com Esc e com um toque fora do cartão. O foco fica preso
+   dentro dela enquanto está aberta, que é o que o showModal faz. Regra: directives/paginas-de-setor.md. */
+
+(() => {
+    const pergunta = document.getElementById('pergunta');
+    if (!pergunta || typeof pergunta.showModal !== 'function') return;
+    const opcoes = [...pergunta.querySelectorAll('a[data-setor]')];
+
+    const buscarAntes = () => {
+        try {
+            if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+                const regras = document.createElement('script');
+                regras.type = 'speculationrules';
+                regras.textContent = JSON.stringify({ prefetch: [{ source: 'list', urls: opcoes.map((a) => a.getAttribute('href')) }] });
+                document.head.appendChild(regras);
+                return;
+            }
+            opcoes.forEach((a) => {
+                const link = document.createElement('link');
+                link.rel = 'prefetch';
+                link.href = a.getAttribute('href');
+                document.head.appendChild(link);
+            });
+        } catch { /* sem a busca antecipada, a página abre do mesmo jeito */ }
+    };
+
+    // O setor escolhido fica no navegador, sem cookie, para o formulário chegar com ele.
+    opcoes.forEach((a) => a.addEventListener('click', () => {
+        try { localStorage.setItem('gk-setor', a.dataset.setor); } catch { /* navegação privada */ }
+    }));
+
+    // Toque no fundo escuro, fora do cartão, também fecha.
+    pergunta.addEventListener('click', (e) => {
+        if (e.target !== pergunta) return;
+        const caixa = pergunta.getBoundingClientRect();
+        const fora = e.clientX < caixa.left || e.clientX > caixa.right || e.clientY < caixa.top || e.clientY > caixa.bottom;
+        if (fora) pergunta.close('fora');
+    });
+
+    if (location.hash) return;
+    pergunta.showModal();
+    buscarAntes();
 })();

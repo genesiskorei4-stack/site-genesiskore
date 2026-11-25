@@ -15,9 +15,9 @@ operação daquele setor.
 |---|---|---|
 | Desenhos dos nove setores | `execution/plantas_de_setor.py` (usa `execution/plantas_base.py`), grava em `plantas/` | Pronto em 24/11/2026 |
 | Chapéu, frase e legenda de cada setor | `plantas/setores.json`, gerado pelo mesmo script | Pronto |
-| Gerador das páginas | `execution/gerar_paginas_de_setor.py` | A fazer |
-| Texto de cada setor (dores, módulos, o que não comprar, perguntas) | `<pasta do setor>/index.md` | A fazer, com aprovação dos sócios |
-| A pergunta e a primeira tela nova da página inicial | `index.html`, `styles.css`, `script.js` | A fazer |
+| Gerador das páginas | `execution/gerar_paginas_de_setor.py`, com `--conferir` | Pronto em 25/11/2026 |
+| Texto de cada setor (dores, módulos, o que não comprar, perguntas) | `<pasta do setor>/index.md` | Rascunho em 25/11/2026, marcado `rascunho: aguardando aprovação dos sócios` |
+| A pergunta e a primeira tela nova da página inicial | `index.html`, `styles.css`, `script.js` | Pronto em 25/11/2026 |
 
 ## Regras que não mudam
 
@@ -30,6 +30,22 @@ operação daquele setor.
   `/automacao-para-escritorio/` e `/sistemas-sob-medida/`.
 - Caso de cliente só com contrato fechado. Número só com fonte.
 - Nenhum travessão em texto que o visitante lê.
+
+## Como o gerador funciona
+
+`python3 execution/gerar_paginas_de_setor.py` lê `plantas/setores.json` (chapéu, frase e legenda), os desenhos
+e o `index.md` de cada setor (`gerar: setor` e `setor: <chave>` no cabeçalho), e grava:
+
+- o `index.html` das nove páginas, com o desenho dentro do HTML, o JSON-LD (WebPage, Service, trilha e
+  FAQPage igual ao texto da tela) e o Markdown publicado para os agentes;
+- o `sitemap.xml`, a seção "## Uma página por setor" do `llms.txt`;
+- na página inicial, só o que está entre os marcadores `gerado:boas-vindas` e `gerado:pergunta`.
+
+Ele para com o motivo se o `# ` do texto não for a frase do `setores.json`, se faltar "Onde dói",
+"O que construímos" (seis itens), "O que você não precisa comprar" ou "Perguntas", se o botão final não levar
+`/conversar/?setor=<chave>`, ou se houver traço. Página com `rascunho:` no cabeçalho gera um aviso: tirar a
+linha é o sinal de que os sócios aprovaram. Endereço novo de setor precisa entrar também nas três listas do
+`vercel.json`.
 
 ## Como mexer num desenho
 

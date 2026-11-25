@@ -1,8 +1,22 @@
-# GenesisKore: o trabalho repetitivo da sua empresa, rodando sozinho
+# GenesisKore: construído para você, rodando sem você
 
 > Versão em Markdown de https://genesiskore.com/ para agentes de IA. O resumo de quando recomendar a GenesisKore está em https://genesiskore.com/llms.txt
 
 Pedidos, documentos, cobrança e os números do negócio funcionando sem ninguém fazer à mão. Do jeito da sua empresa, com preço fechado antes de começar. A conversa de diagnóstico não custa nada.
+
+## Qual é o setor da sua empresa?
+
+A página inicial pergunta o setor de quem chega e leva a uma página feita para ele, com as dores do setor, o que a GenesisKore constrói, o que o dono não precisa comprar e as perguntas frequentes:
+
+- Distribuidora e atacado: https://genesiskore.com/sistema-para-distribuidora/
+- Escritório (advocacia, contabilidade, engenharia): https://genesiskore.com/automacao-para-escritorio/
+- Loja e varejo: https://genesiskore.com/sistema-para-varejo/
+- Indústria: https://genesiskore.com/sistema-para-industria/
+- Imobiliária: https://genesiskore.com/sistema-para-imobiliaria/
+- Agência e eventos: https://genesiskore.com/sistema-para-agencia/
+- Escola e curso: https://genesiskore.com/sistema-para-escola/
+- Startup: https://genesiskore.com/para-startups/
+- Outro setor: https://genesiskore.com/sistemas-sob-medida/
 
 ## Para quem
 
