@@ -237,6 +237,8 @@ img,svg{max-width:100%}
 }
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
 """
+# O menu do celular é o mesmo das páginas internas (gerar_paginas.MENU_CSS e gerar_paginas.topo).
+ESTILO += gp.MENU_CSS + '\n'
 
 
 # ------------------------------------------------------------------ uma página
@@ -479,12 +481,7 @@ def montar(chave, pasta, meta, md):
     <style>{ESTILO}</style>
 </head>
 <body>
-    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
-    <header class="topo">
-        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="36" height="40"><span>GenesisKore</span></a>
-        <nav class="menu" aria-label="Páginas"><a href="/#sistemas">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/#cases">Resultados</a><a href="/#como-funciona">Como funciona</a><a href="/#perguntas">Perguntas</a></nav>
-        <a class="topo-cta" href="{conversar}">Conversar</a>
-    </header>
+{gp.topo('pt', conversar)}
     <main id="conteudo">
     <section class="heroi" aria-labelledby="titulo-setor">
         <a class="volta" href="/"><span aria-hidden="true">&larr;&nbsp;</span>Escolher outro setor</a>

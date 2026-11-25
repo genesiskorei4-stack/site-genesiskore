@@ -74,14 +74,55 @@ RODAPE_FIM = {
 }
 
 
-def topo(lingua='pt'):
+# O menu do celular (25/11/2026): os mesmos itens do menu de três tracinhos da página inicial, em toda página
+# interna, de setor e de case. É um <details>, então abre e fecha sem JavaScript; o painel cobre a tela e o topo
+# fica preso em cima enquanto ele está aberto. Some a partir de 1024 px, onde o menu de cima aparece.
+MENU_CELULAR = {
+    'pt': ('Menu', 'Seções', [('/#sistemas', 'Sistemas sob medida'), ('/#consultoria', 'Consultoria de gestão'),
+                              ('/#calculadora', 'Calculadora'), ('/#cases', 'Resultados'), ('/#como-funciona', 'Como funciona'),
+                              ('/#compromissos', 'Compromissos'), ('/#perguntas', 'Perguntas')], 'Quero conversar'),
+    'en': ('Menu', 'Pages', [('/', 'Home'), ('/management-consulting/', 'Consulting'), ('/about/', 'About'),
+                             ('/contact/', 'Contact'), ('/privacy/', 'Privacy')], 'Talk to us'),
+}
+# O estilo do menu mora no molde (consultoria/index.html) e no ESTILO das páginas de setor. Os dois usam este texto,
+# e o main() confere que o molde está com ele, para os dois menus não andarem cada um para um lado.
+MENU_CSS = ('.menu-cel>summary{list-style:none;width:44px;height:44px;margin-right:-10px;display:grid;place-content:center;cursor:pointer;color:#fff}'
+            '.menu-cel>summary::-webkit-details-marker{display:none}'
+            '.menu-cel .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}'
+            '.menu-cel-icone{display:grid;gap:7px}'
+            '.menu-cel-icone i{display:block;width:22px;height:1.5px;background:currentColor;transition:transform .35s ease}'
+            '.menu-cel[open] .menu-cel-icone i:first-child{transform:translateY(4.25px) rotate(45deg)}'
+            '.menu-cel[open] .menu-cel-icone i:last-child{transform:translateY(-4.25px) rotate(-45deg)}'
+            '.topo:has(.menu-cel[open]){position:sticky;top:0;z-index:70}'
+            'body:has(.menu-cel[open]){overflow:hidden}'
+            '.menu-cel-painel{position:fixed;inset:0;z-index:-1;background:var(--azul);color:#fff;display:flex;flex-direction:column;'
+            'padding:88px 20px calc(28px + env(safe-area-inset-bottom));overflow-y:auto}'
+            '.menu-cel-painel a{display:flex;align-items:center;min-height:56px;border-bottom:1px solid rgba(255,255,255,.18);'
+            'font:500 clamp(22px,6.4vw,28px)/1.1 var(--letra);letter-spacing:-.02em;text-transform:uppercase;text-decoration:none;color:#fff}'
+            '.menu-cel-painel a.menu-cel-botao{justify-content:center;flex:none;margin-top:28px;min-height:52px;border:0;background:#fff;color:var(--azul);'
+            'font:500 13px var(--letra);letter-spacing:.14em}'
+            '.menu-cel-painel p{margin-top:auto;padding-top:28px;font:500 12px var(--mono);letter-spacing:.08em;color:rgba(255,255,255,.6)}'
+            '@media (min-width:1024px){.menu-cel{display:none}}'
+            '@media (prefers-reduced-motion:reduce){.menu-cel-icone i{transition:none}}')
+
+
+def menu_celular(lingua='pt', conversar='/conversar/'):
+    rotulo, rotulo_nav, itens, cta = MENU_CELULAR[lingua]
+    links = ''.join(f'<a href="{h}">{t}</a>' for h, t in itens)
+    return (f'<details class="menu-cel"><summary><span class="sr">{rotulo}</span><span class="menu-cel-icone" aria-hidden="true"><i></i><i></i></span></summary>'
+            f'<nav class="menu-cel-painel" aria-label="{rotulo_nav}">{links}<a class="menu-cel-botao" href="{conversar}">{cta}</a>'
+            f'<p>contato@genesiskore.com</p></nav></details>')
+
+
+def topo(lingua='pt', conversar='/conversar/'):
     pular, rotulo, rotulo_nav, cta, menu = TOPO[lingua]
     links = ''.join(f'<a href="{h}">{t}</a>' for h, t in menu)
     return (f'    <a class="pular" href="#conteudo">{pular}</a>\n'
             f'    <header class="topo">\n'
             f'        <a href="/" class="marca" aria-label="{rotulo}"><img src="/logo.webp" alt="" width="36" height="40"><span>GenesisKore</span></a>\n'
             f'        <nav class="menu" aria-label="{rotulo_nav}">{links}</nav>\n'
-            f'        <a class="topo-cta" href="/conversar/">{cta}</a>\n'
+            f'        <a class="topo-cta" href="{conversar}">{cta}</a>\n'
+            f'        {menu_celular(lingua, conversar)}\n'
             f'    </header>')
 
 
@@ -420,6 +461,8 @@ def sitemap(lastmods):
 def main():
     conferir = '--conferir' in sys.argv
     estilo = re.search(r'<style>(.*?)</style>', ler('consultoria/index.html'), re.S).group(1)
+    if MENU_CSS not in estilo:
+        raise SystemExit('consultoria/index.html: o <style> do molde precisa ter o MENU_CSS do gerar_paginas.py, igual')
     mudados = []
     lastmods = dict(re.findall(r'<loc>(.*?)</loc><lastmod>(.*?)</lastmod>', ler('sitemap.xml')))
     for pasta in sorted(os.listdir(RAIZ)):
