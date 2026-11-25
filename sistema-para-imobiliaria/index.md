@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: imobiliaria
 titulo: Sistema para imobiliária, sob medida | GenesisKore

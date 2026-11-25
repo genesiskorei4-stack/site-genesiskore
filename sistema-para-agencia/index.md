@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: agencia
 titulo: Sistema para agência e empresa de eventos | GenesisKore

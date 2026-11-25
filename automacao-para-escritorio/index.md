@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: escritorio
 titulo: Automação para escritório de advocacia e contábil | GenesisKore

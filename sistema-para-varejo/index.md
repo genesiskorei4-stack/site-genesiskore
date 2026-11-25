@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: varejo
 titulo: Sistema para loja e varejo, sob medida | GenesisKore

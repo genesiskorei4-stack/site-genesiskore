@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: outro
 titulo: Desenvolvimento de sistema sob medida em São Paulo | GenesisKore

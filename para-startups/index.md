@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: startup
 titulo: Sistemas e consultoria de IA para startups | GenesisKore

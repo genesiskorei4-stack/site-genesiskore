@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: industria
 titulo: Sistema para indústria pequena, sob medida | GenesisKore

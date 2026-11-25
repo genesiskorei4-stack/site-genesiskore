@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: distribuidora
 titulo: Sistema para distribuidora e atacado, sob medida | GenesisKore

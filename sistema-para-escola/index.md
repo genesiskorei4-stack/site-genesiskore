@@ -1,5 +1,4 @@
 ---
-rascunho: aguardando aprovação dos sócios
 gerar: setor
 setor: escola
 titulo: Sistema para escola e curso, sob medida | GenesisKore
