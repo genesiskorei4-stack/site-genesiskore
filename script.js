@@ -716,10 +716,22 @@ try {
         } catch { /* sem a busca antecipada, a página abre do mesmo jeito */ }
     };
 
+    // A contagem da pergunta (quantos veem, escolhem, pulam ou fecham) mora no contagem.js.
+    const contar = (evento, setor) => {
+        try { window.gkPergunta?.(evento, setor); } catch { /* a contagem nunca quebra a pergunta */ }
+    };
+
     // O setor escolhido fica no navegador, sem cookie, para o formulário chegar com ele.
     opcoes.forEach((a) => a.addEventListener('click', () => {
         try { localStorage.setItem('gk-setor', a.dataset.setor); } catch { /* navegação privada */ }
+        contar('pergunta_setor', a.dataset.setor);
     }));
+
+    // "Pular, quero ver tudo" fecha com o valor 'pular'. O X ('fechar'), o toque fora ('fora') e o
+    // Esc (sem valor) contam como fechou. Escolher um setor troca de página e não passa por aqui.
+    pergunta.addEventListener('close', () => {
+        contar(pergunta.returnValue === 'pular' ? 'pergunta_pulou' : 'pergunta_fechou');
+    });
 
     // Toque no fundo escuro, fora do cartão, também fecha.
     pergunta.addEventListener('click', (e) => {
@@ -731,5 +743,6 @@ try {
 
     if (location.hash) return;
     pergunta.showModal();
+    contar('pergunta_aberta');
     buscarAntes();
 })();

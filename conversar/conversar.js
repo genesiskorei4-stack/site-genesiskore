@@ -4,7 +4,8 @@
  * O mais reservado (faturamento) fica por último, e cada etapa diz qual é a próxima.
  *
  * O envio é o mesmo de antes, para o workflow do n8n (Pipeline de Leads), com os mesmos campos:
- * nome, empresa, whatsapp, email, faturamento, gargalo, consent, website e origem. As respostas
+ * nome, empresa, whatsapp, email, faturamento, gargalo, consent, website e origem, e desde
+ * 25/11/2026 o setor (vazio quando não há). As respostas
  * das etapas 1 e 2 vão como texto dentro do gargalo, que é o campo livre que o workflow já lê.
  *
  * Cada etapa ganha um endereço (#etapa-2), então o botão de voltar do celular volta uma etapa
@@ -17,6 +18,29 @@ const menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 
 // A origem do lead e a contagem moram no contagem.js. Se ele não carregar, a origem vira 'direto'.
 const origemDoLead = window.gkOrigem || 'direto';
+
+/*
+ * O setor da empresa (lançamento de 05/01/2027): vem do ?setor= do botão das páginas de setor ou,
+ * sem ele, do que a pessoa escolheu na pergunta da página inicial (guardado no navegador, sem
+ * cookie, pelo script.js). Só as nove chaves de plantas/setores.json passam. Sem setor o lead vai
+ * como sempre foi, com o campo vazio.
+ */
+const SETORES = ['distribuidora', 'escritorio', 'varejo', 'industria', 'imobiliaria', 'agencia', 'escola', 'startup', 'outro'];
+const setorDoLead = (() => {
+    const valido = (v) => {
+        const s = String(v || '').trim().toLowerCase();
+        return SETORES.includes(s) ? s : '';
+    };
+    try {
+        const doEndereco = valido(new URLSearchParams(location.search).get('setor'));
+        if (doEndereco) return doEndereco;
+    } catch { /* endereço estranho: tenta o navegador */ }
+    try {
+        return valido(localStorage.getItem('gk-setor'));
+    } catch {
+        return ''; // navegação privada sem armazenamento
+    }
+})();
 // Em que etapa a pessoa para (13/11/2026): uma batida por etapa e por visita, pelo mesmo caminho
 // que conta as seções da página inicial. A plataforma mostra em "Onde param no formulário".
 const etapasContadas = new Set();
@@ -274,6 +298,7 @@ async function enviar() {
         gargalo: gargaloComEscolhas(lido.gargalo),
         website: document.getElementById('website').value || '',
         origem: origemDoLead,
+        setor: setorDoLead,
     };
 
     // Campo escondido preenchido é robô: finge que enviou e não dispara o workflow, que
