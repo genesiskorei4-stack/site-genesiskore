@@ -53,6 +53,10 @@ Ainda não temos startup em operação para mostrar. O sistema no ar há mais te
 3. **Um passo de cada vez.** A primeira entrega é pequena e entra em uso logo. A próxima só vem quando fizer sentido para o caixa.
 4. **Depois do ar, a gente continua junto**, com monitoramento e suporte direto com quem construiu.
 
+## A garantia
+
+Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
+
 ## Perguntas
 
 ### Startup sem receita pode contratar?

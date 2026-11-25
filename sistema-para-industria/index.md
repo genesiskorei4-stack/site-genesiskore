@@ -55,6 +55,10 @@ Uma indústria em operação a gente ainda não tem para mostrar. O sistema no a
 3. **A primeira parte em uso antes do resto.** Em geral, a que mais custa hoje: a ordem de produção ou o custo do produto.
 4. **Depois do ar, a gente continua junto**, com monitoramento e suporte direto com quem construiu.
 
+## A garantia
+
+Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
+
 ## Perguntas
 
 ### Preciso trocar de ERP?

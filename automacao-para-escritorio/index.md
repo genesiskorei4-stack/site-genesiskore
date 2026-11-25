@@ -52,7 +52,9 @@ Robô que conversa com o cliente no WhatsApp a gente não faz. Aviso automático
 
 ## O que já está em operação
 
-O caso que a gente pode mostrar com contrato e sistema no ar é o da AUTH, uma empresa de autenticação de peças de luxo. O certificado de cada peça, que era montado à mão, passou a sair sozinho, e a AUTH divulga 500% mais capacidade de avaliação. É o mesmo trabalho de um escritório: documento que pesa, montado a partir de um modelo, com alguém aprovando. O caso inteiro está em [AUTH](https://genesiskore.com/cases/auth/).
+Na AUTH, uma empresa de autenticação de peças de luxo, o certificado de cada peça, que era montado à mão, passou a sair sozinho, e a AUTH divulga 500% mais capacidade de avaliação. É o mesmo trabalho de um escritório: documento que pesa, montado a partir de um modelo, com alguém aprovando. O caso inteiro está em [AUTH](https://genesiskore.com/cases/auth/).
+
+Na **Fazenda CCA**, quem está no campo manda áudio, foto ou texto pelo celular, e o sistema organiza e gera o recibo em PDF na hora.
 
 ## Como funciona
 
@@ -60,6 +62,10 @@ O caso que a gente pode mostrar com contrato e sistema no ar é o da AUTH, uma e
 2. **Proposta com preço fechado**, em três opções, com a lista escrita do que vai ser automatizado e o prazo de cada parte.
 3. **A primeira automação em uso antes do resto.** As outras entram em fases.
 4. **Depois do ar, a gente continua junto**, com monitoramento e suporte direto com quem construiu.
+
+## A garantia
+
+Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
 
 ## Perguntas
 

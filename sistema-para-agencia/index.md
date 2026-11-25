@@ -53,6 +53,10 @@ Nenhuma agência em operação para mostrar, por enquanto. O que está no ar há
 3. **A primeira parte em uso antes do resto.** Em geral, o orçamento ou o cronograma.
 4. **Depois do ar, a gente continua junto**, com monitoramento e suporte direto com quem construiu.
 
+## A garantia
+
+Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
+
 ## Perguntas
 
 ### O fornecedor vai ter de se cadastrar em algum sistema?

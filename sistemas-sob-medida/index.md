@@ -63,6 +63,11 @@ Se o problema é não saber se a empresa está ganhando dinheiro, quem entra é 
 
 > "A GenesisKore tornou nossos processos na AUTH muito mais rápidos, completos e seguros." Theodoro Janz, fundador da AUTH.
 
+- **Uma empresa de alimentos:** um painel que lê as notas fiscais e mostra o lucro de cada venda, por produto e ponto de venda.
+- **Rastro**, frota e pneus: o histórico de cada pneu, o desgaste medido pelo celular e o relatório do que trocar.
+- **Fazenda CCA**, agro: pastos, lotes, insumos e maquinário num aplicativo só, pelo celular.
+- **GMF Gráfica Rápida:** pedidos, clientes e arquivos num sistema, com permissão por perfil.
+
 ## Como funciona
 
 1. **Conversa de diagnóstico, sem custo.** Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale.
@@ -71,6 +76,10 @@ Se o problema é não saber se a empresa está ganhando dinheiro, quem entra é 
 4. **Depois do ar, a gente continua junto.** A mensalidade cobre hospedagem, monitoramento, correção e suporte. Se algo falha, o próprio sistema avisa a nossa equipe.
 
 Sem porcentagem sobre o faturamento e sem taxa escondida. Cada cliente tem o próprio banco de dados, separado dos outros, dentro da LGPD.
+
+## A garantia
+
+Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
 
 ## Perguntas
 

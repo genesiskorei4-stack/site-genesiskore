@@ -53,6 +53,10 @@ Ainda não temos escola em operação para mostrar. O sistema no ar há mais tem
 3. **A primeira parte em uso antes do resto.** Se a matrícula está perto, começa por ela.
 4. **Depois do ar, a gente continua junto**, com monitoramento e suporte direto com quem construiu.
 
+## A garantia
+
+Se, em 30 dias do sistema no ar, ele não fizer o que está escrito na proposta, a gente devolve 100% da implementação.
+
 ## Perguntas
 
 ### Preciso trocar o sistema de gestão escolar?
