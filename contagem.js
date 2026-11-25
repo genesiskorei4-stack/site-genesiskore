@@ -141,7 +141,25 @@
         } catch { /* a contagem nunca derruba o site */ }
     }
 
+    // A pergunta do setor da página inicial (lançamento de 05/01/2027): abriu, escolheu (com a chave),
+    // pulou ou fechou. Mesmo caminho e mesmas regras da batida de seção: sem cookie e sem IP.
+    const EVENTOS_DA_PERGUNTA = ['pergunta_aberta', 'pergunta_setor', 'pergunta_pulou', 'pergunta_fechou'];
+    function gkPergunta(evento, setor) {
+        try {
+            if (desligada || !EVENTOS_DA_PERGUNTA.includes(evento)) return;
+            if (!base) base = montarBase();
+            const dados = { evento, sessao: base.sessao, dispositivo: base.dispositivo, origem: base.origem };
+            if (evento === 'pergunta_setor') dados.setor = String(setor || '').toLowerCase().replace(/[^a-z]/g, '').slice(0, 20);
+            const corpo = JSON.stringify(dados);
+            if (navigator.sendBeacon && navigator.sendBeacon(ENDERECO, new Blob([corpo], { type: 'text/plain' }))) return;
+            if (window.fetch) {
+                fetch(ENDERECO, { method: 'POST', body: corpo, keepalive: true, mode: 'no-cors', headers: { 'Content-Type': 'text/plain' } }).catch(() => {});
+            }
+        } catch { /* a contagem nunca derruba o site */ }
+    }
+
     window.gkContar = gkContar;
     window.gkSecao = gkSecao;
+    window.gkPergunta = gkPergunta;
     gkContar('visita');
 })();
