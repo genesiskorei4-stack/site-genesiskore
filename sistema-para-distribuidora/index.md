@@ -57,6 +57,8 @@ Para montar a conta do mês antes de qualquer sistema, use o [modelo de DRE gere
 
 Ainda não temos uma distribuidora em operação para mostrar, e preferimos dizer isso a inventar um caso. O sistema que está no ar há mais tempo é o da AUTH, que autentica peças de luxo: a empresa inteira num sistema, com uma porta para a equipe e outra para a loja e o cliente acompanharem cada peça. A AUTH divulga 500% mais capacidade de avaliação, com as mesmas pessoas. O caso inteiro está em [AUTH](https://genesiskore.com/cases/auth/).
 
+Para quem entrega com caminhão próprio, o aplicativo de frota e pneus da [Rastro](https://genesiskore.com/cases/rastro/) guarda a história de cada pneu, calcula o desgaste na medição e mostra o que trocar no mês.
+
 > "A GenesisKore tornou nossos processos na AUTH muito mais rápidos, completos e seguros." Theodoro Janz, fundador da AUTH.
 
 ## Como funciona

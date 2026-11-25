@@ -43,6 +43,10 @@ Todo mês, semestre e ano sai o relatório completo do caixa.
 
 Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 
+## E no seu setor?
+
+Empresa de outro setor, como o agro, começa pela página de [sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/), que mostra o caminho de qualquer operação.
+
 ## Outros projetos
 
 [AUTH](https://genesiskore.com/cases/auth/) · [Rastro](https://genesiskore.com/cases/rastro/) · [GMF Gráfica](https://genesiskore.com/cases/gmf/)

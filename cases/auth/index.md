@@ -55,6 +55,10 @@ A cada 5 minutos o sistema testa se a equipe consegue trabalhar, e se conserta s
 
 Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 
+## E no seu setor?
+
+A página de [sistema para loja e varejo de alto valor](https://genesiskore.com/sistema-para-varejo/) mostra o que a GenesisKore constrói para quem vende peça de valor e não pode errar com o cliente.
+
 ## Outros projetos
 
 [Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/) · [Rastro](https://genesiskore.com/cases/rastro/) · [GMF Gráfica](https://genesiskore.com/cases/gmf/)

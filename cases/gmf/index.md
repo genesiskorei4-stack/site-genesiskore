@@ -63,6 +63,10 @@ Gastos, fluxo de caixa e o cálculo do preço de cada produto.
 
 Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 
+## E no seu setor?
+
+Quem produz sob pedido encontra na página de [sistema para indústria](https://genesiskore.com/sistema-para-industria/) o caminho do pedido à ordem de produção e ao custo de cada produto.
+
 ## Outros projetos
 
 [AUTH](https://genesiskore.com/cases/auth/) · [Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/) · [Rastro](https://genesiskore.com/cases/rastro/)

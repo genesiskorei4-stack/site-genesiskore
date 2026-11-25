@@ -63,9 +63,9 @@ Se o problema é não saber se a empresa está ganhando dinheiro, quem entra é 
 > "A GenesisKore tornou nossos processos na AUTH muito mais rápidos, completos e seguros." Theodoro Janz, fundador da AUTH.
 
 - **Uma empresa de alimentos:** um painel que lê as notas fiscais e mostra o lucro de cada venda, por produto e ponto de venda.
-- **Rastro**, frota e pneus: o histórico de cada pneu, o desgaste medido pelo celular e o relatório do que trocar.
-- **Fazenda CCA**, agro: pastos, lotes, insumos e maquinário num aplicativo só, pelo celular.
-- **GMF Gráfica Rápida:** pedidos, clientes e arquivos num sistema, com permissão por perfil.
+- **[Rastro](https://genesiskore.com/cases/rastro/)**, frota e pneus: o histórico de cada pneu, o desgaste medido pelo celular e o relatório do que trocar.
+- **[Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/)**, agro: pastos, lotes, insumos e maquinário num aplicativo só, pelo celular.
+- **[GMF Gráfica Rápida](https://genesiskore.com/cases/gmf/):** pedidos, clientes e arquivos num sistema, com permissão por perfil.
 
 ## Como funciona
 

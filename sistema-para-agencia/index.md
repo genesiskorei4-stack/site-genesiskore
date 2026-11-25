@@ -45,6 +45,8 @@ O sob medida entra quando o mesmo trabalho se repete em todo evento (orçamento,
 
 Nenhuma agência em operação para mostrar, por enquanto. O que está no ar há mais tempo é o sistema da AUTH, que autentica peças de luxo: cada peça tem prazo, cada etapa tem responsável e o cliente acompanha tudo por um link. A AUTH divulga 500% mais capacidade de avaliação, com as mesmas pessoas. O caso inteiro está em [AUTH](https://genesiskore.com/cases/auth/).
 
+Mais perto de agência é o sistema que a GenesisKore construiu para a [GMF Gráfica](https://genesiskore.com/cases/gmf/): cada arte fica no pedido com o número da versão, só segue depois de aprovada, e o cliente acompanha o pedido por um link.
+
 ## Como funciona
 
 1. **Conversa de diagnóstico, sem custo.** Você conta como foi o último evento, do pedido do cliente até o último pagamento.

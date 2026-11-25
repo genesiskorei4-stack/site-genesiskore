@@ -67,6 +67,10 @@ A transportadora recebe um endereço para ver o relatório da frota dela, que va
 
 Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos [Sistemas sob medida](https://genesiskore.com/sistemas-sob-medida/).
 
+## E no seu setor?
+
+Quem entrega com caminhão próprio encontra na página de [sistema para distribuidora e atacado](https://genesiskore.com/sistema-para-distribuidora/) o pedido, a nota e o lucro de cada entrega.
+
 ## Outros projetos
 
 [AUTH](https://genesiskore.com/cases/auth/) · [Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/) · [GMF Gráfica](https://genesiskore.com/cases/gmf/)

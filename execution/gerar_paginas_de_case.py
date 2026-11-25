@@ -27,6 +27,12 @@ DESCRICAO={'auth':'Como a AUTH, que autentica peças de luxo, ganhou 500% de cap
            'cca':'Como a Fazenda CCA trocou o bloquinho por um aplicativo só: pastos, lotes, entradas, saídas e o caixa, preenchidos pelo celular, direto do pasto.',
            'rastro':'Como a Rastro passou a controlar frota e pneus pelo celular: cada pneu com história, desgaste calculado na medição e relatório do que trocar todo mês.',
            'gmf':'O sistema de pedidos que a GenesisKore construiu para a GMF Gráfica Rápida: cada pedido no seu passo, a arte com versão e aprovação, o link para o cliente acompanhar e o caixa dos próximos 30 dias.'}
+# 25/11/2026 (lançamento de 05/01/2027): cada case aponta para a página de setor mais próxima, e a página de setor
+# aponta de volta para ele. Só texto que já está no case ou na página de setor, sem número novo.
+VOLTA_AO_SETOR={'auth':'A página de <a href="/sistema-para-varejo/">sistema para loja e varejo de alto valor</a> mostra o que a GenesisKore constrói para quem vende peça de valor e não pode errar com o cliente.',
+                'cca':'Empresa de outro setor, como o agro, começa pela página de <a href="/sistemas-sob-medida/">sistemas sob medida</a>, que mostra o caminho de qualquer operação.',
+                'rastro':'Quem entrega com caminhão próprio encontra na página de <a href="/sistema-para-distribuidora/">sistema para distribuidora e atacado</a> o pedido, a nota e o lucro de cada entrega.',
+                'gmf':'Quem produz sob pedido encontra na página de <a href="/sistema-para-industria/">sistema para indústria</a> o caminho do pedido à ordem de produção e ao custo de cada produto.'}
 feitos=[]
 for cid,(slug,nome,tit) in CASES.items():
     art=re.search(r'<(?:article|section) class="case" id="case-%s".*?</(?:article|section)>'%cid,t,re.S).group(0)
@@ -201,6 +207,9 @@ for cid,(slug,nome,tit) in CASES.items():
         <h2>Como um projeto assim começa?</h2>
         <p>Com uma conversa de diagnóstico, que não custa nada. Você conta como o trabalho acontece hoje, e a gente diz o que vale automatizar e o que não vale. A proposta vem com preço fechado, em três opções, e o sistema entra em uso por partes, começando pela que mais pesa. O passo a passo está na página dos <a href="/sistemas-sob-medida/">Sistemas sob medida</a>.</p>
         <a class="botao" href="/conversar/">Quero conversar</a>
+
+        <h2>E no seu setor?</h2>
+        <p>{VOLTA_AO_SETOR[cid]}</p>
 
         <h2>Outros projetos</h2>
         <p>{outros}</p>

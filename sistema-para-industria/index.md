@@ -47,6 +47,8 @@ Em janeiro de 2027 a CBS passa a ser cobrada no lugar do PIS e da Cofins ([Lei C
 
 Uma indústria em operação a gente ainda não tem para mostrar. O sistema no ar há mais tempo é o da AUTH, que autentica peças de luxo: cada peça entra numa fila com prazo, passa por um checklist e sai com certificado, como uma linha de produção. A AUTH divulga 500% mais capacidade de avaliação, com as mesmas pessoas. O caso inteiro está em [AUTH](https://genesiskore.com/cases/auth/).
 
+Mais perto de quem produz sob pedido, o sistema que a GenesisKore construiu para a [GMF Gráfica](https://genesiskore.com/cases/gmf/) põe cada pedido no seu passo, com a arte aprovada antes da impressão e a conferência antes de faturar.
+
 ## Como funciona
 
 1. **Conversa de diagnóstico, sem custo.** Você conta o caminho de um pedido, do comercial até o caminhão.

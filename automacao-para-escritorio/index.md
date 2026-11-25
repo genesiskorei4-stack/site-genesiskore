@@ -53,7 +53,7 @@ Robô que conversa com o cliente no WhatsApp a gente não faz. Aviso automático
 
 Na AUTH, uma empresa de autenticação de peças de luxo, o certificado de cada peça, que era montado à mão, passou a sair sozinho, e a AUTH divulga 500% mais capacidade de avaliação. É o mesmo trabalho de um escritório: documento que pesa, montado a partir de um modelo, com alguém aprovando. O caso inteiro está em [AUTH](https://genesiskore.com/cases/auth/).
 
-Na **Fazenda CCA**, quem está no campo manda áudio, foto ou texto pelo celular, e o sistema organiza e gera o recibo em PDF na hora.
+Na [Fazenda CCA](https://genesiskore.com/cases/fazenda-cca/), quem está no campo manda áudio, foto ou texto pelo celular, e o sistema organiza e gera o recibo em PDF na hora.
 
 ## Como funciona
 
