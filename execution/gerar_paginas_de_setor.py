@@ -523,7 +523,6 @@ def boas_vindas(meta):
     cel = desenho(PLANTA_INICIO, 'cel', descricao).replace(f'id="{PLANTA_INICIO}-cel-', 'id="inicio-cel-').replace(f'#{PLANTA_INICIO}-cel-', '#inicio-cel-')
     legenda = ''.join(f'<li><b>{i}</b>{html.escape(t)}</li>' for i, t in enumerate(m['legenda'], 1))
     return f'''        <section class="boas-vindas" id="inicio" aria-labelledby="titulo-inicio">
-            <p class="bv-chapeu">Sistemas sob medida · Consultoria de gestão</p>
             <h1 class="bv-titulo" id="titulo-inicio"><span class="linha">{LEMA[0]}</span> <span class="linha">{LEMA[1]}</span></h1>
             <p class="bv-dor">A empresa cresceu e ainda depende de você.</p>
             <figure class="bv-planta" style="--proporcao:{proporcao(pc)}">
@@ -531,9 +530,8 @@ def boas_vindas(meta):
                 <div class="so-cel">{cel}</div>
                 <figcaption><ol class="bv-legenda">{legenda}</ol></figcaption>
             </figure>
-            <p class="bv-sub">Sistemas sob medida tiram da mão da equipe o pedido, o documento e a cobrança. A Consultoria de gestão mostra quanto sobra e por onde a IA entra na sua empresa.</p>
+            <p class="bv-sub"><span class="linha">Sistema para o que se repete.</span> <span class="linha">Número para o que se decide.</span></p>
             <a class="bv-botao" href="/conversar/">Quero conversar</a>
-            <p class="bv-garantia">A conversa de diagnóstico não custa nada. Você sai dela sabendo o que vale fazer, mesmo que não feche com a gente.</p>
         </section>'''
 
 

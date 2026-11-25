@@ -5222,7 +5222,7 @@ p, li, dd, blockquote, figcaption span, .lead {
 /* 25/11/2026: a frase da marca (a dor) embaixo do lema (a promessa), os dois produtos em uma linha e a
    conversa sem custo, que estavam na primeira tela do site antigo. */
 .lancamento .bv-dor { font-weight: 500; font-size: clamp(17px, 1.6vw, 22px); margin: 16px 0 0; opacity: 0.85; color: #fff; }
-.lancamento .bv-sub { max-width: 760px; margin: 22px auto 0; font-size: 16px; line-height: 1.5; opacity: 0.85; color: #fff; }
+.lancamento .bv-sub { max-width: 760px; margin: 22px auto 0; font-weight: 500; font-size: clamp(18px, 1.7vw, 24px); line-height: 1.35; color: #fff; }
 .lancamento .bv-botao {
     display: inline-block;
     margin-top: 20px;
@@ -5378,7 +5378,8 @@ p, li, dd, blockquote, figcaption span, .lead {
     .lancamento .bv-chapeu { font-size: 10px; letter-spacing: 0.08em; line-height: 1.7; white-space: nowrap; }
     .lancamento .bv-titulo { font-size: 9.3vw; line-height: 1; margin-top: 14px; }
     .lancamento .bv-dor { font-size: 15px; margin-top: 12px; }
-    .lancamento .bv-sub { font-size: 15px; margin-top: 26px; text-align: left; }
+    .lancamento .bv-sub { font-size: 18px; margin-top: 26px; }
+    .lancamento .bv-sub .linha { display: block; white-space: nowrap; }
     .lancamento .bv-botao { display: block; width: 100%; text-align: center; }
     .lancamento .bv-garantia { text-align: left; }
     .lancamento .bv-planta { width: calc(100% + 40px); min-width: 0; margin: 30px -20px 0; }
