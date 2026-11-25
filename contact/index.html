@@ -32,10 +32,13 @@
            sobre branco. Este bloco de estilo é o molde: gerar_paginas.py copia para as páginas geradas, para os cases e para
            as escritas à mão (MOLDE_A_MAO). Mude aqui e rode o script. */
         @font-face { font-family: 'Inter Tight'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('/fontes/inter-tight-latin.woff2') format('woff2'); }
+        /* Reserva do tamanho da Inter Tight (medido em 25/11/2026: o texto em Arial sai 4,6% mais largo). Enquanto a fonte
+           não chega, o texto já ocupa o mesmo espaço, e a página não pula quando ela chega. */
+        @font-face{font-family:'Inter Tight Reserva';src:local('Arial'),local('ArialMT'),local('Liberation Sans'),local('Roboto');size-adjust:95.4%;ascent-override:101.5%;descent-override:25.4%;line-gap-override:0%}
         @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fontes/jetbrains-mono-latin.woff2') format('woff2'); }
         @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fontes/playfair-italic-latin.woff2') format('woff2'); }
         @view-transition { navigation: auto; }
-        :root { --azul: #120A8F; --tinta: #121212; --suave: #4a4a4a; --linha: #dcdcdc; --papel: #fff; --cinza: #fafafa; --mono: 'JetBrains Mono', ui-monospace, monospace; --letra: 'Inter Tight', system-ui, -apple-system, "Segoe UI", sans-serif; }
+        :root { --azul: #120A8F; --tinta: #121212; --suave: #4a4a4a; --linha: #dcdcdc; --papel: #fff; --cinza: #fafafa; --mono: 'JetBrains Mono', ui-monospace, monospace; --letra: 'Inter Tight', 'Inter Tight Reserva', system-ui, -apple-system, "Segoe UI", sans-serif; }
         * { box-sizing: border-box; }
         html { -webkit-text-size-adjust: 100%; }
         body { margin: 0; background: var(--papel); color: var(--tinta); font: 400 17px/1.65 var(--letra); -webkit-font-smoothing: antialiased; overflow-x: hidden; }

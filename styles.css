@@ -53,6 +53,17 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Reserva do tamanho da Inter Tight (25/11/2026): Arial, ou Roboto no Android, encolhida para ocupar o mesmo
+ * espaço (o texto em Arial sai 4,6% mais largo). Enquanto a fonte não chega, nada pula quando ela chega. */
+@font-face {
+    font-family: 'Inter Tight Reserva';
+    src: local('Arial'), local('ArialMT'), local('Liberation Sans'), local('Roboto');
+    size-adjust: 95.4%;
+    ascent-override: 101.5%;
+    descent-override: 25.4%;
+    line-gap-override: 0%;
+}
+
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;
@@ -79,7 +90,7 @@
     /* Identidade nova (semana 1, ainda sem uso): o ultramarino e a régua de tamanhos e espaços
      * que entram na semana 2. Proporção de chegada: branco 65%, preto 20%, ultramarino 15%. */
     --ultramarino: #120A8F;
-    --letra-nova: 'Inter Tight', system-ui, sans-serif;
+    --letra-nova: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif;
     --mono-nova: 'JetBrains Mono', ui-monospace, monospace;
     --t-1: 0.875rem;
     --t-2: 1rem;
@@ -4987,8 +4998,8 @@ p, li, dd, blockquote, figcaption span, .lead {
 @view-transition { navigation: auto; }
 
 .lancamento {
-    --titulo: 'Inter Tight', system-ui, sans-serif;
-    --texto: 'Inter Tight', system-ui, sans-serif;
+    --titulo: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif;
+    --texto: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif;
     --mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
@@ -4996,7 +5007,7 @@ p, li, dd, blockquote, figcaption span, .lead {
 .lancamento h2,
 .lancamento h3,
 .lancamento .titulo-secao {
-    font-family: 'Inter Tight', system-ui, sans-serif !important;
+    font-family: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif !important;
     text-transform: none !important;
     letter-spacing: -0.035em !important;
 }
@@ -5255,7 +5266,7 @@ p, li, dd, blockquote, figcaption span, .lead {
     background: #fff;
     color: #121212;
     box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.5);
-    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-family: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif;
 }
 
 .pergunta::backdrop { background: rgba(10, 6, 60, 0.55); }
@@ -5508,14 +5519,14 @@ p, li, dd, blockquote, figcaption span, .lead {
 .lancamento .conversa-topo .marca img { filter: none; height: 34px; width: auto; }
 
 .lancamento .conversa-topo .marca span {
-    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-family: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif;
     font-weight: 600;
     font-size: 25px;
     letter-spacing: -0.03em;
     text-transform: none;
 }
 
-.lancamento .conversa-sair { color: #fff; font-family: 'Inter Tight', system-ui, sans-serif; }
+.lancamento .conversa-sair { color: #fff; font-family: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif; }
 
 /* A etiqueta da etapa volta a aparecer aqui (a inicial esconde as dela), sem os colchetes do site antigo. */
 .lancamento .conversa .etiqueta {
@@ -5546,7 +5557,7 @@ p, li, dd, blockquote, figcaption span, .lead {
 .lancamento .campo-aceite input { accent-color: var(--ultramarino); }
 
 .lancamento .conta-do-ano { background: var(--ultramarino); color: #fff; }
-.lancamento .conta-do-ano strong { font-family: 'Inter Tight', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.03em; }
+.lancamento .conta-do-ano strong { font-family: 'Inter Tight', 'Inter Tight Reserva', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.03em; }
 .lancamento .conta-do-ano p,
 .lancamento .conta-do-ano .mini { color: rgba(255, 255, 255, 0.82); }
 .lancamento .conta-do-ano a { color: #fff; }
