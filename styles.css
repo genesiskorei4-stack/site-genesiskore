@@ -5486,3 +5486,67 @@ p, li, dd, blockquote, figcaption span, .lead {
 .lancamento #sistemas .sistema-video strong,
 .lancamento #sistemas .sistema-video .link-seta { color: #121212 !important; }
 .lancamento #calculadora .painel-resultado .etiqueta { color: #6b6b6b !important; }
+
+/* ------------------------------------------------------------ a página de conversa (25/11/2026)
+ * conversar/ passou a ter body.lancamento, como a inicial. O topo azul das outras páginas internas, com a
+ * linha de progresso em branco, a base branca, a opção escolhida em azul e a conta do ano num cartão azul
+ * (era preto). A lógica continua em conversar/conversar.js, sem mudança. */
+
+.lancamento:has(> .conversa)::before { content: none; }
+.lancamento .conversa { background: #fff; }
+
+.lancamento .conversa-topo {
+    background: var(--ultramarino);
+    color: #fff;
+    border-bottom: 0;
+    --linha: rgba(255, 255, 255, 0.28);
+    --tinta: #fff;
+    --suave: rgba(255, 255, 255, 0.78);
+}
+
+.lancamento .conversa-topo .marca { color: #fff; }
+.lancamento .conversa-topo .marca img { filter: none; height: 34px; width: auto; }
+
+.lancamento .conversa-topo .marca span {
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: -0.03em;
+    text-transform: none;
+}
+
+.lancamento .conversa-sair { color: #fff; font-family: 'Inter Tight', system-ui, sans-serif; }
+
+/* A etiqueta da etapa volta a aparecer aqui (a inicial esconde as dela), sem os colchetes do site antigo. */
+.lancamento .conversa .etiqueta {
+    display: block !important;
+    font: 500 12px/1.5 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.16em;
+}
+
+.lancamento .conversa .etiqueta::before,
+.lancamento .conversa .etiqueta::after { content: none; }
+
+.lancamento .conversa .mini,
+.lancamento .conversa .a-seguir,
+.lancamento .progresso-texto { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+.lancamento .opcao { border-color: #dcdcdc; }
+.lancamento .opcao[aria-pressed='true'] { background: var(--ultramarino); border-color: var(--ultramarino); color: #fff; }
+.lancamento .opcao[aria-pressed='true']::before { background: #fff; border-color: #fff; }
+
+@media (hover: hover) {
+    .lancamento .opcao:hover { border-color: var(--ultramarino); }
+}
+
+.lancamento .campo input:focus,
+.lancamento .campo select:focus,
+.lancamento .campo textarea:focus { border-color: var(--ultramarino); box-shadow: inset 0 0 0 1px var(--ultramarino); }
+
+.lancamento .campo-aceite input { accent-color: var(--ultramarino); }
+
+.lancamento .conta-do-ano { background: var(--ultramarino); color: #fff; }
+.lancamento .conta-do-ano strong { font-family: 'Inter Tight', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.03em; }
+.lancamento .conta-do-ano p,
+.lancamento .conta-do-ano .mini { color: rgba(255, 255, 255, 0.82); }
+.lancamento .conta-do-ano a { color: #fff; }

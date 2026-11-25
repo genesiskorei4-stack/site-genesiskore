@@ -1,7 +1,10 @@
 """Gera cases/<nome>/index.html a partir do texto de cada case na página inicial (index.html).
 Uso: python3 execution/gerar_paginas_de_case.py   (rodar de novo sempre que o texto do case mudar)
 """
-import re, json, os, html
+import re, json, os, html, sys
+# O topo, o rodapé e as fontes da identidade nova vêm do mesmo molde das outras páginas internas (25/11/2026).
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from gerar_paginas import topo, rodape, PRELOAD
 t=open('index.html',encoding='utf-8').read()
 estilo=re.search(r'<style>.*?</style>',open('consultoria/index.html',encoding='utf-8').read(),re.S).group(0)
 limpa=lambda s: re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s)).strip()
@@ -160,7 +163,7 @@ for cid,(slug,nome,tit) in CASES.items():
     <title>{TITULO[cid]} | GenesisKore</title>
     <meta name="description" content="{html.escape(desc,quote=True)}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#120A8F">
     <link rel="canonical" href="{U}">
     <link rel="alternate" type="text/markdown" href="{U}index.md" title="Versão em Markdown para agentes de IA">
     <meta property="og:type" content="article">
@@ -173,17 +176,14 @@ for cid,(slug,nome,tit) in CASES.items():
     <link rel="icon" type="image/png" href="/icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
     <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
     <!-- Gerada do texto do case na página inicial ({"/".join(reversed(PUBLICADO_CASE.get(cid,"2026-11-10").split("-")))}). Mudou lá, mude aqui. -->
-    <script type="application/ld+json">
+{PRELOAD}    <script type="application/ld+json">
 {json.dumps(ld,ensure_ascii=False,indent=2)}
     </script>
     {estilo}
 </head>
 <body>
-    <header>
-        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a></nav>
-    </header>
-    <main>
+{topo()}
+    <main id="conteudo">
         <p class="etiqueta">Case · {setor}</p>
         <h1>{h3}</h1>
         <p class="suave">Atualizado em {"/".join(reversed(ATUALIZADO_CASE.get(cid,ATUALIZADO).split("-")))}.</p>
@@ -205,10 +205,7 @@ for cid,(slug,nome,tit) in CASES.items():
         <h2>Outros projetos</h2>
         <p>{outros}</p>
     </main>
-    <footer>
-        <a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/privacidade/">Privacidade</a>
-        <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão.</p>
-    </footer>
+{rodape()}
     <script src="/contagem.js" defer></script>{auto}
     <a class="conversa-fixa" href="/conversar/">Quero meu diagnóstico</a>
 </body>

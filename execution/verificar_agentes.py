@@ -111,7 +111,7 @@ checar('GenesisKore Management Consulting' in re.search(r'<title>(.*?)</title>',
        '/management-consulting/ tem "GenesisKore Management Consulting" no título')
 
 for p in ('sobre', 'contato', 'privacidade', 'about', 'contact', 'privacy', 'consultoria', 'management-consulting'):
-    corpo = re.search(r'<main>(.*)</main>', ler(p + '/'), re.S).group(1)
+    corpo = re.search(r'<main[^>]*>(.*)</main>', ler(p + '/'), re.S).group(1)
     texto = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', corpo)).strip()
     checar(len(texto) >= 500, f'/{p}/ tem pelo menos 500 caracteres ({len(texto)})')
 

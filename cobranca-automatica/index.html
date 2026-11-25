@@ -7,7 +7,7 @@
     <title>Cobrança automática de clientes, com aviso e baixa | GenesisKore</title>
     <meta name="description" content="Régua de cobrança sob medida: aviso antes do vencimento, lembrete depois e baixa quando o pagamento cai. Para empresa que vende a prazo e cobra de memória.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#120A8F">
     <link rel="canonical" href="https://genesiskore.com/cobranca-automatica/">
     <link rel="alternate" type="text/markdown" href="https://genesiskore.com/cobranca-automatica/index.md" title="Versão em Markdown para agentes de IA">
     <meta property="og:type" content="website">
@@ -20,6 +20,8 @@
     <link rel="icon" type="image/png" href="/icone-tema-claro.png?v=1" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="/icone-tema-escuro.png?v=1" media="(prefers-color-scheme: dark)">
     <link rel="help" type="text/plain" href="https://genesiskore.com/llms.txt">
+    <link rel="preload" href="/fontes/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fontes/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -152,75 +154,141 @@
 }
     </script>
     <style>
-        :root { --fundo: #fff; --texto: #000; --suave: #555; --linha: #d4d4d4; }
-        * { box-sizing: border-box; }
-        body { margin: 0; background: var(--fundo); color: var(--texto); font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; }
-        header, main, footer { max-width: 44rem; margin: 0 auto; padding: 0 16px; }
-        header { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--linha); }
-        header a { color: var(--texto); text-decoration: none; letter-spacing: .14em; font-size: .85rem; font-weight: 600; }
-        header .marca { display: flex; align-items: center; gap: 12px; font-size: .95rem; }
-        header .marca img { height: 44px; width: auto; filter: invert(1); }
-        @media (max-width: 480px) { header .marca span { display: none; } header nav a { margin-left: 14px; } }
-        header nav a { letter-spacing: 0; font-weight: 400; margin-left: 16px; color: var(--suave); display: inline-block; padding: 12px 0; }
-        main { padding-top: 40px; padding-bottom: 56px; }
-        h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.1; margin: 0 0 20px; letter-spacing: -.01em; }
-        h2 { font-size: 1.15rem; margin: 40px 0 8px; }
-        h3 { font-size: 1rem; margin: 0 0 6px; }
-        p, li { color: var(--texto); }
-        .suave { color: var(--suave); }
-        a { color: inherit; }
-        .etiqueta { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--suave); margin: 0 0 12px; }
-        .produto { border-top: 1px solid var(--linha); padding: 18px 0 6px; }
-        .fala { font-style: italic; }
-        .rotulo { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); margin-right: 6px; }
-        .socios { list-style: none; padding: 0; display: grid; gap: 18px; }
-        .socios li { display: flex; gap: 14px; align-items: flex-start; }
-        .socios p { margin: 0; }
-        .foto { flex: 0 0 56px; width: 56px; height: 56px; object-fit: cover; display: flex; align-items: center; justify-content: center; border: 1px solid var(--texto); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .85rem; letter-spacing: .08em; }
-        @media (min-width: 640px) { .socios { grid-template-columns: 1fr 1fr; } }
-        blockquote { margin: 32px 0 0; padding-left: 18px; border-left: 2px solid var(--texto); font-size: 1.15rem; }
-        .botao { display: inline-block; margin-top: 12px; padding: 14px 22px; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
-        footer { border-top: 1px solid var(--linha); padding-top: 20px; padding-bottom: 32px; font-size: .85rem; color: var(--suave); }
-        footer a { margin-right: 14px; display: inline-block; padding: 12px 0; }
+        /* Identidade do lançamento de 05/01/2027 nas páginas internas (25/11/2026). Mesmas regras de body.lancamento
+           em styles.css e das páginas de setor: base branca, ultramarino #120A8F no botão, no link, nos filetes e no
+           topo, preto no texto e nos contornos, raio zero, filete de 1 px, Inter Tight e JetBrains Mono. Letra azul só
+           sobre branco. Este bloco de estilo é o molde: gerar_paginas.py copia para as páginas geradas, para os cases e para
+           as escritas à mão (MOLDE_A_MAO). Mude aqui e rode o script. */
+        @font-face { font-family: 'Inter Tight'; font-style: normal; font-weight: 300 700; font-display: swap; src: url('/fontes/inter-tight-latin.woff2') format('woff2'); }
+        @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fontes/jetbrains-mono-latin.woff2') format('woff2'); }
+        @font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fontes/playfair-italic-latin.woff2') format('woff2'); }
         @view-transition { navigation: auto; }
-    
-        .tabela { overflow-x: auto; margin: 20px 0 8px; }
-        .tabela table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .92rem; }
-        .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--linha); }
-        .tabela thead th { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); font-weight: 500; border-top: 0; }
+        :root { --azul: #120A8F; --tinta: #121212; --suave: #4a4a4a; --linha: #dcdcdc; --papel: #fff; --cinza: #fafafa; --mono: 'JetBrains Mono', ui-monospace, monospace; --letra: 'Inter Tight', system-ui, -apple-system, "Segoe UI", sans-serif; }
+        * { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; }
+        body { margin: 0; background: var(--papel); color: var(--tinta); font: 400 17px/1.65 var(--letra); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        a { color: inherit; }
+        img, video { max-width: 100%; }
+        .pular { position: absolute; left: -9999px; top: 0; background: #fff; color: var(--azul); padding: 12px 16px; z-index: 20; }
+        .pular:focus { left: 12px; top: 12px; }
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+        /* O topo: o mesmo das páginas de setor e da primeira tela da inicial. Azul, marca branca, botão branco. */
+        .topo { background: var(--azul); color: #fff; display: flex; align-items: center; gap: 24px; padding: 10px max(20px, calc((100% - 1200px) / 2)); }
+        .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; font: 600 25px/1 var(--letra); letter-spacing: -.03em; min-height: 44px; }
+        .marca img { height: 34px; width: auto; display: block; }
+        .menu { display: none; gap: 30px; }
+        .menu a { font: 500 12px var(--letra); letter-spacing: .12em; text-transform: uppercase; text-decoration: none; opacity: .9; padding: 12px 0; }
+        .menu a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+        .topo-cta { background: #fff; color: var(--azul); font: 500 12px var(--letra); letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 15px 21px; min-height: 44px; display: inline-flex; align-items: center; }
+        .topo-cta:hover { background: var(--tinta); color: #fff; }
+
+        /* O texto: uma coluna de leitura sobre o branco. */
+        main { max-width: 46rem; margin: 0 auto; padding: 64px 20px 80px; }
+        h1 { font: 600 clamp(34px, 6vw, 54px)/1.04 var(--letra); letter-spacing: -.04em; margin: 0 0 22px; }
+        h2 { font: 600 clamp(24px, 3.4vw, 32px)/1.12 var(--letra); letter-spacing: -.03em; margin: 60px 0 14px; }
+        h3 { font: 600 19px/1.3 var(--letra); letter-spacing: -.015em; margin: 0 0 6px; }
+        main h2 + h3 { margin-top: 22px; }
+        main p + h3, main ul + h3 { margin-top: 28px; }
+        em { font: italic 400 1.08em/1 'Playfair Display', Georgia, serif; letter-spacing: 0; color: var(--azul); }
+        strong { font-weight: 600; }
+        p, li { color: var(--tinta); }
+        ul, ol { padding-left: 22px; }
+        li + li { margin-top: 6px; }
+        .suave, .suave * { color: var(--suave); }
+        p.suave { font-size: 15px; }
+        .etiqueta { font: 500 12px/1.5 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--azul); margin: 0 0 16px; }
+        .rotulo { font: 500 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); margin-right: 6px; }
+        main a:not(.botao) { color: var(--azul); padding-block: 12px; text-underline-offset: 3px; }
+        main a:not(.botao):hover { text-decoration-thickness: 2px; }
+        blockquote { margin: 36px 0 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--azul); font-size: 20px; line-height: 1.45; letter-spacing: -.01em; }
+        .produto { border-top: 1px solid var(--linha); padding: 20px 0 6px; }
+        .produto + h2 { margin-top: 48px; }
+        .fala { font-style: italic; color: var(--suave); }
+        main video { border: 1px solid var(--linha); }
+
+        /* O botão principal: azul com letra branca, raio zero, 48 px de altura. */
+        .botao { display: inline-flex; align-items: center; min-height: 48px; margin-top: 16px; padding: 0 26px; background: var(--azul); color: #fff; font: 500 13px var(--letra); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; }
+        .botao:hover { background: var(--tinta); color: #fff; }
+        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
+
+        /* Quem faz: na Consultoria, as iniciais num quadro de contorno preto. No Sobre, um cartão por sócio. */
+        .socios { list-style: none; padding: 0; display: grid; gap: 14px; margin-top: 18px; }
+        .socios li { display: flex; gap: 14px; align-items: flex-start; margin: 0; border-top: 1px solid var(--linha); padding-top: 16px; }
+        .socios p { margin: 0; }
+        .foto { flex: 0 0 56px; width: 56px; height: 56px; object-fit: cover; display: flex; align-items: center; justify-content: center; border: 1px solid var(--tinta); font: 500 13px var(--mono); letter-spacing: .08em; }
+        .socio { border: 1px solid var(--linha); padding: 20px 22px; }
+        .socio h3 { margin: 0; font-size: 19px; }
+        .socio .cargo { margin: 2px 0 10px; color: var(--suave); font: 500 11px/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+        .socio p { margin: 0 0 12px; }
+        .socio a { display: inline-block; padding: 12px 0; font-size: 15px; }
+        @media (min-width: 640px) { .socios { grid-template-columns: 1fr 1fr; } }
+
+        /* Tabela: filete de 1 px, cabeçalho em letra de máquina. No celular vira cartão. */
+        .tabela { overflow-x: auto; margin: 22px 0 8px; border-top: 1px solid var(--tinta); }
+        .tabela table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: 15px; }
+        .tabela th, .tabela td { text-align: left; vertical-align: top; padding: 12px 14px 12px 0; border-top: 1px solid var(--linha); }
+        .tabela thead th { font: 500 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--suave); border-top: 0; }
         .tabela tbody th { font-weight: 600; }
         @media (max-width: 600px) {
             .tabela table { min-width: 0; }
             .tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
             .tabela tr, .tabela th, .tabela td { display: block; }
             .tabela tr { border-top: 1px solid var(--linha); padding: 12px 0; }
+            .tabela tbody tr:first-child { border-top: 0; }
             .tabela th, .tabela td { border-top: 0; padding: 4px 0; }
-            .tabela td::before { content: attr(data-rotulo); display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
+            .tabela td::before { content: attr(data-rotulo); display: block; font: 500 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
         }
-        /* 13/11/2026: auditoria de uso. Foco visível de 2 px, resposta ao toque, área de toque de 44 px
-           nos links do texto (o preenchimento vertical de um link em linha não mexe no espaço entre as
-           linhas) e o botão de conversa à mão: no topo no computador, preso embaixo no celular. */
-        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--texto); outline-offset: 3px; }
-        main a:not(.botao) { padding-block: 12px; text-underline-offset: 3px; }
-        main a:not(.botao):hover { text-decoration-thickness: 2px; }
-        header nav a:hover, footer a:hover { color: var(--texto); }
-        .botao:hover, .conversa-fixa:hover, header nav a.nav-conversa:hover { background: #2a2a2a; color: var(--fundo); }
-        .botao:active, .conversa-fixa:active { transform: translateY(1px); }
-        header nav a.nav-conversa { color: var(--fundo); background: var(--texto); padding: 12px 16px; letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; font-weight: 600; }
+
+        /* Leia também: os vizinhos como etiquetas de contorno, igual às páginas de setor. */
+        .leia-tambem { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .leia-tambem li { margin: 0; }
+        main .leia-tambem a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--linha); color: var(--tinta); text-decoration: none; font-size: 15px; }
+        main .leia-tambem a:hover { border-color: var(--azul); color: var(--azul); }
+
+        /* O rodapé: o mesmo da página inicial, claro e com o filete azul em cima. */
+        .rodape { background: var(--cinza); border-top: 4px solid var(--azul); color: var(--suave); font-size: 15px; padding: 56px 20px calc(28px + env(safe-area-inset-bottom)); }
+        .rodape-grade, .rodape-fim { max-width: 1200px; margin: 0 auto; }
+        .rodape-grade { display: grid; gap: 36px; }
+        .rodape .marca { color: var(--tinta); font-size: 22px; margin: 0 0 10px; }
+        .rodape .marca img { height: 32px; filter: invert(1); }
+        .rodape-grade p { margin: 0; }
+        .rodape-links { list-style: none; padding: 0; margin: 0; }
+        .rodape-links li { margin: 0; }
+        .rodape-titulo { font: 500 11px var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--suave); padding-bottom: 6px; }
+        .rodape-links a { display: flex; align-items: center; min-height: 44px; color: var(--tinta); text-decoration: none; border-bottom: 1px solid var(--linha); }
+        .rodape a:hover { color: var(--azul); }
+        .rodape-fim { border-top: 1px solid var(--linha); margin-top: 40px; padding-top: 18px; font-size: 14px; }
+        .rodape-fim a { color: var(--tinta); display: inline-flex; align-items: center; min-height: 44px; }
+
+        /* O botão de conversa: no topo no computador, preso embaixo no celular. */
         .conversa-fixa { display: none; }
-        @media (max-width: 768px) {
-            header nav a.nav-conversa { display: none; }
-            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--texto); color: var(--fundo); text-decoration: none; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
-            body { padding-bottom: 84px; }
+        @media (min-width: 720px) { .rodape-grade { grid-template-columns: 1.3fr 1fr 1fr 1fr; } }
+        @media (min-width: 1024px) { .menu { display: flex; } }
+        @media (max-width: 767px) {
+            body { font-size: 16px; }
+            .rodape { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+            .topo { padding: 12px 20px; }
+            .topo .marca span { display: none; }
+            .topo .marca img { height: 40px; }
+            .topo-cta { font-size: 13px; padding: 0 20px; }
+            main { padding-top: 40px; padding-bottom: 56px; }
+            h2 { margin-top: 48px; }
+            blockquote { font-size: 18px; }
+            .conversa-fixa { position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 10; min-height: 52px; display: flex; align-items: center; justify-content: center; background: var(--azul); color: #fff; text-decoration: none; letter-spacing: .14em; text-transform: uppercase; font: 500 13px var(--letra); }
+            .conversa-fixa:hover { background: var(--tinta); }
         }
+        @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
     </style>
 </head>
 <body>
-    <header>
-        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="40" height="44"><span>GENESISKORE</span></a>
-        <nav aria-label="Páginas"><a href="/sistemas-sob-medida/">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a class="nav-conversa" href="/conversar/">Conversar</a></nav>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topo">
+        <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="36" height="40"><span>GenesisKore</span></a>
+        <nav class="menu" aria-label="Páginas"><a href="/#sistemas">Sistemas</a><a href="/consultoria/">Consultoria</a><a href="/#cases">Resultados</a><a href="/#como-funciona">Como funciona</a><a href="/#perguntas">Perguntas</a></nav>
+        <a class="topo-cta" href="/conversar/">Conversar</a>
     </header>
-    <main>
+    <main id="conteudo">
         <p class="etiqueta">Cobrança</p>
         <h1>Cobrança automática de clientes, com aviso antes do vencimento e baixa quando paga</h1>
         <p class="suave">Atualizado em 13/11/2026.</p>
@@ -275,9 +343,40 @@
             <li><a href="/lucro-por-produto/">Lucro por produto</a></li>
         </ul>
     </main>
-    <footer>
-        <a href="/">Início</a><a href="/sistemas-sob-medida/">Sistemas sob medida</a><a href="/consultoria/">Consultoria de gestão</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Privacidade</a>
-        <p>© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão. São Paulo, atendimento em todo o Brasil.</p>
+    <footer class="rodape">
+        <div class="rodape-grade">
+            <div>
+                <a href="/" class="marca" aria-label="GenesisKore, página inicial"><img src="/logo.webp" alt="" width="32" height="36" loading="lazy"><span>GenesisKore</span></a>
+                <p>A empresa cresceu e ainda depende de você.</p>
+            </div>
+            <ul class="rodape-links" aria-label="Sistemas sob medida">
+                <li class="rodape-titulo">Sistemas sob medida</li>
+                <li><a href="/sistemas-sob-medida/">Como funciona</a></li>
+                <li><a href="/sistema-para-distribuidora/">Para distribuidora e atacado</a></li>
+                <li><a href="/sistema-para-distribuidora-de-alimentos/">Para distribuidora de alimentos</a></li>
+                <li><a href="/sistema-de-pedidos-b2b/">Pedidos B2B</a></li>
+                <li><a href="/lucro-por-produto/">Lucro por produto</a></li>
+                <li><a href="/automacao-de-processos/">Automação de processos</a></li>
+                <li><a href="/automacao-para-escritorio/">Para escritório</a></li>
+            </ul>
+            <ul class="rodape-links" aria-label="Para decidir">
+                <li class="rodape-titulo">Para decidir</li>
+                <li><a href="/bling-omie-ou-sistema-sob-medida/">Bling, Omie ou sob medida</a></li>
+                <li><a href="/quanto-custa-um-sistema-sob-medida/">Quanto custa</a></li>
+                <li><a href="/sistema-para-substituir-planilhas/">Substituir planilhas</a></li>
+                <li><a href="/consultoria-de-ia/">Consultoria de IA</a></li>
+                <li><a href="/consultoria-financeira/">Consultoria financeira</a></li>
+                <li><a href="/dre-gerencial-para-distribuidora/">DRE gerencial (modelo)</a></li>
+            </ul>
+            <ul class="rodape-links" aria-label="Contato">
+                <li class="rodape-titulo">Contato</li>
+                <li><a href="mailto:contato@genesiskore.com">contato@genesiskore.com</a></li>
+                <li><a href="https://www.instagram.com/genesiskore/" rel="noopener">Instagram @genesiskore</a></li>
+                <li><a href="https://www.tiktok.com/@genesiskore" rel="noopener">TikTok @genesiskore</a></li>
+                <li><a href="https://www.linkedin.com/company/genesiskore" rel="noopener">LinkedIn GenesisKore</a></li>
+            </ul>
+        </div>
+        <p class="rodape-fim">© 2026 GenesisKore. Sistemas sob medida e consultoria de gestão. São Paulo, atendimento em todo o Brasil. <a href="/consultoria/">Consultoria</a> · <a href="/sobre/">Sobre</a> · <a href="/contato/">Contato</a> · <a href="/privacidade/">Privacidade</a></p>
     </footer>
     <!-- Contagem de visitas sem cookie e sem IP. -->
     <script src="/contagem.js" defer></script>
